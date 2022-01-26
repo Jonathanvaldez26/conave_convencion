@@ -149,7 +149,7 @@
                         <div class="card">
                             <div class="card-body text-center">
                                 <div class="col-12 text-end">
-                                    <img class="w-30" src="../../assets/img/small-logos/asofarma_1.png">
+                                    <img class="w-30" src="../../assets/img/small-logos/boleto_virtual.png">
                                 </div>
                                 <h6 class="mb-0 font-weight-bolder"><a href="#">Datos Personales</a></h6>
                                 <p class="opacity-8 mb-0 text-sm">Sin Completar</p>
@@ -160,7 +160,7 @@
                         <div class="card">
                             <div class="card-body text-center">
                                 <div class="col-12 text-end">
-                                    <img class="w-30" src="../../assets/img/small-logos/asofarma_1.png">
+                                    <img class="w-30" src="../../assets/img/small-logos/vacuna.png">
                                 </div>
                                 <h6 class="mb-0 font-weight-bolder"><a href="#">Comprobantes Vacuna</a></h6>
                                 <p class="opacity-8 mb-0 text-sm">Sin completar</p>
@@ -173,7 +173,7 @@
                         <div class="card">
                             <div class="card-body text-center">
                                 <div class="col-12 text-end">
-                                    <img class="w-30" src="../../assets/img/small-logos/asofarma_1.png">
+                                    <img class="w-30" src="../../assets/img/small-logos/vacuna_comprobante.png">
                                 </div>
                                 <h6 class="mb-0 font-weight-bolder"><a href="#">Mis Pruebas Covid</a></h6>
                                 <p class="opacity-8 mb-0 text-sm">Sin completar</p>
@@ -184,7 +184,7 @@
                         <div class="card">
                             <div class="card-body text-center">
                                 <div class="col-12 text-end">
-                                    <img class="w-30" src="../../assets/img/small-logos/asofarma_1.png">
+                                    <img class="w-30" src="../../assets/img/small-logos/pase.png">
                                 </div>
                                 <h6 class="mb-0 font-weight-bolder"><a href="#">Pases de Abordar</a></h6>
                                 <p class="opacity-8 mb-0 text-sm">Sin completar</p>
@@ -197,7 +197,7 @@
                         <div class="card">
                             <div class="card-body text-center">
                                 <div class="col-12 text-end">
-                                    <img class="w-30" src="../../assets/img/small-logos/asofarma_1.png">
+                                    <img class="w-30" src="../../assets/img/small-logos/boleto_virtual.png">
                                 </div>
                                 <h6 class="mb-0 font-weight-bolder"><a href="#">Mi boleto Virtual</a></h6>
                                 <p class="opacity-8 mb-0 text-sm">A un click tus asistencias</p>
