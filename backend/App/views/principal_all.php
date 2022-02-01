@@ -165,7 +165,7 @@
                                 <div class="col-12 text-end">
                                     <img class="w-30" src="../../assets/img/small-logos/asofarma_prueba_covid.png">
                                 </div>
-                                <h6 class="mb-0 font-weight-bolder"><a href="#">Mis Pruebas Covid</a></h6>
+                                <h6 class="mb-0 font-weight-bolder"><a href="/Covid/">Mis Pruebas Covid</a></h6>
                                 <p class="opacity-8 mb-0 text-sm">Disponible <i class="fa fa-clock me-sm-0" style="color: #8a6d3b"></i></p>
                             </div>
                         </div>

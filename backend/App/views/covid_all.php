@@ -58,86 +58,73 @@
             <div class="col-lg-2">
             </div>
             <div class="card col-lg-8 mt-lg-0 mt-6" >
-            <div class="card-header pb-0 p-3">
-                <h6 class="mb-1">Comprobantes de Vacunación</h6>
-                <p class="text-sm">Registraste 3 Dosis de Vacuna</p>
-            </div>
-            <div class="card-body p-3">
-                <div class="row">
-                    <div class="col-xl-4 col-md-6 mb-xl-0 mb-4">
-                        <div class="card card-blog card-plain">
-                            <div class="position-relative">
-                                <a class="d-block shadow-xl border-radius-xl">
-                                    <img src="../../../assets/img/comprobante1.jpeg" alt="img-blur-shadow" class="img-fluid shadow border-radius-xl">
-                                </a>
-                            </div>
-                            <div class="card-body px-1 pb-0">
-                                <p class="text-gradient text-dark mb-2 text-sm">Comprobante de Vacunación #1</p>
-                                <a href="javascript:;">
-                                    <h5>
-                                        AstraZeneca
-                                    </h5>
-                                </a>
-                                <p class="mb-4 text-sm">
-                                    Subiste este documento <br>el 27/01/2022 10:25 a.m.
-                                </p>
-                                <div class="d-flex align-items-center justify-content-between">
-                                    <button type="button" class="btn btn-outline-danger btn-sm mb-0">Ver cOnprobante</button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-xl-4 col-md-6 mb-xl-0 mb-4">
-                        <div class="card card-blog card-plain">
-                            <div class="position-relative">
-                                <a class="d-block shadow-xl border-radius-xl">
-                                    <img src="../../../assets/img/comprobante2.jpeg" alt="img-blur-shadow" class="img-fluid shadow border-radius-lg">
-                                </a>
-                            </div>
-                            <div class="card-body px-1 pb-0">
-                                <p class="text-gradient text-dark mb-2 text-sm">Comprobante de Vacunación #2</p>
-                                <a href="javascript:;">
-                                    <h5>
-                                        AstraZeneca
-                                    </h5>
-                                </a>
-                                <p class="mb-4 text-sm">
-                                    Subiste este documento <br>el 27/01/2022 10:32 a.m.
-                                </p>
-                                <div class="d-flex align-items-center justify-content-between">
-                                    <button type="button" class="btn btn-outline-danger btn-sm mb-0">Ver Comprobante</button>
+                <div class="card-header pb-0 p-3">
+                    <h6 class="mb-1">Mis pruebas Covid</h6>
+                    <p class="text-sm">Registra la primera prueba Covid con anticipación de 24 o 48 horas a tu vuelo</p>
 
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-xl-4 col-md-6 mb-xl-0 mb-4">
-                        <div class="card card-blog card-plain">
-                            <div class="position-relative">
-                                <a class="d-block shadow-xl border-radius-xl">
-                                    <img src="../../../assets/img/rechazo.jpeg" alt="img-blur-shadow" class="img-fluid shadow border-radius-xl">
-                                </a>
-                            </div>
-                            <div class="card-body px-1 pb-0">
-                                <p class="text-gradient text-dark mb-2 text-sm">Fecha Límite de Carga 01/04/2022</p>
-                                <a href="javascript:;">
-                                    <h5>
-                                        Comprobante Rechazado
-                                    </h5>
-                                </a>
-                                <p class="mb-4 text-sm">
-                                    Sube un nuevo comprobante, este fue rechazado por inconsistencias.
-                                </p>
-                                <div class="d-flex align-items-center justify-content-between">
-                                    <button type="button" class="btn btn-outline-danger btn-sm mb-0">Subir mi Archivo</button>
+                    <br>
+                    <a href="/Empresa/Add" type="button" class="btn btn-success btn-sm">Nuevo</a>
+                    <button type="button" class="btn btn-secondary btn-sm">Eliminar</button>
+                </div>
+                <div class="card-body p-3">
+                    <div class="row">
+                        <div class="card">
+                            <div class="table-responsive">
+                                <table class="table align-items-center mb-0">
+                                    <thead>
+                                    <tr>
+                                        <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Prueba</th>
+                                        <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Estatus</th>
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+                                    <tr>
+                                        <td>
+                                            <div class="d-flex px-2 py-1">
+                                                <div class="d-flex flex-column justify-content-center">
+                                                    <h6 class="mb-0 text-xs">Prueba Covid Lab 1</h6>
+                                                    <p class="text-xs text-secondary mb-0">04/04/2022</p>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td class="align-middle text-center text-sm">
+                                            <span class="badge badge-sm badge-success">Se valido Correctamente</span>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div class="d-flex px-2 py-1">
+                                                <div class="d-flex flex-column justify-content-center">
+                                                    <h6 class="mb-0 text-xs">Prueba Covid Lab 2</h6>
+                                                    <p class="text-xs text-secondary mb-0">04/04/2022</p>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td class="align-middle text-center text-sm">
+                                            <span class="badge badge-sm badge-secondary">En Espera a Validar</span>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div class="d-flex px-2 py-1">
+                                                <div class="d-flex flex-column justify-content-center">
+                                                    <h6 class="mb-0 text-xs">Prueba Covid Lab 3</h6>
+                                                    <p class="text-xs text-secondary mb-0">04/04/2022</p>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td class="align-middle text-center text-sm">
+                                            <span class="badge badge-sm badge-secondary">En Espera a Validar</span>
+                                        </td>
+                                    </tr>
 
-                                </div>
+                                    </tbody>
+                                </table>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
         </div>
     </div>
     <?php echo $footer; ?>
