@@ -67,7 +67,7 @@ html;
     public function footer($extra = ''){
         $footer =<<<html
 
-  <footer class="footer pt-3  ">
+        <footer class="footer pt-9">
                 <div class="container-fluid">
                     <div class="row align-items-center justify-content-lg-between">
                         <div class="col-lg-6 mb-lg-0 mb-4">

@@ -100,24 +100,16 @@
                     <div class="card-body p-3 mt-2">
                         <div class="tab-content" id="v-pills-tabContent">
                             <div class="tab-pane fade show position-relative active height-400 border-radius-lg" id="cam1" role="tabpanel" aria-labelledby="cam1" style="background-image: url('../../assets/img/miercoles.jpeg'); background-size:cover;">
-                                <div class="position-absolute d-flex top-0 w-100">
-                                    <p class="text-white p-3 mb-0">FRASES</p>
-                                </div>
+
                             </div>
                             <div class="tab-pane fade position-relative height-400 border-radius-lg" id="cam2" role="tabpanel" aria-labelledby="cam2" style="background-image: url('../../assets/img/jueves.jpeg'); background-size:cover;">
-                                <div class="position-absolute d-flex top-0 w-100">
-                                    <p class="text-white p-3 mb-0">FRASES</p>
-                                </div>
+
                             </div>
                             <div class="tab-pane fade position-relative height-400 border-radius-lg" id="cam3" role="tabpanel" aria-labelledby="cam3" style="background-image: url('../../assets/img/viernes.jpeg'); background-size:cover;">
-                                <div class="position-absolute d-flex top-0 w-100">
-                                    <p class="text-white p-3 mb-0">FRASES</p>
-                                </div>
+
                             </div>
                             <div class="tab-pane fade position-relative height-400 border-radius-lg" id="cam4" role="tabpanel" aria-labelledby="cam3" style="background-image: url('../../assets/img/sabado.jpeg'); background-size:cover;">
-                                <div class="position-absolute d-flex top-0 w-100">
-                                    <p class="text-white p-3 mb-0">FRASES</p>
-                                </div>
+
                             </div>
                         </div>
                     </div>
@@ -137,8 +129,6 @@
                                             </h5>
                                         </div>
                                     </div>
-
-
                                 </div>
                             </div>
                         </div>
@@ -149,34 +139,10 @@
                         <div class="card">
                             <div class="card-body text-center">
                                 <div class="col-12 text-end">
-                                    <img class="w-30" src="../../assets/img/small-logos/boleto_virtual.png">
+                                    <img class="w-30" src="../../assets/img/small-logos/asofarma_user.png">
                                 </div>
-                                <h6 class="mb-0 font-weight-bolder"><a href="#">Datos Personales</a></h6>
-                                <p class="opacity-8 mb-0 text-sm">Sin Completar</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-6 mt-md-0 mt-4">
-                        <div class="card">
-                            <div class="card-body text-center">
-                                <div class="col-12 text-end">
-                                    <img class="w-30" src="../../assets/img/small-logos/vacuna.png">
-                                </div>
-                                <h6 class="mb-0 font-weight-bolder"><a href="#">Comprobantes Vacuna</a></h6>
-                                <p class="opacity-8 mb-0 text-sm">Sin completar</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="row mt-4">
-                    <div class="col-md-6">
-                        <div class="card">
-                            <div class="card-body text-center">
-                                <div class="col-12 text-end">
-                                    <img class="w-30" src="../../assets/img/small-logos/vacuna_comprobante.png">
-                                </div>
-                                <h6 class="mb-0 font-weight-bolder"><a href="#">Mis Pruebas Covid</a></h6>
-                                <p class="opacity-8 mb-0 text-sm">Sin completar</p>
+                                <h6 class="mb-0 font-weight-bolder"><a href="/Account/">Datos Personales</a></h6>
+                                <p class="opacity-8 mb-0 text-sm">Disponible <i class="fa fa-check-circle me-sm-0" style="color: #01a31c"></i></p>
                             </div>
                         </div>
                     </div>
@@ -184,10 +150,10 @@
                         <div class="card">
                             <div class="card-body text-center">
                                 <div class="col-12 text-end">
-                                    <img class="w-30" src="../../assets/img/small-logos/pase.png">
+                                    <img class="w-30" src="../../assets/img/small-logos/asofarma_comprobante_vacuna.png">
                                 </div>
-                                <h6 class="mb-0 font-weight-bolder"><a href="#">Pases de Abordar</a></h6>
-                                <p class="opacity-8 mb-0 text-sm">Sin completar</p>
+                                <h6 class="mb-0 font-weight-bolder"><a href="/Vaccination/">Comprobantes Vacuna</a></h6>
+                                <p class="opacity-8 mb-0 text-sm">Disponible <i class="fa fa-check-circle me-sm-0" style="color: #01a31c"></i></p>
                             </div>
                         </div>
                     </div>
@@ -197,7 +163,31 @@
                         <div class="card">
                             <div class="card-body text-center">
                                 <div class="col-12 text-end">
-                                    <img class="w-30" src="../../assets/img/small-logos/boleto_virtual.png">
+                                    <img class="w-30" src="../../assets/img/small-logos/asofarma_prueba_covid.png">
+                                </div>
+                                <h6 class="mb-0 font-weight-bolder"><a href="#">Mis Pruebas Covid</a></h6>
+                                <p class="opacity-8 mb-0 text-sm">Disponible <i class="fa fa-clock me-sm-0" style="color: #8a6d3b"></i></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 mt-md-0 mt-5">
+                        <div class="card">
+                            <div class="card-body text-center">
+                                <div class="col-12 text-end">
+                                    <img class="w-30" src="../../assets/img/small-logos/asofarma_pase_abordar.png">
+                                </div>
+                                <h6 class="mb-0 font-weight-bolder"><a href="/Passes/">Pases de Abordar</a></h6>
+                                <p class="opacity-8 mb-0 text-sm">Disponible <i class="fa fa-check-circle me-sm-0" style="color: #01a31c"></i></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row mt-4">
+                    <div class="col-md-6">
+                        <div class="card">
+                            <div class="card-body text-center">
+                                <div class="col-12 text-end">
+                                    <img class="w-30" src="../../assets/img/small-logos/asofarma_boleto_virtual.png">
                                 </div>
                                 <h6 class="mb-0 font-weight-bolder"><a href="#">Mi boleto Virtual</a></h6>
                                 <p class="opacity-8 mb-0 text-sm">A un click tus asistencias</p>
@@ -208,10 +198,34 @@
                         <div class="card">
                             <div class="card-body text-center">
                                 <div class="col-12 text-end">
-                                    <img class="w-30" src="../../assets/img/small-logos/asofarma_1.png">
+                                    <img class="w-30" src="../../assets/img/small-logos/asofarma_cenas.png">
                                 </div>
                                 <h6 class="mb-0 font-weight-bolder"><a href="#">Cenas</a></h6>
                                 <p class="opacity-8 mb-0 text-sm">Reserva y disfruta</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row mt-4">
+                    <div class="col-md-6">
+                        <div class="card">
+                            <div class="card-body text-center">
+                                <div class="col-12 text-end">
+                                    <img class="w-30" src="../../assets/img/small-logos/asofarma_pickup.png">
+                                </div>
+                                <h6 class="mb-0 font-weight-bolder"><a href="#">PICK UP</a></h6>
+                                <p class="opacity-8 mb-0 text-sm">A un click tus asistencias</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 mt-md-0 mt-5">
+                        <div class="card">
+                            <div class="card-body text-center">
+                                <div class="col-12 text-end">
+                                    <img class="w-30" src="../../assets/img/small-logos/asofarma_1.png">
+                                </div>
+                                <h6 class="mb-0 font-weight-bolder"><a href="#">NOTIASOFARMA</a></h6>
+                                <p class="opacity-8 mb-0 text-sm">A un click</p>
                             </div>
                         </div>
                     </div>

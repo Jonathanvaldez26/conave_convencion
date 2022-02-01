@@ -16,7 +16,7 @@ class Login{
         <link rel="apple-touch-icon" sizes="76x76" href="/assets/img/favicon.ico">
         <link rel="icon" type="image/vnd.microsoft.icon" href="/assets//img/favicon.ico">
         <title>
-           APM Register
+           CONAVE Register
         </title>
         <!--     Fonts and icons     -->
         <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet" />
@@ -32,18 +32,33 @@ class Login{
         <link rel="stylesheet" href="/css/alertify/alertify.default.css" id="toggleCSS" />
 html;
         $extraFooter =<<<html
+
+        <footer class="footer pt-2">
+            <div class="container">
+                <div class="row">
+                    <div class="col-8 mx-auto text-center mt-0">
+                        <p class="mb-0 text-secondary">
+                            Copyright © <script>
+                                document.write(new Date().getFullYear())
+                            </script> Grupo LAHE.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        
         <script src="/js/jquery.min.js"></script>
         <script src="/js/validate/jquery.validate.js"></script>
         <script src="/js/alertify/alertify.min.js"></script>
         <!-- -------- END FOOTER 3 w/ COMPANY DESCRIPTION WITH LINKS & SOCIAL ICONS & COPYRIGHT ------- -->
-       <script src="/assets/js/core/popper.min.js"></script>
-      <script src="/assets/js/core/bootstrap.min.js"></script>
-      <script src="/assets/js/plugins/perfect-scrollbar.min.js"></script>
-      <script src="/assets/js/plugins/smooth-scrollbar.min.js"></script>
-      <!-- Kanban scripts -->
-      <script src="/assets/js/plugins/dragula/dragula.min.js"></script>
-      <script src="/assets/js/plugins/jkanban/jkanban.js"></script>
-      <script>
+        <script src="/assets/js/core/popper.min.js"></script>
+        <script src="/assets/js/core/bootstrap.min.js"></script>
+        <script src="/assets/js/plugins/perfect-scrollbar.min.js"></script>
+        <script src="/assets/js/plugins/smooth-scrollbar.min.js"></script>
+        <!-- Kanban scripts -->
+        <script src="/assets/js/plugins/dragula/dragula.min.js"></script>
+        <script src="/assets/js/plugins/jkanban/jkanban.js"></script>
+        <script>
         var win = navigator.platform.indexOf('Win') > -1;
         if (win && document.querySelector('#sidenav-scrollbar')) {
           var options = {
@@ -51,9 +66,9 @@ html;
           }
           Scrollbar.init(document.querySelector('#sidenav-scrollbar'), options);
         }
-      </script>
-      <!-- Github buttons -->
-      <script async defer src="https://buttons.github.io/buttons.js"></script>
+        </script>
+        <!-- Github buttons -->
+        <script async defer src="https://buttons.github.io/buttons.js"></script>
 
       
 
@@ -123,6 +138,8 @@ html;
 
             });
         </script>
+
+        
 html;
         View::set('header',$extraHeader);
         View::set('footer',$extraFooter);

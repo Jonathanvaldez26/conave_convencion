@@ -566,7 +566,7 @@ echo $header;
                         </ul>
                         <ul class="navbar-nav d-lg-block d-none">
                             <li class="nav-item">
-                                <a href="/Register/" class="btn btn-sm  bg-gradient-info  btn-round mb-0 me-1" onclick="smoothToPricing('pricing-soft-ui')">¡Quiero Registrarme!</a>
+                                <a href="/Register/" class="btn btn-sm  bg-gradient-faded-danger  btn-round mb-0 me-1" onclick="smoothToPricing('pricing-soft-ui')"><b style="color: #ffffff">¡Quiero Registrarme!</b></a>
                             </li>
                         </ul>
                     </div>
@@ -597,7 +597,7 @@ echo $header;
                                             <label class="form-check-label" for="rememberMe">Recordar Contraseña</label>
                                         </div>
                                         <div class="text-center">
-                                            <button type="button" id="btnEntrar" class="btn bg-gradient-info w-100 mt-4 mb-0">ENTRAR</button>
+                                            <button type="button" id="btnEntrar" class="btn bg-gradient-faded-danger w-100 mt-4 mb-0"><b style="color: #FFFFFF">ENTRAR</b></button>
                                         </div>
                                     </form>
                                     <div class="card-footer text-center pt-0 px-lg-2 px-1">
@@ -623,19 +623,7 @@ echo $header;
         </section>
     </main>
     <!-- -------- START FOOTER 3 w/ COMPANY DESCRIPTION WITH LINKS & SOCIAL ICONS & COPYRIGHT ------- -->
-    <footer class="footer py-2s">
-        <div class="container">
-            <div class="row">
-                <div class="col-8 mx-auto text-center mt-0">
-                    <p class="mb-0 text-secondary">
-                        Copyright © <script>
-                            document.write(new Date().getFullYear())
-                        </script> Grupo LAHE.
-                    </p>
-                </div>
-            </div>
-        </div>
-    </footer>
+
 
     </body>
 
