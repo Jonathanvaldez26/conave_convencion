@@ -55,140 +55,90 @@
     <!-- End Navbar -->
     <div class="container-fluid py-0">
         <div class="row mt-4">
-            <div class="col-12">
-                <div class="card mb-4">
-                    <div class="card-header pb-0 p-3">
-                        <h6 class="mb-1">Comprobantes de Vacunación</h6>
-                        <p class="text-sm">Architects design houses</p>
+            <div class="col-lg-2">
+            </div>
+            <div class="card col-lg-8 mt-lg-0 mt-6" >
+            <div class="card-header pb-0 p-3">
+                <h6 class="mb-1">Comprobantes de Vacunación</h6>
+                <p class="text-sm">Registraste 3 Dosis de Vacuna en tu Registro</p>
+            </div>
+            <div class="card-body p-3">
+                <div class="row">
+                    <div class="col-xl-4 col-md-6 mb-xl-0 mb-4">
+                        <div class="card card-blog card-plain">
+                            <div class="position-relative">
+                                <a class="d-block shadow-xl border-radius-xl">
+                                    <img src="../../../assets/img/comprobante1.jpeg" alt="img-blur-shadow" class="img-fluid shadow border-radius-xl">
+                                </a>
+                            </div>
+                            <div class="card-body px-1 pb-0">
+                                <p class="text-gradient text-dark mb-2 text-sm">Comprobante de Vacunación #1</p>
+                                <a href="javascript:;">
+                                    <h5>
+                                        AstraZeneca
+                                    </h5>
+                                </a>
+                                <p class="mb-4 text-sm">
+                                    Subiste este documento <br>el 27/01/2022 10:25 a.m.
+                                </p>
+                                <div class="d-flex align-items-center justify-content-between">
+                                    <button type="button" class="btn btn-outline-danger btn-sm mb-0">Ver cOnprobante</button>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                    <div class="card-body p-3">
-                        <div class="row">
-                            <div class="col-xl-2 col-md-6 mb-xl-0 mb-4">
-
+                    <div class="col-xl-4 col-md-6 mb-xl-0 mb-4">
+                        <div class="card card-blog card-plain">
+                            <div class="position-relative">
+                                <a class="d-block shadow-xl border-radius-xl">
+                                    <img src="../../../assets/img/comprobante2.jpeg" alt="img-blur-shadow" class="img-fluid shadow border-radius-lg">
+                                </a>
                             </div>
-                            <div class="col-xl-2 col-md-6 mb-xl-0 mb-4">
-                                <div class="card card-blog card-plain">
-                                    <div class="position-relative">
-                                        <a class="d-block shadow-xl border-radius-xl">
-                                            <img src="../../../assets/img/home-decor-1.jpg" alt="img-blur-shadow" class="img-fluid shadow border-radius-xl">
-                                        </a>
-                                    </div>
-                                    <div class="card-body px-1 pb-0">
-                                        <p class="text-gradient text-dark mb-2 text-sm">Project #2</p>
-                                        <a href="javascript:;">
-                                            <h5>
-                                                Modern
-                                            </h5>
-                                        </a>
-                                        <p class="mb-4 text-sm">
-                                            As Uber works through a huge amount of internal management turmoil.
-                                        </p>
-                                        <div class="d-flex align-items-center justify-content-between">
-                                            <button type="button" class="btn btn-outline-primary btn-sm mb-0">View Project</button>
-                                            <div class="avatar-group mt-2">
-                                                <a href="javascript:;" class="avatar avatar-xs rounded-circle" data-bs-toggle="tooltip" data-bs-placement="bottom" title="" data-bs-original-title="Elena Morison">
-                                                    <img alt="Image placeholder" src="../../../assets/img/team-1.jpg">
-                                                </a>
-                                                <a href="javascript:;" class="avatar avatar-xs rounded-circle" data-bs-toggle="tooltip" data-bs-placement="bottom" title="" data-bs-original-title="Ryan Milly">
-                                                    <img alt="Image placeholder" src="../../../assets/img/team-2.jpg">
-                                                </a>
-                                                <a href="javascript:;" class="avatar avatar-xs rounded-circle" data-bs-toggle="tooltip" data-bs-placement="bottom" title="" data-bs-original-title="Nick Daniel">
-                                                    <img alt="Image placeholder" src="../../../assets/img/team-3.jpg">
-                                                </a>
-                                                <a href="javascript:;" class="avatar avatar-xs rounded-circle" data-bs-toggle="tooltip" data-bs-placement="bottom" title="" data-bs-original-title="Peterson">
-                                                    <img alt="Image placeholder" src="../../../assets/img/team-4.jpg">
-                                                </a>
-                                            </div>
-                                        </div>
-                                    </div>
+                            <div class="card-body px-1 pb-0">
+                                <p class="text-gradient text-dark mb-2 text-sm">Comprobante de Vacunación #2</p>
+                                <a href="javascript:;">
+                                    <h5>
+                                        AstraZeneca
+                                    </h5>
+                                </a>
+                                <p class="mb-4 text-sm">
+                                    Subiste este documento <br>el 27/01/2022 10:32 a.m.
+                                </p>
+                                <div class="d-flex align-items-center justify-content-between">
+                                    <button type="button" class="btn btn-outline-danger btn-sm mb-0">Ver Comprobante</button>
+
                                 </div>
                             </div>
-                            <div class="col-xl-2 col-md-6 mb-xl-0 mb-4">
-                                <div class="card card-blog card-plain">
-                                    <div class="position-relative">
-                                        <a class="d-block shadow-xl border-radius-xl">
-                                            <img src="../../../assets/img/home-decor-2.jpg" alt="img-blur-shadow" class="img-fluid shadow border-radius-lg">
-                                        </a>
-                                    </div>
-                                    <div class="card-body px-1 pb-0">
-                                        <p class="text-gradient text-dark mb-2 text-sm">Project #1</p>
-                                        <a href="javascript:;">
-                                            <h5>
-                                                Scandinavian
-                                            </h5>
-                                        </a>
-                                        <p class="mb-4 text-sm">
-                                            Music is something that every person has his or her own specific opinion about.
-                                        </p>
-                                        <div class="d-flex align-items-center justify-content-between">
-                                            <button type="button" class="btn btn-outline-primary btn-sm mb-0">View Project</button>
-                                            <div class="avatar-group mt-2">
-                                                <a href="javascript:;" class="avatar avatar-xs rounded-circle" data-bs-toggle="tooltip" data-bs-placement="bottom" title="" data-bs-original-title="Nick Daniel">
-                                                    <img alt="Image placeholder" src="../../../assets/img/team-3.jpg">
-                                                </a>
-                                                <a href="javascript:;" class="avatar avatar-xs rounded-circle" data-bs-toggle="tooltip" data-bs-placement="bottom" title="" data-bs-original-title="Peterson">
-                                                    <img alt="Image placeholder" src="../../../assets/img/team-4.jpg">
-                                                </a>
-                                                <a href="javascript:;" class="avatar avatar-xs rounded-circle" data-bs-toggle="tooltip" data-bs-placement="bottom" title="" data-bs-original-title="Elena Morison">
-                                                    <img alt="Image placeholder" src="../../../assets/img/team-1.jpg">
-                                                </a>
-                                                <a href="javascript:;" class="avatar avatar-xs rounded-circle" data-bs-toggle="tooltip" data-bs-placement="bottom" title="" data-bs-original-title="Ryan Milly">
-                                                    <img alt="Image placeholder" src="../../../assets/img/team-2.jpg">
-                                                </a>
-                                            </div>
-                                        </div>
-                                    </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-4 col-md-6 mb-xl-0 mb-4">
+                        <div class="card card-blog card-plain">
+                            <div class="position-relative">
+                                <a class="d-block shadow-xl border-radius-xl">
+                                    <img src="../../../assets/img/rechazo.jpeg" alt="img-blur-shadow" class="img-fluid shadow border-radius-xl">
+                                </a>
+                            </div>
+                            <div class="card-body px-1 pb-0">
+                                <p class="text-gradient text-dark mb-2 text-sm">Fecha Límite de Carga 01/04/2022</p>
+                                <a href="javascript:;">
+                                    <h5>
+                                        Comprobante Rechazado
+                                    </h5>
+                                </a>
+                                <p class="mb-4 text-sm">
+                                    Sube un nuevo comprobante, este fue rechazado por inconsistencias.
+                                </p>
+                                <div class="d-flex align-items-center justify-content-between">
+                                    <button type="button" class="btn btn-outline-danger btn-sm mb-0">Subir mi Archivo</button>
+
                                 </div>
                             </div>
-                            <div class="col-xl-3 col-md-6 mb-xl-0 mb-4">
-                                <div class="card card-blog card-plain">
-                                    <div class="position-relative">
-                                        <a class="d-block shadow-xl border-radius-xl">
-                                            <img src="../../../assets/img/home-decor-3.jpg" alt="img-blur-shadow" class="img-fluid shadow border-radius-xl">
-                                        </a>
-                                    </div>
-                                    <div class="card-body px-1 pb-0">
-                                        <p class="text-gradient text-dark mb-2 text-sm">Project #3</p>
-                                        <a href="javascript:;">
-                                            <h5>
-                                                Minimalist
-                                            </h5>
-                                        </a>
-                                        <p class="mb-4 text-sm">
-                                            Different people have different taste, and various types of music.
-                                        </p>
-                                        <div class="d-flex align-items-center justify-content-between">
-                                            <button type="button" class="btn btn-outline-primary btn-sm mb-0">View Project</button>
-                                            <div class="avatar-group mt-2">
-                                                <a href="javascript:;" class="avatar avatar-xs rounded-circle" data-bs-toggle="tooltip" data-bs-placement="bottom" title="" data-bs-original-title="Peterson">
-                                                    <img alt="Image placeholder" src="../../../assets/img/team-4.jpg">
-                                                </a>
-                                                <a href="javascript:;" class="avatar avatar-xs rounded-circle" data-bs-toggle="tooltip" data-bs-placement="bottom" title="" data-bs-original-title="Nick Daniel">
-                                                    <img alt="Image placeholder" src="../../../assets/img/team-3.jpg">
-                                                </a>
-                                                <a href="javascript:;" class="avatar avatar-xs rounded-circle" data-bs-toggle="tooltip" data-bs-placement="bottom" title="" data-bs-original-title="Ryan Milly">
-                                                    <img alt="Image placeholder" src="../../../assets/img/team-2.jpg">
-                                                </a>
-                                                <a href="javascript:;" class="avatar avatar-xs rounded-circle" data-bs-toggle="tooltip" data-bs-placement="bottom" title="" data-bs-original-title="Elena Morison">
-                                                    <img alt="Image placeholder" src="../../../assets/img/team-1.jpg">
-                                                </a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-xl-1 col-md-6 mb-xl-0 mb-4">
-
-                            </div>
-
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="col-lg-2">
-            </div>
         </div>
-
+        </div>
     </div>
     <?php echo $footer; ?>
 </main>
