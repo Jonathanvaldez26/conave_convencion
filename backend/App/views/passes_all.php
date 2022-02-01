@@ -33,9 +33,9 @@
 
                 <ul class="navbar-nav  justify-content-end">
                     <li class="nav-item d-flex align-items-center">
-                        <a href="/Account" class="nav-link text-body font-weight-bold px-0">
-                            <i class="fa fa-user me-sm-0"></i>
-                            <span class="d-sm-inline d-none">Mi Cuenta</span>
+                        <a href="/Home/" class="nav-link text-body font-weight-bold px-0">
+                            <i class="fa fa-home me-sm-0"></i>
+                            <span class="d-sm-inline d-none">Inicio</span>
                         </a>
                     </li>
                 </ul>
