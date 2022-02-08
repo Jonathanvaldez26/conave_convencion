@@ -19970,7 +19970,11 @@ fieldset:disabled .btn {
 }
 
 .badge {
-  text-transform: uppercase;
+  text-transform: none;
+}
+
+.choices__list.choices__list--multiple .badge {
+  text-transform: none;
 }
 
 .btn {
