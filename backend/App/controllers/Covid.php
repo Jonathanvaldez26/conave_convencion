@@ -38,7 +38,8 @@ html;
 
       $pruebas = CovidDao::getAll();
       $tabla = '';
-      $status= '';
+      $status = '';
+      $fechaActual = date('d-m-Y');
       foreach ($pruebas as $key => $prueba) {
         if($prueba['status'] = 1){
           $status.=<<<html
@@ -81,8 +82,12 @@ html;
         </tr>
 html;
       }
+      $extraFooter =<<<html
+     
+html;
 
       View::set('tabla',$tabla);
+      View::set('fechaActual',$fechaActual);
       View::set('header',$this->_contenedor->header($extraHeader));
       View::set('footer',$this->_contenedor->footer($extraFooter));
       View::render("covid_all");

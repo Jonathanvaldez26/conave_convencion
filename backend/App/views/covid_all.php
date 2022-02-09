@@ -126,15 +126,21 @@
         <div class="modal-dialog" role="document">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">Agregue su Prueba de Covid</h5>
-                    <label id="fecha_actual"></label>
+                    <h5 class="modal-title" id="exampleModalLabel">
+                        Agregue su Prueba de Covid
+                    </h5>
                     <span type="button" class="btn btn-dark" data-dismiss="modal" aria-label="Close">
                         X
                     </span>
                 </div>
                 <div class="modal-header">
-                    <p>Por su seguridad y la de las demás personas, le pedimos que nos proporcione la Información siguiente para comprobar que no este contagiado de COVID.</p>
+                    <h6>
+                    <label id="fecha_actual"><?php echo $fechaActual; ?></label>
+                    <br>    
+                    Por su seguridad y la de las demás personas, le pedimos que nos proporcione la Información siguiente para comprobar que no este contagiado de COVID.
+                    </h6>
                 </div>
+
                 <div class="modal-body">
                     <form method="POST" enctype="multipart/form-data" id="form_reportes_acta">
                         <div class="form-group row">
@@ -142,7 +148,7 @@
                                 <div class="col-md-6">
                                     <div class="form-group col-md-12">
                                         <label class="control-label col-md-12 col-sm-3 col-xs-12" for="fecha_">Fecha de Prueba<span class="required">*</span></label>
-                                        <div class="col-md-12 col-sm-6 col-xs-12">
+                                        <div class="col-md-12 col-sm-12 col-xs-12">
                                             <input type="date" name="fecha_" id="fecha_" class="form-control col-md-7 col-xs-12">
                                         </div>
                                         <span id="availability_"></span>
@@ -151,7 +157,7 @@
                                 <div class="col-md-6">
                                     <div class="form-group col-md-12">
                                         <label class="control-label col-md-12 col-sm-3 col-xs-12" for="fecha_">Tipo de Prueba<span class="required">*</span></label>
-                                        <div class="col-md-12 col-sm-6 col-xs-12">
+                                        <div class="col-md-12 col-sm-12 col-xs-12">
                                             <!-- <input type="date" name="fecha_" id="fecha_" class="form-control col-md-7 col-xs-12"> -->
                                             <select class="form-control" name="tipo-prueba" id="tipo-prueba">
                                                 <option selected>Seleccione Un Tipo</option>
@@ -163,8 +169,8 @@
                                 </div>
                                 <div class="col-md-12">
                                     <div class="form-group col-md-12">
-                                        <label class="control-label col-md-12 col-sm-3 col-xs-12" for="fecha_">Resultado<span class="required">*</span></label>
-                                        <div class="col-md-12 col-sm-6 col-xs-12">
+                                        <label class="control-label col-md-12 col-sm-12 col-xs-12" for="fecha_">Resultado<span class="required">*</span></label>
+                                        <div class="col-md-12 col-sm-12 col-xs-12">
                                             <!-- <input type="date" name="fecha_" id="fecha_" class="form-control col-md-7 col-xs-12"> -->
                                             <select class="form-control" name="tipo-prueba" id="tipo-prueba">
                                                 <option selected>Seleccione Un Resultado</option>
@@ -176,8 +182,8 @@
                                     </div>
                                 </div>
                                 <div class="form-group col-md-12">
-                                    <label class="control-label col-md-12 col-sm-3 col-xs-12" for="file_">Archivo Escaneado con información de la prueba COVID: <span class="required">*</span></label>
-                                    <div class="col-md-12 col-sm-6 col-xs-12">
+                                    <label class="control-label col-md-12 col-sm-12 col-xs-12" for="file_">Archivo Escaneado con información de la prueba COVID: <span class="required">*</span></label>
+                                    <div class="col-md-12 col-sm-12 col-xs-12">
                                         <input type="file" accept="application/pdf" class="form-control" id="file_" name="file_">
                                     </div>
                                     <span id="availability_4_"></span>
@@ -194,103 +200,11 @@
             </div>
         </div>
     </div>
-
-    <!-- <div class="modal" id="Modal_Prueba_COVID" tabindex="-1" role="dialog" aria-hidden="true">
-        <div class="modal-dialog">
-            <div class="form-group row">
-                <div class="row">
-                    <div class="col-md-12">
-                        <div class="panel panel-default">
-                            <div class="panel-heading text-center">
-                                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span>
-                                </button>
-                                <span><strong><span class="glyphicon glyphicon-circle-arrow-up"></span> Registro Acta Administrativa</strong>
-                                                                                        </span>
-                            </div>
-                            <div class="panel-body">
-
-                                <form enctype="multipart/form-data" id="form_reportes_acta">
-                                    <div class="form-group row">
-                                        <div class="row">
-                                            <div class="col-md-12">
-                                                <div class="form-group col-md-6">
-                                                    <label class="control-label col-md-12 col-sm-3 col-xs-12" for="fecha_">Fecha del Suceso<span class="required">*</span></label>
-                                                    <div class="col-md-12 col-sm-6 col-xs-12">
-                                                        <input type="date" name="fecha_" id="fecha_" class="form-control col-md-7 col-xs-12">
-                                                    </div>
-                                                    <span id="availability_"></span>
-                                                </div>
-
-                                                <div class="form-group col-md-12">
-                                                    <label class="control-label col-md-12 col-sm-3 col-xs-12" for="nombre_colaborador_reportado_">Nombre del Colaborador Reportado<span class="required">*</span></label>
-                                                    <div class="col-md-12 col-sm-6 col-xs-12">
-                                                        <select class="form-control" name="nombre_colaborador_reportado_" id="nombre_colaborador_reportado_">
-                                                            <option value="" disabled selected>Selecciona un Colaborador</option>
-                                                            <?php echo $idColaborador; ?>
-                                                        </select>
-                                                    </div>
-                                                    <span id="availability_1_"></span>
-                                                </div>
-
-                                                <div class="form-group col-md-12">
-                                                    <label class="control-label col-md-12 col-sm-3 col-xs-12" for="motivo_">Motivo del Acta Administrativa<span class="required">*</span></label>
-                                                    <div class="col-md-12 col-sm-6 col-xs-12">
-                                                        <select class="form-control" name="motivo_" id="motivo_">
-                                                            <option value="" disabled selected>Selecciona un Motivo del Acta Administrativa</option>
-                                                            <?php echo $idMotivoActa; ?>
-                                                        </select>
-                                                    </div>
-                                                    <span id="availability_2_"></span>
-                                                </div>
-
-                                                <div class="form-group col-md-12">
-                                                    <label class="control-label col-md-12 col-sm-3 col-xs-12" for="otro_">Resumen del Acta Administrativa</label>
-                                                    <div class="col-md-12 col-sm-6 col-xs-12">
-                                                        <textarea class="form-control" name="otro_" id="otro_" style="text-transform:uppercase;" onkeyup="javascript:this.value=this.value.toUpperCase();" placeholder="Detalle a Resumen breve lo sucedido"></textarea>
-                                                    </div>
-                                                    <span id="availability_3_"></span>
-                                                </div>
-
-                                                <div class="form-group col-md-12">
-                                                    <label class="control-label col-md-12 col-sm-3 col-xs-12" for="file_">Archivo Escaneado con Firmas de los Representantes e Implicados</label>
-                                                    <div class="col-md-12 col-sm-6 col-xs-12">
-                                                        <input type="file" accept="application/pdf" class="form-control" id="file_" name="file_">
-                                                    </div>
-                                                    <span id="availability_4_"></span>
-                                                </div>
-
-                                                <br>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                </form>
-
-                                <br>
-                                <div class="row">
-                                    <div class="col-md-6">
-                                        <div class="col-md-6">
-                                            Espacio máximo
-                                        </div>
-                                        <div class="col-md-6">
-                                            783.0 KB
-                                        </div>
-                                    </div>
-                                    <div class="col-md-6">
-                                        <button type="submit" name="btn_Validar_Acta" id="btn_Validar_Acta"
-                                                class="btn btn-primary btn-block" onclick="onSubmitFormReporteActa()">Terminar Registro
-                                        </button>
-                                    </div>
-                                </div>
-
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div> -->
-    <?php echo $footer; ?>
+    <div class="fixed-bottom navbar-dark">
+        <!-- <a class="navbar-brand" href="#!">Footer</a> -->
+        <?php echo $footer; ?>
+    </div>
+    
 </main>
 
 
