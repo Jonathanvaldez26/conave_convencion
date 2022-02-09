@@ -1,4 +1,5 @@
 <?php echo $header; ?>
+        <link id="pagestyle" href="/assets/css/soft-ui-dashboard.css?v=1.0.5" rel="stylesheet" />
 <main class="main-content position-relative max-height-vh-100 h-100 border-radius-lg ">
     <!-- Navbar -->
     <nav class="navbar navbar-main navbar-expand-lg position-sticky mt-4 top-1 px-0 mx-4 shadow-none border-radius-xl z-index-sticky" id="navbarBlur" data-scroll="true">
@@ -110,11 +111,17 @@
                                 </div>
                             </div>
                         </div>
+
+                        <div>
+                            <div class="choices" data-type="select-one" hidden tabindex="0" role="combobox" aria-autocomplete="list" aria-haspopup="true" aria-expanded="false"><div class="choices__inner">
+                                <select class="choices__input choices__input--cloned form -control choices__list" aria-expanded="false" name="choices-button" id="choices-button" placeholder="Genero" hidden="" tabindex="-1" data-choice="active"><option value="Male">Hombre</option></select><div class="choices__list choices__list--single"><div class="choices__item choices__item--selectable" data-item="" data-id="1" data-value="Male" data-custom-properties="null" aria-selected="true">Hombre</div></div></div><div class="choices__list choices__list--dropdown" aria-expanded="false"><input type="text" class="choices__input choices__input--cloned" autocomplete="off" autocapitalize="off" spellcheck="false" role="textbox" aria-autocomplete="list" aria-label="false" placeholder=""><div class="choices__list" role="listbox"><div id="choices--choices-button-item-choice-1" class="choices__item choices__item--choice is-selected choices__item--selectable is-highlighted" role="option" data-choice="" data-id="1" data-value="Male" data-select-text="Press to select" data-choice-selectable="" aria-selected="true">Hombre</div><div id="choices--choices-button-item-choice-2" class="choices__item choices__item--choice choices__item--selectable" role="option" data-choice="" data-id="2" data-value="Male" data-select-text="Press to select" data-choice-selectable="">Mujer</div><div id="choices--choices-button-item-choice-3" class="choices__item choices__item--choice choices__item--selectable" role="option" data-choice="" data-id="3" data-value="Male" data-select-text="Press to select" data-choice-selectable="">Otro</div></div></div>
+                            </div>
+                        </div>
+
                         <div class="row">
-                            <div class="col-sm-4 col-6">
-                                                                                
+                            <div class="col-sm-4 col-6">                                      
                                 <label class="form-label mt-4">Me identifico como: *</label>
-                                <select class="form-control" name="choices-button" id="choices-button" placeholder="Genero" >
+                                <select class="form-control" style="cursor: pointer;" name="choices-button" id="choices-button" placeholder="Genero" >
                                     <option value="Male">Hombre</option>
                                     <option value="Male">Mujer</option>
                                     <option value="Male">Otro</option>
@@ -124,7 +131,7 @@
                                 <div class="row">
                                     <div class="col-sm-5 col-5">
                                         <label class="form-label mt-4">Fecha de Nacimiento *</label>
-                                        <select class="form-control" name="choices-button" id="choices-button" placeholder="Mes" >
+                                        <select class="form-control" style="cursor: pointer;" name="choices-button" id="choices-button" placeholder="Mes" >
                                             <option value="Male">Enero</option>
                                             <option value="Male">Febrero</option>
                                             <option value="Male">Marzo</option>
@@ -132,7 +139,7 @@
                                     </div>
                                     <div class="col-sm-4 col-3">
                                         <label class="form-label mt-4">&nbsp;</label>
-                                        <select class="form-control choices__inner" name="choices-day" id="choices-day" tabindex="-1" data-choice="active">
+                                        <select class="form-control choices__inner" style="cursor: pointer;" name="choices-day" id="choices-day" tabindex="-1" data-choice="active">
                                             <option value="1">1</option>
                                             <option value="2">2</option>
                                             <option value="3">3</option>
@@ -146,7 +153,7 @@
                                     </div>
                                     <div class="col-sm-3 col-4">
                                         <label class="form-label mt-4">&nbsp;</label>
-                                        <select class="form-control" name="choices-year" id="choices-year" data-choice="active">
+                                        <select class="form-control" style="cursor: pointer;" name="choices-year" id="choices-year" data-choice="active">
                                             <option value="1991">1991</option>
                                             <option value="1992">1992</option>
                                             <option value="1993">1993</option>
@@ -173,14 +180,35 @@
                         <div class="row">
                             <div class="col-md-6 align-self-center">
                                 <label class="form-label mt-4">Pertenezco a la Línea ASOFARMA</label>
-                                <div class="choices" data-type="select-one" tabindex="0" role="combobox" aria-autocomplete="list" aria-haspopup="true" aria-expanded="false"><div class="choices__inner">
-                                        <select class="form-control choices__input" name="choices-language" id="choices-language" hidden="" tabindex="-1" data-choice="active">
-                                            <option value="English"></option>
-                                        </select><div class="choices__list choices__list--single"><div class="choices__item choices__item--selectable" data-item="" data-id="1" data-value="English" data-custom-properties="null" aria-selected="true">ASOFEM</div></div></div><div class="choices__list choices__list--dropdown" aria-expanded="false"><input type="text" class="choices__input choices__input--cloned" autocomplete="off" autocapitalize="off" spellcheck="false" role="textbox" aria-autocomplete="list" aria-label="false" placeholder=""><div class="choices__list" role="listbox"><div id="choices--choices-language-item-choice-1" class="choices__item choices__item--choice is-selected choices__item--selectable is-highlighted" role="option" data-choice="" data-id="1" data-value="English" data-select-text="Press to select" data-choice-selectable="" aria-selected="true">English</div><div id="choices--choices-language-item-choice-2" class="choices__item choices__item--choice choices__item--selectable" role="option" data-choice="" data-id="2" data-value="French" data-select-text="Press to select" data-choice-selectable="">French</div><div id="choices--choices-language-item-choice-3" class="choices__item choices__item--choice choices__item--selectable" role="option" data-choice="" data-id="3" data-value="Spanish" data-select-text="Press to select" data-choice-selectable="">Spanish</div></div></div></div>
+                                <select class="form-control" style="cursor: pointer;" name="choices-linea" id="choices-linea" tabindex="-1" data-choice="active">
+                                    <option value="asofem">ASOFEM</option>
+                                </select>
                             </div>
                             <div class="col-md-6">
                                 <label class="form-label mt-4">Alergias</label>
-                                <div class="choices" data-type="text" aria-haspopup="true" aria-expanded="false"><div class="choices__inner"><input class="form-control choices__input" id="choices-skills" type="text" value="vuejs,angular,react" placeholder="Enter something" hidden="" tabindex="-1" data-choice="active" onfocus="focused(this)" onfocusout="defocused(this)"><div class="choices__list choices__list--multiple"><div class="choices__item choices__item--selectable" data-item="" data-id="1" data-value="vuejs" data-custom-properties="null" aria-selected="true" data-deletable="">Leche<button type="button" class="choices__button" aria-label="Remove item: 'vuejs'" data-button="">Remove item</button></div><div class="choices__item choices__item--selectable" data-item="" data-id="2" data-value="angular" data-custom-properties="null" aria-selected="true" data-deletable="">Polen<button type="button" class="choices__button" aria-label="Remove item: 'angular'" data-button="">Remove item</button></div><div class="choices__item choices__item--selectable" data-item="" data-id="3" data-value="react" data-custom-properties="null" aria-selected="true" data-deletable="">Huevo<button type="button" class="choices__button" aria-label="Remove item: 'react'" data-button="">Remove item</button></div></div><input type="text" class="choices__input choices__input--cloned" autocomplete="off" autocapitalize="off" spellcheck="false" role="textbox" aria-autocomplete="list" aria-label="false"></div><div class="choices__list choices__list--dropdown" aria-expanded="false"></div></div>
+                                <input class="form-control" id="choices-tags" data-color="dark" type="text" value="Leche, Polen, Huevo" placeholder="Enter something" />
+                                <!-- <div class="choices" data-type="text" aria-haspopup="true" aria-expanded="false">
+                                    <div class="choices__inner">
+                                        <input class="form-control choices__input" id="choices-skills" type="text" value="vuejs,angular,react" placeholder="Enter something" hidden="" tabindex="-1" data-choice="active" onfocus="focused(this)" onfocusout="defocused(this)">
+                                        <div class="choices__list choices__list--multiple">
+                                            <div class="choices__item choices__item--selectable" data-item="" data-id="1" data-value="vuejs" data-custom-properties="null" aria-selected="true" data-deletable="">
+                                                Leche
+                                                <button type="button" class="choices__button" aria-label="Remove item: 'vuejs'" data-button="">Remove item</button>
+                                            </div>
+                                            <div class="choices__item choices__item--selectable" data-item="" data-id="2" data-value="angular" data-custom-properties="null" aria-selected="true" data-deletable="">
+                                                Polen
+                                                <button type="button" class="choices__button" aria-label="Remove item: 'angular'" data-button="">Remove item</button>
+                                            </div>
+                                            <div class="choices__item choices__item--selectable" data-item="" data-id="3" data-value="react" data-custom-properties="null" aria-selected="true" data-deletable="">
+                                                Huevo
+                                                <button type="button" class="choices__button" aria-label="Remove item: 'react'" data-button="">Remove item</button>
+                                            </div>
+                                        </div>
+                                        <input type="text" class="choices__input choices__input--cloned" autocomplete="off" autocapitalize="off" spellcheck="false" role="textbox" aria-autocomplete="list" aria-label="false"></div>
+                                        <div class="choices__list choices__list--dropdown" aria-expanded="false">
+
+                                        </div>
+                                    </div> -->
                             </div>
                         </div>
                     </div>

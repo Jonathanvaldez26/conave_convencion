@@ -33,6 +33,7 @@ class Vaccination extends Controller{
         }
       </style>
 html;
+
       View::set('header',$this->_contenedor->header($extraHeader));
       View::set('footer',$this->_contenedor->footer($extraFooter));
       View::render("proof_vacination_all");
