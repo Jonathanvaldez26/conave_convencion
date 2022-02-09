@@ -741,7 +741,7 @@ echo $header;
                                                                                 <div class="row">
                                                                                     <div class="col-sm-6 col-5">
                                                                                         <label class="form-label mt-4">Fecha de Nacimiento *</label>
-<<<<<<< HEAD
+
                                                                                             <select class="form-control" name="choices-button" id="choices-button" placeholder="Mes" >
                                                                                                 <option value="Male">Enero</option>
                                                                                                 <option value="Male">Febrero</option>
@@ -749,15 +749,14 @@ echo $header;
                                                                                             </select>
 
                                                                                         <!--
-=======
                                                                                         <select class="form-control" style="cursor: pointer;" name="choices-month" id="choices-month" tabindex="-1" data-choice="active" placeholder="Mes" >
                                                                                             <option value="Male">Enero</option>
                                                                                             <option value="Male">Febrero</option>
                                                                                             <option value="Male">Marzo</option>
                                                                                         </select>
                                                                                         
-                                                                                        <!--  NO BORRAR PARA FUTURAS REFERENCIAS DE ESTILO
->>>>>>> aaa6eab371f0bd5a354f7fb836d52206d9874e5a
+                                                                                        NO BORRAR PARA FUTURAS REFERENCIAS DE ESTILO
+
                                                                                             <div class="choices__list choices__list--dropdown" aria-expanded="false">
                                                                                                 <input type="text" class="choices__input choices__input--cloned" autocomplete="off" autocapitalize="off" spellcheck="false" role="textbox" aria-autocomplete="list" aria-label="false" placeholder="">
                                                                                                 <div class="choices__list" role="listbox">
@@ -783,7 +782,6 @@ echo $header;
                                                                                             <option value="8">8</option>
                                                                                             <option value="9">9</option>
                                                                                         </select>
-<<<<<<< HEAD
 
                                                                                             <!-- <div class="choices__inner">
                                                                                                 <select class="form-control choices__input" name="choices-day" id="choices-day" hidden="" tabindex="-1" data-choice="active">
@@ -808,8 +806,7 @@ echo $header;
                                                                                                 </div>
                                                                                             </div>
                                                                                         </div>-->
-=======
->>>>>>> aaa6eab371f0bd5a354f7fb836d52206d9874e5a
+
                                                                                     </div>
                                                                                     <div class="col-sm-3 col-4">
                                                                                         <label class="form-label mt-4">&nbsp;</label>
