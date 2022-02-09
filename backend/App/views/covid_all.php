@@ -23,7 +23,7 @@
                         </a>
                     </li>
                     <li class="breadcrumb-item text-sm"><a class="opacity-5 text-dark" href="/Home/">Inicio</a></li>
-                    <li class="breadcrumb-item text-sm"><a class="opacity-5 text-dark" href="javascript:;" disabled>Mis Comprobantes de Vacunación</a></li>
+                    <li class="breadcrumb-item text-sm"><a class="opacity-5 text-dark" href="javascript:;" disabled>Mis Pruebas Covid</a></li>
                 </ol>
             </nav>
 
@@ -81,6 +81,7 @@
                                         <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Estatus</th>
                                         <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Tipo de Prueba</th>
                                         <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Resultado</th>
+                                        <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Documento</th>
                                     </tr>
                                     </thead>
                                     <tbody>
@@ -135,9 +136,9 @@
                 </div>
                 <div class="modal-header">
                     <h6>
-                    <label id="fecha_actual"><?php echo $fechaActual; ?></label>
-                    <br>    
-                    Por su seguridad y la de las demás personas, le pedimos que nos proporcione la Información siguiente para comprobar que no este contagiado de COVID.
+                        <label id="fecha_actual"><?php echo $fechaActual; ?></label>
+                        <br>    
+                        Por su seguridad y la de las demás personas, le pedimos que nos proporcione la Información siguiente para comprobar que no este contagiado de COVID.
                     </h6>
                 </div>
 
@@ -200,6 +201,25 @@
             </div>
         </div>
     </div>
+
+    <!-- MODAL VISTA - DOCUMENTO -->
+    <div class="modal fade" id="ver-documento" tabindex="-1" role="dialog" aria-labelledby="ver-documento" aria-hidden="true">
+        <div class="modal-dialog" role="document" style="max-width: 590px;">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Documento de vacunación</h5>
+                    <span type="button" class="btn btn-dark" data-dismiss="modal" aria-label="Close">
+                        X
+                    </span>
+                </div>
+                <?php echo $iframe_doc; ?>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-danger" data-dismiss="modal">Cerrar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <div class="fixed-bottom navbar-dark">
         <!-- <a class="navbar-brand" href="#!">Footer</a> -->
         <?php echo $footer; ?>

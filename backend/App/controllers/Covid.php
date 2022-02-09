@@ -79,6 +79,15 @@ html;
               </div>
             </div>
           </td>
+          <td>
+          <div class="text-center">
+              <div class="d-flex flex-column justify-content-center" style="text-transform: capitalize;">
+                <button type="button" class="btn btn-outline-primary btn-sm" data-toggle="modal" data-target="#ver-documento">
+                  Ver documento
+                </button>
+              </div>
+            </div>
+          </td>
         </tr>
 html;
       }
@@ -86,6 +95,14 @@ html;
      
 html;
 
+      $iframe_doc = <<<html
+        <div class="modal-body">
+          <iframe src="/assets/pdf/{$prueba['documento']}" style="width:100%; height:460px;" frameborder="0" >
+          </iframe>
+        </div>
+html;
+      
+      View::set('iframe_doc',$iframe_doc);
       View::set('tabla',$tabla);
       View::set('fechaActual',$fechaActual);
       View::set('header',$this->_contenedor->header($extraHeader));
