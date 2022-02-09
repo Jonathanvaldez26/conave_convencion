@@ -587,12 +587,12 @@ echo $header;
                                                 <div class="row">
                                                     <div class="col-12 col-lg-12 mx-auto my-4">
                                                         <div class="multisteps-form__progress">
-                                                            <button class="multisteps-form__progress-btn js-active" type="button" title="User Info">
+                                                            <button class="multisteps-form__progress-btn js-active" type="button" title="Crear cuenta">
                                                                 <span>Crear cuenta</span>
                                                             </button>
-                                                            <button class="multisteps-form__progress-btn" type="button" title="Address">Verificar email</button>
-                                                            <button class="multisteps-form__progress-btn" type="button" title="Address">Mis Datos</button>
-                                                            <button class="multisteps-form__progress-btn" type="button" title="Socials">Crear contraseña</button>
+                                                            <button class="multisteps-form__progress-btn" type="button" title="Verificar">Verificar email</button>
+                                                            <button class="multisteps-form__progress-btn" type="button" title="Mis Datos">Mis Datos</button>
+                                                            <button class="multisteps-form__progress-btn" type="button" title="Contraseña">Crear contraseña</button>
                                                             <!--<button class="multisteps-form__progress-btn" type="button" title="Profile">Profile</button>-->
                                                         </div>
                                                     </div>

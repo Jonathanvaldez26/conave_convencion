@@ -58,79 +58,83 @@
             <div class="col-lg-2">
             </div>
             <div class="card col-lg-8 mt-lg-0 mt-6" >
-            <div class="card-header pb-0 p-3">
-                <h6 class="mb-1">Comprobantes de Vacunación</h6>
-                <p class="text-sm">Registraste 3 Dosis de Vacuna</p>
-            </div>
-            <div class="card-body p-3">
-                <div class="row">
-                    <div class="col-xl-4 col-md-6 mb-xl-0 mb-4">
-                        <div class="card card-blog card-plain">
-                            <div class="position-relative">
-                                <a class="d-block shadow-xl border-radius-xl">
-                                    <img src="../../../assets/img/comprobante1.jpeg" alt="img-blur-shadow" class="img-fluid shadow border-radius-xl">
-                                </a>
-                            </div>
-                            <div class="card-body px-1 pb-0">
-                                <p class="text-gradient text-dark mb-2 text-sm">Comprobante de Vacunación #1</p>
-                                <a href="javascript:;">
-                                    <h5>
-                                        AstraZeneca
-                                    </h5>
-                                </a>
-                                <p class="mb-4 text-sm">
-                                    Subiste este documento <br>el 27/01/2022 10:25 a.m.
-                                </p>
-                                <div class="d-flex align-items-center justify-content-between">
-                                    <button type="button" class="btn btn-outline-danger btn-sm mb-0">Ver cOnprobante</button>
+                <div class="card-header pb-0 p-3">
+                    <h6 class="mb-1">Comprobantes de Vacunación</h6>
+                    <p class="text-sm">Registraste 3 Dosis de Vacuna</p>
+                </div>
+                <div class="card-body p-3">
+                    <div class="row">
+                        <div class="col-xl-4 col-md-6 mb-xl-0 mb-4">
+                            <div class="card card-blog card-plain">
+                                <div class="position-relative">
+                                    <a class="d-block shadow-xl border-radius-xl">
+                                        <img src="../../../assets/img/comprobante1.jpeg" alt="img-blur-shadow" class="img-fluid shadow border-radius-xl">
+                                    </a>
+                                </div>
+                                <div class="card-body px-1 pb-0">
+                                    <p class="text-gradient text-dark mb-2 text-sm">Comprobante de Vacunación #1</p>
+                                    <a href="javascript:;">
+                                        <h5>
+                                            AstraZeneca
+                                        </h5>
+                                    </a>
+                                    <p class="mb-4 text-sm">
+                                        Subiste este documento <br>el 27/01/2022 10:25 a.m.
+                                    </p>
+                                    <div class="d-flex align-items-center justify-content-between">
+                                        <button type="button" class="btn btn-outline-danger btn-sm mb-0" data-toggle="modal" data-target="#ver-comprobante">
+                                            Ver comprobante
+                                        </button>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="col-xl-4 col-md-6 mb-xl-0 mb-4">
-                        <div class="card card-blog card-plain">
-                            <div class="position-relative">
-                                <a class="d-block shadow-xl border-radius-xl">
-                                    <img src="../../../assets/img/comprobante2.jpeg" alt="img-blur-shadow" class="img-fluid shadow border-radius-lg">
-                                </a>
-                            </div>
-                            <div class="card-body px-1 pb-0">
-                                <p class="text-gradient text-dark mb-2 text-sm">Comprobante de Vacunación #2</p>
-                                <a href="javascript:;">
-                                    <h5>
-                                        AstraZeneca
-                                    </h5>
-                                </a>
-                                <p class="mb-4 text-sm">
-                                    Subiste este documento <br>el 27/01/2022 10:32 a.m.
-                                </p>
-                                <div class="d-flex align-items-center justify-content-between">
-                                    <button type="button" class="btn btn-outline-danger btn-sm mb-0">Ver Comprobante</button>
+                        <div class="col-xl-4 col-md-6 mb-xl-0 mb-4">
+                            <div class="card card-blog card-plain">
+                                <div class="position-relative">
+                                    <a class="d-block shadow-xl border-radius-xl">
+                                        <img src="../../../assets/img/comprobante2.jpeg" alt="img-blur-shadow" class="img-fluid shadow border-radius-lg">
+                                    </a>
+                                </div>
+                                <div class="card-body px-1 pb-0">
+                                    <p class="text-gradient text-dark mb-2 text-sm">Comprobante de Vacunación #2</p>
+                                    <a href="javascript:;">
+                                        <h5>
+                                            AstraZeneca
+                                        </h5>
+                                    </a>
+                                    <p class="mb-4 text-sm">
+                                        Subiste este documento <br>el 27/01/2022 10:32 a.m.
+                                    </p>
+                                    <div class="d-flex align-items-center justify-content-between">
+                                        <button type="button" class="btn btn-outline-danger btn-sm mb-0">Ver Comprobante</button>
 
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="col-xl-4 col-md-6 mb-xl-0 mb-4">
-                        <div class="card card-blog card-plain">
-                            <div class="position-relative">
-                                <a class="d-block shadow-xl border-radius-xl">
-                                    <img src="../../../assets/img/rechazo.jpeg" alt="img-blur-shadow" class="img-fluid shadow border-radius-xl">
-                                </a>
-                            </div>
-                            <div class="card-body px-1 pb-0">
-                                <p class="text-gradient text-dark mb-2 text-sm">Fecha Límite de Carga 01/04/2022</p>
-                                <a href="javascript:;">
-                                    <h5>
-                                        Comprobante Rechazado
-                                    </h5>
-                                </a>
-                                <p class="mb-4 text-sm">
-                                    Sube un nuevo comprobante, este fue rechazado por inconsistencias.
-                                </p>
-                                <div class="d-flex align-items-center justify-content-between">
-                                    <button type="button" class="btn btn-outline-danger btn-sm mb-0">Subir mi Archivo</button>
-
+                        <div class="col-xl-4 col-md-6 mb-xl-0 mb-4">
+                            <div class="card card-blog card-plain">
+                                <div class="position-relative">
+                                    <a class="d-block shadow-xl border-radius-xl">
+                                        <img src="../../../assets/img/rechazo.jpeg" alt="img-blur-shadow" class="img-fluid shadow border-radius-xl">
+                                    </a>
+                                </div>
+                                <div class="card-body px-1 pb-0">
+                                    <p class="text-gradient text-dark mb-2 text-sm">Fecha Límite de Carga 01/04/2022</p>
+                                    <a href="javascript:;">
+                                        <h5>
+                                            Comprobante Rechazado
+                                        </h5>
+                                    </a>
+                                    <p class="mb-4 text-sm">
+                                        Sube un nuevo comprobante, este fue rechazado por inconsistencias.
+                                    </p>
+                                    <div class="d-flex align-items-center justify-content-between">
+                                        <button type="button" class="btn btn-outline-danger btn-sm mb-0" data-toggle="modal" data-target="#subir-comprobante">
+                                            Subir Comprobante
+                                        </button>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -138,7 +142,65 @@
                 </div>
             </div>
         </div>
+        
+        <!-- MODAL VISTA - COMPROBANTE -->
+        <div class="modal fade" id="ver-comprobante" tabindex="-1" role="dialog" aria-labelledby="ver-comprobante" aria-hidden="true">
+            <div class="modal-dialog" role="document" style="max-width: 590px;">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Comprobante de vacunación</h5>
+                        <span type="button" class="btn btn-dark" data-dismiss="modal" aria-label="Close">
+                            X
+                        </span>
+                    </div>
+                    <!-- <div class="modal-header">
+                        <p>Por su seguridad y la de las demás personas, le pedimos que nos proporcione la Información siguiente para comprobar que no este contagiado de COVID.</p>
+                    </div> -->
+                    <div class="modal-body">
+                        <iframe src="/assets/pdf/pdf-prueba.pdf" 
+                            style="width:100%; height:700px;" frameborder="0" >
+                        </iframe>
+                    </div>
+                    <div class="modal-footer">
+                       <button type="button" class="btn btn-danger" data-dismiss="modal">Cerrar</button>
+                    </div>
+                </div>
+            </div>
         </div>
+
+        <!-- MODAL SUBIR COMPROBANTE -->
+        <div class="modal fade" id="subir-comprobante" tabindex="-1" role="dialog" aria-labelledby="subir-comprobante" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Agregue su Comprobante de Vacuncación</h5>
+                    <span type="button" class="btn btn-ligth" data-dismiss="modal" aria-label="Close">
+                        X
+                    </span>
+                </div>
+                <div class="modal-body">
+                    <form method="POST" enctype="multipart/form-data" id="form_reportes_acta">
+                        <div class="form-group row">
+                            <div class="row">
+                                <div class="form-group col-md-12">
+                                    <label class="control-label col-md-12 col-sm-3 col-xs-12" for="file_">Archivocon información en comprobante de vacunación: <span class="required">*</span></label>
+                                    <div class="col-md-12 col-sm-6 col-xs-12">
+                                        <input type="file" accept="application/pdf" class="form-control" id="file_" name="file_">
+                                    </div>
+                                    <span id="availability_4_"></span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="submit" class="btn btn-dark">Aceptar</button>
+                            <button type="button" class="btn btn-danger" data-dismiss="modal">Cancelar</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
     </div>
     <?php echo $footer; ?>
 </main>

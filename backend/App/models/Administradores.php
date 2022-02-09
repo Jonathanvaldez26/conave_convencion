@@ -12,17 +12,17 @@ class Administradores implements Crud{
     public static function getAll(){
       $mysqli = Database::getInstance();
       $query=<<<sql
-SELECT a.administrador_id, a.nombre, a.usuario, a.perfil_id, a.descripcion, a.status, s.nombre AS nombre_status, p.nombre AS nombre_perfil, a.identificador, cp.nombre AS nombre_planta,
-per.permisos_globales, per.seccion_empresas, per.seccion_plantas, per.seccion_horarios, per.seccion_departamentos, per.seccion_ubicaciones,
-per.seccion_lectores, per.seccion_dias_festivos, per.seccion_motivo_bajas, per.seccion_incidencias, per.seccion_puestos, per.seccion_incentivos, per.seccion_colaboradores,
-per.seccion_incentivosadd, per.seccion_periodo, per.seccion_registro_incidencias, per.seccion_resumen, per.seccion_prorrateo
-FROM utilerias_administradores AS a
-INNER JOIN utilerias_permisos AS per ON (a.usuario = per.usuario)
-INNER JOIN catalogo_status AS s ON (a.status = s.catalogo_status_id)
-INNER JOIN catalogo_planta AS cp USING (catalogo_planta_id)
-INNER JOIN utilerias_perfiles AS p ON(a.perfil_id = p.perfil_id)
-WHERE a.usuario = per.usuario AND a.status = 1
-sql;
+      SELECT a.administrador_id, a.nombre, a.usuario, a.perfil_id, a.descripcion, a.status, s.nombre AS nombre_status, p.nombre AS nombre_perfil, a.identificador, cp.nombre AS nombre_planta,
+      per.permisos_globales, per.seccion_empresas, per.seccion_plantas, per.seccion_horarios, per.seccion_departamentos, per.seccion_ubicaciones,
+      per.seccion_lectores, per.seccion_dias_festivos, per.seccion_motivo_bajas, per.seccion_incidencias, per.seccion_puestos, per.seccion_incentivos, per.seccion_colaboradores,
+      per.seccion_incentivosadd, per.seccion_periodo, per.seccion_registro_incidencias, per.seccion_resumen, per.seccion_prorrateo
+      FROM utilerias_administradores AS a
+      INNER JOIN utilerias_permisos AS per ON (a.usuario = per.usuario)
+      INNER JOIN catalogo_status AS s ON (a.status = s.catalogo_status_id)
+      INNER JOIN catalogo_planta AS cp USING (catalogo_planta_id)
+      INNER JOIN utilerias_perfiles AS p ON(a.perfil_id = p.perfil_id)
+      WHERE a.usuario = per.usuario AND a.status = 1
+      sql;
         return $mysqli->queryAll($query);
     }
 
