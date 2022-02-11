@@ -49,7 +49,7 @@ html;
         {
             $status.=<<<html
             <span class="badge badge-sm badge-secondary">En Espera a Validar</span>
-            html;
+html;
         }
 
         $tabla.=<<<html
