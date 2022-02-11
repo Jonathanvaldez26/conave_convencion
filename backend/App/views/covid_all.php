@@ -143,7 +143,7 @@
                 </div>
 
                 <div class="modal-body">
-                    <form method="POST" enctype="multipart/form-data" id="form_reportes_acta">
+                    <form method="POST" enctype="multipart/form-data" id="form_prueba_covid">
                         <div class="form-group row">
                             <div class="row">
                                 <div class="col-md-6">
@@ -157,10 +157,10 @@
                                 </div>
                                 <div class="col-md-6">
                                     <div class="form-group col-md-12">
-                                        <label class="control-label col-md-12 col-sm-3 col-xs-12" for="fecha_">Tipo de Prueba<span class="required">*</span></label>
+                                        <label class="control-label col-md-12 col-sm-3 col-xs-12" for="tipo_prueba_">Tipo de Prueba<span class="required">*</span></label>
                                         <div class="col-md-12 col-sm-12 col-xs-12">
                                             <!-- <input type="date" name="fecha_" id="fecha_" class="form-control col-md-7 col-xs-12"> -->
-                                            <select class="form-control" name="tipo-prueba" id="tipo-prueba">
+                                            <select class="form-control" name="tipo_prueba_" id="tipo_prueba_">
                                                 <option selected>Seleccione Un Tipo</option>
                                                 <option value="antigeno">Antigeno</option>
                                             </select>
@@ -173,7 +173,7 @@
                                         <label class="control-label col-md-12 col-sm-12 col-xs-12" for="fecha_">Resultado<span class="required">*</span></label>
                                         <div class="col-md-12 col-sm-12 col-xs-12">
                                             <!-- <input type="date" name="fecha_" id="fecha_" class="form-control col-md-7 col-xs-12"> -->
-                                            <select class="form-control" name="tipo-prueba" id="tipo-prueba">
+                                            <select class="form-control" name="resultado_" id="resultado_">
                                                 <option selected>Seleccione Un Resultado</option>
                                                 <option value="positivo">Positivo</option>
                                                 <option value="negativo">Negativo</option>
@@ -190,9 +190,10 @@
                                     <span id="availability_4_"></span>
                                 </div>
                             </div>
+                            <input type="text" id="user_" name="user_" value="<?=$_SESSION["usuario"]?>">
                         </div>
                         <div class="modal-footer">
-                            <button type="submit" class="btn btn-success">Aceptar</button>
+                            <button type="submit" class="btn btn-success" id="btn_upload" name="btn_upload">Aceptar</button>
                             <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
                         </div>
                     </form>
@@ -227,6 +228,57 @@
     
 </main>
 
+<script>
+        $( document ).ready(function() {
+
+            $("#form_prueba_covid").on("submit",function(event){
+                event.preventDefault();
+                
+                    var formData = new FormData(document.getElementById("form_prueba_covid"));
+                    console.log(formData);
+                    $.ajax({
+                        url:"/Covid/uploadPrueba",
+                        type: "POST",
+                        data: formData,
+                        cache: false,
+                        contentType: false,
+                        processData: false,
+                        beforeSend: function(){
+                        console.log("Procesando....");
+
+                    
+                    },
+                    success: function(respuesta){
+                        
+                        
+                        if(respuesta == 'success'){
+                           // $('#modal_payment_ticket').modal('toggle');
+                            Swal.fire(
+                                'OK',
+                                'Se ha guardado tu la prueba correctamente!!',
+                                'success'
+                            )
+
+                            
+                            
+                            
+                        }
+                        
+                        console.log(respuesta);
+
+                    },
+                    error:function (respuesta)
+                    {
+                        console.log(respuesta);
+                    }
+
+                });
+            });
+
+        });
+         
+    
+    </script>
 
 
 
