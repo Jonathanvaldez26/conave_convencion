@@ -87,7 +87,7 @@
                                 <i class="fas fa-ellipsis-v" aria-hidden="true"></i>
                             </a>
                             <ul class="dropdown-menu dropdown-menu-end me-sm-n4 px-2 py-3" aria-labelledby="dropdownCam">
-                                <li><a class="dropdown-item border-radius-md" href="javascript:;">Mis cenas</a></li>
+                                <li><a class="dropdown-item border-radius-md" href="/Dinners/">Mis cenas</a></li>
                                 <li><a class="dropdown-item border-radius-md" href="javascript:;">Reservar cena para mi y mis amigos</a></li>
 
                                 <li>
@@ -99,16 +99,16 @@
                     </div>
                     <div class="card-body p-3 mt-2">
                         <div class="tab-content" id="v-pills-tabContent">
-                            <div class="tab-pane fade show position-relative active height-400 border-radius-lg" id="cam1" role="tabpanel" aria-labelledby="cam1" style="background-image: url('../../assets/img/miercoles.jpeg'); background-size:cover;">
+                            <div class="tab-pane fade show position-relative active height-700 border-radius-lg" id="cam1" role="tabpanel" aria-labelledby="cam1" style="background-image: url('../../assets/img/miercoles.jpeg'); background-size:cover;">
 
                             </div>
-                            <div class="tab-pane fade position-relative height-400 border-radius-lg" id="cam2" role="tabpanel" aria-labelledby="cam2" style="background-image: url('../../assets/img/jueves.jpeg'); background-size:cover;">
+                            <div class="tab-pane fade position-relative height-700 border-radius-lg" id="cam2" role="tabpanel" aria-labelledby="cam2" style="background-image: url('../../assets/img/jueves.jpeg'); background-size:cover;">
 
                             </div>
-                            <div class="tab-pane fade position-relative height-400 border-radius-lg" id="cam3" role="tabpanel" aria-labelledby="cam3" style="background-image: url('../../assets/img/viernes.jpeg'); background-size:cover;">
+                            <div class="tab-pane fade position-relative height-700 border-radius-lg" id="cam3" role="tabpanel" aria-labelledby="cam3" style="background-image: url('../../assets/img/viernes.jpeg'); background-size:cover;">
 
                             </div>
-                            <div class="tab-pane fade position-relative height-400 border-radius-lg" id="cam4" role="tabpanel" aria-labelledby="cam3" style="background-image: url('../../assets/img/sabado.jpeg'); background-size:cover;">
+                            <div class="tab-pane fade position-relative height-700 border-radius-lg" id="cam4" role="tabpanel" aria-labelledby="cam3" style="background-image: url('../../assets/img/sabado.jpeg'); background-size:cover;">
 
                             </div>
                         </div>
@@ -200,7 +200,7 @@
                                 <div class="col-12 text-end">
                                     <img class="w-30" src="../../assets/img/small-logos/asofarma_cenas.png">
                                 </div>
-                                <h6 class="mb-0 font-weight-bolder"><a href="#">Cenas</a></h6>
+                                <h6 class="mb-0 font-weight-bolder"><a href="/Dinners/">Cenas</a></h6>
                                 <p class="opacity-8 mb-0 text-sm">Reserva y disfruta</p>
                             </div>
                         </div>

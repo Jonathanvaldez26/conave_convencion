@@ -63,7 +63,7 @@
                                 <div class="card-body position-relative z-index-1 h-100 p-3">
                                     <h6 class="text-white font-weight-bolder mb-3">Hey Dr. Carlos Cruz Sánchez</h6>
                                     <p class="text-white mb-3">Los boletos estarán disponibles en todo momento con días de anticipación, una vez tengamos tus comprobantes de vacunación y tu prueba Covid.</p>
-                                    <a class="btn btn-round btn-outline-white mb-0" href="javascript:;">
+                                    <a class="btn btn-round btn-outline-white mb-0" href="https://api.whatsapp.com/send?phone=+5215627307605&text=¡Hola, necesito ayuda con mis pases de abordar!">
                                         ¡QUIERO CONTACTAR A SOPORTE!
                                         <i class="fas fa-arrow-right text-sm ms-1" aria-hidden="true"></i>
                                     </a>
