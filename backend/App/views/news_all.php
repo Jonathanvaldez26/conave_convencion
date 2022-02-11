@@ -1,28 +1,4 @@
-<!-- Basic Page Needs
-================================================== -->
-<meta charset="utf-8">
 
-<!-- Mobile Specific Metas
-================================================== -->
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="description" content="Bootstrap App Landing Template">
-<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
-<meta name="author" content="Themefisher">
-<meta name="generator" content="Themefisher Small Apps Template v1.0">
-
-<!-- Favicon -->
-<link rel="shortcut icon" type="image/x-icon" href="images/favicon.png" />
-
-<!-- PLUGINS CSS STYLE -->
-<link rel="stylesheet" href="public/assets_news/plugins/bootstrap/bootstrap.min.css">
-<link rel="stylesheet" href="public/assets_news/plugins/themify-icons/themify-icons.css">
-<link rel="stylesheet" href="public/assets_news/plugins/slick/slick.css">
-<link rel="stylesheet" href="public/assets_news/plugins/slick/slick-theme.css">
-<link rel="stylesheet" href="public/assets_news/plugins/fancybox/jquery.fancybox.min.css">
-<link rel="stylesheet" href="public/assets_news/plugins/aos/aos.css">
-
-<!-- CUSTOM CSS -->
-<link href="../public/assets_news/css/style.css" rel="stylesheet">
 
 <?php echo $header; ?>
 
@@ -91,6 +67,41 @@
                     <h1>Blog</h1>
                     <!-- Page Description -->
                     <p>Vivamus magna justo, lacinia eget consectetur sed, convallis at tellus. Vivamus magna justo, lacinia eget consectetur sed, convallis at tellus. Cras ultricies ligula sed magna dictum porta.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section featured-article">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <article class="featured">
+                        <!-- Image -->
+                        <div class="image">
+                            <a href="blog-single.html"><img class="img-fluid" src="../../assets_news/images/feature/featured-article.jpg" alt="featured-article"></a>
+                        </div>
+                        <!-- written-content -->
+                        <div class="content">
+                            <!-- Post Title -->
+                            <h2><a href="blog-single.html">Introducing New IOS App</a></h2>
+                            <!-- Tags -->
+                            <ul class="list-inline post-tag">
+                                <li class="list-inline-item">
+                                    <img class="img-fluid" src="../../assets_news/images/testimonial/feature-testimonial-thumb.jpg" alt="author-thumb">
+                                </li>
+                                <li class="list-inline-item">
+                                    <a href="#">Thomas Johnson</a>
+                                </li>
+                                <li class="list-inline-item">
+                                    August 8, 2017
+                                </li>
+                            </ul>
+                            <!-- Post Body -->
+                            <p>Praesent sapien massa, convallis a pellentesque nec, egestas non nisi. eget tortor risus. Vivamus magna justo, lacinia eget consectetur sed,convallis at tellus. Vivamus suscipit tortor eget felis porttitor volutpat.Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem. Praesent sapien massa, convallis</p>
+                            <a class="btn btn-main-sm" href="blog-single.html">Read more</a>
+                        </div>
+                    </article>
                 </div>
             </div>
         </div>
@@ -423,17 +434,5 @@
     <?php echo $footer; ?>
 </main>
 
-<!-- JAVASCRIPTS -->
-<script src="public/assets_news/plugins/jquery/jquery.min.js"></script>
-<script src="public/assets_news/plugins/bootstrap/bootstrap.min.js"></script>
-<script src="public/assets_news/plugins/slick/slick.min.js"></script>
-<script src="public/assets_news/plugins/fancybox/jquery.fancybox.min.js"></script>
-<script src="public/assets_news/plugins/syotimer/jquery.syotimer.min.js"></script>
-<script src="public/assets_news/plugins/aos/aos.js"></script>
-<!-- google map -->
-<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAgeuuDfRlweIs7D6uo4wdIHVvJ0LonQ6g"></script>
-<script src="public/assets_news/plugins/google-map/gmap.js"></script>
-
-<script src="js/script.js"></script>
 
 
