@@ -168,6 +168,7 @@ html;
         session_start();
         $_SESSION['usuario'] = $user['usuario'];
         $_SESSION['nombre'] = $user['nombre'];
+        $_SESSION['administrador_id'] = $user['administrador_id'];
         header("location: /Home/");
     }
 

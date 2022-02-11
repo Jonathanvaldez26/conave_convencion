@@ -129,6 +129,7 @@
                 <div class="modal-header">
                     <h5 class="modal-title" id="exampleModalLabel">
                         Agregue su Prueba de Covid
+                        
                     </h5>
                     <span type="button" class="btn btn-dark" data-dismiss="modal" aria-label="Close">
                         X
@@ -190,7 +191,7 @@
                                     <span id="availability_4_"></span>
                                 </div>
                             </div>
-                            <input type="text" id="user_" name="user_" value="<?=$_SESSION["usuario"]?>">
+                            <input type="hidden" id="user_" name="user_" value="<?=$_SESSION["administrador_id"]?>">
                         </div>
                         <div class="modal-footer">
                             <button type="submit" class="btn btn-success" id="btn_upload" name="btn_upload">Aceptar</button>
@@ -258,6 +259,7 @@
                                 'Se ha guardado tu la prueba correctamente!!',
                                 'success'
                             )
+                            
 
                             
                             

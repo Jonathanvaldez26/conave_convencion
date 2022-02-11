@@ -111,7 +111,7 @@ html;
     }
 
     public function uploadPrueba(){
-        echo "funciona";
+        
         // $ticket = $_FILES["file_"];
       // $ticket_name = $_FILES["file_"]['name'];
       // $nota = $_POST['note_'];
@@ -147,9 +147,9 @@ html;
           // var_dump($usuario);
           // exit;
 
-          move_uploaded_file($file["tmp_name"], "pruebas_covid/".$usuario.'.pdf');
+          move_uploaded_file($file["tmp_name"], "pruebas_covid/".$_SESSION['usuario'].'.pdf');
 
-          $documento->_url = $usuario.'.pdf';
+          $documento->_url = $_SESSION['usuario'].'.pdf';
           $documento->_user = $usuario;
           $documento->_fecha_prueba = $fecha_prueba;
           $documento->_tipo_prueba = $tipo_prueba;
