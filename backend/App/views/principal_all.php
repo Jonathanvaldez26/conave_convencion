@@ -224,7 +224,7 @@
                                 <div class="col-12 text-end">
                                     <img class="w-30" src="../../assets/img/small-logos/asofarma_1.png">
                                 </div>
-                                <h6 class="mb-0 font-weight-bolder"><a href="#">NOTIASOFARMA</a></h6>
+                                <h6 class="mb-0 font-weight-bolder"><a href="/News/">NOTIASOFARMA</a></h6>
                                 <p class="opacity-8 mb-0 text-sm">A un click</p>
                             </div>
                         </div>
