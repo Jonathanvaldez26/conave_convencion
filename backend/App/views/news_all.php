@@ -1,4 +1,32 @@
+<!-- Basic Page Needs
+================================================== -->
+<meta charset="utf-8">
+
+<!-- Mobile Specific Metas
+================================================== -->
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="description" content="Bootstrap App Landing Template">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+<meta name="author" content="Themefisher">
+<meta name="generator" content="Themefisher Small Apps Template v1.0">
+
+<!-- Favicon -->
+<link rel="shortcut icon" type="image/x-icon" href="images/favicon.png" />
+
+<!-- PLUGINS CSS STYLE -->
+<link rel="stylesheet" href="public/assets_news/plugins/bootstrap/bootstrap.min.css">
+<link rel="stylesheet" href="public/assets_news/plugins/themify-icons/themify-icons.css">
+<link rel="stylesheet" href="public/assets_news/plugins/slick/slick.css">
+<link rel="stylesheet" href="public/assets_news/plugins/slick/slick-theme.css">
+<link rel="stylesheet" href="public/assets_news/plugins/fancybox/jquery.fancybox.min.css">
+<link rel="stylesheet" href="public/assets_news/plugins/aos/aos.css">
+
+<!-- CUSTOM CSS -->
+<link href="../public/assets_news/css/style.css" rel="stylesheet">
+
 <?php echo $header; ?>
+
+
 <main class="main-content position-relative max-height-vh-100 h-100 border-radius-lg ">
     <!-- Navbar -->
     <nav class="navbar navbar-main navbar-expand-lg position-sticky mt-4 top-1 px-0 mx-4 shadow-none border-radius-xl z-index-sticky" id="navbarBlur" data-scroll="true">
@@ -55,7 +83,18 @@
     <!-- End Navbar -->
     <div class="container-fluid py-4">
 
-    <h1 style="text-align: center; margin-bottom: 100px;">NOTIASOFARMA</h1>
+    <section class="section page-title">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-8 m-auto">
+                    <!-- Page Title -->
+                    <h1>Blog</h1>
+                    <!-- Page Description -->
+                    <p>Vivamus magna justo, lacinia eget consectetur sed, convallis at tellus. Vivamus magna justo, lacinia eget consectetur sed, convallis at tellus. Cras ultricies ligula sed magna dictum porta.</p>
+                </div>
+            </div>
+        </div>
+    </section>
         
     <section class="post-grid section pt-0">
         <div class="container">
@@ -65,7 +104,7 @@
                     <article class="post-sm">
                         <!-- Post Image -->
                         <div class="post-thumb">
-                            <a href="blog-single.html"><img class="w-100" src="../../assets/assets_news/../../assets/assets_news/images/blog/post-01.jpg" alt="Post-Image"></a>		
+                            <a href="blog-single.html"><img class="w-100" src="../../assets_news/images/blog/post-01.jpg" alt="Post-Image"></a>		
                         </div>
                         <!-- Post Title -->
                         <div class="post-title">
@@ -75,7 +114,7 @@
                         <div class="post-meta">
                             <ul class="list-inline post-tag">
                                 <li class="list-inline-item">
-                                    <img src="../../assets/assets_news/../../assets/assets_news/images/testimonial/feature-testimonial-thumb.jpg" alt="author-thumb">
+                                    <img src="../../assets_news/images/testimonial/feature-testimonial-thumb.jpg" alt="author-thumb">
                                 </li>
                                 <li class="list-inline-item">
                                     <a href="#">Thomas Johnson</a>
@@ -96,7 +135,7 @@
                     <article class="post-sm">
                         <!-- Post Image -->
                         <div class="post-thumb">
-                            <a href="blog-single.html"><img class="w-100" src="../../assets/assets_news/images/blog/post-02.jpg" alt="Post-Image"></a>		
+                            <a href="blog-single.html"><img class="w-100" src="../../assets_news/images/blog/post-02.jpg" alt="Post-Image"></a>		
                         </div>
                         <!-- Post Title -->
                         <div class="post-title">
@@ -106,7 +145,7 @@
                         <div class="post-meta">
                             <ul class="list-inline post-tag">
                                 <li class="list-inline-item">
-                                    <img src="../../assets/assets_news/images/testimonial/feature-testimonial-thumb.jpg" alt="author-thumb">
+                                    <img src="../../assets_news/images/testimonial/feature-testimonial-thumb.jpg" alt="author-thumb">
                                 </li>
                                 <li class="list-inline-item">
                                     <a href="#">Thomas Johnson</a>
@@ -127,7 +166,7 @@
                     <article class="post-sm">
                         <!-- Post Image -->
                         <div class="post-thumb">
-                            <a href="blog-single.html"><img class="w-100" src="../../assets/assets_news/images/blog/post-03.jpg" alt="Post-Image"></a>		
+                            <a href="blog-single.html"><img class="w-100" src="../../assets_news/images/blog/post-03.jpg" alt="Post-Image"></a>		
                         </div>
                         <!-- Post Title -->
                         <div class="post-title">
@@ -137,7 +176,7 @@
                         <div class="post-meta">
                             <ul class="list-inline post-tag">
                                 <li class="list-inline-item">
-                                    <img src="../../assets/assets_news/images/testimonial/feature-testimonial-thumb.jpg" alt="author-thumb">
+                                    <img src="../../assets_news/images/testimonial/feature-testimonial-thumb.jpg" alt="author-thumb">
                                 </li>
                                 <li class="list-inline-item">
                                     <a href="#">Thomas Johnson</a>
@@ -158,7 +197,7 @@
                     <article class="post-sm">
                         <!-- Post Image -->
                         <div class="post-thumb">
-                            <a href="blog-single.html"><img class="w-100" src="../../assets/assets_news/images/blog/post-01.jpg" alt="Post-Image"></a>		
+                            <a href="blog-single.html"><img class="w-100" src="../../assets_news/images/blog/post-01.jpg" alt="Post-Image"></a>		
                         </div>
                         <!-- Post Title -->
                         <div class="post-title">
@@ -168,7 +207,7 @@
                         <div class="post-meta">
                             <ul class="list-inline post-tag">
                                 <li class="list-inline-item">
-                                    <img src="../../assets/assets_news/images/testimonial/feature-testimonial-thumb.jpg" alt="author-thumb">
+                                    <img src="../../assets_news/images/testimonial/feature-testimonial-thumb.jpg" alt="author-thumb">
                                 </li>
                                 <li class="list-inline-item">
                                     <a href="#">Thomas Johnson</a>
@@ -189,7 +228,7 @@
                     <article class="post-sm">
                         <!-- Post Image -->
                         <div class="post-thumb">
-                            <a href="blog-single.html"><img class="w-100" src="../../assets/assets_news/images/blog/post-02.jpg" alt="Post-Image"></a>		
+                            <a href="blog-single.html"><img class="w-100" src="../../assets_news/images/blog/post-02.jpg" alt="Post-Image"></a>		
                         </div>
                         <!-- Post Title -->
                         <div class="post-title">
@@ -199,7 +238,7 @@
                         <div class="post-meta">
                             <ul class="list-inline post-tag">
                                 <li class="list-inline-item">
-                                    <img src="../../assets/assets_news/images/testimonial/feature-testimonial-thumb.jpg" alt="author-thumb">
+                                    <img src="../../assets_news/images/testimonial/feature-testimonial-thumb.jpg" alt="author-thumb">
                                 </li>
                                 <li class="list-inline-item">
                                     <a href="#">Thomas Johnson</a>
@@ -220,7 +259,7 @@
                         <article class="post-sm">
                             <!-- Post Image -->
                             <div class="post-thumb">
-                                <a href="blog-single.html"><img class="w-100" src="../../assets/assets_news/images/blog/post-03.jpg" alt="Post-Image"></a>		
+                                <a href="blog-single.html"><img class="w-100" src="../../assets_news/images/blog/post-03.jpg" alt="Post-Image"></a>		
                             </div>
                             <!-- Post Title -->
                             <div class="post-title">
@@ -230,7 +269,7 @@
                             <div class="post-meta">
                                 <ul class="list-inline post-tag">
                                     <li class="list-inline-item">
-                                        <img src="../../assets/assets_news/images/testimonial/feature-testimonial-thumb.jpg" alt="author-thumb">
+                                        <img src="../../assets_news/images/testimonial/feature-testimonial-thumb.jpg" alt="author-thumb">
                                     </li>
                                     <li class="list-inline-item">
                                         <a href="#">Thomas Johnson</a>
@@ -272,7 +311,7 @@
                     <article class="post-sm">
                         <!-- Post Image -->
                         <div class="post-thumb">
-                            <a href="blog-single.html"><img class="w-100" src="../../assets/assets_news/images/blog/post-01.jpg" alt="Post-Image"></a>		
+                            <a href="blog-single.html"><img class="w-100" src="../../assets_news/images/blog/post-01.jpg" alt="Post-Image"></a>		
                         </div>
                         <!-- Post Title -->
                         <div class="post-title">
@@ -282,7 +321,7 @@
                         <div class="post-meta">
                             <ul class="list-inline post-tag">
                                 <li class="list-inline-item">
-                                    <img src="../../assets/assets_news/images/testimonial/feature-testimonial-thumb.jpg" alt="author-thumb">
+                                    <img src="../../assets_news/images/testimonial/feature-testimonial-thumb.jpg" alt="author-thumb">
                                 </li>
                                 <li class="list-inline-item">
                                     <a href="#">Thomas Johnson</a>
@@ -303,7 +342,7 @@
                     <article class="post-sm">
                         <!-- Post Image -->
                         <div class="post-thumb">
-                            <a href="blog-single.html"><img class="w-100" src="../../assets/assets_news/images/blog/post-02.jpg" alt="Post-Image"></a>		
+                            <a href="blog-single.html"><img class="w-100" src="../../assets_news/images/blog/post-02.jpg" alt="Post-Image"></a>		
                         </div>
                         <!-- Post Title -->
                         <div class="post-title">
@@ -313,7 +352,7 @@
                         <div class="post-meta">
                             <ul class="list-inline post-tag">
                                 <li class="list-inline-item">
-                                    <img src="../../assets/assets_news/images/testimonial/feature-testimonial-thumb.jpg" alt="author-thumb">
+                                    <img src="../../assets_news/images/testimonial/feature-testimonial-thumb.jpg" alt="author-thumb">
                                 </li>
                                 <li class="list-inline-item">
                                     <a href="#">Thomas Johnson</a>
@@ -334,7 +373,7 @@
                     <article class="post-sm">
                         <!-- Post Image -->
                         <div class="post-thumb">
-                            <a href="blog-single.html"><img class="w-100" src="../../assets/assets_news/images/blog/post-03.jpg" alt="Post-Image"></a>		
+                            <a href="blog-single.html"><img class="w-100" src="../../assets_news/images/blog/post-03.jpg" alt="Post-Image"></a>		
                         </div>
                         <!-- Post Title -->
                         <div class="post-title">
@@ -344,7 +383,7 @@
                         <div class="post-meta">
                             <ul class="list-inline post-tag">
                                 <li class="list-inline-item">
-                                    <img src="../../assets/assets_news/images/testimonial/feature-testimonial-thumb.jpg" alt="author-thumb">
+                                    <img src="../../assets_news/images/testimonial/feature-testimonial-thumb.jpg" alt="author-thumb">
                                 </li>
                                 <li class="list-inline-item">
                                     <a href="#">Thomas Johnson</a>
@@ -384,6 +423,17 @@
     <?php echo $footer; ?>
 </main>
 
+<!-- JAVASCRIPTS -->
+<script src="public/assets_news/plugins/jquery/jquery.min.js"></script>
+<script src="public/assets_news/plugins/bootstrap/bootstrap.min.js"></script>
+<script src="public/assets_news/plugins/slick/slick.min.js"></script>
+<script src="public/assets_news/plugins/fancybox/jquery.fancybox.min.js"></script>
+<script src="public/assets_news/plugins/syotimer/jquery.syotimer.min.js"></script>
+<script src="public/assets_news/plugins/aos/aos.js"></script>
+<!-- google map -->
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAgeuuDfRlweIs7D6uo4wdIHVvJ0LonQ6g"></script>
+<script src="public/assets_news/plugins/google-map/gmap.js"></script>
 
+<script src="js/script.js"></script>
 
 
