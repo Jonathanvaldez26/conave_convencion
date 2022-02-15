@@ -54,13 +54,26 @@
         </div>
     </nav>
     <!-- End Navbar -->
-    <div class="container-fluid py-0">
-        <div class="row mt-5">
-            <div class="col-lg-2">
+    <style>
+        @media (max-width: 576px) {
+            #ticket-titulo{
+                display: none;
+            }
+
+            #ticket-img{
+                transform: rotateZ(-90deg);
+                width: 135%;
+                margin: 0px !important;
+            }
+        }
+    </style>
+    <div class="container-fluid py-0 mt-5">
+        <div class="row">
+            <div id="ticket-titulo" class="col-lg-2">
             </div>
-            <div class="col-lg-8 mt-lg-0 mt-8">
+            <div  class="col-lg-8 mt-lg-0 mt-7">
                 <!-- Card Profile -->
-                <div class="card card-body" id="profile">
+                <div id="ticket-titulo" class="card card-body" id="profile">
                     <div class="row justify-content-center align-items-center">
                         <div class="col-sm-auto col-4">
                             <div class="avatar avatar-xl position-relative">
@@ -86,11 +99,11 @@
 
                 
                 <!-- Card Basic Info -->
-                <div class="card mt-4" id="basic-info">
-                    <div class="card-header">
+                <div id="ticket-img" class="card mt-4" id="basic-info">
+                    <div id="ticket-titulo" class="card-header">
                         <h5>Información Básica</h5>
                     </div>
-                    <div class="card-body pt-0">
+                    <div class="card-body">
                         <img src="../../assets/img/boleto.png" alt="bruce" class="w-100 border-radius-lg shadow-sm">
                     </div>
                 </div>
