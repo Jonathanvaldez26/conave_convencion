@@ -5,7 +5,7 @@
     <nav class="navbar navbar-main navbar-expand-lg position-sticky mt-4 top-1 px-0 mx-4 shadow-none border-radius-xl z-index-sticky" id="navbarBlur" data-scroll="true">
         <div class="container-fluid py-1 px-3">
             <nav aria-label="breadcrumb">
-                <ol class="breadcrumb bg-transparent mb-0 pb-0 pt-1 px-0 me-sm-6 me-5">
+                <ol class="breadcrumb bg-transparent mb-0 pb-0 pt-1 px-0 me-sm-6 me-2">
                     <li class="breadcrumb-item text-sm">
                         <a class="opacity-3 text-dark" href="javascript:;">
                             <svg width="12px" height="12px" class="mb-1" viewBox="0 0 45 40" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
@@ -24,7 +24,7 @@
                         </a>
                     </li>
                     <li class="breadcrumb-item text-sm"><a class="opacity-5 text-dark" href="/Home/">Inicio</a></li>
-                    <li class="breadcrumb-item text-sm"><a class="opacity-5 text-dark" href="javascript:;" disabled>Mis Datos Personales</a></li>
+                    <li class="breadcrumb-item text-sm"><a class="opacity-5 text-dark" href="javascript:;" disabled>Tickets Virtuales</a></li>
                 </ol>
             </nav>
 
@@ -41,7 +41,6 @@
                         </a>
                     </li>
                 </ul>
-                <ul></ul>
                 <ul class="navbar-nav  justify-content-end">
                     <li class="nav-item d-flex align-items-center">
                         <a href="/Login/cerrarSession" class="nav-link text-body font-weight-bold px-0">
@@ -64,6 +63,10 @@
                 transform: rotateZ(-90deg);
                 width: 135%;
                 margin: 0px !important;
+                position: relative;
+                right: 40%;
+                top: 10%;
+                width: 180%;
             }
         }
     </style>
