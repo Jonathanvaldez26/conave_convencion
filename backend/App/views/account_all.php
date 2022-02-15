@@ -5,7 +5,7 @@
     <nav class="navbar navbar-main navbar-expand-lg position-sticky mt-4 top-1 px-0 mx-4 shadow-none border-radius-xl z-index-sticky" id="navbarBlur" data-scroll="true">
         <div class="container-fluid py-1 px-3">
             <nav aria-label="breadcrumb">
-                <ol class="breadcrumb bg-transparent mb-0 pb-0 pt-1 px-0 me-sm-6 me-5">
+                <ol class="breadcrumb bg-transparent mb-0 pb-0 pt-1 px-0 me-sm-6 me-2">
                     <li class="breadcrumb-item text-sm">
                         <a class="opacity-3 text-dark" href="javascript:;">
                             <svg width="12px" height="12px" class="mb-1" viewBox="0 0 45 40" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
@@ -24,7 +24,7 @@
                         </a>
                     </li>
                     <li class="breadcrumb-item text-sm"><a class="opacity-5 text-dark" href="/Home/">Inicio</a></li>
-                    <li class="breadcrumb-item text-sm"><a class="opacity-5 text-dark" href="javascript:;" disabled>Mis Datos Personales</a></li>
+                    <li class="breadcrumb-item text-sm"><a class="opacity-5 text-dark" href="javascript:;" disabled>Datos Personales</a></li>
                 </ol>
             </nav>
 
@@ -35,13 +35,12 @@
 
                 <ul class="navbar-nav  justify-content-end">
                     <li class="nav-item d-flex align-items-center">
-                        <a href="/Home/" class="nav-link text-body font-weight-bold px-0">
+                        <a href="/Home/" class="nav-link text-body font-weight-bold mx-lg-4 mx-0 px-0">
                             <i class="fa fa-home me-sm-0"></i>
                             <span class="d-sm-inline d-none">Inicio</span>
                         </a>
                     </li>
                 </ul>
-                <ul></ul>
                 <ul class="navbar-nav  justify-content-end">
                     <li class="nav-item d-flex align-items-center">
                         <a href="/Login/cerrarSession" class="nav-link text-body font-weight-bold px-0">
@@ -55,10 +54,10 @@
     </nav>
     <!-- End Navbar -->
     <div class="container-fluid py-0">
-        <div class="row mt-5">
+        <div class="row mt-lg-5 mt-2">
             <div class="col-lg-2">
             </div>
-            <div class="col-lg-8 mt-lg-0 mt-8">
+            <div class="col-lg-8 mt-lg-0 mt-0">
                 <!-- Card Profile -->
                 <div class="card card-body" id="profile">
                     <div class="row justify-content-center align-items-center">
@@ -92,19 +91,19 @@
                     </div>
                     <div class="card-body pt-0">
                         <div class="row">
-                            <div class="col-4">
+                            <div class="col-12 col-lg-4">
                                 <label class="form-label">Nombre *</label>
                                 <div class="input-group">
                                     <input id="firstName" name="firstName" class="form-control" type="text" placeholder="Alec" required="required" onfocus="focused(this)" onfocusout="defocused(this)" value="Carlos">
                                 </div>
                             </div>
-                            <div class="col-4">
+                            <div class="col-12 col-lg-4">
                                 <label class="form-label">Apellido Paterno *</label>
                                 <div class="input-group">
                                     <input id="lastName" name="lastName" class="form-control" type="text" placeholder="Thompson" required="required" onfocus="focused(this)" onfocusout="defocused(this)" value="Cruz">
                                 </div>
                             </div>
-                            <div class="col-4">
+                            <div class="col-12 col-lg-4">
                                 <label class="form-label">Apellido Materno *</label>
                                 <div class="input-group">
                                     <input id="lastName" name="lastName" class="form-control" type="text" placeholder="Thompson" required="required" onfocus="focused(this)" onfocusout="defocused(this)" value="Sánchez">
@@ -119,7 +118,7 @@
                         </div>
 
                         <div class="row">
-                            <div class="col-sm-4 col-6">                                      
+                            <div class="col-sm-4 col-12">                                      
                                 <label class="form-label mt-4">Me identifico como: *</label>
                                 <select class="form-control" style="cursor: pointer;" name="choices-button" id="choices-button" placeholder="Genero" >
                                     <option value="Male">Hombre</option>
@@ -137,7 +136,7 @@
                                             <option value="Male">Marzo</option>
                                         </select>
                                     </div>
-                                    <div class="col-sm-4 col-3">
+                                    <div class="col-sm-4 col-3 mt-lg-0 mt-3">
                                         <label class="form-label mt-4">&nbsp;</label>
                                         <select class="form-control choices__inner" style="cursor: pointer;" name="choices-day" id="choices-day" tabindex="-1" data-choice="active">
                                             <option value="1">1</option>
@@ -151,7 +150,7 @@
                                             <option value="9">9</option>
                                         </select>
                                     </div>
-                                    <div class="col-sm-3 col-4">
+                                    <div class="col-sm-3 col-4 mt-lg-0 mt-3">
                                         <label class="form-label mt-4">&nbsp;</label>
                                         <select class="form-control" style="cursor: pointer;" name="choices-year" id="choices-year" data-choice="active">
                                             <option value="1991">1991</option>
@@ -164,13 +163,13 @@
                             </div>
                         </div>
                         <div class="row">
-                            <div class="col-6">
+                            <div class="col-lg-6 col-12">
                                 <label class="form-label mt-4">Email Rregistrado y Verificado</label>
                                 <div class="input-group">
                                     <input id="email" name="email" class="form-control" type="email" placeholder="example@email.com" onfocus="focused(this)" onfocusout="defocused(this)" disabled value="user@asofarma.com">
                                 </div>
                             </div>
-                            <div class="col-6">
+                            <div class="col-lg-6 col-12">
                                 <label class="form-label mt-4">Número de Telefono</label>
                                 <div class="input-group">
                                     <input id="phone" name="phone" class="form-control" type="number" placeholder="+40 735 631 620" onfocus="focused(this)" onfocusout="defocused(this)" value="+52 7293787668">
@@ -213,8 +212,6 @@
                         </div>
                     </div>
                 </div>
-            </div>
-            <div class="col-lg-2">
             </div>
         </div>
 

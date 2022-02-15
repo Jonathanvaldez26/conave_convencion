@@ -1,0 +1,23 @@
+.height-350{
+    height: 350px !important;
+}
+
+@media (max-width: 576px) {
+    #days-desk{
+        display: none !important;
+    }
+
+    #titulo-program{
+        text-align: center;
+    }
+
+    li#movil-li {
+        padding: 0 5px;
+    }
+}
+
+@media (min-width: 576px) {
+    #days-movil{
+        display: none !important;
+    }
+}

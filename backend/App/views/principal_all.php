@@ -33,13 +33,12 @@
 
                 <ul class="navbar-nav  justify-content-end">
                     <li class="nav-item d-flex align-items-center">
-                        <a href="/Account" class="nav-link text-body font-weight-bold px-0">
+                        <a href="/Account" class="nav-link text-body font-weight-bold mx-lg-4 mx-0  px-0">
                             <i class="fa fa-user me-sm-0"></i>
                             <span class="d-sm-inline d-none">Mi Cuenta</span>
                         </a>
                     </li>
                 </ul>
-                <ul></ul>
                 <ul class="navbar-nav  justify-content-end">
                     <li class="nav-item d-flex align-items-center">
                         <a href="/Login/cerrarSession" class="nav-link text-body font-weight-bold px-0">
@@ -56,8 +55,9 @@
         <div class="row mt-4">
             <div class="col-xl-7">
                 <div class="card">
-                    <div class="card-header d-flex pb-0 p-3">
-                        <h6 class="my-auto">Programa</h6>
+                    
+                    <div  id="days-desk" class="card-header d-flex pb-0 p-3">
+                        <h6 id="titulo-program" class="my-auto">Programa</h6>
                         <div class="nav-wrapper position-relative ms-auto w-50">
                             <ul class="nav nav-pills nav-fill p-1 flex-row" role="tablist">
                                 <li class="nav-item">
@@ -80,7 +80,52 @@
                                         Sábado
                                     </a>
                                 </li>
-                                <div class="moving-tab position-absolute nav-link" style="padding: 0px; transition: all 0.5s ease 0s; transform: translate3d(0px, 0px, 0px); width: 163px;"><a class="nav-link mb-0 px-0 py-1 active" data-bs-toggle="tab" href="#cam1" role="tab" aria-controls="cam1" aria-selected="true">-</a></div></ul>
+                                <div class="moving-tab position-absolute nav-link" style="padding: 0px; transition: all 0.5s ease 0s; transform: translate3d(0px, 0px, 0px); "><a class="nav-link mb-0 px-0 py-1 active" data-bs-toggle="tab" href="#cam1" role="tab" aria-controls="cam1" aria-selected="true">-</a></div></ul>
+                        </div>
+                        <div class="dropdown pt-2">
+                            <a href="javascript:;" class="text-secondary ps-4" id="dropdownCam" data-bs-toggle="dropdown" aria-expanded="false">
+                                <i class="fas fa-ellipsis-v" aria-hidden="true"></i>
+                            </a>
+                            <ul class="dropdown-menu dropdown-menu-end me-sm-n4 px-2 py-3" aria-labelledby="dropdownCam">
+                                <li><a class="dropdown-item border-radius-md" href="/Dinners/">Mis cenas</a></li>
+                                <li><a class="dropdown-item border-radius-md" href="javascript:;">Reservar cena para mi y mis amigos</a></li>
+
+                                <li>
+                                    <hr class="dropdown-divider">
+                                </li>
+                                <li><a class="dropdown-item border-radius-md text-danger" href="javascript:;">Cancelar Reservacion (Cena)</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div id="days-movil" class="card-header d-flex pb-0 p-3">
+                        <div class="nav-wrapper position-relative">
+                            <h6 id="titulo-program" class="my-auto">Programa</h6>
+                            <ul class="nav nav-pills nav-fill p-1" role="tablist">
+                                <li id="movil-li" class="nav-item">
+                                    <a id="nav-day" class="nav-link mb-0 px-3 py-1 active" data-bs-toggle="tab" href="#cam1" role="tab" aria-controls="cam1" aria-selected="true">
+                                        Mi.
+                                    </a>
+                                </li>
+                                <li id="movil-li" class="nav-item">
+                                    <a id="nav-day" class="nav-link mb-0 px-3 py-1" data-bs-toggle="tab" href="#cam2" role="tab" aria-controls="cam2" aria-selected="false">
+                                        Ju.
+                                    </a>
+                                </li>
+                                <li id="movil-li" class="nav-item">
+                                    <a id="nav-day" class="nav-link mb-0 px-3 py-1" data-bs-toggle="tab" href="#cam3" role="tab" aria-controls="cam3" aria-selected="false">
+                                        Vi.
+                                    </a>
+                                </li>
+                                <li id="movil-li" class="nav-item">
+                                    <a id="nav-day" class="nav-link mb-0 px-3 py-1" data-bs-toggle="tab" href="#cam4" role="tab" aria-controls="cam3" aria-selected="false">
+                                        Sa.
+                                    </a>
+                                </li>
+                                <div class="moving-tab position-absolute nav-link" style="padding: 0px; transition: all 0.5s ease 0s; transform: translate3d(0px, 0px, 0px);">
+                                    <a class="nav-link mb-0 px-0 py-1 active" data-bs-toggle="tab" href="#cam1" role="tab" aria-controls="cam1" aria-selected="true">-</a>
+                                </div>
+                            </ul>
                         </div>
                         <div class="dropdown pt-2">
                             <a href="javascript:;" class="text-secondary ps-4" id="dropdownCam" data-bs-toggle="dropdown" aria-expanded="false">
@@ -99,16 +144,16 @@
                     </div>
                     <div class="card-body p-3 mt-2">
                         <div class="tab-content" id="v-pills-tabContent">
-                            <div class="tab-pane fade show position-relative active height-700 border-radius-lg" id="cam1" role="tabpanel" aria-labelledby="cam1" style="background-image: url('../../assets/img/miercoles.jpeg'); background-size:cover;">
+                            <div class="tab-pane fade show position-relative active height-350 border-radius-lg" id="cam1" role="tabpanel" aria-labelledby="cam1" style="background-image: url('../../assets/img/miercoles.jpeg'); background-size:cover;">
 
                             </div>
-                            <div class="tab-pane fade position-relative height-700 border-radius-lg" id="cam2" role="tabpanel" aria-labelledby="cam2" style="background-image: url('../../assets/img/jueves.jpeg'); background-size:cover;">
+                            <div class="tab-pane fade position-relative height-350 border-radius-lg" id="cam2" role="tabpanel" aria-labelledby="cam2" style="background-image: url('../../assets/img/jueves.jpeg'); background-size:cover;">
 
                             </div>
-                            <div class="tab-pane fade position-relative height-700 border-radius-lg" id="cam3" role="tabpanel" aria-labelledby="cam3" style="background-image: url('../../assets/img/viernes.jpeg'); background-size:cover;">
+                            <div class="tab-pane fade position-relative height-350 border-radius-lg" id="cam3" role="tabpanel" aria-labelledby="cam3" style="background-image: url('../../assets/img/viernes.jpeg'); background-size:cover;">
 
                             </div>
-                            <div class="tab-pane fade position-relative height-700 border-radius-lg" id="cam4" role="tabpanel" aria-labelledby="cam3" style="background-image: url('../../assets/img/sabado.jpeg'); background-size:cover;">
+                            <div class="tab-pane fade position-relative height-350 border-radius-lg" id="cam4" role="tabpanel" aria-labelledby="cam3" style="background-image: url('../../assets/img/sabado.jpeg'); background-size:cover;">
 
                             </div>
                         </div>

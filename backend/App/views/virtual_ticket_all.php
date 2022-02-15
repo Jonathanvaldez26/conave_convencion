@@ -1,5 +1,5 @@
 <?php echo $header; ?>
-        <link id="pagestyle" href="/assets/css/soft-ui-dashboard.css?v=1.0.5" rel="stylesheet" />
+<link id="pagestyle" href="/assets/css/soft-ui-dashboard.css?v=1.0.5" rel="stylesheet" />
 <main class="main-content position-relative max-height-vh-100 h-100 border-radius-lg ">
     <!-- Navbar -->
     <nav class="navbar navbar-main navbar-expand-lg position-sticky mt-4 top-1 px-0 mx-4 shadow-none border-radius-xl z-index-sticky" id="navbarBlur" data-scroll="true">
@@ -35,7 +35,7 @@
 
                 <ul class="navbar-nav  justify-content-end">
                     <li class="nav-item d-flex align-items-center">
-                        <a href="/Home/" class="nav-link text-body font-weight-bold px-0">
+                        <a href="/Home/" class="nav-link text-body font-weight-bold mx-lg-4 mx-0  px-0">
                             <i class="fa fa-home me-sm-0"></i>
                             <span class="d-sm-inline d-none">Inicio</span>
                         </a>
