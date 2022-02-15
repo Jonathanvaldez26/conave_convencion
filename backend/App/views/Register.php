@@ -18,29 +18,29 @@ echo $header;
         <div class="container">
             <div class="row mt-lg-n10 mt-md-n11 mt-n10 justify-content-center">
                 <div class="col-xl-4 col-lg-5 col-md-7 mx-auto">
-                    <div class="card z-index-0">
-                        <div class="card-header text-center pt-4">
-                            <p>Introduce tu email para crear tu cuenta</p>
-                            <p class="text-sm font-weight-bold mb-2 text-secondary text-border d-inline z-index-2 bg-white px-3">
-                                <i class="fa fa-user-circle"></i>
-                            </p>
+                        <div class="card z-index-0">
+                            <div class="card-header text-center pt-4">
+                                <p>Introduce tu email para crear tu cuenta</p>
+                                <p class="text-sm font-weight-bold mb-2 text-secondary text-border d-inline z-index-2 bg-white px-3">
+                                    <i class="fa fa-user-circle"></i>
+                                </p>
+                            </div>
+                            <div class="card-body pt-1">
+                                <form class="form-horizontal" id="email_form" action="/Register/Success" method="POST">
+                                    <div class="mb-3 form-group">
+                                        <label>Correo Eléctronico Institucional *</label>
+                                        <input type="email" id="email" name="email" class="form-control" placeholder="Ej. usuario@asofarma.com.mx" aria-label="Correo Eléctronico" required="required">
+                                    </div>
+                                    <div class="mb-3 form-group">
+                                        <label>Confirma tu Email *</label>
+                                        <input type="email" id="confirm_email" name="confirm_email" class="form-control" placeholder="Ej. usuario@asofarma.com.mx" aria-label="Confirmar tu Correo Eléctronico" required="required">
+                                    </div>
+                                    <div class="form-group text-center">
+                                        <button class="btn btn-outline-danger w-100 my-4 mb-2 ms-auto" type="submit" id="btn_registro_email">Registrar</button>
+                                    </div>
+                                </form>
+                            </div>
                         </div>
-                        <div class="card-body pt-1">
-                            <form role="form" class="text-start" id="email_form" action="/Register/Success" method="POST">
-                                <div class="mb-3">
-                                    <label>Correo Eléctronico Institucional *</label>
-                                    <input type="email" id="email" name="email" class="form-control" placeholder="Ej. usuario@asofarma.com.mx" aria-label="Correo Eléctronico">
-                                </div>
-                                <div class="mb-3">
-                                    <label>Confirma tu Email *</label>
-                                    <input type="email" id="confirm_email" name="confirm_email" class="form-control" placeholder="Ej. usuario@asofarma.com.mx" aria-label="Confirmar tu Correo Eléctronico">
-                                </div>
-                                <div class="text-center">
-                                    <button type="button" id="btn_registro_email" type="submit" class="btn bg-gradient-faded-info w-100 my-4 mb-2" style="color:white">Registrarme</button>
-                                </div>
-                            </form>
-                        </div>
-                    </div>
                 </div>
             </div>
         </div>
