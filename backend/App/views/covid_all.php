@@ -53,11 +53,11 @@
         </div>
     </nav>
     <!-- End Navbar -->
-    <div class="container-fluid py-0">
+    <div class="container-fluid py-">
         <div class="row mt-4">
             <div class="col-lg-2">
             </div>
-            <div class="card col-lg-8 mt-lg-0 mt-6" >
+            <div class="card col-lg-8 mt-lg-5 mt-8" >
                 <div class="card-header pb-0 p-3">
                     <h6 class="mb-1">Mis pruebas Covid</h6>
                     <p class="text-sm">Registra la primera prueba Covid con anticipación de 24 o 48 horas a tu vuelo</p>
@@ -74,7 +74,7 @@
                     <div class="row">
                         <div class="card">
                             <div class="table-responsive">
-                                <table class="table align-items-center mb-0">
+                                <table class="table align-items-center mb-4">
                                     <thead>
                                     <tr>
                                         <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Prueba</th>
@@ -210,14 +210,11 @@
             <div class="modal-content">
                 <div class="modal-header">
                     <h5 class="modal-title" id="exampleModalLabel">Documento de vacunación</h5>
-                    <span type="button" class="btn btn-dark" data-dismiss="modal" aria-label="Close">
+                    <span type="button" class="btn btn-danger" data-dismiss="modal" aria-label="Close">
                         X
                     </span>
                 </div>
                 <?php echo $iframe_doc; ?>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-danger" data-dismiss="modal">Cerrar</button>
-                </div>
             </div>
         </div>
     </div>
@@ -228,59 +225,6 @@
     </div>
     
 </main>
-
-<script>
-        $( document ).ready(function() {
-
-            $("#form_prueba_covid").on("submit",function(event){
-                event.preventDefault();
-                
-                    var formData = new FormData(document.getElementById("form_prueba_covid"));
-                    console.log(formData);
-                    $.ajax({
-                        url:"/Covid/uploadPrueba",
-                        type: "POST",
-                        data: formData,
-                        cache: false,
-                        contentType: false,
-                        processData: false,
-                        beforeSend: function(){
-                        console.log("Procesando....");
-
-                    
-                    },
-                    success: function(respuesta){
-                        
-                        
-                        if(respuesta == 'success'){
-                           // $('#modal_payment_ticket').modal('toggle');
-                            Swal.fire(
-                                'OK',
-                                'Se ha guardado tu la prueba correctamente!!',
-                                'success'
-                            )
-                            
-
-                            
-                            
-                            
-                        }
-                        
-                        console.log(respuesta);
-
-                    },
-                    error:function (respuesta)
-                    {
-                        console.log(respuesta);
-                    }
-
-                });
-            });
-
-        });
-         
-    
-    </script>
 
 
 

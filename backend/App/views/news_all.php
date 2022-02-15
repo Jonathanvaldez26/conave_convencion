@@ -59,18 +59,16 @@
     <!-- End Navbar -->
     <div class="container-fluid py-4">
 
-    <section class="section page-title">
         <div class="container">
             <div class="row">
                 <div class="col-sm-8 m-auto">
                     <!-- Page Title -->
-                    <h1>Blog</h1>
+                    <h1>NotiAsofarma</h1>
                     <!-- Page Description -->
-                    <p>Vivamus magna justo, lacinia eget consectetur sed, convallis at tellus. Vivamus magna justo, lacinia eget consectetur sed, convallis at tellus. Cras ultricies ligula sed magna dictum porta.</p>
+                    <p>Una seccion dedicada a lo mas nuevo en noticias Asofarma, enterate ya, aquí. </p>
                 </div>
             </div>
         </div>
-    </section>
 
     <section class="section featured-article">
         <div class="container">
@@ -79,22 +77,22 @@
                     <article class="featured">
                         <!-- Image -->
                         <div class="image">
-                            <a href="blog-single.html"><img class="img-fluid" src="../../assets_news/images/feature/featured-article.jpg" alt="featured-article"></a>
+                            <a href="blog-single.html"><img class="img-fluid" src="../../assets_news/images/feature/Notiasofarma.png" alt="featured-article"></a>
                         </div>
                         <!-- written-content -->
                         <div class="content">
                             <!-- Post Title -->
-                            <h2><a href="blog-single.html">Introducing New IOS App</a></h2>
+                            <h2><a href="blog-single.html">NOTICIA O TEMA DE INTERÉS PRINCIPAL</a></h2>
                             <!-- Tags -->
                             <ul class="list-inline post-tag">
                                 <li class="list-inline-item">
                                     <img class="img-fluid" src="../../assets_news/images/testimonial/feature-testimonial-thumb.jpg" alt="author-thumb">
                                 </li>
                                 <li class="list-inline-item">
-                                    <a href="#">Thomas Johnson</a>
+                                    <a href="#">Autor del título</a>
                                 </li>
                                 <li class="list-inline-item">
-                                    August 8, 2017
+                                    Febrero 11, 2022
                                 </li>
                             </ul>
                             <!-- Post Body -->

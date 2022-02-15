@@ -55,10 +55,10 @@
     </nav>
     <!-- End Navbar -->
     <div class="container-fluid py-0">
-        <div class="row mt-4">
+        <div class="row mt-5">
             <div class="col-lg-2">
             </div>
-            <div class="col-lg-8 mt-lg-0 mt-6">
+            <div class="col-lg-8 mt-lg-0 mt-8">
                 <!-- Card Profile -->
                 <div class="card card-body" id="profile">
                     <div class="row justify-content-center align-items-center">

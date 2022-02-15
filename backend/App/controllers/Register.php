@@ -94,60 +94,80 @@ html;
           <script async defer src="https://buttons.github.io/buttons.js"></script>
           <!-- Control Center for Soft Dashboard: parallax effects, scripts for the example pages etc -->
 
-        <script>
-        window.addEventListener("keypress", function(event){
-            if (event.keyCode == 13){
-                event.preventDefault();
-            }
-        }, false);
-        
-          window.onload = function() {
-          var myInput = document.getElementById('confirm_email');
-          var myInput_conf = document.getElementById('confirm_email_iva');
-          myInput.onpaste = function(e) {
-            e.preventDefault();
-          }
-          myInput_conf.onpaste = function(e) {
-            e.preventDefault();
-          }
-          
-          myInput.oncopy = function(e) {
-            e.preventDefault();
-          }
-          myInput_conf.oncopy = function(e) {
-            e.preventDefault();
-          }
-        }
-     
-        $(document).ready(function(){
-                
-                $('input[type="checkbox"]').on('change', function() 
-                {
-                    $('input[name="' + this.name + '"]').not(this).prop('checked', false);
-                    $('#ModalPayOne').show();
-                });
-                
-                $.validator.addMethod("checkUserName",function(value, element) {
+          <script>
+            $(document).ready(function(){
+                $.validator.addMethod("checkUserCorreo",function(value, element) {
                   var response = false;
                     $.ajax({
                         type:"POST",
                         async: false,
-                        url: "/Login/isUserValidate",
-                        data: {usuario: $("#usuario").val()},
+                        url: "/Register/isUserValidate",
+                        data: {email: $("#email").val()},
                         success: function(data) {
                             if(data=="true"){
-                                $('#btnEntrar').attr("disabled", false);
+                                $('#btn_registro_email').attr("disabled", false);
+                                $('#confirm_email').attr("disabled", false);
+                                $('#email').attr("disabled", true);
+
                                 response = true;
                             }else{
-                                $('#btnEntrar').attr("disabled", true);
+                                $('#btn_registro_email').attr("disabled", true);
+                                $('#confirm_email').attr("disabled", true);
+                                document.getElementById("confirm_email").value = "";
                             }
                         }
                     });
 
                     return response;
-                },"El usuario no es correcto");
+                },"Usted no está registrado en la Base de Datos CONAVE 2022, verifique con su área y reintente.");
+
+                $("#email_form").validate({
+                   rules:{
+                        email:{
+                            required: true,
+                            checkUserCorreo: true
+                        },
+                        confirm_email:{
+                            required: true,
+                            equalTo:"#email",
+                        }
+                    },
+                    messages:{
+                        email:{
+                            required: "Este campo es requerido",
+                        },
+                        confirm_email:{
+                            required: "Este campo es requerido",
+                            equalTo: "El Correo Eléctronico no coincide",
+                        }
+                    }
+                });
+
+                $("#btn_registro_email").click(function(){
+                    $.ajax({
+                        type: "POST",
+                        url: "/Login/verificarUsuario",
+                        data: $("#login").serialize(),
+                        success: function(response){
+                            if(response!=""){
+                                var usuario = jQuery.parseJSON(response);
+                                if(usuario.nombre!=""){
+                                    $("#login").append('<input type="hidden" name="autentication" id="autentication" value="OK"/>');
+                                    $("#login").append('<input type="hidden" name="nombre" id="nombre" value="'+usuario.nombre+'"/>');
+                                    $("#login").submit();
+                            }else{
+                                alertify.alert("Error de autenticación <br> El usuario o contraseña es incorrecta");
+                            }
+                            }else{
+                                alertify.alert("Error de autenticación <br> El usuario o contraseña es incorrecta");
+                            }
+                        }
+                    });
+                });
+
             });
-      </script>
+        </script>
+       
 html;
         View::set('header',$extraHeader);
         View::set('footer',$extraFooter);
@@ -289,6 +309,9 @@ html;
         View::render("alerta");
     }
 
+    public function isUserValidate(){
+        echo (count(RegisterDao::getUserRegister($_POST['email']))>=1)? 'true' : 'false';
+    }
 
 
 }

@@ -25,15 +25,6 @@ class Covid extends Controller{
 
     public function index() {
       $extraHeader =<<<html
-        <style>
-          .logo{
-            width:100%;
-            height:150px;
-            margin: 0px;
-            padding: 0px;
-          }
-        </style>
-        <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
 html;
 
       $pruebas = CovidDao::getAll();
@@ -92,12 +83,49 @@ html;
 html;
       }
       $extraFooter =<<<html
-     
+     <script>
+      $( document ).ready(function() {
+
+            $("#form_prueba_covid").on("submit",function(event){
+                event.preventDefault();
+                
+                    var formData = new FormData(document.getElementById("form_prueba_covid"));
+                    console.log(formData);
+                    $.ajax({
+                        url:"/Covid/uploadPrueba",
+                        type: "POST",
+                        data: formData,
+                        cache: false,
+                        contentType: false,
+                        processData: false,
+                        beforeSend: function(){
+                        console.log("Procesando....");
+                    },
+                    success: function(respuesta){
+                        if(respuesta == 'success'){
+                           // $('#modal_payment_ticket').modal('toggle');
+                            Swal.fire(
+                                'OK',
+                                'Se ha guardado tu la prueba correctamente!!',
+                                'success'
+                            )
+                        }
+                        console.log(respuesta);
+                    },
+                    error:function (respuesta)
+                    {
+                        console.log(respuesta);
+                    }
+                });
+            });
+
+        });
+</script>
 html;
 
       $iframe_doc = <<<html
         <div class="modal-body">
-          <iframe src="/assets/pdf/{$prueba['documento']}" style="width:100%; height:460px;" frameborder="0" >
+          <iframe src="/assets/pdf/{$prueba['documento']}" style="width:100%; height:700px;" frameborder="0" >
           </iframe>
         </div>
 html;

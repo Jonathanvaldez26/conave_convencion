@@ -189,7 +189,7 @@
                                 <div class="col-12 text-end">
                                     <img class="w-30" src="../../assets/img/small-logos/asofarma_boleto_virtual.png">
                                 </div>
-                                <h6 class="mb-0 font-weight-bolder"><a href="#">Mi boleto Virtual</a></h6>
+                                <h6 class="mb-0 font-weight-bolder"><a href="/VirtualTicket/">Mi boleto Virtual</a></h6>
                                 <p class="opacity-8 mb-0 text-sm">A un click tus asistencias</p>
                             </div>
                         </div>
@@ -213,7 +213,7 @@
                                 <div class="col-12 text-end">
                                     <img class="w-30" src="../../assets/img/small-logos/asofarma_pickup.png">
                                 </div>
-                                <h6 class="mb-0 font-weight-bolder"><a href="#">PICK UP</a></h6>
+                                <h6 class="mb-0 font-weight-bolder"><a type="button" data-toggle="modal" data-target="#ver-pickup">PICK UP</a></h6>
                                 <p class="opacity-8 mb-0 text-sm">A un click tus asistencias</p>
                             </div>
                         </div>
@@ -234,6 +234,28 @@
         </div>
 
     </div>
+    <!-- MODAL VISTA - COMPROBANTE -->
+    <div class="modal fade" id="ver-pickup" tabindex="-1" role="dialog" aria-labelledby="ver-comprobante" aria-hidden="true">
+        <div class="modal-dialog" role="document" style="max-width: 590px;">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">PICKUP Convención 2022</h5>
+                    <span type="button" class="btn btn-danger" data-dismiss="modal" aria-label="Close">
+                            X
+                        </span>
+                </div>
+                <!-- <div class="modal-header">
+                    <p>Por su seguridad y la de las demás personas, le pedimos que nos proporcione la Información siguiente para comprobar que no este contagiado de COVID.</p>
+                </div> -->
+                <div class="modal-body">
+                    <iframe src="/assets/pdf/complements/pickup.pdf"
+                            style="width:100%; height:780px;" frameborder="0" >
+                    </iframe>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <?php echo $footer; ?>
 </main>
 

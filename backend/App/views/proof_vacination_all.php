@@ -54,7 +54,7 @@
     </nav>
     <!-- End Navbar -->
     <div class="container-fluid py-0">
-        <div class="row mt-4">
+        <div class="row mt-8">
             <div class="col-lg-2">
             </div>
             <div class="card col-lg-8 mt-lg-0 mt-6" >
@@ -107,7 +107,7 @@
                                         Subiste este documento <br>el 27/01/2022 10:32 a.m.
                                     </p>
                                     <div class="d-flex align-items-center justify-content-between">
-                                        <button type="button" class="btn btn-outline-danger btn-sm mb-0">Ver Comprobante</button>
+                                        <button type="button" class="btn btn-outline-danger btn-sm mb-0" data-toggle="modal" data-target="#ver-comprobante">Ver Comprobante</button>
 
                                     </div>
                                 </div>
@@ -149,7 +149,7 @@
                 <div class="modal-content">
                     <div class="modal-header">
                         <h5 class="modal-title" id="exampleModalLabel">Comprobante de vacunación</h5>
-                        <span type="button" class="btn btn-dark" data-dismiss="modal" aria-label="Close">
+                        <span type="button" class="btn btn-danger" data-dismiss="modal" aria-label="Close">
                             X
                         </span>
                     </div>
@@ -157,12 +157,9 @@
                         <p>Por su seguridad y la de las demás personas, le pedimos que nos proporcione la Información siguiente para comprobar que no este contagiado de COVID.</p>
                     </div> -->
                     <div class="modal-body">
-                        <iframe src="/assets/pdf/pdf-prueba.pdf" 
+                        <iframe src="/assets/pdf/vaccination/ComprobanteVacunacion.pdf"
                             style="width:100%; height:700px;" frameborder="0" >
                         </iframe>
-                    </div>
-                    <div class="modal-footer">
-                       <button type="button" class="btn btn-danger" data-dismiss="modal">Cerrar</button>
                     </div>
                 </div>
             </div>
@@ -174,7 +171,7 @@
             <div class="modal-content">
                 <div class="modal-header">
                     <h5 class="modal-title" id="exampleModalLabel">Agregue su Comprobante de Vacuncación</h5>
-                    <span type="button" class="btn btn-ligth" data-dismiss="modal" aria-label="Close">
+                    <span type="button" class="btn btn-danger" data-dismiss="modal" aria-label="Close">
                         X
                     </span>
                 </div>
@@ -183,7 +180,21 @@
                         <div class="form-group row">
                             <div class="row">
                                 <div class="form-group col-md-12">
-                                    <label class="control-label col-md-12 col-sm-3 col-xs-12" for="file_">Archivocon información en comprobante de vacunación: <span class="required">*</span></label>
+                                    <label class="control-label col-md-12 col-sm-3 col-xs-12" for="file_">Archivo con información en comprobante de vacunación: <span class="required">*</span></label>
+                                    <div class="col-md-12 col-sm-6 col-xs-12">
+                                        <input type="file" accept="application/pdf" class="form-control" id="file_" name="file_">
+                                    </div>
+                                    <span id="availability_4_"></span>
+                                </div>
+                                <div class="form-group col-md-12">
+                                    <label class="control-label col-md-12 col-sm-3 col-xs-12" for="file_">Marca de Vacuna <span class="required">*</span></label>
+                                    <div class="col-md-12 col-sm-6 col-xs-12">
+                                        <input type="file" accept="application/pdf" class="form-control" id="file_" name="file_">
+                                    </div>
+                                    <span id="availability_4_"></span>
+                                </div>
+                                <div class="form-group col-md-12">
+                                    <label class="control-label col-md-12 col-sm-3 col-xs-12" for="file_">Lote de Vacuna: <span class="required">*</span></label>
                                     <div class="col-md-12 col-sm-6 col-xs-12">
                                         <input type="file" accept="application/pdf" class="form-control" id="file_" name="file_">
                                     </div>

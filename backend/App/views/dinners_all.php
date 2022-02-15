@@ -60,7 +60,7 @@
                 <div class="card">
                     <div class="card-header p-3">
                         <h5 class="mb-2">Cenas</h5>
-                        <p class="mb-0">Registrate como anfitrion e invita a tus amigos y disfruta de lo que tenemos prreparado paara ti.</p>
+                        <p class="mb-0">Registrate como anfitrion e invita a tus amigos y disfruta de lo que tenemos preparado para ti.</p>
                     </div>
                     <div class="card-body p-3">
                         <div class="row">
@@ -102,7 +102,7 @@
                             </div>
                             <div class="col-lg-2 col-6 text-center mt-4 mt-lg-0">
                                 <div class="border-dashed border-1 border-secondary border-radius-md py-3">
-                                    <h6 class="text-dark text-gradient mb-0">Nombre Restaurante 3</h6>
+                                    <h6 class="text-dark text-gradient mb-0">Nombre Restaurante 5</h6>
                                     <div class="col-12 text-centers">
                                         <img class="w-15" src="../../assets/img/small-logos/asofarma_prueba_covid.png">
                                     </div>
@@ -111,7 +111,7 @@
                             </div>
                             <div class="col-lg-2 col-6 text-center mt-4 mt-lg-0">
                                 <div class="border-dashed border-1 border-secondary border-radius-md py-3">
-                                    <h6 class="text-dark text-gradient mb-0">Nombre Restaurante 4</h6>
+                                    <h6 class="text-dark text-gradient mb-0">Nombre Restaurante 6</h6>
                                     <div class="col-12 text-centers">
                                         <img class="w-15" src="../../assets/img/small-logos/asofarma_prueba_covid.png">
                                     </div>
@@ -121,22 +121,22 @@
                         </div>
                         <div class="row mt-5">
                             <div class="col-lg-5 col-12">
-                                <h6 class="mb-0">Referral Code</h6>
-                                <p class="text-sm">Copy the code bellow to your registered provider.</p>
+                                <h6 class="mb-0">Estas Registrado como Anfitrión de Cena</h6>
+                                <p class="text-sm">y hoy tienes reservada una cena</p>
                                 <div class="border-dashed border-1 border-secondary border-radius-md p-3">
-                                    <p class="text-xs mb-2">Generated 23 days ago by <span class="font-weight-bolder">softuidash23</span></p>
-                                    <p class="text-xs mb-3"><span class="font-weight-bolder">(Used one time)</span></p>
+                                    <p class="text-xs mb-2">Reservaste tu lugar como Anfitrion en <span class="font-weight-bolder">Nombre del Restaurante</span></p>
+                                    <p class="text-xs mb-3"><span class="font-weight-bolder">el día 11/02/2022 14:00:25</span> a nombre de:</p>
                                     <div class="d-flex align-items-center">
-                                        <div class="form-group w-70">
+                                        <div class="form-group w-60">
                                             <div class="input-group bg-gray-200">
-                                                <input class="form-control form-control-sm" value="soft-ui-dashboard-vmsk392" type="text" disabled="" onfocus="focused(this)" onfocusout="defocused(this)">
-                                                <span class="input-group-text bg-transparent" data-bs-toggle="tooltip" data-bs-placement="top" title="" data-bs-original-title="Referral code expires in 24 hours" aria-label="Referral code expires in 24 hours"><i class="ni ni-key-25"></i></span>
+                                                <input class="form-control form-control-sm" value="EL NOMBRE DEL EQUIPO ASOFARMA" type="text" disabled="" onfocus="focused(this)" onfocusout="defocused(this)">
+                                                <span class="input-group-text bg-transparent" data-bs-toggle="tooltip" data-bs-placement="top" title="" data-bs-original-title="Tu cena es hoy 11 de Febrero a las 7:00 pm Hora Local, en Nombre del Restaurante" aria-label="Referral code expires in 24 hours"><i class="ni ni-key-25"></i></span>
                                             </div>
                                         </div>
-                                        <a href="javascript:;" class="btn btn-sm btn-outline-secondary ms-2 px-3">Copy</a>
+                                        <a href="javascript:;" class="btn btn-sm btn-outline-secondary ms-2 px-3">Cancelar Reservación</a>
                                     </div>
-                                    <p class="text-xs mb-1">You cannot generate codes.</p>
-                                    <p class="text-xs mb-0"><a href="javascript:;">Contact us</a> to generate more referrals link.</p>
+                                    <p class="text-xs mb-1">Puedes Cancelar tu Reservación en todo momento y registrarte a otra cena.</p>
+                                    <p class="text-xs mb-0"><a href="javascript:;">Revisa Disponibilidad</a>.</p>
                                 </div>
                             </div>
                             <div class="col-lg-7 col-12 mt-4 mt-lg-0">
@@ -183,9 +183,9 @@
                                 <div class="card text-center">
                                     <div class="overflow-hidden position-relative border-radius-lg p-3" style="background-image: url('https://raw.githubusercontent.com/creativetimofficial/public-assets/master/soft-ui-design-system/assets/img/window-desk.jpg')">
                                         <span></span>
-                                        <div class="card-body position-relative z-index-1 d-flex flex-column mt-5">
+                                        <div class="card-body position-relative z-index-1 d-flex flex-column mt-9">
                                             <a class="text-white text-sm font-weight-bold mb-0 icon-move-right mt-4" href="javascript:;">
-                                                Read More
+                                                Quiero Registrarme
                                                 <i class="fas fa-arrow-right text-sm ms-1" aria-hidden="true"></i>
                                             </a>
                                         </div>
@@ -194,12 +194,11 @@
                             </div>
                             <div class="col-lg-3 col-md-6 col-12 mt-4 mt-lg-0">
                                 <div class="card text-center">
-                                    <div class="overflow-hidden position-relative border-radius-lg bg-cover p-3" style="background-image: url('../../assets/img/office-dark.jpg')">
-                                        <span class="mask bg-gradient-dark opacity-6"></span>
-                                        <div class="card-body position-relative z-index-1 d-flex flex-column mt-5">
-                                            <p class="text-white font-weight-bolder">Send the invitation link to 10 friends and get a 50% coupon to use on any purchase.</p>
+                                    <div class="overflow-hidden position-relative border-radius-lg p-3" style="background-image: url('https://raw.githubusercontent.com/creativetimofficial/public-assets/master/soft-ui-design-system/assets/img/window-desk.jpg')">
+                                        <span></span>
+                                        <div class="card-body position-relative z-index-1 d-flex flex-column mt-9">
                                             <a class="text-white text-sm font-weight-bold mb-0 icon-move-right mt-4" href="javascript:;">
-                                                Read More
+                                                Quiero Registrarme
                                                 <i class="fas fa-arrow-right text-sm ms-1" aria-hidden="true"></i>
                                             </a>
                                         </div>
@@ -208,28 +207,27 @@
                             </div>
                             <div class="col-lg-3 col-md-6 col-12 mt-4 mt-lg-0">
                                 <div class="card text-center">
-                                    <div class="overflow-hidden position-relative border-radius-lg bg-cover p-3" style="background-image: url('../../assets/img/office-dark.jpg')">
-                                        <span class="mask bg-gradient-dark opacity-6"></span>
-                                        <div class="card-body position-relative z-index-1 d-flex flex-column mt-5">
-                                            <p class="text-white font-weight-bolder">Send the invitation link to 10 friends and get a 50% coupon to use on any purchase.</p>
+                                    <div class="overflow-hidden position-relative border-radius-lg p-3" style="background-image: url('https://raw.githubusercontent.com/creativetimofficial/public-assets/master/soft-ui-design-system/assets/img/window-desk.jpg')">
+                                        <span></span>
+                                        <div class="card-body position-relative z-index-1 d-flex flex-column mt-9">
                                             <a class="text-white text-sm font-weight-bold mb-0 icon-move-right mt-4" href="javascript:;">
-                                                Read More
+                                                Quiero Registrarme
                                                 <i class="fas fa-arrow-right text-sm ms-1" aria-hidden="true"></i>
                                             </a>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-lg-3 col-12 mt-4 mt-lg-0">
-                                <div class="card border-dashed border-1 text-center h-100">
-                                    <div class="card-body position-relative z-index-1 d-flex flex-column">
-                                        <div class="position-relative d-flex align-items-center justify-content-center h-100">
-                                            <img class="w-50 position-relative z-index-2" src="../../assets/img/illustrations/rocket-white.png" alt="illustration">
+                            <div class="col-lg-3 col-md-6 col-12 mt-4 mt-lg-0">
+                                <div class="card text-center">
+                                    <div class="overflow-hidden position-relative border-radius-lg p-3" style="background-image: url('https://raw.githubusercontent.com/creativetimofficial/public-assets/master/soft-ui-design-system/assets/img/window-desk.jpg')">
+                                        <span></span>
+                                        <div class="card-body position-relative z-index-1 d-flex flex-column mt-9">
+                                            <a class="text-white text-sm font-weight-bold mb-0 icon-move-right mt-4" href="javascript:;">
+                                                Quiero Registrarme
+                                                <i class="fas fa-arrow-right text-sm ms-1" aria-hidden="true"></i>
+                                            </a>
                                         </div>
-                                        <a class="text-sm text-secondary font-weight-bold mb-0 icon-move-right mt-2" href="javascript:;">
-                                            Join rocketship program
-                                            <i class="fas fa-arrow-right text-sm ms-1" aria-hidden="true"></i>
-                                        </a>
                                     </div>
                                 </div>
                             </div>

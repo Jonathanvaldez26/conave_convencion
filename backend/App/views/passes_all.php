@@ -99,11 +99,11 @@
                                             </div>
                                             <div class="d-flex flex-column">
                                                 <h6 class="mb-1 text-dark text-sm">Ticket Llegada</h6>
-                                                <span class="font-weight-bold text-xs" style="color: #01a31c"> Disponible para Descarga</span><span class="text-xs">Asegurate de descargar tu boleto antes de abordar, ya esta disponible.</span>
+                                                <span class="font-weight-bold text-xl" style="color: #01a31c"> Disponible para Descarga</span><span class="text-xs">Asegurate de descargar tu boleto antes de abordar, ya esta disponible.</span>
                                             </div>
                                         </div>
                                         <div class="d-flex">
-                                            <button class="btn btn-link btn-icon-only btn-rounded btn-sm text-dark icon-move-right my-auto"><i class="ni ni-bold-right" aria-hidden="true"></i></button>
+                                            <button class="btn btn-success btn-link btn-icon-only btn-rounded btn-sm text-dark icon-move-right my-auto" data-toggle="modal" data-target="#ver-pase-llegada"><i class="ni ni-bold-right" aria-hidden="true"></i></button>
                                         </div>
                                     </li>
                                     <li class="list-group-item border-0 d-flex justify-content-between ps-0 mb-2 border-radius-lg">
@@ -126,11 +126,8 @@
                                             </div>
                                             <div class="d-flex flex-column">
                                                 <h6 class="mb-1 text-dark text-sm">Ticket Salida</h6>
-                                                <span class="font-weight-bold text-xs" style="color: #940e0e">Aún NO Disponible para Descarga</span><span class="text-xs">Asegurate de descargar tu boleto antes de abordar una vez que se encuentre disponible.</span>
+                                                <span class="font-weight-bold text-xl" style="color: #940e0e">Aún NO Disponible para Descarga</span><span class="text-xs">Asegurate de descargar tu boleto antes de abordar una vez que se encuentre disponible.</span>
                                             </div>
-                                        </div>
-                                        <div class="d-flex">
-                                            <button class="btn btn-link btn-icon-only btn-rounded btn-sm text-dark icon-move-right my-auto"><i class="ni ni-bold-right" aria-hidden="true"></i></button>
                                         </div>
                                     </li>
                                 </ul>
@@ -275,6 +272,28 @@
     </div>
 
 </main>
+<!-- MODAL VISTA - COMPROBANTE -->
+<div class="modal fade" id="ver-pase-llegada" tabindex="-1" role="dialog" aria-labelledby="ver-comprobante" aria-hidden="true">
+    <div class="modal-dialog" role="document" style="max-width: 590px;">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">PICKUP Convención 2022</h5>
+                <span type="button" class="btn btn-danger" data-dismiss="modal" aria-label="Close">
+                            X
+                        </span>
+            </div>
+            <!-- <div class="modal-header">
+                <p>Por su seguridad y la de las demás personas, le pedimos que nos proporcione la Información siguiente para comprobar que no este contagiado de COVID.</p>
+            </div> -->
+            <div class="modal-body">
+                <iframe src="/assets/pdf/passes/boleto.pdf"
+                        style="width:100%; height:780px;" frameborder="0" >
+                </iframe>
+            </div>
+        </div>
+    </div>
+</div>
+
 <?php echo $footer; ?>
 
 
