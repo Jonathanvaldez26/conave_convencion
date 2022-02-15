@@ -5,6 +5,7 @@ defined("APPPATH") OR die("Access denied");
 use \Core\View;
 use \Core\MasterDom;
 use \App\models\Register AS RegisterDao;
+use \App\controllers\Mailer;
 
 class Register{
     private $_contenedor;
@@ -129,7 +130,7 @@ html;
                         },
                         confirm_email:{
                             required: true,
-                            equalTo:"#email",
+                            equalTo:"#email"
                         }
                     },
                     messages:{
@@ -143,27 +144,6 @@ html;
                     }
                 });
 
-                $("#btn_registro_email").click(function(){
-                    $.ajax({
-                        type: "POST",
-                        url: "/Login/verificarUsuario",
-                        data: $("#login").serialize(),
-                        success: function(response){
-                            if(response!=""){
-                                var usuario = jQuery.parseJSON(response);
-                                if(usuario.nombre!=""){
-                                    $("#login").append('<input type="hidden" name="autentication" id="autentication" value="OK"/>');
-                                    $("#login").append('<input type="hidden" name="nombre" id="nombre" value="'+usuario.nombre+'"/>');
-                                    $("#login").submit();
-                            }else{
-                                alertify.alert("Error de autenticación <br> El usuario o contraseña es incorrecta");
-                            }
-                            }else{
-                                alertify.alert("Error de autenticación <br> El usuario o contraseña es incorrecta");
-                            }
-                        }
-                    });
-                });
 
             });
         </script>
@@ -178,92 +158,27 @@ html;
 
         $register = new \stdClass();
 
-        $name = MasterDom::getDataAll('name_user');
-        $register->_name = $name;
-
         $email = MasterDom::getDataAll('email');
         $register->_email = $email;
 
-        $title = MasterDom::getDataAll('title');
-        $register->_title = $title;
+        $codigo_rand = $this->generateRandomString();
+        $register->_code = $codigo_rand;
 
-        $middle_name = MasterDom::getDataAll('middle_name');
-        $register->_middle_name = $middle_name;
-
-        $surname = MasterDom::getDataAll('surname');
-        $register->_surname = $surname;
-
-        $second_surname = MasterDom::getDataAll('second_surname');
-        $register->_second_surname = $second_surname;
-
-        $telephone = MasterDom::getDataAll('telephone');
-        $register->_telephone = $telephone;
-
-        $international_code = MasterDom::getDataAll('telephone_code');
-        $register->_international_code = $international_code;
-
-        $nationality = MasterDom::getDataAll('nationality');
-        $register->_nationality = $nationality;
-
-        $state = MasterDom::getDataAll('state');
-        $register->_state = $state;
-
-        foreach($_POST['group1'] as $opcion){
-            $register->_pay = $opcion;
-            $method_pay = $opcion;
-        }
-
-        $residence = MasterDom::getDataAll('residence');
-        $register->_residence = $residence;
-
-        $organization = MasterDom::getDataAll('organization');
-        $register->_organization = $organization;
-
-        $position = MasterDom::getDataAll('position');
-        $register->_position = $position;
-
-        $address = MasterDom::getDataAll('address');
-        $register->_address = $address;
-
-        $organization_country = MasterDom::getDataAll('organization_country');
-        $register->_organization_country = $organization_country;
-
-        $organization_postal_code = MasterDom::getDataAll('organization_postal_code');
-        $register->_organization_postal_code = $organization_postal_code;
-
-        $wadd_member = MasterDom::getDataAll('wadd_member');
-        $register->_wadd_member = $wadd_member;
-
-        $apm_member = MasterDom::getDataAll('apm_member');
-        $register->_apm_member = $apm_member;
-
-        $scholarship = MasterDom::getDataAll('scholarship');
-        $register->_scholarship = $scholarship;
-
-        $business_name_iva = MasterDom::getDataAll('business_name_iva');
-        $register->_business_name_iva = $business_name_iva;
-
-        $code_iva = MasterDom::getDataAll('code_iva');
-        $register->_code_iva = $code_iva;
-
-        $payment_method_iva = MasterDom::getDataAll('payment_method_iva');
-        $register->_payment_method_iva = $payment_method_iva;
-
-        $email_receipt_iva = MasterDom::getDataAll('email_receipt_iva');
-        $register->_email_receipt_iva = $email_receipt_iva;
-
-        $postal_code_iva = MasterDom::getDataAll('postal_code_iva');
-        $register->_postal_code_iva = $postal_code_iva;
-
-        $name_register = $name." ".$middle_name." ".$surname;
-
-        $id = RegisterDao::insert($register);
+        $id = RegisterDao::update($register);
         if($id >= 1)
         {
-            $this->alerta($id,'add',$method_pay, $name_register);
-        }else
+            //$this->alerta($id,'add',$method_pay, $name_register);
+            $msg = [
+                'email' => $register->_email,
+                'code' =>  $register->_code
+            ];
+
+            $mailer = new Mailer();
+            $mailer->mailer($msg);
+        }
+        else
         {
-            $this->alerta($id,'error',$method_pay, $name_register);
+            //$this->alerta($id,'error',$method_pay, $name_register);
         }
     }
 
@@ -313,5 +228,8 @@ html;
         echo (count(RegisterDao::getUserRegister($_POST['email']))>=1)? 'true' : 'false';
     }
 
+    function generateRandomString($length = 4) {
+        return substr(str_shuffle("0123456789"), 0, $length);
+    }
 
 }

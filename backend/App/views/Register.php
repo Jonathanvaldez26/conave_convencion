@@ -26,7 +26,7 @@ echo $header;
                             </p>
                         </div>
                         <div class="card-body pt-1">
-                            <form role="form" class="text-start" id="email_form" action="/Register/" method="POST">
+                            <form role="form" class="text-start" id="email_form" action="/Register/Success" method="POST">
                                 <div class="mb-3">
                                     <label>Correo Eléctronico Institucional *</label>
                                     <input type="email" id="email" name="email" class="form-control" placeholder="Ej. usuario@asofarma.com.mx" aria-label="Correo Eléctronico">
@@ -36,7 +36,7 @@ echo $header;
                                     <input type="email" id="confirm_email" name="confirm_email" class="form-control" placeholder="Ej. usuario@asofarma.com.mx" aria-label="Confirmar tu Correo Eléctronico">
                                 </div>
                                 <div class="text-center">
-                                    <button type="button" id="btn_registro_email" class="btn bg-gradient-faded-info w-100 my-4 mb-2" style="color:white">Registrarme</button>
+                                    <button type="button" id="btn_registro_email" type="submit" class="btn bg-gradient-faded-info w-100 my-4 mb-2" style="color:white">Registrarme</button>
                                 </div>
                             </form>
                         </div>
