@@ -54,10 +54,10 @@
     </nav>
     <!-- End Navbar -->
     <div class="container-fluid py-0">
-        <div class="row mt-8">
+        <div class="row mt-lg-8 mt-0">
             <div class="col-lg-2">
             </div>
-            <div class="card col-lg-8 mt-lg-0 mt-6" >
+            <div class="card col-lg-8 mt-lg-0 mt-0" >
                 <div class="card-header pb-0 p-3">
                     <h6 class="mb-1">Comprobantes de Vacunación</h6>
                     <p class="text-sm">Registraste 3 Dosis de Vacuna</p>

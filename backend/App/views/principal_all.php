@@ -281,7 +281,7 @@
     </div>
     <!-- MODAL VISTA - COMPROBANTE -->
     <div class="modal fade" id="ver-pickup" tabindex="-1" role="dialog" aria-labelledby="ver-comprobante" aria-hidden="true">
-        <div class="modal-dialog" role="document" style="max-width: 590px;">
+        <div class="modal-dialog  modal-dialog-scrollable" role="document" style="max-width: 590px;">
             <div class="modal-content">
                 <div class="modal-header">
                     <h5 class="modal-title" id="exampleModalLabel">PICKUP Convención 2022</h5>
@@ -293,9 +293,14 @@
                     <p>Por su seguridad y la de las demás personas, le pedimos que nos proporcione la Información siguiente para comprobar que no este contagiado de COVID.</p>
                 </div> -->
                 <div class="modal-body">
-                    <iframe src="/assets/pdf/complements/pickup.pdf"
+                    <!-- <iframe src="../assets/pdf/complements/PruebaCovid.pdf"
                             style="width:100%; height:780px;" frameborder="0" >
+                    </iframe> -->
+                    <iframe src="/assets/pdf/complements/PruebaCovid.pdf" style="width:100%; height:700px;" frameborder="0" >
                     </iframe>
+                    <!-- <object data="your_url_to_pdf"  style="width:100%; height:700px;" type="application/pdf">
+                        <iframe src="/assets/pdf/complements/PruebaCovid.pdf"></iframe>
+                    </object> -->
                 </div>
             </div>
         </div>

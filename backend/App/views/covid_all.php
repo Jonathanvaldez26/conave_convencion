@@ -4,7 +4,7 @@
     <nav class="navbar navbar-main navbar-expand-lg position-sticky mt-4 top-1 px-0 mx-4 shadow-none border-radius-xl z-index-sticky" id="navbarBlur" data-scroll="true">
         <div class="container-fluid py-1 px-3">
             <nav aria-label="breadcrumb">
-                <ol class="breadcrumb bg-transparent mb-0 pb-0 pt-1 px-0 me-sm-6 me-5">
+                <ol class="breadcrumb bg-transparent mb-0 pb-0 pt-1 px-0 me-sm-6 me-2">
                     <li class="breadcrumb-item text-sm">
                         <a class="opacity-3 text-dark" href="javascript:;">
                             <svg width="12px" height="12px" class="mb-1" viewBox="0 0 45 40" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
@@ -23,7 +23,7 @@
                         </a>
                     </li>
                     <li class="breadcrumb-item text-sm"><a class="opacity-5 text-dark" href="/Home/">Inicio</a></li>
-                    <li class="breadcrumb-item text-sm"><a class="opacity-5 text-dark" href="javascript:;" disabled>Mis Pruebas Covid</a></li>
+                    <li class="breadcrumb-item text-sm"><a class="opacity-5 text-dark" href="javascript:;" disabled>Pruebas Covid</a></li>
                 </ol>
             </nav>
 
@@ -34,13 +34,12 @@
 
                 <ul class="navbar-nav  justify-content-end">
                     <li class="nav-item d-flex align-items-center">
-                        <a href="/Home/" class="nav-link text-body font-weight-bold px-0">
+                        <a href="/Home/" class="nav-link text-body font-weight-bold mx-lg-4 mx-0 px-0">
                             <i class="fa fa-home me-sm-0"></i>
                             <span class="d-sm-inline d-none">Inicio</span>
                         </a>
                     </li>
                 </ul>
-                <ul></ul>
                 <ul class="navbar-nav  justify-content-end">
                     <li class="nav-item d-flex align-items-center">
                         <a href="/Login/cerrarSession" class="nav-link text-body font-weight-bold px-0">
@@ -54,10 +53,10 @@
     </nav>
     <!-- End Navbar -->
     <div class="container-fluid py-">
-        <div class="row mt-4">
+        <div class="row mt-2">
             <div class="col-lg-2">
             </div>
-            <div class="card col-lg-8 mt-lg-5 mt-8" >
+            <div class="card col-lg-8 mt-lg-5 mt-1" >
                 <div class="card-header pb-0 p-3">
                     <h6 class="mb-1">Mis pruebas Covid</h6>
                     <p class="text-sm">Registra la primera prueba Covid con anticipación de 24 o 48 horas a tu vuelo</p>
