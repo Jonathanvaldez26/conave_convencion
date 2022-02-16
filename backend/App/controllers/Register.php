@@ -1,6 +1,5 @@
 <?php
 namespace App\controllers;
-defined("APPPATH") OR die("Access denied");
 
 use \Core\View;
 use \Core\MasterDom;
@@ -243,3 +242,4 @@ html;
     }
 
 }
+
