@@ -6,9 +6,14 @@ use \Core\View;
 use \Core\MasterDom;
 use \App\models\Register AS RegisterDao;
 use \App\controllers\Mailer;
+use Core\Controller;
 
-class Register{
+class Register extends Controller{
     private $_contenedor;
+
+    public function getUsuario(){
+        return $this->__usuario;
+    }
 
     public function index() {
         $extraHeader =<<<html
@@ -158,8 +163,10 @@ html;
 
         $register = new \stdClass();
 
-        $email = MasterDom::getDataAll('email');
+        //$email = MasterDom::getDataAll('email');
+        $email = $_POST['confirm_email'];
         $register->_email = $email;
+
 
         $codigo_rand = $this->generateRandomString();
         $register->_code = $codigo_rand;
@@ -173,11 +180,14 @@ html;
                 'code' =>  $register->_code
             ];
 
+            //echo "Se actualizo";
+
             $mailer = new Mailer();
             $mailer->mailer($msg);
         }
         else
         {
+            echo "No se actualizo";
             //$this->alerta($id,'error',$method_pay, $name_register);
         }
     }

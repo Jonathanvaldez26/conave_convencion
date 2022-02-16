@@ -88,25 +88,27 @@
                 <div class="card mt-4" id="basic-info">
                     <div class="card-header">
                         <h5>Información Básica</h5>
+                        <?php $prueba;?>
+                        <?php //$userData; ?>
                     </div>
                     <div class="card-body pt-0">
                         <div class="row">
                             <div class="col-12 col-lg-4">
                                 <label class="form-label">Nombre *</label>
                                 <div class="input-group">
-                                    <input id="firstName" name="firstName" class="form-control" type="text" placeholder="Alec" required="required" onfocus="focused(this)" onfocusout="defocused(this)" value="Carlos">
+                                    <input id="firstName" name="firstName" class="form-control" type="text" placeholder="Alec" required="required" onfocus="focused(this)" onfocusout="defocused(this)" value="<?=$userData['nombre']?>">
                                 </div>
                             </div>
                             <div class="col-12 col-lg-4">
                                 <label class="form-label">Apellido Paterno *</label>
                                 <div class="input-group">
-                                    <input id="lastName" name="lastName" class="form-control" type="text" placeholder="Thompson" required="required" onfocus="focused(this)" onfocusout="defocused(this)" value="Cruz">
+                                    <input id="lastName" name="lastName" class="form-control" type="text" placeholder="Thompson" required="required" onfocus="focused(this)" onfocusout="defocused(this)" value="<?=$userData['apellido_p']?>">
                                 </div>
                             </div>
                             <div class="col-12 col-lg-4">
                                 <label class="form-label">Apellido Materno *</label>
                                 <div class="input-group">
-                                    <input id="lastName" name="lastName" class="form-control" type="text" placeholder="Thompson" required="required" onfocus="focused(this)" onfocusout="defocused(this)" value="Sánchez">
+                                    <input id="lastName" name="lastName" class="form-control" type="text" placeholder="Thompson" required="required" onfocus="focused(this)" onfocusout="defocused(this)" value="<?=$userData['apellido_m']?>">
                                 </div>
                             </div>
                         </div>
@@ -120,23 +122,25 @@
                         <div class="row">
                             <div class="col-sm-4 col-12">                                      
                                 <label class="form-label mt-4">Me identifico como: *</label>
-                                <select class="form-control" style="cursor: pointer;" name="choices-button" id="choices-button" placeholder="Genero" >
-                                    <option value="Male">Hombre</option>
-                                    <option value="Male">Mujer</option>
-                                    <option value="Male">Otro</option>
-                                </select>
+                                <!-- <select class="form-control" style="cursor: pointer;" name="choices-button" id="choices-button" placeholder="Genero" >
+                                    <option value="Hombre">Hombre</option>
+                                    <option value="Mujer">Mujer</option>
+                                    <option value="Otro">Otro</option>
+                                </select> -->
+                                <input type="text" class="form-control" value="<?=$userData['genero']?>" disabled>
                             </div>
                             <div class="col-sm-8">
                                 <div class="row">
                                     <div class="col-sm-5 col-5">
                                         <label class="form-label mt-4">Fecha de Nacimiento *</label>
-                                        <select class="form-control" style="cursor: pointer;" name="choices-button" id="choices-button" placeholder="Mes" >
+                                        <!-- <select class="form-control" style="cursor: pointer;" name="choices-button" id="choices-button" placeholder="Mes" >
                                             <option value="Male">Enero</option>
                                             <option value="Male">Febrero</option>
-                                            <option value="Male">Marzo</option>
+                                            <option value="Male">Marzo</option> -->
+                                            <input type="date" class="form-control" value="<?=$userData['fecha_nacimiento']?>"> 
                                         </select>
                                     </div>
-                                    <div class="col-sm-4 col-3 mt-lg-0 mt-3">
+                                    <!-- <div class="col-sm-4 col-3 mt-lg-0 mt-3">
                                         <label class="form-label mt-4">&nbsp;</label>
                                         <select class="form-control choices__inner" style="cursor: pointer;" name="choices-day" id="choices-day" tabindex="-1" data-choice="active">
                                             <option value="1">1</option>
@@ -149,8 +153,8 @@
                                             <option value="8">8</option>
                                             <option value="9">9</option>
                                         </select>
-                                    </div>
-                                    <div class="col-sm-3 col-4 mt-lg-0 mt-3">
+                                    </div> -->
+                                    <!-- <div class="col-sm-3 col-4 mt-lg-0 mt-3">
                                         <label class="form-label mt-4">&nbsp;</label>
                                         <select class="form-control" style="cursor: pointer;" name="choices-year" id="choices-year" data-choice="active">
                                             <option value="1991">1991</option>
@@ -158,7 +162,7 @@
                                             <option value="1993">1993</option>
                                             <option value="1994">1994</option>
                                         </select>
-                                    </div>
+                                    </div> -->
                                 </div>
                             </div>
                         </div>
@@ -166,26 +170,26 @@
                             <div class="col-lg-6 col-12">
                                 <label class="form-label mt-4">Email Rregistrado y Verificado</label>
                                 <div class="input-group">
-                                    <input id="email" name="email" class="form-control" type="email" placeholder="example@email.com" onfocus="focused(this)" onfocusout="defocused(this)" disabled value="user@asofarma.com">
+                                    <input id="email" name="email" class="form-control" type="email" placeholder="example@email.com" onfocus="focused(this)" onfocusout="defocused(this)" disabled value="<?=$userData['usuario']?>">
                                 </div>
                             </div>
                             <div class="col-lg-6 col-12">
                                 <label class="form-label mt-4">Número de Telefono</label>
                                 <div class="input-group">
-                                    <input id="phone" name="phone" class="form-control" type="number" placeholder="+40 735 631 620" onfocus="focused(this)" onfocusout="defocused(this)" value="+52 7293787668">
+                                    <input id="phone" name="phone" class="form-control" type="number" placeholder="+40 735 631 620" onfocus="focused(this)" onfocusout="defocused(this)" value="<?=$userData['telefono']?>">
                                 </div>
                             </div>
                         </div>
                         <div class="row">
                             <div class="col-md-6 align-self-center">
                                 <label class="form-label mt-4">Pertenezco a la Línea ASOFARMA</label>
-                                <select class="form-control" style="cursor: pointer;" name="choices-linea" id="choices-linea" tabindex="-1" data-choice="active">
+                                <select class="form-control" style="cursor: pointer;" name="choices-linea" id="choices-linea" tabindex="-1" data-choice="active" disabled>
                                     <option value="asofem">ASOFEM</option>
                                 </select>
                             </div>
                             <div class="col-md-6">
                                 <label class="form-label mt-4">Alergias</label>
-                                <input class="form-control" id="choices-tags" data-color="dark" type="text" value="Leche, Polen, Huevo" placeholder="Enter something" />
+                                <input class="form-control" id="choices-tags" data-color="dark" type="text" value="<?=$userData['alergias']?>" placeholder="Enter something" />
                                 <!-- <div class="choices" data-type="text" aria-haspopup="true" aria-expanded="false">
                                     <div class="choices__inner">
                                         <input class="form-control choices__input" id="choices-skills" type="text" value="vuejs,angular,react" placeholder="Enter something" hidden="" tabindex="-1" data-choice="active" onfocus="focused(this)" onfocusout="defocused(this)">

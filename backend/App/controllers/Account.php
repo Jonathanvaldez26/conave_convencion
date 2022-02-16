@@ -5,6 +5,7 @@ defined("APPPATH") OR die("Access denied");
 use \Core\View;
 use \Core\MasterDom;
 use \App\controllers\Contenedor;
+use \App\models\Login AS LoginDao;
 use \Core\Controller;
 
 class Account extends Controller{
@@ -23,6 +24,7 @@ class Account extends Controller{
     }
 
     public function index() {
+        $userData = LoginDao::getUser($_SESSION['usuario'])[0];
      $extraHeader =<<<html
 
 
@@ -77,8 +79,10 @@ html;
       </div>
   </footer>
 html;
+    
       View::set('header',$this->_contenedor->header($extraHeader));
       View::set('footer',$extraFooter);
+      View::set('userData', $userData);
       View::render("account_all");
     }
 
