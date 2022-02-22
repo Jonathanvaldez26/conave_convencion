@@ -10,7 +10,7 @@ use \App\controllers\Mailer;
 use \App\controllers\Contenedor;
 use Core\Controller;
 
-class Register extends Controller{
+class Register{
     private $_contenedor;
 
     public function getUsuario(){
@@ -105,6 +105,7 @@ html;
 
           <script>
             $(document).ready(function(){
+
                 $.validator.addMethod("checkUserCorreo",function(value, element) {
                   var response = false;
                     $.ajax({
@@ -151,10 +152,6 @@ html;
                         }
                     }
                 });
-
-                
-
-
             });
         </script>
        
@@ -904,12 +901,7 @@ html;
                 $password = $_POST['password'];
                 $email = $_POST['email'];
                 $id_registro = $_POST['id_registro'];
-                //   echo $_POST['password'];
-                // echo $_POST['confirm_password'];
-                // echo $_POST['email'];
-                // echo $_POST['id_registro'];
-                // exit;
-                
+               
                 
                 $register->_password = md5($password);
                 $register->_email = $email;
@@ -919,12 +911,12 @@ html;
 
                 if ($id) {
                 
-                    echo 'success';
+                    header("Location: /Login/");
 
                 } else {
 
-                
-                    echo 'fail';
+                    $this->code500();
+                    //echo 'fail';
                 }
         }    
       
