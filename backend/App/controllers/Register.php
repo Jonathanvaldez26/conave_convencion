@@ -10,7 +10,7 @@ use \App\controllers\Mailer;
 use \App\controllers\Contenedor;
 use Core\Controller;
 
-class Register{
+class Register extends Controller{
     private $_contenedor;
 
     public function getUsuario(){
