@@ -38,6 +38,7 @@ echo $header;
                                     <div class="form-group text-center">
                                         <button class="btn btn-outline-danger w-100 my-4 mb-2 ms-auto" type="submit" id="btn_registro_email">Registrar</button>
                                     </div>
+                                    
                                 </form>
                             </div>
                         </div>

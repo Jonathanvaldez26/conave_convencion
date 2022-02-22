@@ -1,24 +1,5 @@
 <!--single form panel-->
-<div class="card multisteps-form__panel p-3 border-radius-xl bg-white js-active" data-animation="FadeIn">
-    <h5 class="font-weight-bolder mb-0">Crear cuenta</h5>
-    <!--<p class="mb-0 text-sm">Mandatory informations</p>-->
-    <div class="multisteps-form__content">
-        <div class="row mt-3">
-            <div class="col-12 col-sm-6">
-                <label>Ingresa tu Email:</label>
-                <input class="multisteps-form__input form-control" type="email" id="email" name="email" placeholder="usuario@grupolahe.com">
-            </div>
-            <div class="col-12 col-sm-6 mt-3 mt-sm-0">
-                <label>Confirma tu Email:</label>
-                <input class="multisteps-form__input form-control" type="text" id="confirm_email" name="confirm_email" placeholder="usuario@grupolahe.com" autocomplete="no">
-            </div>
-        </div>
 
-        <div class="button-row d-flex mt-4">
-            <button class="btn bg-gradient-dark ms-auto mb-0 js-btn-next" type="button" title="Next">Siguiente</button>
-        </div>
-    </div>
-</div>
 <!--single form panel-->
 <div class="card multisteps-form__panel p-3 border-radius-xl bg-white" data-animation="FadeIn">
     <!--<h5 class="font-weight-bolder">Address</h5>-->

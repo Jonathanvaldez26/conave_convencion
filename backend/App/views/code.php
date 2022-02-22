@@ -20,7 +20,7 @@ echo $header;
                 <div class="col-xl-4 col-lg-5 col-md-7 mx-auto">
                     <div class="card z-index-0">
                         <div class="card-body pt-1">
-                            <form class="form-horizontal" id="email_form" action="/Register/Success" method="POST">
+                            
                                 <div class="card-body px-lg-2 py-lg-2 text-center">
                                         <div class="info mb-2">
                                             <div class="icon icon-shape icon-xl rounded-circle bg-gradient-danger shadow text-center py-3 mx-auto">
@@ -46,7 +46,7 @@ echo $header;
                                             <span class="text-muted text-sm">Has recibido un código de verificación de identidad en tu cuenta de correo electrónico, introdúcelo a continuación. </span>
 
                                         </div>
-                                        <form class="form-horizontal" id="code_form" action="Register/code" method="POST">
+                                        <form class="form-horizontal" id="code_form" action="/Register/Step1" method="POST">
                                             <div class="form-group">
                                                 <input type="hidden" id="email" name="email" class="form-control form-control-lg text-center" value="<?php echo $code;?>">
                                             </div>
@@ -75,12 +75,13 @@ echo $header;
                                             <div class="text-center">
                                                 <button class="btn btn-outline-danger w-100 my-0 mb-2 ms-auto" type="submit" id="btn_registro_email">Verificar mi Código</button>
                                                 <a type="submit" name="id" class="btn btn-outline-primary"><span class="fa fa-pencil-square-o"></span> </a>
+                                                <?php $alerta;?>
 
                                                 <span class="text-muted text-sm">¿No ha recibido recibido un código?<a href="javascript:;"> Reenviar un nuevo código</a>.</span>
                                             </div>
                                         </form>
                                     </div>
-                            </form>
+                            
                         </div>
                     </div>
                 </div>
