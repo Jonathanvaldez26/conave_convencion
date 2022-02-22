@@ -1,7 +1,7 @@
 <?php
 echo $header;
 ?>
-    <script src="/backend/public/assets/js/plugins/choices.min.js"></script>
+    <!-- <script src="/backend/public/assets/js/plugins/choices.min.js"></script> -->
     <body class="">
     <main class="main-content mt-0 ps">
         <div class="page-header align-items-start min-vh-50 pt-5 pb-11 m-3 border-radius-lg" style="background-image: url('../../../assets/img/curved-images/curved.jpg');">
@@ -53,22 +53,22 @@ echo $header;
                                             <div class="row gx-2 gx-sm-3">
                                                 <div class="col">
                                                     <div class="form-group">
-                                                        <input style="font-size: 25px" type="text" id="uno" name="uno" class="form-control form-control-lg text-center" maxlength="1" autocomplete="off" autocapitalize="off" onKeypress="if (event.keyCode < 45 || event.keyCode > 57) event.returnValue = false;">
+                                                        <input style="font-size: 25px" type="text" id="uno" name="uno" class="form-control form-control-lg text-center press" maxlength="1" autocomplete="off" autocapitalize="off" onKeypress="if (event.keyCode < 45 || event.keyCode > 57) event.returnValue = false;">
                                                     </div>
                                                 </div>
                                                 <div class="col">
                                                     <div class="form-group">
-                                                        <input style="font-size: 25px" type="text" id="dos" name="dos" class="form-control form-control-lg text-center" maxlength="1" autocomplete="off" autocapitalize="off" onKeypress="if (event.keyCode < 45 || event.keyCode > 57) event.returnValue = false;">
+                                                        <input style="font-size: 25px" type="text" id="dos" name="dos" class="form-control form-control-lg text-center press" maxlength="1" autocomplete="off" autocapitalize="off" onKeypress="if (event.keyCode < 45 || event.keyCode > 57) event.returnValue = false;">
                                                     </div>
                                                 </div>
                                                 <div class="col">
                                                     <div class="form-group">
-                                                        <input style="font-size: 25px" type="text" id="tres" name="tres" class="form-control form-control-lg text-center" maxlength="1" autocomplete="off" autocapitalize="off" onKeypress="if (event.keyCode < 45 || event.keyCode > 57) event.returnValue = false;">
+                                                        <input style="font-size: 25px" type="text" id="tres" name="tres" class="form-control form-control-lg text-center press" maxlength="1" autocomplete="off" autocapitalize="off" onKeypress="if (event.keyCode < 45 || event.keyCode > 57) event.returnValue = false;">
                                                     </div>
                                                 </div>
                                                 <div class="col">
                                                     <div class="form-group">
-                                                        <input style="font-size: 25px" type="text" id="cuatro" name="cuatro" class="form-control form-control-lg text-center" maxlength="1" autocomplete="off" autocapitalize="off" onKeypress="if (event.keyCode < 45 || event.keyCode > 57) event.returnValue = false;">
+                                                        <input style="font-size: 25px" type="text" id="cuatro" name="cuatro" class="form-control form-control-lg text-center press" maxlength="1" autocomplete="off" autocapitalize="off" onKeypress="if (event.keyCode < 45 || event.keyCode > 57) event.returnValue = false;">
                                                     </div>
                                                 </div>
                                             </div>
@@ -93,3 +93,22 @@ echo $header;
     </body>
 
 <?php echo $footer; ?>
+
+<script>
+    $(document).ready(function(){
+
+        $('.press').keyup(function(e){
+            if (e.which == 8){
+                //backspace
+                $(this).prevAll('input:first').focus();
+            }
+            else if(e.which > 47 && e.which < 58){
+                $(this).nextAll('.press:first').focus();
+            }
+            else{
+                $(this).val('');
+                return false;
+            }
+        });
+    });
+</script>

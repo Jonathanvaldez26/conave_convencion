@@ -31,7 +31,7 @@ echo $header;
                             <div class="card-body pt-0">
                                 <div class="row">
                                     <div class="col-12 col-lg-4">
-                                        <input type="hidden" id="id_registro" name="id_registro" value="<?= $userData['id_registro'] ?> ">
+                                        <input type="text" id="id_registro" name="id_registro" value="<?= $userData['id_registro'] ?> ">
                                         <label class="form-label">Nombre *</label>
                                         <div class="input-group">
                                             <input id="nombre" name="nombre" class="form-control" type="text" placeholder="Alec" required="required" onfocus="focused(this)" onfocusout="defocused(this)" value="<?= $userData['nombre'] ?>">

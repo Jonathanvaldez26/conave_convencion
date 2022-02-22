@@ -10,7 +10,7 @@ use \App\controllers\Mailer;
 use \App\controllers\Contenedor;
 use Core\Controller;
 
-class Register extends Controller{
+class Register{
     private $_contenedor;
 
     public function getUsuario(){
@@ -105,7 +105,6 @@ html;
 
           <script>
             $(document).ready(function(){
-
                 $.validator.addMethod("checkUserCorreo",function(value, element) {
                   var response = false;
                     $.ajax({
@@ -152,6 +151,10 @@ html;
                         }
                     }
                 });
+
+                
+
+
             });
         </script>
        
@@ -250,8 +253,7 @@ html;
         <link id="pagestyle" href="/assets/css/soft-ui-dashboard.css?v=1.0.5" rel="stylesheet" />
         <link rel="stylesheet" href="/css/alertify/alertify.core.css" />
         <link rel="stylesheet" href="/css/alertify/alertify.default.css" id="toggleCSS" />
-        <!--script src="../../../assets/js/plugins/choices.min.js"></script-->
-
+        
         
         
         
@@ -269,27 +271,7 @@ html;
           <script src="../../../assets/js/plugins/perfect-scrollbar.min.js"></script>
           <script src="../../../assets/js/plugins/smooth-scrollbar.min.js"></script>
           <script src="../../../assets/js/plugins/multistep-form.js"></script>
-          <script src="../../../assets/js/plugins/choices.min.js"></script>
-          <script type="text/javascript" wfd-invisible="true">
-            if (document.getElementById('choices-button')) {
-                var element = document.getElementById('choices-button');
-                const example = new Choices(element, {});
-            }
-            var choicesTags = document.getElementById('choices-tags');
-            var color = choicesTags.dataset.color;
-            if (choicesTags) {
-                const example = new Choices(choicesTags, {
-                delimiter: ',',
-                editItems: true,
-                maxItemCount: 5,
-                removeItemButton: true,
-                addItems: true,
-                classNames: {
-                    item: 'badge rounded-pill choices-' + color + ' me-2'
-                }
-                });
-            }
-        </script>
+         
           <!-- Kanban scripts -->
           <script src="../../../assets/js/plugins/dragula/dragula.min.js"></script>
           <script src="../../../assets/js/plugins/jkanban/jkanban.js"></script>
@@ -353,8 +335,9 @@ html;
                     }
                 });
 
+               
+
             });
-            
           
         </script>
       
@@ -901,7 +884,12 @@ html;
                 $password = $_POST['password'];
                 $email = $_POST['email'];
                 $id_registro = $_POST['id_registro'];
-               
+                //   echo $_POST['password'];
+                // echo $_POST['confirm_password'];
+                // echo $_POST['email'];
+                // echo $_POST['id_registro'];
+                // exit;
+                
                 
                 $register->_password = md5($password);
                 $register->_email = $email;
@@ -911,12 +899,12 @@ html;
 
                 if ($id) {
                 
-                    header("Location: /Login/");
+                    echo 'success';
 
                 } else {
 
-                    $this->code500();
-                    //echo 'fail';
+                
+                    echo 'fail';
                 }
         }    
       
