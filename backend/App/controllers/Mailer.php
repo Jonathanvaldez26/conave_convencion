@@ -24,34 +24,34 @@ class Mailer extends Controller{
 
         try {
             //Server settings
-            $mail->SMTPDebug = 1;                      //Enable verbose debug output
+            $mail->SMTPDebug = 0;                      //Enable verbose debug output
             $mail->isSMTP();                                            //Send using SMTP
             $mail->Host       = 'smtp.gmail.com';                     //Set the SMTP server to send through
             $mail->SMTPAuth   = true;                                   //Enable SMTP authentication
             $mail->Username   = 'pruebass345@gmail.com';                     //SMTP username
-            $mail->Password   = 'pruebas123';                               //SMTP password
+            $mail->Password   = 'pru3b@5_123';                               //SMTP password
             $mail->SMTPSecure = 'ssl';
             $mail->SMTPAutoTLS = false;            //Enable implicit TLS encryption
             $mail->Port       = 465;                                    //TCP port to connect to; use 587 if you have set `SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS`
 
             //Recipients
-            $mail->setFrom($msg['email'], 's');
+            $mail->setFrom($msg['email'], 'Convencion CONAVE 2022 Registro');
             $mail->addAddress($msg['email'], 'a');     //Add a recipient
 
             $message = "<h5>Thank you for submitting your pre-registration form!</h5>";
-            $message .= "<h5>Dear ".$msg['code'] ."</h5><br>";
+            $message .= "<h5>".$msg['code'] ."</h5><br>";
 
             //Content
             $mail->isHTML(true);                                  //Set email format to HTML
-            $mail->Subject = 'Asunto de prueba';
+            $mail->Subject = 'Código de Registro';
             $mail->Body    = $message;
             $mail->AltBody = 'Mensaje plano';
 
             $mail->send();
             //echo 'El mensaje ha sido enviado';
         }
-        catch (Exception $e) {
-
+        catch (Exception $e)
+        {
             //echo "No se pudo enviar el email: {$mail->ErrorInfo}";
         }
 
