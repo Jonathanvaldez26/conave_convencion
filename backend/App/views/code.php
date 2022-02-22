@@ -46,7 +46,7 @@ echo $header;
                                             <span class="text-muted text-sm">Has recibido un código de verificación de identidad en tu cuenta de correo electrónico, introdúcelo a continuación. </span>
 
                                         </div>
-                                        <form class="form-horizontal" id="code_form" action="/Register/Step1" method="POST">
+                                        <form class="form-horizontal" id="code_form" action="/Register/Data" method="POST">
                                             <div class="form-group">
                                                 <input type="hidden" id="email" name="email" class="form-control form-control-lg text-center" value="<?php echo $code;?>">
                                             </div>
