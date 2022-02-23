@@ -120,7 +120,6 @@ html;
                         url: "/Login/verificarUsuario",
                         data: $("#login").serialize(),
                         success: function(response){
-                            //console.log(response);
                             if(response!=""){
                                 var usuario = jQuery.parseJSON(response);
                                 if(usuario.nombre!=""){
