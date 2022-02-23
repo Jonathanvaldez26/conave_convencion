@@ -21,7 +21,7 @@ class Register{
         <link rel="apple-touch-icon" sizes="76x76" href="/assets/img/favicon.ico">
         <link rel="icon" type="image/vnd.microsoft.icon" href="/assets//img/favicon.ico">
         <title>
-            APM Register
+            Conave Register
         </title>
         <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet" />
         <!-- Nucleo Icons -->
@@ -62,27 +62,8 @@ html;
           <script src="../../../assets/js/plugins/perfect-scrollbar.min.js"></script>
           <script src="../../../assets/js/plugins/smooth-scrollbar.min.js"></script>
           <script src="../../../assets/js/plugins/multistep-form.js"></script>
-          <script src="../../../assets/js/plugins/choices.min.js"></script>
-          <script type="text/javascript" wfd-invisible="true">
-            if (document.getElementById('choices-button')) {
-                var element = document.getElementById('choices-button');
-                const example = new Choices(element, {});
-            }
-            var choicesTags = document.getElementById('choices-tags');
-            var color = choicesTags.dataset.color;
-            if (choicesTags) {
-                const example = new Choices(choicesTags, {
-                delimiter: ',',
-                editItems: true,
-                maxItemCount: 5,
-                removeItemButton: true,
-                addItems: true,
-                classNames: {
-                    item: 'badge rounded-pill choices-' + color + ' me-2'
-                }
-                });
-            }
-        </script>
+          
+         
           <!-- Kanban scripts -->
           <script src="../../../assets/js/plugins/dragula/dragula.min.js"></script>
           <script src="../../../assets/js/plugins/jkanban/jkanban.js"></script>
