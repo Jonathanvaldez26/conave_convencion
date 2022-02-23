@@ -27,7 +27,7 @@ echo $header;
                             </div>
                             <div class="card-body pt-1">
                                 <form class="form-horizontal" id="pass_form" action="/Register/finalize" method="POST">
-                                    <input type="hidden" id="id_registro" name="id_registro" value="<?=$id_registro?>">
+                                    <!-- <input type="hidden" id="id_registro" name="id_registro" value="<?=$id_registro?>"> -->
                                     <input type="hidden" id="email" name="email" value="<?=$email?>">
                                     <div class="mb-3 form-group">
                                         <label>Contraseña *</label>

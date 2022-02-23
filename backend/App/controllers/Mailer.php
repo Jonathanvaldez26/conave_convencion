@@ -57,4 +57,44 @@ class Mailer extends Controller{
 
     }
 
+
+    public function mailerRegister($msg) {
+        $mail = new PHPMailer(true);
+
+        try {
+            //Server settings
+            $mail->SMTPDebug = 0;                      //Enable verbose debug output
+            $mail->isSMTP();                                            //Send using SMTP
+            $mail->Host       = 'smtp.gmail.com';                     //Set the SMTP server to send through
+            $mail->SMTPAuth   = true;                                   //Enable SMTP authentication
+            $mail->Username   = 'pruebass345@gmail.com';                     //SMTP username
+            $mail->Password   = 'pru3b@5_123';                               //SMTP password
+            $mail->SMTPSecure = 'ssl';
+            $mail->SMTPAutoTLS = false;            //Enable implicit TLS encryption
+            $mail->Port       = 465;                                    //TCP port to connect to; use 587 if you have set `SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS`
+
+            //Recipients
+            $mail->setFrom($msg['email'], 'Convencion CONAVE 2022 Registro');
+            $mail->addAddress($msg['email'], 'a');     //Add a recipient
+
+            $message = "<h2>Estimado ".$msg['name']."</h2><br>";
+            $message .= "<h5>Se ha generado tu registro exitosamente</h5><br>";
+            
+
+            //Content
+            $mail->isHTML(true);                                  //Set email format to HTML
+            $mail->Subject = 'Registro';
+            $mail->Body    = $message;
+            
+
+            $mail->send();
+            echo 'El mensaje ha sido enviado';
+        }
+        catch (Exception $e)
+        {
+            //echo "No se pudo enviar el email: {$mail->ErrorInfo}";
+        }
+
+    }
+
 }

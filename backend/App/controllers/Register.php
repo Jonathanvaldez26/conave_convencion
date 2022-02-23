@@ -858,9 +858,9 @@ html;
                   View::set('footer',$extraFooter);
                   View::render('confirm_pass');
                   //echo 'success';
-  
               } else {
 
+                //quitar esta parte
                   View::set('id_registro', $id_registro);
                   View::set('email',$email);
                   View::set('header',$extraHeader);
@@ -883,13 +883,11 @@ html;
 
                 $password = $_POST['password'];
                 $email = $_POST['email'];
-                $id_registro = $_POST['id_registro'];
-                //   echo $_POST['password'];
-                // echo $_POST['confirm_password'];
-                // echo $_POST['email'];
-                // echo $_POST['id_registro'];
-                // exit;
+               
+
+                $userData = RegisterDao::getUserRegister($email)[0];
                 
+                $id_registro = $userData['id_registro'];
                 
                 $register->_password = md5($password);
                 $register->_email = $email;
@@ -898,8 +896,15 @@ html;
                 $id = DataDao::insert($register);
 
                 if ($id) {
-                
-                    echo 'success';
+                    
+                    $msg = [
+                        'email' => $email,
+                        'name' =>  $userData['nombre']
+                    ];
+        
+                    $mailer = new Mailer();
+                    $mailer->mailerRegister($msg);
+                    //echo 'success';
 
                 } else {
 
