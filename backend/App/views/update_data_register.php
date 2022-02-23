@@ -38,9 +38,9 @@ echo $header;
                                         </div>
                                     </div>
                                     <div class="col-12 col-lg-4">
-                                        <label class="form-label">Segundo Nombre *</label>
+                                        <label class="form-label">Segundo Nombre </label>
                                         <div class="input-group">
-                                            <input id="segundo_nombre" name="segundo_nombre" class="form-control" type="text" placeholder="Alec" required="required" onfocus="focused(this)" onfocusout="defocused(this)" value="<?= $userData['segundo_nombre'] ?>">
+                                            <input id="segundo_nombre" name="segundo_nombre" class="form-control" type="text" placeholder="Alec"  onfocus="focused(this)" onfocusout="defocused(this)" value="<?= $userData['segundo_nombre'] ?>">
                                         </div>
                                     </div>
                                     <div class="col-12 col-lg-4">
@@ -108,7 +108,7 @@ echo $header;
 
                                     <div class="row">
                                         <div class="button-row d-flex mt-4 col-12">
-                                            <button class="btn bg-gradient-light mb-0 js-btn-prev" type="button" title="Prev">Regresar</button>
+                                            <a class="btn bg-gradient-light mb-0 js-btn-prev" href="/Register" title="Prev">Regresar</a>
                                             <button class="btn bg-gradient-dark ms-auto mb-0" type="submit" title="Next">Finalizar</button>
                                         </div>
                                     </div>

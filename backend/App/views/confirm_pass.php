@@ -1,7 +1,7 @@
 <?php
 echo $header;
 ?>
-    <script src="/backend/public/assets/js/plugins/choices.min.js"></script>
+    
     <body class="">
     <main class="main-content mt-0 ps">
         <div class="page-header align-items-start min-vh-50 pt-5 pb-11 m-3 border-radius-lg" style="background-image: url('../../../assets/img/curved-images/curved9.jpg');">
@@ -53,45 +53,52 @@ echo $header;
     </body>
 
 <?php echo $footer; ?>
-
+<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 <script>
     $(document).ready(function(){
         
-        // $("#pass_form").on("submit",function(event){
-        //         event.preventDefault();
+        
+        $("#pass_form").on("submit",function(event){
+                event.preventDefault();
                 
-        //             var formData = new FormData(document.getElementById("pass_form"));
-        //             console.log(formData);
-        //             $.ajax({
-        //             url:"/Register/finalize",
-        //             type: "POST",
-        //             data: formData,
-        //             cache: false,
-        //             contentType: false,
-        //             processData: false,
-        //             beforeSend: function(){
-        //                 console.log("Procesando....");
+                    var formData = new FormData(document.getElementById("pass_form"));
+                    console.log(formData);
+                    $.ajax({
+                    url:"/Register/finalize",
+                    type: "POST",
+                    data: formData,
+                    cache: false,
+                    contentType: false,
+                    processData: false,
+                    beforeSend: function(){
+                        console.log("Procesando....");
 
                     
-        //             },
-        //             success: function(respuesta){
+                    },
+                    success: function(respuesta){
+
+                        console.log(respuesta);
+                       
+                        if(respuesta == 'success'){
+                            swal("Te has registrado exitosamente!", "", "success").
+                            then((value) => {
+                                window.location.replace("/Login");
+                            });
+                        }else{
+                            swal("Hubo un error al registrarte!", "", "error").
+                            then((value) => {
+                                window.location.replace("/Login")
+                            });
+                        }
+
+                    },
+                    error:function (respuesta)
+                    {
                         
-        //                 if(respuesta == 'success'){
-        //                     Swal.fire(
-        //                         'OK',
-        //                         'Te has registrado correctamente!!',
-        //                         'success'
-        //                     )
-        //                 }
-        //                 console.log(respuesta);
+                        console.log(respuesta);
+                    }
 
-        //             },
-        //             error:function (respuesta)
-        //             {
-        //                 console.log(respuesta);
-        //             }
-
-        //         });
-        //     });
+                });
+            });
     });
 </script>

@@ -88,7 +88,7 @@ class Mailer extends Controller{
             
 
             $mail->send();
-            echo 'El mensaje ha sido enviado';
+            //echo 'El mensaje ha sido enviado';
         }
         catch (Exception $e)
         {
