@@ -27,7 +27,7 @@ echo $header;
                             <?php //$userData; 
                             ?>
                         </div>
-                        <form class="form-horizontal" id="update_form" action="/Register/DataPassword" method="POST">
+                        <form class="form-horizontal" id="update_form" action="/Register/Politicas" method="POST">
                             <div class="card-body pt-0">
                                 <div class="row">
                                     <div class="col-12 col-lg-4">
