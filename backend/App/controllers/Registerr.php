@@ -320,7 +320,7 @@ html;
         View::set('header',$extraHeader);
         View::set('footer',$extraFooter);
         View::set('idCountry',$this->getCountry());
-        View::render("Register");
+        View::render("account_all");
     }
 
     public function Success(){
