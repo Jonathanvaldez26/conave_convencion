@@ -1,7 +1,6 @@
 <?php
 echo $header;
 ?>
-    <script src="/backend/public/assets/js/plugins/choices.min.js"></script>
     <body class="">
     <main class="main-content mt-0 ps">
         <div class="page-header align-items-start min-vh-50 pt-5 pb-11 m-3 border-radius-lg" style="background-image: url('../../../assets/img/curved-images/curved9.jpg');">

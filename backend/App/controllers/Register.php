@@ -43,10 +43,6 @@ class Register{
         <link id="pagestyle" href="/assets/css/soft-ui-dashboard.css?v=1.0.5" rel="stylesheet" />
         <link rel="stylesheet" href="/css/alertify/alertify.core.css" />
         <link rel="stylesheet" href="/css/alertify/alertify.default.css" id="toggleCSS" />
-        <!--script src="../../../assets/js/plugins/choices.min.js"></script-->
-
-        
-        
         
 
 html;
@@ -61,7 +57,7 @@ html;
           <script src="../../../assets/js/core/bootstrap.min.js"></script>
           <script src="../../../assets/js/plugins/perfect-scrollbar.min.js"></script>
           <script src="../../../assets/js/plugins/smooth-scrollbar.min.js"></script>
-          <script src="../../../assets/js/plugins/multistep-form.js"></script>
+          
           
          
           <!-- Kanban scripts -->
