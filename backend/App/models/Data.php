@@ -37,17 +37,19 @@ sql;
       return $mysqli->update($query, $parametros);
   }
 
+
   public static function insert($register)
     {
         $mysqli = Database::getInstance();
         $query = <<<sql
-        INSERT INTO utilerias_administradores VALUES(null,:id_registro,:usuario,:contrasena,1)                        
+        INSERT INTO utilerias_administradores VALUES(null,:id_registro,:usuario,:contrasena,:politica,1)                        
 sql;
 
         $parametros = array(
             ':id_registro' => $register->_id_registro,
             ':usuario' => $register->_email,
-            ':contrasena' => $register->_password
+            ':contrasena' => $register->_password,
+            ':politica' => $register->_politica
         );
 
         $id = $mysqli->insert($query, $parametros);

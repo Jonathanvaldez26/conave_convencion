@@ -26,9 +26,10 @@ echo $header;
                                 </p>
                             </div>
                             <div class="card-body pt-1">
-                                <form class="form-horizontal" id="pass_form" action="/Register/finalize" method="POST">
+                                <form class="form-horizontal" id="pass_form" action="" method="POST">
                                     <!-- <input type="hidden" id="id_registro" name="id_registro" value="<?=$id_registro?>"> -->
                                     <input type="hidden" id="email" name="email" value="<?=$email?>">
+                                    <input type="hidden" id="politica" name="politica" value="<?=$politica?>">
                                     <div class="mb-3 form-group">
                                         <label>Contraseña *</label>
                                         <input type="password" id="password" name="password" class="form-control" placeholder="Ingresa tu password*" aria-label="Password" required="required">
@@ -58,47 +59,47 @@ echo $header;
     $(document).ready(function(){
         
         
-        $("#pass_form").on("submit",function(event){
-                event.preventDefault();
+        // $("#pass_form").on("submit",function(event){
+        //         event.preventDefault();
                 
-                    var formData = new FormData(document.getElementById("pass_form"));
-                    console.log(formData);
-                    $.ajax({
-                    url:"/Register/finalize",
-                    type: "POST",
-                    data: formData,
-                    cache: false,
-                    contentType: false,
-                    processData: false,
-                    beforeSend: function(){
-                        console.log("Procesando....");
+        //             var formData = new FormData(document.getElementById("pass_form"));
+        //             console.log(formData);
+        //             $.ajax({
+        //             url:"/Register/finalize",
+        //             type: "POST",
+        //             data: formData,
+        //             cache: false,
+        //             contentType: false,
+        //             processData: false,
+        //             beforeSend: function(){
+        //                 console.log("Procesando....");
 
                     
-                    },
-                    success: function(respuesta){
+        //             },
+        //             success: function(respuesta){
 
-                        console.log(respuesta);
+        //                 console.log(respuesta);
                        
-                        if(respuesta == 'success'){
-                            swal("Te has registrado exitosamente!", "", "success").
-                            then((value) => {
-                                window.location.replace("/Login");
-                            });
-                        }else{
-                            swal("Hubo un error al registrarte!", "", "error").
-                            then((value) => {
-                                window.location.replace("/Login")
-                            });
-                        }
+        //                 if(respuesta == 'success'){
+        //                     swal("Te has registrado exitosamente!", "", "success").
+        //                     then((value) => {
+        //                         window.location.replace("/Login");
+        //                     });
+        //                 }else{
+        //                     swal("Hubo un error al registrarte!", "", "error").
+        //                     then((value) => {
+        //                         window.location.replace("/Login")
+        //                     });
+        //                 }
 
-                    },
-                    error:function (respuesta)
-                    {
+        //             },
+        //             error:function (respuesta)
+        //             {
                         
-                        console.log(respuesta);
-                    }
+        //                 console.log(respuesta);
+        //             }
 
-                });
-            });
+        //         });
+        //     });
     });
 </script>

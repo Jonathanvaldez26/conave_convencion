@@ -109,7 +109,7 @@ echo $header;
                                     <div class="row">
                                         <div class="button-row d-flex mt-4 col-12">
                                             <a class="btn bg-gradient-light mb-0 js-btn-prev" href="/Register" title="Prev">Regresar</a>
-                                            <button class="btn bg-gradient-dark ms-auto mb-0" type="submit" title="Next">Finalizar</button>
+                                            <button class="btn bg-gradient-dark ms-auto mb-0" type="submit" title="Next">Siguiente</button>
                                         </div>
                                     </div>
                                 </div>

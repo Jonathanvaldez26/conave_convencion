@@ -1009,6 +1009,45 @@ html;
                             equalTo: "El password no coincide",
                         }
                     }
+
+                    submitHandler: function(form) {
+                        $.ajax({
+                            url:"/Register/finalize",
+                            type: "POST",
+                            data: formData,
+                            cache: false,
+                            contentType: false,
+                            processData: false,
+                            beforeSend: function(){
+                                console.log("Procesando....");
+        
+                            
+                            },
+                            success: function(respuesta){
+        
+                                console.log(respuesta);
+                               
+                                if(respuesta == 'success'){
+                                    swal("Te has registrado exitosamente!", "", "success").
+                                    then((value) => {
+                                        window.location.replace("/Login");
+                                    });
+                                }else{
+                                    swal("Hubo un error al registrarte!", "", "error").
+                                    then((value) => {
+                                        window.location.replace("/Login")
+                                    });
+                                }
+        
+                            },
+                            error:function (respuesta)
+                            {
+                                
+                                console.log(respuesta);
+                            }
+        
+                        });
+                    }
                 });
 
                 
@@ -1018,6 +1057,7 @@ html;
         </script>
        
 html;
+        $email = $_POST['email'];
         $btn_politicas = '';
         if(isset($_POST['btn_success'])){
             $btn_politicas = $_POST['btn_success'];
@@ -1025,62 +1065,13 @@ html;
             $btn_politicas = $_POST['btn_danger'];
         }
         
-
-        echo $btn_politicas;
+        View::set('politica',$btn_politicas);
+        View::set('email',$email);
+        View::set('header',$extraHeader);
+        View::set('footer',$extraFooter);
+        View::render('confirm_pass');
        
-        // $documento = new \stdClass();
-  
-  
-        //   if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-
-        //       $id_registro = $_POST['id_registro'];
-        //       $nombre = $_POST['nombre'];
-        //       $segundo_nombre = $_POST['segundo_nombre'];
-        //       $apellido_paterno = $_POST['apellido_paterno'];
-        //       $apellido_materno = $_POST['apellido_materno'];
-        //       $genero = $_POST['genero'];
-        //       $fecha_nacimiento = $_POST['fecha_nacimiento'];
-        //       $email = $_POST['email'];
-        //       $telefono = $_POST['telefono'];
-        //       $linea_principal = $_POST['linea_principal'];
-        //       $alergias = $_POST['alergias'];
-             
-  
-        //       $documento->_nombre = $nombre;
-        //       $documento->_segundo_nombre = $segundo_nombre;
-        //       $documento->_apellido_paterno = $apellido_paterno;
-        //       $documento->_apellido_materno = $apellido_materno;
-        //       $documento->_genero = $genero;
-        //       $documento->_fecha_nacimiento = $fecha_nacimiento;
-        //       $documento->_email = $email;
-        //       $documento->_telefono = $telefono;
-        //       $documento->_linea_principal = $linea_principal;
-        //       $documento->_alergias = $alergias;
-
-
-        //       $id = DataDao::update($documento);
-  
-        //       if ($id) {
-        //           View::set('email',$email);
-        //           View::set('header',$extraHeader);
-        //           View::set('footer',$extraFooter);
-        //           View::render('confirm_pass');
-        //           //echo 'success';
-        //       } else {
-
-        //         //quitar esta parte
-                
-        //           View::set('email',$email);
-        //           View::set('header',$extraHeader);
-        //           View::set('footer',$extraFooter);
-        //           View::render('confirm_pass');
-        //        // print_r($id);
-        //          // $this->code500();
-        //           //echo 'fail';
-        //       }
-        //   } else {
-        //       echo 'fail REQUEST';
-        //   }
+        
     }
 
 
@@ -1092,6 +1083,7 @@ html;
 
                 $password = $_POST['password'];
                 $email = $_POST['email'];
+                $politica = $_POST['politica'];
                
 
                 $userData = RegisterDao::getUserRegister($email)[0];
@@ -1100,6 +1092,7 @@ html;
                 
                 $register->_password = md5($password);
                 $register->_email = $email;
+                $register->_politica = $politica;
                 $register->_id_registro = $id_registro;
 
                 $id = DataDao::insert($register);
