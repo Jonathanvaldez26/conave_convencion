@@ -115,7 +115,8 @@ html;
                 });
 
                 $("#btnEntrar").click(function(){
-                    $.ajax({
+                    alert("funciona");
+                   /* $.ajax({
                         type: "POST",
                         url: "/Login/verificarUsuario",
                         data: $("#login").serialize(),
@@ -133,7 +134,7 @@ html;
                                 alertify.alert("Error de autenticación <br> El usuario o contraseña es incorrecta");
                             }
                         }
-                    });
+                    });*/
                 });
 
             });
