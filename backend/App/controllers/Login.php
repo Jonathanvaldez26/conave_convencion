@@ -115,14 +115,15 @@ html;
                 });
 
                 $("#btnEntrar").click(function(){
-                    alert("funciona");
-                   /* $.ajax({
+                    
+                   $.ajax({
                         type: "POST",
                         url: "/Login/verificarUsuario",
                         data: $("#login").serialize(),
                         success: function(response){
                             if(response!=""){
-                                var usuario = jQuery.parseJSON(response);
+                                var usuario = JSON.parse(response);
+                                console.log(usuario);
                                 if(usuario.nombre!=""){
                                     $("#login").append('<input type="hidden" name="autentication" id="autentication" value="OK"/>');
                                     $("#login").append('<input type="hidden" name="nombre" id="nombre" value="'+usuario.nombre+'"/>');
@@ -134,7 +135,7 @@ html;
                                 alertify.alert("Error de autenticación <br> El usuario o contraseña es incorrecta");
                             }
                         }
-                    });*/
+                    });
                 });
 
             });
