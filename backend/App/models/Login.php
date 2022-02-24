@@ -10,10 +10,11 @@ class Login{
     public static function getById($usuario){
         $mysqli = Database::getInstance(true);
         $query =<<<sql
-        SELECT ua.*, ra.nombre FROM utilerias_administradores ua INNER JOIN registros_acceso ra WHERE ua.id_registro = ra.id_registro and ua.usuario LIKE :usuario
+        SELECT ua.*, ra.nombre FROM utilerias_asistentes ua INNER JOIN registros_acceso ra WHERE ua.id_registro_acceso = ra.id_registro_acceso and ua.usuario LIKE :usuario AND contrasena LIKE :password
 sql;
         $params = array(
-            ':usuario'=> $usuario->_usuario
+            ':usuario'=> $usuario->_usuario,
+            ':password'=>$usuario->_password
         );
 
         return $mysqli->queryOne($query,$params);
@@ -22,7 +23,7 @@ sql;
     public static function getUser($usuario){
         $mysqli = Database::getInstance(true);
         $query =<<<sql
-        SELECT * FROM utilerias_administradores WHERE usuario = '$usuario'
+        SELECT * FROM utilerias_asistentes WHERE usuario = '$usuario'
 sql;
 
         return $mysqli->queryAll($query);

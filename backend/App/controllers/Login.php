@@ -164,11 +164,13 @@ html;
     public function crearSession(){
         $usuario = new \stdClass();
         $usuario->_usuario = MasterDom::getData("usuario");
+        $usuario->_password = MD5(MasterDom::getData("password"));
         $user = LoginDao::getById($usuario);
         session_start();
         $_SESSION['usuario'] = $user['usuario'];
         $_SESSION['nombre'] = $user['nombre'];
         $_SESSION['administrador_id'] = $user['administrador_id'];
+
         header("location: /Home/");
     }
 
