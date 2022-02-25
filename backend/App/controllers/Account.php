@@ -156,6 +156,7 @@ $extraFooter =<<<html
             }
         </script>
         
+        
 
 html;
 
@@ -201,9 +202,7 @@ html;
 
     public function Actualizar(){
 
-        echo "ssssss";
-        
-
+    
         $documento = new \stdClass();
   
   

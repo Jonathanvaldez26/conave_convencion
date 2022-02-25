@@ -67,7 +67,7 @@
                         <!-- <i class="fa fa-plus" aria-hidden="true"></i>   -->
                         Nuevo
                     </button>
-                    <button type="button" class="btn btn-secondary btn-sm">Eliminar</button>
+                    <!-- <button type="button" class="btn btn-secondary btn-sm">Eliminar</button> -->
                 </div>
                 <div class="card-body p-3">
                     <div class="row">
@@ -190,7 +190,8 @@
                                     <span id="availability_4_"></span>
                                 </div>
                             </div>
-                            <input type="hidden" id="user_" name="user_" value="<?=$_SESSION["administrador_id"]?>">
+                            
+                            <input type="hidden" id="user_" name="user_" value="<?=$_SESSION["utilerias_asistentes_id"]?>">
                         </div>
                         <div class="modal-footer">
                             <button type="submit" class="btn btn-success" id="btn_upload" name="btn_upload">Aceptar</button>
@@ -204,7 +205,8 @@
     </div>
 
     <!-- MODAL VISTA - DOCUMENTO -->
-    <div class="modal fade" id="ver-documento" tabindex="-1" role="dialog" aria-labelledby="ver-documento" aria-hidden="true">
+    <?php echo $iframe_doc; ?>
+    <!-- <div class="modal fade" id="ver-documento" tabindex="-1" role="dialog" aria-labelledby="ver-documento" aria-hidden="true">
         <div class="modal-dialog" role="document" style="max-width: 590px;">
             <div class="modal-content">
                 <div class="modal-header">
@@ -213,10 +215,10 @@
                         X
                     </span>
                 </div>
-                <?php echo $iframe_doc; ?>
+                
             </div>
         </div>
-    </div>
+    </div> -->
 
     <div class="fixed-bottom navbar-dark">
         <!-- <a class="navbar-brand" href="#!">Footer</a> -->

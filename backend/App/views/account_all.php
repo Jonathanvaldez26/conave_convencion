@@ -211,43 +211,52 @@
         </div>
         <?php echo $footer; ?>
 </main>
+<script src="/js/jquery.min.js"></script>
 <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 
 <script>
-    $(document).ready(function() {
+    
+
+    $( document ).ready(function() {
+
         $("#update_form").on("submit",function(event){
-                event.preventDefault();
-                
-                    var formData = new FormData(document.getElementById("update_form"));
-                    
-                    // $.ajax({
-                    //     url:"/Account/Actualizar",
-                    //     type: "POST",
-                    //     data: formData,
-                    //     // cache: false,
-                    //     // contentType: false,
-                    //     // processData: false,
-                    //     beforeSend: function(){
-                    //         console.log("Procesando....");
+    event.preventDefault();
+    
+    var formData = new FormData(document.getElementById("update_form"));
+        console.log(formData);
+        $.ajax({
+        url:"/Account/Actualizar",
+        type: "POST",
+        data: formData,
+        cache: false,
+        contentType: false,
+        processData: false,
+        beforeSend: function(){
+            console.log("Procesando....");
 
-                        
-                    //     },
-                    //     success: function(respuesta){
-                            
-                            
-                        
-                            
-                    //         console.log(respuesta);
-
-                    //     },
-                    //     error:function (respuesta)
-                    //     {
-                    //         console.log(respuesta);
-                    //     }
-
-                    // });
-                    alert("funciona");
-            });
+        
+        },
+        success: function(respuesta){
+            
+           if (respuesta == 'success') {
+                swal("Se actualizaron tus datos correctamente!", "", "success").
+                then((value) => {
+                    window.location.replace("/Home");
+                });
+            } else {
+                swal("Hubo un error al actualizar tus datos!", "Comunicate con el administrador del sitio", "error").
+                then((value) => {
+                    window.location.replace("/Home")
+                });
+            }
+        },
+        error:function (respuesta)
+        {
+            console.log(respuesta);
+        }
 
     });
+});
+
+});
 </script>

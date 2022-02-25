@@ -27,18 +27,19 @@ class Covid extends Controller{
       $extraHeader =<<<html
 html;
 
-      $pruebas = CovidDao::getAll();
+      $pruebas = CovidDao::getById($_SESSION['utilerias_asistentes_id']);
       $tabla = '';
+      $iframe_doc = '';
       $status = '';
       $fechaActual = date('d-m-Y');
       foreach ($pruebas as $key => $prueba) {
         if($prueba['status'] = 1){
-          $status.=<<<html
+          $status =<<<html
           <span class="badge badge-sm badge-success">Se valido Correctamente</span>   
 html;
         }elseif ($prueba['status'] = 2)
         {
-            $status.=<<<html
+            $status =<<<html
             <span class="badge badge-sm badge-secondary">En Espera a Validar</span>
 html;
         }
@@ -73,13 +74,33 @@ html;
           <td>
           <div class="text-center">
               <div class="d-flex flex-column justify-content-center" style="text-transform: capitalize;">
-                <button type="button" class="btn btn-outline-primary btn-sm" data-toggle="modal" data-target="#ver-documento">
+                <button type="button" class="btn btn-outline-primary btn-sm" data-toggle="modal" data-target="#ver-documento-{$prueba['id_prueba_covid']}">
                   Ver documento
                 </button>
               </div>
             </div>
           </td>
         </tr>
+html;
+
+
+$iframe_doc .= <<<html
+<div class="modal fade" id="ver-documento-{$prueba['id_prueba_covid']}" tabindex="-1" role="dialog" aria-labelledby="ver-documento-{$prueba['id_prueba_covid']}" aria-hidden="true">
+    <div class="modal-dialog" role="document" style="max-width: 590px;">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Documento de vacunación</h5>
+                <span type="button" class="btn btn-danger" data-dismiss="modal" aria-label="Close">
+                    X
+                </span>
+            </div>
+            <div class="modal-body">
+            <iframe src="/pruebas_covid/{$prueba['documento']}" style="width:100%; height:700px;" frameborder="0" >
+            </iframe>
+         </div>
+        </div>
+    </div>
+</div>
 html;
       }
       $extraFooter =<<<html
@@ -132,6 +153,7 @@ html;
               <script src="/js/validate/jquery.validate.js"></script>
               <script src="/js/alertify/alertify.min.js"></script>
               <script src="/js/login.js"></script>
+              <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
             <!-- VIEJO FIN -->
      <script>
       $( document ).ready(function() {
@@ -154,11 +176,11 @@ html;
                     success: function(respuesta){
                         if(respuesta == 'success'){
                            // $('#modal_payment_ticket').modal('toggle');
-                            Swal.fire(
-                                'OK',
-                                'Se ha guardado tu la prueba correctamente!!',
-                                'success'
-                            )
+                           
+                            swal("Se ha guardado tu la prueba correctamente!!", "", "success").
+                            then((value) => {
+                                window.location.replace("/Covid/");
+                            });
                         }
                         console.log(respuesta);
                     },
@@ -173,12 +195,14 @@ html;
 </script>
 html;
 
-      $iframe_doc = <<<html
-        <div class="modal-body">
-          <iframe src="/assets/pdf/{$prueba['documento']}" style="width:100%; height:700px;" frameborder="0" >
-          </iframe>
-        </div>
-html;
+//       $iframe_doc = <<<html
+//         <div class="modal-body">
+//           <iframe src="/pruebas_covid/{$prueba['documento']}" style="width:100%; height:700px;" frameborder="0" >
+//           </iframe>
+//         </div>
+// html;
+
+         
       
       View::set('iframe_doc',$iframe_doc);
       View::set('tabla',$tabla);
@@ -210,6 +234,7 @@ html;
           $file = $_FILES["file_"];
           $usuario = $_POST["user_"];
           $fecha = date("Y-m-d h:i:s");
+          $pdf = $this->generateRandomString();
           $ruta = $usuario.$titulo.$fecha;
 
 
@@ -225,9 +250,9 @@ html;
           // var_dump($usuario);
           // exit;
 
-          move_uploaded_file($file["tmp_name"], "pruebas_covid/".$_SESSION['usuario'].'.pdf');
+          move_uploaded_file($file["tmp_name"], "pruebas_covid/".$pdf.'.pdf');
 
-          $documento->_url = $_SESSION['usuario'].'.pdf';
+          $documento->_url = $pdf.'.pdf';
           $documento->_user = $usuario;
           $documento->_fecha_prueba = $fecha_prueba;
           $documento->_tipo_prueba = $tipo_prueba;
@@ -246,5 +271,9 @@ html;
           echo 'fail REQUEST';
       }
     }
+
+    function generateRandomString($length = 10) { 
+      return substr(str_shuffle("0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"), 0, $length); 
+  } 
 
 }
