@@ -192,6 +192,7 @@ html;
             // echo "holaaaaa";
             // exit();
             $this->code500();
+            //$this->Success();
             //$this->alerta($id,'error',$method_pay, $name_register);
         }
     }
@@ -224,7 +225,7 @@ html;
         View::render("alerta");
     }
 
-    public function code($email){
+    public function code($email , $alerta = null){
         $extraHeader =<<<html
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -363,11 +364,12 @@ html;
       
 html;
 
-        
+       
         $code = $email;
         View::set('header',$extraHeader);
         View::set('footer',$extraFooter);
         View::set('code',$code);
+        View::set('alerta',$alerta);
         View::render("code");
     }
 
@@ -708,7 +710,13 @@ html;
             View::set('footer',$extraFooter);
             View::render('update_data_register');
         }else{
-            $this->code500();
+
+            $alerta =<<<html
+            <div class="alert alert-danger text-white" role="alert" >
+                El codigo de verificación no coincide, Intenta nuevamente!
+            </div>
+html;
+            $this->code($email,$alerta);
         }
 
         // print_r($user_register);
@@ -1009,45 +1017,6 @@ html;
                             equalTo: "El password no coincide",
                         }
                     }
-
-                    submitHandler: function(form) {
-                        $.ajax({
-                            url:"/Register/finalize",
-                            type: "POST",
-                            data: formData,
-                            cache: false,
-                            contentType: false,
-                            processData: false,
-                            beforeSend: function(){
-                                console.log("Procesando....");
-        
-                            
-                            },
-                            success: function(respuesta){
-        
-                                console.log(respuesta);
-                               
-                                if(respuesta == 'success'){
-                                    swal("Te has registrado exitosamente!", "", "success").
-                                    then((value) => {
-                                        window.location.replace("/Login");
-                                    });
-                                }else{
-                                    swal("Hubo un error al registrarte!", "", "error").
-                                    then((value) => {
-                                        window.location.replace("/Login")
-                                    });
-                                }
-        
-                            },
-                            error:function (respuesta)
-                            {
-                                
-                                console.log(respuesta);
-                            }
-        
-                        });
-                    }
                 });
 
                 
@@ -1088,12 +1057,12 @@ html;
 
                 $userData = RegisterDao::getUserRegister($email)[0];
                 
-                $id_registro = $userData['id_registro'];
+                $id_registro_acceso = $userData['id_registro_acceso'];
                 
                 $register->_password = md5($password);
                 $register->_email = $email;
                 $register->_politica = $politica;
-                $register->_id_registro = $id_registro;
+                $register->_id_registro_acceso = $id_registro_acceso;
 
                 $id = DataDao::insert($register);
 

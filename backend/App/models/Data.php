@@ -42,11 +42,11 @@ sql;
     {
         $mysqli = Database::getInstance();
         $query = <<<sql
-        INSERT INTO utilerias_administradores VALUES(null,:id_registro,:usuario,:contrasena,:politica,1)                        
+        INSERT INTO utilerias_asistentes VALUES(null,:id_registro_acceso,:usuario,:contrasena,:politica,1)                        
 sql;
 
         $parametros = array(
-            ':id_registro' => $register->_id_registro,
+            ':id_registro_acceso' => $register->_id_registro_acceso,
             ':usuario' => $register->_email,
             ':contrasena' => $register->_password,
             ':politica' => $register->_politica
