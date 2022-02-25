@@ -77,10 +77,7 @@ echo $header;
                                             </div>
                                             <div class="text-center">
                                                 <button class="btn btn-outline-danger w-100 my-0 mb-2 ms-auto" type="submit" id="btn_registro_email">Verificar mi Código</button>
-                                                <a type="submit" name="id" class="btn btn-outline-primary"><span class="fa fa-pencil-square-o"></span> </a>
-                                                <?php $alerta;?>
-
-                                                <span class="text-muted text-sm">¿No ha recibido recibido un código?<a href="javascript:;"> Reenviar un nuevo código</a>.</span>
+                                                <span class="text-muted text-sm">¿No ha recibido recibido un código?<br><a href="javascript:0;" id="btn_reenviar_email"> Reenviar un nuevo código</a>.</span>
                                             </div>
                                         </form>
                                     </div>
@@ -100,18 +97,8 @@ echo $header;
 <script>
     $(document).ready(function(){
 
-        $('.press').keyup(function(e){
-            if (e.which == 8){
-                //backspace
-                $(this).prevAll('input:first').focus();
-            }
-            else if(e.which > 47 && e.which < 58){
-                $(this).nextAll('.press:first').focus();
-            }
-            else{
-                $(this).val('');
-                return false;
-            }
+        $("#btn_reenviar_email").on("click",function(){
+            location.reload();
         });
     });
 </script>

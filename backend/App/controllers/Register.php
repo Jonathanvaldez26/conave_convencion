@@ -21,10 +21,10 @@ class Register{
         $extraHeader =<<<html
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-        <link rel="apple-touch-icon" sizes="76x76" href="/assets/img/favicon.ico">
-        <link rel="icon" type="image/vnd.microsoft.icon" href="/assets//img/favicon.ico">
+        <link rel="apple-touch-icon" sizes="76x76" href="/assets/img/favicon.png">
+        <link rel="icon" type="image/vnd.microsoft.icon" href="/assets/img/favicon.png">
         <title>
-            APM Register
+            Registro Conave
         </title>
         <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet" />
         <!-- Nucleo Icons -->
@@ -166,6 +166,7 @@ html;
 
     public function Success(){
 
+
         $register = new \stdClass();
 
         $email = $_POST['confirm_email'];
@@ -229,10 +230,10 @@ html;
         $extraHeader =<<<html
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-        <link rel="apple-touch-icon" sizes="76x76" href="/assets/img/favicon.ico">
-        <link rel="icon" type="image/vnd.microsoft.icon" href="/assets//img/favicon.ico">
+        <link rel="apple-touch-icon" sizes="76x76" href="/assets/img/favicon.png">
+        <link rel="icon" type="image/vnd.microsoft.icon" href="/assets/img/favicon.png">
         <title>
-            APM Register
+            Registro Conave
         </title>
         <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet" />
         <!-- Nucleo Icons -->
@@ -377,10 +378,10 @@ html;
         $extraHeader =<<<html
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-        <link rel="apple-touch-icon" sizes="76x76" href="/assets/img/favicon.ico">
-        <link rel="icon" type="image/vnd.microsoft.icon" href="/assets//img/favicon.ico">
+        <link rel="apple-touch-icon" sizes="76x76" href="/assets/img/favicon.png">
+        <link rel="icon" type="image/vnd.microsoft.icon" href="/assets/img/favicon.png">
         <title>
-            APM Register
+            Registro Conave
         </title>
         <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet" />
         <!-- Nucleo Icons -->
@@ -526,10 +527,10 @@ html;
         $extraHeader =<<<html
             <meta charset="utf-8" />
             <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-            <link rel="apple-touch-icon" sizes="76x76" href="/assets/img/favicon.ico">
-            <link rel="icon" type="image/vnd.microsoft.icon" href="/assets//img/favicon.ico">
+            <link rel="apple-touch-icon" sizes="76x76" href="/assets/img/favicon.png">
+            <link rel="icon" type="image/vnd.microsoft.icon" href="/assets/img/favicon.png">
             <title>
-                APM Register
+                Registro Conave
             </title>
             <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet" />
             <!-- Nucleo Icons -->
@@ -701,24 +702,6 @@ html;
 
         }
 
-// Actividades
-
-        if($userData['actividad'] == '3k_caminata'){
-            $optionActividad =<<<html
-                <option value="3k_caminata" selected>3k Caminata</option>
-                <option value="5k_carrera">5k Carrera</option>
-        html;
-
-        }else{
-            $optionActividad =<<<html
-                <option value="3k_caminata">3k Caminata</option>
-                <option value="5k_carrera" selected>5k Carrera</option>
-        html;
-
-        }
-
-
-
 
         if($userData['code'] === $code_received){
             //echo "Se verifico codigo correctamente";
@@ -749,10 +732,10 @@ html;
         $extraHeader =<<<html
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-        <link rel="apple-touch-icon" sizes="76x76" href="/assets/img/favicon.ico">
-        <link rel="icon" type="image/vnd.microsoft.icon" href="/assets//img/favicon.ico">
+        <link rel="apple-touch-icon" sizes="76x76" href="/assets/img/favicon.png">
+        <link rel="icon" type="image/vnd.microsoft.icon" href="/assets/img/favicon.png">
         <title>
-            APM Register
+            Registro Conave
         </title>
         <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet" />
         <!-- Nucleo Icons -->
@@ -838,7 +821,7 @@ html;
                    rules:{
                         password:{
                             required: true,
-                            minlength: 4
+                            minlength: 6
                             
                             
                         },
@@ -850,7 +833,7 @@ html;
                     messages:{
                         password:{
                             required: "Este campo es requerido",
-                            minlength: "El password debe tener al menos 8 caracteres"
+                            minlength: "El password debe tener al menos 6 caracteres"
                         },
                         confirm_password:{
                             required: "Este campo es requerido",
@@ -934,10 +917,10 @@ html;
         $extraHeader =<<<html
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-        <link rel="apple-touch-icon" sizes="76x76" href="/assets/img/favicon.ico">
-        <link rel="icon" type="image/vnd.microsoft.icon" href="/assets//img/favicon.ico">
+        <link rel="apple-touch-icon" sizes="76x76" href="/assets/img/favicon.png">
+        <link rel="icon" type="image/vnd.microsoft.icon" href="/assets/img/favicon.png">
         <title>
-            APM Register
+            Registro Conave
         </title>
         <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet" />
         <!-- Nucleo Icons -->
@@ -1023,7 +1006,7 @@ html;
                    rules:{
                         password:{
                             required: true,
-                            minlength: 4
+                            minlength: 6
                             
                             
                         },
@@ -1035,7 +1018,7 @@ html;
                     messages:{
                         password:{
                             required: "Este campo es requerido",
-                            minlength: "El password debe tener al menos 8 caracteres"
+                            minlength: "El password debe tener al menos 6 caracteres"
                         },
                         confirm_password:{
                             required: "Este campo es requerido",
@@ -1081,6 +1064,7 @@ html;
                
 
                 $userData = RegisterDao::getUserRegister($email)[0];
+                
                 
                 $id_registro_acceso = $userData['id_registro_acceso'];
                 
