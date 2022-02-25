@@ -1,5 +1,5 @@
 <?php echo $header; ?>
-        <link id="pagestyle" href="/assets/css/soft-ui-dashboard.css?v=1.0.5" rel="stylesheet" />
+<link id="pagestyle" href="/assets/css/soft-ui-dashboard.css?v=1.0.5" rel="stylesheet" />
 <main class="main-content position-relative max-height-vh-100 h-100 border-radius-lg ">
     <!-- Navbar -->
     <nav class="navbar navbar-main navbar-expand-lg position-sticky mt-4 top-1 px-0 mx-4 shadow-none border-radius-xl z-index-sticky" id="navbarBlur" data-scroll="true">
@@ -83,146 +83,170 @@
                     </div>
                 </div>
 
-                
+
                 <!-- Card Basic Info -->
                 <div class="card mt-4" id="basic-info">
                     <div class="card-header">
                         <h5>Información Básica</h5>
-                        <?php $prueba;?>
-                        <?php //$userData; ?>
+                        <?php $prueba; ?>
+                        <?php //$userData; 
+                        ?>
                     </div>
-                    <div class="card-body pt-0">
-                        <div class="row">
-                            <div class="col-12 col-lg-4">
-                                <label class="form-label">Nombre *</label>
-                                <div class="input-group">
-                                    <input id="firstName" name="firstName" class="form-control" type="text" placeholder="Alec" required="required" onfocus="focused(this)" onfocusout="defocused(this)" value="<?=$userData['nombre']?>">
-                                </div>
-                            </div>
-                            <div class="col-12 col-lg-4">
-                                <label class="form-label">Apellido Paterno *</label>
-                                <div class="input-group">
-                                    <input id="lastName" name="lastName" class="form-control" type="text" placeholder="Thompson" required="required" onfocus="focused(this)" onfocusout="defocused(this)" value="<?=$userData['apellido_p']?>">
-                                </div>
-                            </div>
-                            <div class="col-12 col-lg-4">
-                                <label class="form-label">Apellido Materno *</label>
-                                <div class="input-group">
-                                    <input id="lastName" name="lastName" class="form-control" type="text" placeholder="Thompson" required="required" onfocus="focused(this)" onfocusout="defocused(this)" value="<?=$userData['apellido_m']?>">
-                                </div>
-                            </div>
-                        </div>
-
-                        <div>
-                            <div class="choices" data-type="select-one" hidden tabindex="0" role="combobox" aria-autocomplete="list" aria-haspopup="true" aria-expanded="false"><div class="choices__inner">
-                                <select class="choices__input choices__input--cloned form -control choices__list" aria-expanded="false" name="choices-button" id="choices-button" placeholder="Genero" hidden="" tabindex="-1" data-choice="active"><option value="Male">Hombre</option></select><div class="choices__list choices__list--single"><div class="choices__item choices__item--selectable" data-item="" data-id="1" data-value="Male" data-custom-properties="null" aria-selected="true">Hombre</div></div></div><div class="choices__list choices__list--dropdown" aria-expanded="false"><input type="text" class="choices__input choices__input--cloned" autocomplete="off" autocapitalize="off" spellcheck="false" role="textbox" aria-autocomplete="list" aria-label="false" placeholder=""><div class="choices__list" role="listbox"><div id="choices--choices-button-item-choice-1" class="choices__item choices__item--choice is-selected choices__item--selectable is-highlighted" role="option" data-choice="" data-id="1" data-value="Male" data-select-text="Press to select" data-choice-selectable="" aria-selected="true">Hombre</div><div id="choices--choices-button-item-choice-2" class="choices__item choices__item--choice choices__item--selectable" role="option" data-choice="" data-id="2" data-value="Male" data-select-text="Press to select" data-choice-selectable="">Mujer</div><div id="choices--choices-button-item-choice-3" class="choices__item choices__item--choice choices__item--selectable" role="option" data-choice="" data-id="3" data-value="Male" data-select-text="Press to select" data-choice-selectable="">Otro</div></div></div>
-                            </div>
-                        </div>
-
-                        <div class="row">
-                            <div class="col-sm-4 col-12">                                      
-                                <label class="form-label mt-4">Me identifico como: *</label>
-                                <!-- <select class="form-control" style="cursor: pointer;" name="choices-button" id="choices-button" placeholder="Genero" >
-                                    <option value="Hombre">Hombre</option>
-                                    <option value="Mujer">Mujer</option>
-                                    <option value="Otro">Otro</option>
-                                </select> -->
-                                <input type="text" class="form-control" value="<?=$userData['genero']?>" disabled>
-                            </div>
-                            <div class="col-sm-8">
-                                <div class="row">
-                                    <div class="col-sm-5 col-5">
-                                        <label class="form-label mt-4">Fecha de Nacimiento *</label>
-                                        <!-- <select class="form-control" style="cursor: pointer;" name="choices-button" id="choices-button" placeholder="Mes" >
-                                            <option value="Male">Enero</option>
-                                            <option value="Male">Febrero</option>
-                                            <option value="Male">Marzo</option> -->
-                                            <input type="date" class="form-control" value="<?=$userData['fecha_nacimiento']?>"> 
-                                        </select>
+                    <form class="form-horizontal" id="update_form" action="" method="POST">
+                        <div class="card-body pt-0">
+                            <div class="row">
+                                <div class="col-12 col-lg-4">
+                                    <!-- <input type="text" id="id_registro" name="id_registro" value="<?= $userData['id_registro'] ?> "> -->
+                                    <label class="form-label">Nombre *</label>
+                                    <div class="input-group">
+                                        <input id="nombre" name="nombre" maxlength="29" pattern="[a-zA-Z ÑñáÁéÉíÍóÚ]*{2,254}" class="form-control" type="text" placeholder="Alec" required="" onfocus="focused(this)" onfocusout="defocused(this)" value="<?= $userData['nombre'] ?>">
                                     </div>
-                                    <!-- <div class="col-sm-4 col-3 mt-lg-0 mt-3">
-                                        <label class="form-label mt-4">&nbsp;</label>
-                                        <select class="form-control choices__inner" style="cursor: pointer;" name="choices-day" id="choices-day" tabindex="-1" data-choice="active">
-                                            <option value="1">1</option>
-                                            <option value="2">2</option>
-                                            <option value="3">3</option>
-                                            <option value="4">4</option>
-                                            <option value="5">5</option>
-                                            <option value="6">6</option>
-                                            <option value="7">7</option>
-                                            <option value="8">8</option>
-                                            <option value="9">9</option>
-                                        </select>
-                                    </div> -->
-                                    <!-- <div class="col-sm-3 col-4 mt-lg-0 mt-3">
-                                        <label class="form-label mt-4">&nbsp;</label>
-                                        <select class="form-control" style="cursor: pointer;" name="choices-year" id="choices-year" data-choice="active">
-                                            <option value="1991">1991</option>
-                                            <option value="1992">1992</option>
-                                            <option value="1993">1993</option>
-                                            <option value="1994">1994</option>
-                                        </select>
-                                    </div> -->
                                 </div>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-lg-6 col-12">
-                                <label class="form-label mt-4">Email Rregistrado y Verificado</label>
-                                <div class="input-group">
-                                    <input id="email" name="email" class="form-control" type="email" placeholder="example@email.com" onfocus="focused(this)" onfocusout="defocused(this)" disabled value="<?=$userData['usuario']?>">
+                                <div class="col-12 col-lg-4">
+                                    <label class="form-label">Segundo Nombre </label>
+                                    <div class="input-group">
+                                        <input id="segundo_nombre" name="segundo_nombre" maxlength="49" pattern="[a-zA-Z ÑñáÁéÉíÍóÚ]*{2,254}" class="form-control" type="text" placeholder="Alec" onfocus="focused(this)" onfocusout="defocused(this)" value="<?= $userData['segundo_nombre'] ?>">
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="col-lg-6 col-12">
-                                <label class="form-label mt-4">Número de Telefono</label>
-                                <div class="input-group">
-                                    <input id="phone" name="phone" class="form-control" type="number" placeholder="+40 735 631 620" onfocus="focused(this)" onfocusout="defocused(this)" value="<?=$userData['telefono']?>">
+                                <div class="col-12 col-lg-4">
+                                    <label class="form-label">Apellido Paterno *</label>
+                                    <div class="input-group">
+                                        <input id="apellido_paterno" name="apellido_paterno" maxlength="29" pattern="[a-zA-Z ÑñáÁéÉíÍóÚ]*{2,254}" class="form-control" type="text" placeholder="Thompson" required="required" onfocus="focused(this)" onfocusout="defocused(this)" value="<?= $userData['apellido_paterno'] ?>">
+                                    </div>
                                 </div>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-md-6 align-self-center">
-                                <label class="form-label mt-4">Pertenezco a la Línea ASOFARMA</label>
-                                <select class="form-control" style="cursor: pointer;" name="choices-linea" id="choices-linea" tabindex="-1" data-choice="active" disabled>
-                                    <option value="asofem">ASOFEM</option>
-                                </select>
-                            </div>
-                            <div class="col-md-6">
-                                <label class="form-label mt-4">Alergias</label>
-                                <input class="form-control" id="choices-tags" data-color="dark" type="text" value="<?=$userData['alergias']?>" placeholder="Enter something" />
-                                <!-- <div class="choices" data-type="text" aria-haspopup="true" aria-expanded="false">
-                                    <div class="choices__inner">
-                                        <input class="form-control choices__input" id="choices-skills" type="text" value="vuejs,angular,react" placeholder="Enter something" hidden="" tabindex="-1" data-choice="active" onfocus="focused(this)" onfocusout="defocused(this)">
-                                        <div class="choices__list choices__list--multiple">
-                                            <div class="choices__item choices__item--selectable" data-item="" data-id="1" data-value="vuejs" data-custom-properties="null" aria-selected="true" data-deletable="">
-                                                Leche
-                                                <button type="button" class="choices__button" aria-label="Remove item: 'vuejs'" data-button="">Remove item</button>
-                                            </div>
-                                            <div class="choices__item choices__item--selectable" data-item="" data-id="2" data-value="angular" data-custom-properties="null" aria-selected="true" data-deletable="">
-                                                Polen
-                                                <button type="button" class="choices__button" aria-label="Remove item: 'angular'" data-button="">Remove item</button>
-                                            </div>
-                                            <div class="choices__item choices__item--selectable" data-item="" data-id="3" data-value="react" data-custom-properties="null" aria-selected="true" data-deletable="">
-                                                Huevo
-                                                <button type="button" class="choices__button" aria-label="Remove item: 'react'" data-button="">Remove item</button>
-                                            </div>
-                                        </div>
-                                        <input type="text" class="choices__input choices__input--cloned" autocomplete="off" autocapitalize="off" spellcheck="false" role="textbox" aria-autocomplete="list" aria-label="false"></div>
-                                        <div class="choices__list choices__list--dropdown" aria-expanded="false">
 
-                                        </div>
-                                    </div> -->
                             </div>
+
+                            <div class="row">
+                                <div class="col-12 col-lg-4">
+                                    <label class="form-label mt-4">Apellido Materno *</label>
+                                    <div class="input-group">
+                                        <input id="apellido_materno" name="apellido_materno" maxlength="29" pattern="[a-zA-Z ÑñáÁéÉíÍóÚ]*{2,254}" class="form-control" type="text" placeholder="Thompson" required="required" onfocus="focused(this)" onfocusout="defocused(this)" value="<?= $userData['apellido_materno'] ?>">
+                                    </div>
+                                </div>
+                                <div class="col-sm-4 col-12">
+                                    <label class="form-label mt-4">Me identifico como: *</label>
+                                    <select class="form-control" style="cursor: pointer;" name="genero" id="genero" placeholder="Genero">
+                                        <option value="">Selecciona una opción</option>
+                                        <!-- <option value="Mujer">Mujer</option>
+                                            <option value="Otro">Otro</option> -->
+                                        <?php echo $optionsGenero; ?>
+                                    </select>
+                                    <!-- <input type="text" class="form-control" value="<?= $userData['genero'] ?>" disabled> -->
+                                </div>
+                                <div class="col-sm-4 col-12">
+
+                                    <label class="form-label mt-4">Fecha de Nacimiento *</label>
+
+                                    <input type="date" class="form-control" id="fecha_nacimiento" name="fecha_nacimiento" required="" value="<?= $userData['fecha_nacimiento'] ?>">
+                                    </select>
+
+
+                                </div>
+                                <div class="row">
+                                    <div class="col-lg-5 col-12">
+                                        <label class="form-label mt-4">Email Rregistrado y Verificado</label>
+                                        <div class="input-group">
+                                            <input id="email" name="email" maxlength="49" class="form-control" type="email" placeholder="example@email.com" onfocus="focused(this)" onfocusout="defocused(this)" value="<?= $userData['email'] ?>" readonly>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-3 col-12">
+                                        <label class="form-label mt-4">Número de Telefono</label>
+                                        <div class="input-group">
+                                            <input id="telefono" name="telefono" maxlength="10" pattern="[0-9]" class="form-control" type="number" placeholder="+40 735 631 620" onfocus="focused(this)" onfocusout="defocused(this)" value="<?= $userData['telefono'] ?>">
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4 align-self-center">
+                                        <label class="form-label mt-4">Pertenezco a la Línea ASOFARMA</label>
+                                        <!-- <select class="form-control" style="cursor: pointer;" name="linea_principal" id="linea_principal" tabindex="-1" data-choice="active">
+                                                <option value="" disabled>Selecciona una opción</option>
+                                                <?php echo $optionsLineaPrincipal; ?>
+                                            </select>  -->
+                                        <input class="form-control" id="linea_principal" name="linea_principal" type="hidden" value="<?= $idLineaPrincipal; ?>" />
+                                        <input class="form-control" id="linea_principal_text" name="linea_principal_text" type="text" value="<?= $nombreLineaPrincipal; ?>" readonly />
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-3 align-self-center">
+                                        <label class="form-label mt-4">Actividad: </label>
+                                        <select class="form-control" style="cursor: pointer;" name="actividad" id="actividad" tabindex="-1" data-choice="active">
+                                            <option value="" selected disabled>Selecciona una opción</option>
+                                            <?php echo $optionsActividad; ?>
+                                        </select>
+
+
+                                    </div>
+                                    <div class="col-md-3 align-self-center">
+                                        <label class="form-label mt-4">Talla de Playera</label>
+                                        <!-- <select class="form-control" style="cursor: pointer;" name="talla" id="talla" tabindex="-1" data-choice="active">
+                                                <option value="" selected disabled>Selecciona una opción</option>
+                                                
+                                            </select> -->
+                                        <input class="form-control" id="talla" name="talla" type="text" value="<?= $userData['talla_playera'] ?>" readonly />
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label class="form-label mt-4">Restricciones alimenticias</label>
+                                        <input class="form-control" id="alergias" maxlength="149" name="alergias" data-color="dark" type="text" value="<?= $userData['alergias'] ?>" placeholder="Enter something" />
+                                    </div>
+                                </div>
+                                <!-- <div class="row">
+                                        
+                                        
+                                    </div> -->
+
+                                <div class="row">
+                                    <div class="button-row d-flex mt-4 col-12">
+
+                                        <button class="btn bg-gradient-dark ms-auto mb-0" type="submit" title="Actualizar">Actualizar</button>
+                                    </div>
+                                </div>
+                            </div>
+
+
                         </div>
-                    </div>
+                    </form>
                 </div>
             </div>
+
         </div>
-
-    </div>
-    <?php echo $footer; ?>
+        <?php echo $footer; ?>
 </main>
+<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 
+<script>
+    $(document).ready(function() {
+        $("#update_form").on("submit",function(event){
+                event.preventDefault();
+                
+                    var formData = new FormData(document.getElementById("update_form"));
+                    console.log(formData);
+                    $.ajax({
+                    url:"/Account/Actualizar",
+                    type: "POST",
+                    data: formData,
+                    cache: false,
+                    contentType: false,
+                    processData: false,
+                    beforeSend: function(){
+                        console.log("Procesando....");
 
+                    
+                    },
+                    success: function(respuesta){
+                        
+                        
+                      
+                        
+                        console.log(respuesta);
 
+                    },
+                    error:function (respuesta)
+                    {
+                        console.log(respuesta);
+                    }
 
+                });
+            });
+
+    });
+</script>

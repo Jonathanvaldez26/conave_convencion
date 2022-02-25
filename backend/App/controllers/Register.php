@@ -161,7 +161,7 @@ html;
 html;
         View::set('header',$extraHeader);
         View::set('footer',$extraFooter);
-        View::render("register");
+        View::render("Register");
     }
 
     public function Success(){
@@ -708,7 +708,7 @@ html;
             View::set('optionsLineaPrincipal',$optionsLineaPrincipal);
             View::set('userData', $userData);
             View::set('optionsGenero',$optionsGenero);
-            View::set('optionActividad',$optionActividad);
+           // View::set('optionActividad',$optionActividad);
             View::set('email',$email);
             View::set('header',$extraHeader);
             View::set('footer',$extraFooter);
