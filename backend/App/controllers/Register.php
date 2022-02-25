@@ -674,7 +674,7 @@ html;
                 <option value="{$value['id_linea_principal']}">{$value['nombre']}</option>
                
 html;
-        }
+        }        
         
         $userData = RegisterDao::getUserRegister($email)[0];
 
@@ -700,11 +700,32 @@ html;
 html;
 
         }
+
+// Actividades
+
+        if($userData['actividad'] == '3k_caminata'){
+            $optionActividad =<<<html
+                <option value="3k_caminata" selected>3k Caminata</option>
+                <option value="5k_carrera">5k Carrera</option>
+        html;
+
+        }else{
+            $optionActividad =<<<html
+                <option value="3k_caminata">3k Caminata</option>
+                <option value="5k_carrera" selected>5k Carrera</option>
+        html;
+
+        }
+
+
+
+
         if($userData['code'] === $code_received){
             //echo "Se verifico codigo correctamente";
             View::set('optionsLineaPrincipal',$optionsLineaPrincipal);
             View::set('userData', $userData);
             View::set('optionsGenero',$optionsGenero);
+            View::set('optionActividad',$optionActividad);
             View::set('email',$email);
             View::set('header',$extraHeader);
             View::set('footer',$extraFooter);
