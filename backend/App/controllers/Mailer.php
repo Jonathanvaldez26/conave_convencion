@@ -13,15 +13,9 @@ use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\Exception;
 
 
-class Mailer extends Controller
+class Mailer
 {
 
-    private $_contenedor;
-
-    function __construct()
-    {
-        parent::__construct();
-    }
 
     public function mailer($msg)
     {

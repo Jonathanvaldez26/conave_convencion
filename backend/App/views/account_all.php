@@ -219,33 +219,34 @@
                 event.preventDefault();
                 
                     var formData = new FormData(document.getElementById("update_form"));
-                    console.log(formData);
-                    $.ajax({
-                    url:"/Account/Actualizar",
-                    type: "POST",
-                    data: formData,
-                    cache: false,
-                    contentType: false,
-                    processData: false,
-                    beforeSend: function(){
-                        console.log("Procesando....");
-
                     
-                    },
-                    success: function(respuesta){
-                        
-                        
-                      
-                        
-                        console.log(respuesta);
+                    // $.ajax({
+                    //     url:"/Account/Actualizar",
+                    //     type: "POST",
+                    //     data: formData,
+                    //     // cache: false,
+                    //     // contentType: false,
+                    //     // processData: false,
+                    //     beforeSend: function(){
+                    //         console.log("Procesando....");
 
-                    },
-                    error:function (respuesta)
-                    {
-                        console.log(respuesta);
-                    }
+                        
+                    //     },
+                    //     success: function(respuesta){
+                            
+                            
+                        
+                            
+                    //         console.log(respuesta);
 
-                });
+                    //     },
+                    //     error:function (respuesta)
+                    //     {
+                    //         console.log(respuesta);
+                    //     }
+
+                    // });
+                    alert("funciona");
             });
 
     });
