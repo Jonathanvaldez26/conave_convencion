@@ -138,15 +138,12 @@ html;
                                     </a>
                                 </div>
                                 <div class="card-body px-1 pb-0">
-                                    <p class="text-gradient text-dark mb-2 text-sm">Comprobante de Vacunación Cargado el {$value['fecha_carga_documento']}</p>
+                                    <p class="text-gradient text-dark mb-2 text-sm">Comprobante de Vacunación Cargado el {$value['fecha_carga_documento']}. Registro {$value['numero_dosis']} Dosis para su comprobante</p>
                                     <a href="javascript:;">
                                         <h6>
                                             Un Ejecutivo lo Está Validando
                                         </h6>
                                     </a>
-                                    <p class="mb-4 text-sm text-center">
-                                        Registraste {$value['numero_dosis']} Dosis 
-                                    </p>
                                 </div>
                             </div>
                         </div>
