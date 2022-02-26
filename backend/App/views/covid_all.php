@@ -23,7 +23,7 @@
                         </a>
                     </li>
                     <li class="breadcrumb-item text-sm"><a class="opacity-5 text-dark" href="/Home/">Inicio</a></li>
-                    <li class="breadcrumb-item text-sm"><a class="opacity-5 text-dark" href="javascript:;" disabled>Pruebas Covid</a></li>
+                    <li class="breadcrumb-item text-sm">Pruebas Covid</li>
                 </ol>
             </nav>
 
@@ -69,6 +69,7 @@
                     </button>
                     <!-- <button type="button" class="btn btn-secondary btn-sm">Eliminar</button> -->
                 </div>
+
                 <div class="card-body p-3">
                     <div class="row">
                         <div class="card">
@@ -127,7 +128,7 @@
                                     <div class="form-group col-md-12">
                                         <label class="control-label col-md-12 col-sm-3 col-xs-12" for="fecha_">Fecha de Prueba SARS-CoV2 <span class="required">*</span></label>
                                         <div class="col-md-12 col-sm-12 col-xs-12">
-                                            <input type="date" name="fecha_" id="fecha_" class="form-control col-md-7 col-xs-12" required>
+                                            <input type="date" name="fecha_" id="fecha_" min="<?php echo $fecha_7d; ?>" max="<?php echo $fecha_hoy; ?>" class="form-control col-md-7 col-xs-12" required>
                                         </div>
                                         <span id="availability_"></span>
                                     </div>

@@ -123,6 +123,7 @@ html;
 
         $vacuna = VaccinationDao::getCount($_SESSION['utilerias_asistentes_id']);
         $tabla= '';
+        $iframe_doc = '';
         $fechaActual = date('d-m-Y');
 
         foreach ($vacuna as $key => $value) {
@@ -145,57 +146,71 @@ html;
                                         </h6>
                                     </a>
                                 </div>
-                            </div>
-                        </div>
-html;
-                    $iframe_doc .= <<<html
-<div class="modal fade" id="ver-documento-{$value['id_comprobante_vacuna']}" tabindex="-1" role="dialog" aria-labelledby="ver-documento-{$value['id_comprobante_vacuna']}" aria-hidden="true">
-  <div class="modal-dialog" role="document" style="max-width: 590px;">
-      <div class="modal-content">
-          <div class="modal-header">
-              <h5 class="modal-title" id="exampleModalLabel">Comprobante de Vacunación SARS-CoV-2</h5>
-              <span type="button" class="btn btn-danger" data-dismiss="modal" aria-label="Close">
-                  X
-              </span>
-          </div>
-          <div class="modal-body">
-          <iframe src="/comprobante_vacunacion/{$value['documento']}" style="width:100%; height:700px;" frameborder="0" >
-          </iframe>
-       </div>
-      </div>
-  </div>
-</div>
-html;
-                }
-
-            }
-            else
-            {
-                $tabla =<<<html
-                <div class="col-xl-4 col-md-6 mb-xl-0 mb-4">
-                            <div class="card card-blog card-plain">
-                                <div class="position-relative">
-                                    <a class="d-block shadow-xl border-radius-xl">
-                                        <img src="../../../assets/img/comprobante1.jpeg" alt="img-blur-shadow" class="img-fluid shadow border-radius-xl">
-                                    </a>
-                                </div>
-                                <div class="card-body px-1 pb-0">
-                                    <p class="text-gradient text-dark mb-2 text-sm text-center">Carga tu Comprobante de Vacunación lo Antes Posible</p>
-                                    <div class="text-center">
-                                        <button type="button" class="btn btn-outline-success btn-sm mb-0 text-center" data-toggle="modal" data-target="#Modal_Vacunacion">Subir Comprobante de Vacunación</button>
+                                <br>
+                                <div class="text-center">
+                                    <div class="d-flex flex-column justify-content-center" style="text-transform: capitalize;">
+                                    <button type="button" class="btn btn-outline-success btn-sm" data-toggle="modal" data-target="#ver-documento-{$prueba['id_prueba_covid']}">
+                                        Ver documento
+                                    </button>
                                     </div>
                                 </div>
                             </div>
                         </div>
 html;
+
+            $iframe_doc .= <<<html
+                <div class="modal fade" id="ver-documento-{$value['id_prueba_covid']}" tabindex="-1" role="dialog" aria-labelledby="ver-documento-{$prueba['id_prueba_covid']}" aria-hidden="true">
+                    <div class="modal-dialog" role="document" style="max-width: 590px;">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="exampleModalLabel">Documento Comprobante de Vacunación</h5>
+                                <span type="button" class="btn btn-danger" data-dismiss="modal" aria-label="Close">
+                                    X
+                                </span>
+                            </div>
+                            <div class="modal-body">
+                            <iframe src="/comprobante_vacunacion/{$value['documento']}" style="width:100%; height:700px;" frameborder="0" >
+                            </iframe>
+                        </div>
+                        </div>
+                    </div>
+                </div>
+html;
+            }
+
+        }else{
+                $tabla =<<<html
+                <div class="col-xl-4 col-md-6 mb-xl-0 mb-4">
+                    <div class="card card-blog card-plain">
+                        <div class="position-relative">
+                            <a class="d-block shadow-xl border-radius-xl">
+                                <img src="../../../assets/img/comprobante1.jpeg" alt="img-blur-shadow" class="img-fluid shadow border-radius-xl">
+                            </a>
+                        </div>
+                        <div class="card-body px-1 pb-0">
+                            <p class="text-gradient text-dark mb-2 text-sm text-center">Carga tu Comprobante de Vacunación lo Antes Posible</p>
+                            <div class="text-center">
+                                <button type="button" class="btn btn-outline-success btn-sm mb-0 text-center" data-toggle="modal" data-target="#Modal_Vacunacion">Subir Comprobante de Vacunación</button>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+html;
             }
         }
 
+        
+        $boton_doc ='';
 
+        $boton_doc .= <<<html
 
+          
+html;
 
         View::set('iframe_doc',$iframe_doc);
         View::set('tabla',$tabla);
+        View::set('boton_doc',$boton_doc);
         View::set('fechaActual',$fechaActual);
         View::set('header',$this->_contenedor->header($extraHeader));
         View::set('footer',$extraFooter);

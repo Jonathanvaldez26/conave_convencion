@@ -23,7 +23,7 @@
                         </a>
                     </li>
                     <li class="breadcrumb-item text-sm"><a class="opacity-5 text-dark" href="/Home/">Inicio</a></li>
-                    <li class="breadcrumb-item text-sm"><a class="opacity-5 text-dark" href="javascript:;" disabled>Comprobante de Vacunación</a></li>
+                    <li class="breadcrumb-item text-sm">Comprobante de Vacunación</li>
                 </ol>
             </nav>
 
@@ -63,9 +63,9 @@
                 </div>
                 <div class="card-body p-3">
                     <div class="row">
-                        <div class="col-xl-4 col-md-6 mb-xl-0 mb-4"></div>
+                        <div class="col-xl-4 col-md-3 mb-xl-0 mb-4"></div>
                         <?php echo $tabla ?>
-                        <div class="col-xl-4 col-md-6 mb-xl-0 mb-4"></div>
+                        <div class="col-xl-4 col-md-0 mb-xl-0 mb-4"></div>
                     </div>
                 </div>
             </div>
@@ -174,6 +174,8 @@
             </div>
         </div>
     </div>
+
+    <?php echo $iframe_doc; ?>
 
     <div class="fixed-bottom navbar-dark">
         <!-- <a class="navbar-brand" href="#!">Footer</a> -->

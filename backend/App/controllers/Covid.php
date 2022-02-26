@@ -123,6 +123,14 @@ html;
     $iframe_doc = '';
     $status = '';
     $fechaActual = date('d-m-Y');
+
+    // $date = strtotime(date("Y-m-d"));
+
+    $first = strtotime('-7 days');
+
+    $fecha_7d = date('Y-m-d', $first);
+    $fecha_hoy = date('Y-m-d');
+
     foreach ($pruebas as $key => $prueba) {
       if($prueba['status'] = 1){
         $status =<<<html
@@ -164,7 +172,7 @@ html;
           </div>
         </td>
         <td>
-        <div class="text-center">
+          <div class="text-center">
             <div class="d-flex flex-column justify-content-center" style="text-transform: capitalize;">
               <button type="button" class="btn btn-outline-primary btn-sm" data-toggle="modal" data-target="#ver-documento-{$prueba['id_prueba_covid']}">
                 Ver documento
@@ -199,6 +207,8 @@ html;
     View::set('iframe_doc',$iframe_doc);
     View::set('tabla',$tabla);
     View::set('fechaActual',$fechaActual);
+    View::set('fecha_7d',$fecha_7d);
+    View::set('fecha_hoy',$fecha_hoy);
     View::set('header',$this->_contenedor->header($extraHeader));
     View::set('footer',$extraFooter);
     View::render("covid_all");

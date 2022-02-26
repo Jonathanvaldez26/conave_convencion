@@ -102,15 +102,15 @@ echo $header;
                                     <div class="row">
                                         <div class="col-md-3 align-self-center">
                                             <label class="form-label mt-4">Actividad: </label>
-                                            <select class="form-control" style="cursor: pointer;" name="actividad" id="actividad" tabindex="-1" data-choice="active" required>
-                                                <option value="" selected disabled>Selecciona una opción</option>
+                                            <select class="form-control" style="cursor: pointer;" name="actividad" id="actividad" tabindex="-1" data-choice="active" required disabled>
+                                                <option value disabled>Selecciona una opción</option>
                                                 <option value="caminata_3k">Caminata 3k</option>
                                                 <option value="carrera_5k">Carrera 5k</option>
                                             </select>
                                         </div>
                                         <div class="col-md-3 align-self-center">
                                             <label class="form-label mt-4">Talla de Playera</label>
-                                            <select class="form-control" style="cursor: pointer;" required="true" name="talla_playera" id="talla_playera" tabindex="-1" data-choice="active" readonly>
+                                            <select class="form-control" style="cursor: pointer;" required="true" name="talla_playera" id="talla_playera" tabindex="-1" data-choice="active" readonly disabled>
                                                 <option value="" disabled>Seleccione una Talla</option>
                                                 <option value="Chica">Chica</option>
                                                 <option value="Mediana">Mediana</option>
