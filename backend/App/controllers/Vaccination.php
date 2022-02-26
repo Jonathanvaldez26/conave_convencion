@@ -129,7 +129,6 @@ html;
             if($value['count'] >= 1){
                 $vacuna_ = VaccinationDao::getByIdUser($_SESSION['utilerias_asistentes_id']);
                 foreach ($vacuna_ as $key => $value) {
-
                     $tabla = <<<html
                     <div class="col-xl-4 col-md-6 mb-xl-0 mb-4">
                             <div class="card card-blog card-plain">
@@ -157,8 +156,7 @@ html;
                             </div>
                         </div>
 html;
-                }
-                $iframe_doc .= <<<html
+                    $iframe_doc .= <<<html
 <div class="modal fade" id="ver-documento-{$value['id_comprobante_vacuna']}" tabindex="-1" role="dialog" aria-labelledby="ver-documento-{$value['id_comprobante_vacuna']}" aria-hidden="true">
   <div class="modal-dialog" role="document" style="max-width: 590px;">
       <div class="modal-content">
@@ -176,6 +174,8 @@ html;
   </div>
 </div>
 html;
+                }
+
             }
             else
             {
