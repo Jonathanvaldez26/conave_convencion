@@ -38,7 +38,7 @@ sql;
 
         $query=<<<sql
         UPDATE registros_acceso SET img = ''  WHERE email = :email;
-  sql;
+sql;
         $parametros = array(
           ':email'=>$user->_email
         );
@@ -55,7 +55,7 @@ sql;
 
         $query1=<<<sql
         UPDATE registros_acceso SET img = :img  WHERE email = :email;
-  sql;
+sql;
         $parametros1 = array(
           ':img'=>$user->_img,
           ':email'=>$user->_email
