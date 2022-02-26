@@ -657,6 +657,14 @@ html;
             </script>
       
 html;
+        if (strlen((date('y')-18))!=1) {
+            $fecha_min = '20'.(date('y')-18).'-'.date('m').'-'.date('d');
+        } else {
+            $fecha_min = '200'.(date('y')-18).'-'.date('m').'-'.date('d');
+        }
+
+        $fecha_max = '20'.date('y').'-'.date('m').'-'.date('d');
+        
 
         $email = $_POST['email'];
         $digit1 =  $_POST['uno'];
@@ -709,12 +717,16 @@ html;
                 <option value="5k_carrera">5k Carrera</option>
         html;
 
-        }else{
+        }else if($userData['actividad'] == '5k_caminata'){
             $optionActividad =<<<html
                 <option value="3k_caminata">3k Caminata</option>
                 <option value="5k_carrera" selected>5k Carrera</option>
         html;
-
+        }else{
+            $optionActividad =<<<html
+                <option value="3k_caminata">3k Caminata</option>
+                <option value="5k_carrera">5k Carrera</option>
+        html;
         }
 
 
@@ -724,6 +736,8 @@ html;
             //echo "Se verifico codigo correctamente";
             View::set('optionsLineaPrincipal',$optionsLineaPrincipal);
             View::set('userData', $userData);
+            View::set('fecha_min', $fecha_min);
+            View::set('fecha_max', $fecha_max);
             View::set('optionsGenero',$optionsGenero);
             View::set('optionActividad',$optionActividad);
             View::set('email',$email);
