@@ -11,7 +11,7 @@ use \App\controllers\Mailer;
 use \App\controllers\Contenedor;
 use Core\Controller;
 
-class Covidextends extends Controller{
+class Covid extends Controller{
 
   private $_contenedor;
 
