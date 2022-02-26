@@ -138,7 +138,7 @@
                     <h6>
                         <label id="fecha_actual"><?php echo $fechaActual; ?></label>
                         <br>    
-                        Por favor a continuación ingrese la información solicitada.s
+                        Por favor a continuación ingrese la información solicitada.
                     </h6>
                 </div>
 
@@ -148,19 +148,19 @@
                             <div class="row">
                                 <div class="col-md-6">
                                     <div class="form-group col-md-12">
-                                        <label class="control-label col-md-12 col-sm-3 col-xs-12" for="fecha_">Fecha de Prueba<span class="required">*</span></label>
+                                        <label class="control-label col-md-12 col-sm-3 col-xs-12" for="fecha_">Fecha de Prueba SARS-CoV2 <span class="required">*</span></label>
                                         <div class="col-md-12 col-sm-12 col-xs-12">
-                                            <input type="date" name="fecha_" id="fecha_" class="form-control col-md-7 col-xs-12">
+                                            <input type="date" name="fecha_" id="fecha_" class="form-control col-md-7 col-xs-12" required>
                                         </div>
                                         <span id="availability_"></span>
                                     </div>
                                 </div>
                                 <div class="col-md-6">
                                     <div class="form-group col-md-12">
-                                        <label class="control-label col-md-12 col-sm-3 col-xs-12" for="tipo_prueba_">Tipo de Prueba<span class="required">*</span></label>
+                                        <label class="control-label col-md-12 col-sm-3 col-xs-12" for="tipo_prueba_">Tipo de Prueba SARS-CoV2 <span class="required">*</span></label>
                                         <div class="col-md-12 col-sm-12 col-xs-12">
                                             <!-- <input type="date" name="fecha_" id="fecha_" class="form-control col-md-7 col-xs-12"> -->
-                                            <select class="form-control" name="tipo_prueba_" id="tipo_prueba_">
+                                            <select class="form-control" name="tipo_prueba_" id="tipo_prueba_" required>
                                                 <option selected>Seleccione Un Tipo de Prueba de Deteccion SARS-CoV-2</option>
                                                 <option value="antigeno">Prueba PCR</option>
                                                 <option value="antigeno">Prueba Antígeno</option>
@@ -176,7 +176,7 @@
                                         <label class="control-label col-md-12 col-sm-12 col-xs-12" for="fecha_">Resultado Prueba SARS-CoV-2<span class="required">*</span></label>
                                         <div class="col-md-12 col-sm-12 col-xs-12">
                                             <!-- <input type="date" name="fecha_" id="fecha_" class="form-control col-md-7 col-xs-12"> -->
-                                            <select class="form-control" name="resultado_" id="resultado_">
+                                            <select class="form-control" name="resultado_" id="resultado_" required>
                                                 <option selected>Seleccione Un Resultado</option>
                                                 <option value="positivo">Positivo</option>
                                                 <option value="negativo">Negativo</option>
@@ -188,7 +188,7 @@
                                 <div class="form-group col-md-12">
                                     <label class="control-label col-md-12 col-sm-12 col-xs-12" for="file_">Archivo Escaneado con información de la prueba SARS-CoV-2: <span class="required">*</span></label>
                                     <div class="col-md-12 col-sm-12 col-xs-12">
-                                        <input type="file" accept="application/pdf" class="form-control" id="file_" name="file_">
+                                        <input type="file" accept="application/pdf" class="form-control" id="file_" name="file_" required>
                                     </div>
                                     <span id="availability_4_"></span>
                                 </div>
