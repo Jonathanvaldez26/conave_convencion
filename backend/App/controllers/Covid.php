@@ -34,12 +34,13 @@ html;
     foreach ($pruebas as $key => $prueba) {
       if($prueba['status'] = 1){
         $status =<<<html
-        <span class="badge badge-sm badge-success">Se valido Correctamente</span>   
+        <span class="badge badge-sm badge-secondary">En Espera a Validar</span>
+        
 html;
       }elseif ($prueba['status'] = 2)
       {
           $status =<<<html
-          <span class="badge badge-sm badge-secondary">En Espera a Validar</span>
+          <span class="badge badge-sm badge-success">Se valido Correctamente</span>   
 html;
       }
 
