@@ -127,8 +127,8 @@ html;
 
         foreach ($vacuna as $key => $value) {
             if($value['count'] >= 1){
-                $vacuna_ = VaccinationDao::getByIdUser($_SESSION['utilerias_asistentes_id']);
-                foreach ($vacuna_ as $key => $value) {
+                $vacunas = VaccinationDao::getByIdUser($_SESSION['utilerias_asistentes_id']);
+                foreach ($vacunas as $key => $value) {
                     $tabla = <<<html
                     <div class="col-xl-4 col-md-6 mb-xl-0 mb-4">
                             <div class="card card-blog card-plain">
