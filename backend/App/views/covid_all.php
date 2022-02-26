@@ -85,42 +85,19 @@
                                     </thead>
                                     <tbody>
                                         <?php echo $tabla; ?>
-                                        <!-- <tr>
-                                            <td>
-                                                <div class="d-flex px-2 py-1">
-                                                    <div class="d-flex flex-column justify-content-center">
-                                                        <h6 class="mb-0 text-xs">Prueba Covid Lab 2</h6>
-                                                        <p class="text-xs text-secondary mb-0">04/04/2022</p>
-                                                    </div>
-                                                </div>
-                                            </td>
-                                            <td class="align-middle text-center text-sm">
-                                                <span class="badge badge-sm badge-secondary">En Espera a Validar</span>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>
-                                                <div class="d-flex px-2 py-1">
-                                                    <div class="d-flex flex-column justify-content-center">
-                                                        <h6 class="mb-0 text-xs">Prueba Covid Lab 3</h6>
-                                                        <p class="text-xs text-secondary mb-0">04/04/2022</p>
-                                                    </div>
-                                                </div>
-                                            </td>
-                                            <td class="align-middle text-center text-sm">
-                                                <span class="badge badge-sm badge-secondary">En Espera a Validar</span>
-                                            </td>
-                                        </tr> -->
-
                                     </tbody>
                                 </table>
+                                <br>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
+        <br>
+        <br>
     </div>
+
 
     <div class="modal fade" id="Modal_Prueba_COVID" tabindex="-1" role="dialog" aria-labelledby="Modal_Prueba_COVID" aria-hidden="true">
         <div class="modal-dialog" role="document">
