@@ -181,7 +181,7 @@ $iframe_doc .= <<<html
   <div class="modal-dialog" role="document" style="max-width: 590px;">
       <div class="modal-content">
           <div class="modal-header">
-              <h5 class="modal-title" id="exampleModalLabel">Documento de vacunación</h5>
+              <h5 class="modal-title" id="exampleModalLabel">Documento Prueba SARS-CoV-2</h5>
               <span type="button" class="btn btn-danger" data-dismiss="modal" aria-label="Close">
                   X
               </span>

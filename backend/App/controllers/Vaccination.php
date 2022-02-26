@@ -128,7 +128,8 @@ html;
         foreach ($vacuna as $key => $value) {
             if($value['count'] >= 1){
                 $vacuna_ = VaccinationDao::getByIdUser($_SESSION['utilerias_asistentes_id']);
-                foreach ($vacuna as $key => $value) {
+                foreach ($vacuna_ as $key => $value) {
+
                     $tabla = <<<html
                     <div class="col-xl-4 col-md-6 mb-xl-0 mb-4">
                             <div class="card card-blog card-plain">
@@ -148,8 +149,8 @@ html;
                                         Subiste este documento <br>el 27/01/2022 10:25 a.m.
                                     </p>
                                     <div class="d-flex align-items-center justify-content-between">
-                                        <button type="button" class="btn btn-outline-danger btn-sm mb-0" data-toggle="modal" data-target="#ver-comprobante">
-                                            Ver comprobante
+                                        <button type="button" class="btn btn-outline-primary btn-sm" data-toggle="modal" data-target="#ver-documento-{$value['id_comprobante_vacuna']}">
+                                            Ver documento
                                         </button>
                                     </div>
                                 </div>
@@ -157,6 +158,24 @@ html;
                         </div>
 html;
                 }
+                $iframe_doc .= <<<html
+<div class="modal fade" id="ver-documento-{$value['id_comprobante_vacuna']}" tabindex="-1" role="dialog" aria-labelledby="ver-documento-{$value['id_comprobante_vacuna']}" aria-hidden="true">
+  <div class="modal-dialog" role="document" style="max-width: 590px;">
+      <div class="modal-content">
+          <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">Comprobante de Vacunación SARS-CoV-2</h5>
+              <span type="button" class="btn btn-danger" data-dismiss="modal" aria-label="Close">
+                  X
+              </span>
+          </div>
+          <div class="modal-body">
+          <iframe src="/comprobante_vacunacion/{$value['documento']}" style="width:100%; height:700px;" frameborder="0" >
+          </iframe>
+       </div>
+      </div>
+  </div>
+</div>
+html;
             }
             else
             {
@@ -183,7 +202,7 @@ html;
 
 
 
-        //View::set('iframe_doc',$iframe_doc);
+        View::set('iframe_doc',$iframe_doc);
         View::set('tabla',$tabla);
         View::set('fechaActual',$fechaActual);
         View::set('header',$this->_contenedor->header($extraHeader));
