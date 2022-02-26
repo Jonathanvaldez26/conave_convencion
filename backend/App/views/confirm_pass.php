@@ -10,7 +10,7 @@ echo $header;
                 <div class="row justify-content-center">
                     <div class="col-lg-5 text-center mx-auto">
                         <h1 class="text-white mb-2 mt-5">¡Bienvenido!</h1>
-                        <p class="text-lead text-white">Convención Nacional CONAVE 2022, Crece sin Límites. </p>
+                        <p class="text-lead text-white">Convención Nacional CONAVE 2022, Creciendo 5in Límites. </p>
                     </div>
                 </div>
             </div>
@@ -20,26 +20,27 @@ echo $header;
                 <div class="col-xl-4 col-lg-5 col-md-7 mx-auto">
                         <div class="card z-index-0">
                             <div class="card-header text-center pt-4">
-                                <p>Introduce tu contraseña para terminar con tu registro</p>
+                                <p>Crea tu contraseña</p>
                                 <p class="text-sm font-weight-bold mb-2 text-secondary text-border d-inline z-index-2 bg-white px-3">
                                     <i class="fa fa-user-circle"></i>
                                 </p>
+                                <p class="text-center" style="font-weight:bold; font-size: 15px">Introduce una contraseña con un mínimo de 6 caracteres alfanuméricos</p>
                             </div>
-                            <div class="card-body pt-1">
+                            <div class="card-body pt-0">
                                 <form class="form-horizontal" id="pass_form" action="" method="POST">
                                     <!-- <input type="hidden" id="id_registro" name="id_registro" value="<?=$id_registro?>"> -->
                                     <input type="hidden" id="email" name="email" value="<?=$email?>">
                                     <input type="hidden" id="politica" name="politica" value="<?=$politica?>">
                                     <div class="mb-3 form-group">
-                                        <label>Contraseña *</label>
-                                        <input type="password" id="password" name="password" class="form-control" placeholder="Ingresa tu password*" aria-label="Password" required="required">
+                                        <label style="font-weight:bold; font-size: 15px">Contraseña *</label>
+                                        <input type="password" id="password" name="password" class="form-control" placeholder="Ingresa tu Contraseña *" aria-label="Password" required="required">
                                     </div>
                                     <div class="mb-3 form-group">
-                                        <label>Confirma tu Contraseña *</label>
-                                        <input type="password" id="confirm_password" name="confirm_password" class="form-control" placeholder="Confirma tu password" aria-label="Confirmar tu Password" required="required">
+                                        <label style="font-weight:bold; font-size: 15px">Confirma tu Contraseña *</label>
+                                        <input type="password" id="confirm_password" name="confirm_password" class="form-control" placeholder="Confirma tu Contraseña" aria-label="Confirmar tu Password" required="required">
                                     </div>
                                     <div class="form-group text-center">
-                                        <button class="btn btn-outline-danger w-100 my-4 mb-2 ms-auto " type="submit" id="btn_registro_password">Registrar</button>
+                                        <button class="btn btn-outline-danger w-100 my-4 mb-2 ms-auto " type="submit" id="btn_registro_password">terminar mi Registro</button>
                                     </div>
                                     
                                 </form>

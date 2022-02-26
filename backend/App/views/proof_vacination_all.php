@@ -4,7 +4,7 @@
     <nav class="navbar navbar-main navbar-expand-lg position-sticky mt-4 top-1 px-0 mx-4 shadow-none border-radius-xl z-index-sticky" id="navbarBlur" data-scroll="true">
         <div class="container-fluid py-1 px-3">
             <nav aria-label="breadcrumb">
-                <ol class="breadcrumb bg-transparent mb-0 pb-0 pt-1 px-0 me-sm-6 me-5">
+                <ol class="breadcrumb bg-transparent mb-0 pb-0 pt-1 px-0 me-sm-6 me-2">
                     <li class="breadcrumb-item text-sm">
                         <a class="opacity-3 text-dark" href="javascript:;">
                             <svg width="12px" height="12px" class="mb-1" viewBox="0 0 45 40" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
@@ -23,7 +23,7 @@
                         </a>
                     </li>
                     <li class="breadcrumb-item text-sm"><a class="opacity-5 text-dark" href="/Home/">Inicio</a></li>
-                    <li class="breadcrumb-item text-sm"><a class="opacity-5 text-dark" href="javascript:;" disabled>Mis Comprobantes de Vacunación</a></li>
+                    <li class="breadcrumb-item text-sm"><a class="opacity-5 text-dark" href="javascript:;" disabled>Comprobante de Vacunación</a></li>
                 </ol>
             </nav>
 
@@ -34,13 +34,12 @@
 
                 <ul class="navbar-nav  justify-content-end">
                     <li class="nav-item d-flex align-items-center">
-                        <a href="/Home/" class="nav-link text-body font-weight-bold px-0">
+                        <a href="/Home/" class="nav-link text-body font-weight-bold mx-lg-4 mx-0 px-0">
                             <i class="fa fa-home me-sm-0"></i>
                             <span class="d-sm-inline d-none">Inicio</span>
                         </a>
                     </li>
                 </ul>
-                <ul></ul>
                 <ul class="navbar-nav  justify-content-end">
                     <li class="nav-item d-flex align-items-center">
                         <a href="/Login/cerrarSession" class="nav-link text-body font-weight-bold px-0">
@@ -53,169 +52,135 @@
         </div>
     </nav>
     <!-- End Navbar -->
-    <div class="container-fluid py-0">
-        <div class="row mt-lg-8 mt-0">
+    <div class="container-fluid py-">
+        <div class="row mt-2">
             <div class="col-lg-2">
             </div>
-            <div class="card col-lg-8 mt-lg-0 mt-0" >
+            <div class="card col-lg-8 mt-lg-5 mt-1" >
                 <div class="card-header pb-0 p-3">
-                    <h6 class="mb-1">Comprobantes de Vacunación</h6>
-                    <p class="text-sm">Registraste 3 Dosis de Vacuna</p>
+                    <h6 class="mb-1">Mi comprobante de Vacunación</h6>
+                    <p class="text-sm">Registra tu Comprobante de Vacunación antes del 01/04/2022</p>
                 </div>
                 <div class="card-body p-3">
                     <div class="row">
-                        <div class="col-xl-4 col-md-6 mb-xl-0 mb-4">
-                            <div class="card card-blog card-plain">
-                                <div class="position-relative">
-                                    <a class="d-block shadow-xl border-radius-xl">
-                                        <img src="../../../assets/img/comprobante1.jpeg" alt="img-blur-shadow" class="img-fluid shadow border-radius-xl">
-                                    </a>
-                                </div>
-                                <div class="card-body px-1 pb-0">
-                                    <p class="text-gradient text-dark mb-2 text-sm">Comprobante de Vacunación #1</p>
-                                    <a href="javascript:;">
-                                        <h5>
-                                            AstraZeneca
-                                        </h5>
-                                    </a>
-                                    <p class="mb-4 text-sm">
-                                        Subiste este documento <br>el 27/01/2022 10:25 a.m.
-                                    </p>
-                                    <div class="d-flex align-items-center justify-content-between">
-                                        <button type="button" class="btn btn-outline-danger btn-sm mb-0" data-toggle="modal" data-target="#ver-comprobante">
-                                            Ver comprobante
-                                        </button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-xl-4 col-md-6 mb-xl-0 mb-4">
-                            <div class="card card-blog card-plain">
-                                <div class="position-relative">
-                                    <a class="d-block shadow-xl border-radius-xl">
-                                        <img src="../../../assets/img/comprobante2.jpeg" alt="img-blur-shadow" class="img-fluid shadow border-radius-lg">
-                                    </a>
-                                </div>
-                                <div class="card-body px-1 pb-0">
-                                    <p class="text-gradient text-dark mb-2 text-sm">Comprobante de Vacunación #2</p>
-                                    <a href="javascript:;">
-                                        <h5>
-                                            AstraZeneca
-                                        </h5>
-                                    </a>
-                                    <p class="mb-4 text-sm">
-                                        Subiste este documento <br>el 27/01/2022 10:32 a.m.
-                                    </p>
-                                    <div class="d-flex align-items-center justify-content-between">
-                                        <button type="button" class="btn btn-outline-danger btn-sm mb-0" data-toggle="modal" data-target="#ver-comprobante">Ver Comprobante</button>
-
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-xl-4 col-md-6 mb-xl-0 mb-4">
-                            <div class="card card-blog card-plain">
-                                <div class="position-relative">
-                                    <a class="d-block shadow-xl border-radius-xl">
-                                        <img src="../../../assets/img/rechazo.jpeg" alt="img-blur-shadow" class="img-fluid shadow border-radius-xl">
-                                    </a>
-                                </div>
-                                <div class="card-body px-1 pb-0">
-                                    <p class="text-gradient text-dark mb-2 text-sm">Fecha Límite de Carga 01/04/2022</p>
-                                    <a href="javascript:;">
-                                        <h5>
-                                            Comprobante Rechazado
-                                        </h5>
-                                    </a>
-                                    <p class="mb-4 text-sm">
-                                        Sube un nuevo comprobante, este fue rechazado por inconsistencias.
-                                    </p>
-                                    <div class="d-flex align-items-center justify-content-between">
-                                        <button type="button" class="btn btn-outline-danger btn-sm mb-0" data-toggle="modal" data-target="#subir-comprobante">
-                                            Subir Comprobante
-                                        </button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                        <div class="col-xl-4 col-md-6 mb-xl-0 mb-4"></div>
+                        <?php echo $tabla ?>
+                        <div class="col-xl-4 col-md-6 mb-xl-0 mb-4"></div>
                     </div>
                 </div>
             </div>
         </div>
-        
-        <!-- MODAL VISTA - COMPROBANTE -->
-        <div class="modal fade" id="ver-comprobante" tabindex="-1" role="dialog" aria-labelledby="ver-comprobante" aria-hidden="true">
-            <div class="modal-dialog" role="document" style="max-width: 590px;">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h5 class="modal-title" id="exampleModalLabel">Comprobante de vacunación</h5>
-                        <span type="button" class="btn btn-danger" data-dismiss="modal" aria-label="Close">
-                            X
-                        </span>
-                    </div>
-                    <!-- <div class="modal-header">
-                        <p>Por su seguridad y la de las demás personas, le pedimos que nos proporcione la Información siguiente para comprobar que no este contagiado de COVID.</p>
-                    </div> -->
-                    <div class="modal-body">
-                        <iframe src="/assets/pdf/vaccination/ComprobanteVacunacion.pdf"
-                            style="width:100%; height:700px;" frameborder="0" >
-                        </iframe>
-                    </div>
-                </div>
-            </div>
-        </div>
+        <br>
+        <br>
+    </div>
 
-        <!-- MODAL SUBIR COMPROBANTE -->
-        <div class="modal fade" id="subir-comprobante" tabindex="-1" role="dialog" aria-labelledby="subir-comprobante" aria-hidden="true">
+    <br>
+    <br>
+
+
+    <div class="modal fade" id="Modal_Vacunacion" tabindex="-1" role="dialog" aria-labelledby="Modal_Vacunacion" aria-hidden="true">
         <div class="modal-dialog" role="document">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">Agregue su Comprobante de Vacuncación</h5>
-                    <span type="button" class="btn btn-danger" data-dismiss="modal" aria-label="Close">
+                    <h5 class="modal-title" id="exampleModalLabel">
+                        Agregue su Comprobante de Vacunación
+
+                    </h5>
+                    <span type="button" class="btn btn-dark" data-dismiss="modal" aria-label="Close">
                         X
                     </span>
                 </div>
+                <div class="modal-header">
+                    <h6>
+                        <label id="fecha_actual">Fecha máxima de validación: <?php echo $fechaActual; ?></label>
+                        <br>
+                        Por favor a continuación ingrese la información solicitada.
+                    </h6>
+                </div>
+
                 <div class="modal-body">
-                    <form method="POST" enctype="multipart/form-data" id="form_reportes_acta">
+                    <form method="POST" enctype="multipart/form-data" id="form_vacunacion">
                         <div class="form-group row">
                             <div class="row">
-                                <div class="form-group col-md-12">
-                                    <label class="control-label col-md-12 col-sm-3 col-xs-12" for="file_">Archivo con información en comprobante de vacunación: <span class="required">*</span></label>
-                                    <div class="col-md-12 col-sm-6 col-xs-12">
-                                        <input type="file" accept="application/pdf" class="form-control" id="file_" name="file_">
+                                <div class="col-md-6">
+                                    <div class="form-group col-md-12">
+                                        <label class="control-label col-md-12 col-sm-3 col-xs-12" for="numero_dosis">Seleccione el número de Dosis con el que Cuentas <span class="required">*</span></label>
+                                        <div class="col-md-12 col-sm-12 col-xs-12">
+                                            <!-- <input type="date" name="fecha_" id="fecha_" class="form-control col-md-7 col-xs-12"> -->
+                                            <select class="form-control" name="numero_dosis" id="numero_dosis" required>
+                                                <option selected>Seleccione una Opción</option>
+                                                <option value="1">1 Dosis</option>
+                                                <option value="2">2 Dosis</option>
+                                                <option value="3">3 Dosis</option>
+                                            </select>
+                                        </div>
+                                        <span id="availability_"></span>
                                     </div>
-                                    <span id="availability_4_"></span>
+                                </div>
+                                <div class="col-md-6">
+                                    <label class="control-label col-md-12 col-sm-3 col-xs-12" for="marca">Seleccione las Marcas de sus Dosis <span class="required">*</span></label>
+                                    <div class="col-md-12 col-sm-12 col-xs-12 checkbox-group required">
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" value="Pfizer-BioNTech" name="checkbox_marcas[]">
+                                            <label class="form-check-label">Pfizer-BioNTech</label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" value="Cansino" name="checkbox_marcas[]">
+                                            <label class="form-check-label" for="flexCheckDefault">Cansino</label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" value="COVAX" name="checkbox_marcas[]">
+                                            <label class="form-check-label" for="flexCheckDefault">COVAX</label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" value="AstraZeneca" name="checkbox_marcas[]">
+                                            <label class="form-check-label" for="flexCheckDefault">AstraZeneca</label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" value="Sputnik V" name="checkbox_marcas[]">
+                                            <label class="form-check-label" for="flexCheckDefault">Sputnik V</label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" value="Sinovac" name="checkbox_marcas[]">
+                                            <label class="form-check-label" for="flexCheckDefault">Sinovac</label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" value="Janssen" name="checkbox_marcas[]">
+                                            <label class="form-check-label" for="flexCheckDefault">Janssen</label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" value="Moderna" name="checkbox_marcas[]">
+                                            <label class="form-check-label" for="flexCheckDefault">Moderna</label>
+                                        </div>
+                                    </div>
                                 </div>
                                 <div class="form-group col-md-12">
-                                    <label class="control-label col-md-12 col-sm-3 col-xs-12" for="file_">Marca de Vacuna <span class="required">*</span></label>
-                                    <div class="col-md-12 col-sm-6 col-xs-12">
-                                        <input type="file" accept="application/pdf" class="form-control" id="file_" name="file_">
+                                    <label class="control-label col-md-12 col-sm-12 col-xs-12" for="file_">Comprobante de Vacuna: <span class="required">*</span></label>
+                                    <div class="col-md-12 col-sm-12 col-xs-12">
+                                        <input type="file" accept="application/pdf" class="form-control" id="file_" name="file_" required>
                                     </div>
-                                    <span id="availability_4_"></span>
-                                </div>
-                                <div class="form-group col-md-12">
-                                    <label class="control-label col-md-12 col-sm-3 col-xs-12" for="file_">Lote de Vacuna: <span class="required">*</span></label>
-                                    <div class="col-md-12 col-sm-6 col-xs-12">
-                                        <input type="file" accept="application/pdf" class="form-control" id="file_" name="file_">
-                                    </div>
-                                    <span id="availability_4_"></span>
                                 </div>
                             </div>
+
+                            <input type="hidden" id="user_" name="user_" value="<?=$_SESSION["utilerias_asistentes_id"]?>">
                         </div>
                         <div class="modal-footer">
-                            <button type="submit" class="btn btn-dark">Aceptar</button>
-                            <button type="button" class="btn btn-danger" data-dismiss="modal">Cancelar</button>
+                            <button type="submit" class="btn btn-success" id="btn_upload" name="btn_upload">Aceptar</button>
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
                         </div>
                     </form>
                 </div>
+
             </div>
         </div>
     </div>
 
+    <div class="fixed-bottom navbar-dark">
+        <!-- <a class="navbar-brand" href="#!">Footer</a> -->
+        <?php echo $footer; ?>
     </div>
-    <?php echo $footer; ?>
-</main>
 
+</main>
 
 
 

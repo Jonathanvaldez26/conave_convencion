@@ -584,11 +584,11 @@ echo $header;
                                 </div>
                                 <div class="card-body">
                                     <form role="form" class="text-start" id="login" action="/Login/crearSession" method="POST" class="form-horizontal">
-                                        <label>Correo Electrónico</label>
+                                        <label style="font-weight:bold; font-size: 15px">Correo Electrónico</label>
                                         <div class="mb-3">
                                             <input type="email" name="usuario" id="usuario" class="form-control" placeholder="usuario@grupolahe.com" aria-label="Email">
                                         </div>
-                                        <label>Contraseña</label>
+                                        <label style="font-weight:bold; font-size: 15px">Contraseña</label>
                                         <div class="mb-3">
                                             <input type="password" name="password" id="password" class="form-control" placeholder="•••••••••" aria-label="Password">
                                         </div>
@@ -597,14 +597,20 @@ echo $header;
                                             <label class="form-check-label" for="rememberMe">Recordar Contraseña</label>
                                         </div>
                                         <div class="text-center">
-                                            <button type="button" id="btnEntrar" class="btn bg-gradient-faded-danger w-100 mt-4 mb-0"><b style="color: #FFFFFF">ENTRAR</b></button>
+                                            <button type="button" id="btnEntrar" class="btn bg-gradient-faded-danger w-100 mt-1 mb-0"><b style="color: #FFFFFF">ENTRAR</b></button>
                                         </div>
                                     </form>
                                     <div class="card-footer text-center pt-0 px-lg-2 px-1">
-                                        <p class="mb-4 text-sm mx-auto">
-                                            ¿No tienes una cuenta?
-                                            <a href="/Register/" class="text-info text-dark font-weight-bold">Registrate</a>
+                                        <p class="mb-2 text-sm mx-auto">
+                                            ¿Olvidaste tu Contraseña?
+                                            <a href="/Register/" class="text-info text-dark font-weight-bold">Da Click Aquí</a>
                                         </p>
+                                        <p class="mb-1 text-sm mx-auto text-center">
+                                            Para crear su cuenta de acceso proporcione su cuenta de correo electrónico corporativo y de clic en el siguiente botón.
+                                        </p>
+                                        <div class="text-center">
+                                            <a href="/Register/" type="button" class="btn btn btn-outline-danger w-100 mt-4 mb-0 font-weight-bold"><b style="color: #b11313">¡QUIERO REGISTRARME!</b></a>
+                                        </div>
                                     </div>
                                 </div>
                             </div>

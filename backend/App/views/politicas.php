@@ -10,7 +10,7 @@ echo $header;
                 <div class="row justify-content-center">
                     <div class="col-lg-5 text-center mx-auto">
                         <h1 class="text-white mb-2 mt-5">¡Bienvenido!</h1>
-                        <p class="text-lead text-white">Convención Nacional CONAVE 2022, Crece sin Límites. </p>
+                        <p class="text-lead text-white">Convención Nacional CONAVE 2022, Creciendo 5in Límites. </p>
                     </div>
                 </div>
             </div>
@@ -29,6 +29,9 @@ echo $header;
                                 <form class="form-horizontal" id="pass_form" action="/Register/DataPassword" method="POST">
                                     <!-- <input type="hidden" id="id_registro" name="id_registro" value="<?=$id_registro?>"> -->
                                     <input type="hidden" id="email" name="email" value="<?=$email?>">
+                                    <div class="card-header text-center pt-4">
+                                        <p>Aquí van los terminos y condiciones</p>
+                                    </div>
                                     <div class="row justify-content-center">
                                         <div class="col-md-4 col-sm-12">
                                             <button class="btn btn-sm btn-success" id="btn_success" name="btn_success" value="1" type="submit">

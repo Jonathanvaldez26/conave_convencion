@@ -11,7 +11,7 @@ echo $header;
                 <div class="row justify-content-center">
                     <div class="col-lg-5 text-center mx-auto">
                         <h1 class="text-white mb-2 mt-5">¡Bienvenido!</h1>
-                        <p class="text-lead text-white">Convención Nacional CONAVE 2022, Crece sin Límites. </p>
+                        <p class="text-lead text-white">Convención Nacional CONAVE 2022, Creciendo 5in Límites. </p>
                     </div>
                 </div>
             </div>
@@ -34,19 +34,31 @@ echo $header;
                                         <!-- <input type="text" id="id_registro" name="id_registro" value="<?= $userData['id_registro'] ?> "> -->
                                         <label class="form-label">Nombre *</label>
                                         <div class="input-group">
+<<<<<<< HEAD
                                             <input id="nombre" name="nombre" maxlength="29" pattern="[a-zA-Z ÑñáÁéÉíÍóÚ]*" class="form-control" type="text" placeholder="Alec" required="" onfocus="focused(this)" onfocusout="defocused(this)" value="<?= $userData['nombre'] ?>">
+=======
+                                            <input id="nombre" name="nombre" maxlength="29" pattern="[a-zA-Z ÑñáÁéÉíÍóÚ]*{2,254}" class="form-control" type="text" placeholder="Alec" required="" onfocus="focused(this)" onfocusout="defocused(this)" value="<?= $userData['nombre'] ?>" style="text-transform:uppercase;" onkeyup="javascript:this.value=this.value.toUpperCase();">
+>>>>>>> 48a95a3cfdfba7af5a5d9c7ea1400105de05c106
                                         </div>
                                     </div>
                                     <div class="col-12 col-lg-4">
                                         <label class="form-label">Segundo Nombre </label>
                                         <div class="input-group">
+<<<<<<< HEAD
                                             <input id="segundo_nombre" name="segundo_nombre" maxlength="49" pattern="[a-zA-Z ÑñáÁéÉíÍóÚ]*" class="form-control" type="text" placeholder="Alec"  onfocus="focused(this)" onfocusout="defocused(this)" value="<?= $userData['segundo_nombre'] ?>">
+=======
+                                            <input id="segundo_nombre" name="segundo_nombre" maxlength="49" pattern="[a-zA-Z ÑñáÁéÉíÍóÚ]*{2,254}" class="form-control" type="text" placeholder="Alec"  onfocus="focused(this)" onfocusout="defocused(this)" value="<?= $userData['segundo_nombre'] ?>" style="text-transform:uppercase;" onkeyup="javascript:this.value=this.value.toUpperCase();">
+>>>>>>> 48a95a3cfdfba7af5a5d9c7ea1400105de05c106
                                         </div>
                                     </div>
                                     <div class="col-12 col-lg-4">
                                         <label class="form-label">Apellido Paterno *</label>
                                         <div class="input-group">
+<<<<<<< HEAD
                                             <input id="apellido_paterno" name="apellido_paterno" maxlength="29" pattern="[a-zA-Z ÑñáÁéÉíÍóÚ]*" class="form-control" type="text" placeholder="Thompson" required="required" onfocus="focused(this)" onfocusout="defocused(this)" value="<?= $userData['apellido_paterno'] ?>">
+=======
+                                            <input id="apellido_paterno" name="apellido_paterno" maxlength="29" pattern="[a-zA-Z ÑñáÁéÉíÍóÚ]*{2,254}" class="form-control" type="text" placeholder="Thompson" required="required" onfocus="focused(this)" onfocusout="defocused(this)" value="<?= $userData['apellido_paterno'] ?>" style="text-transform:uppercase;" onkeyup="javascript:this.value=this.value.toUpperCase();">
+>>>>>>> 48a95a3cfdfba7af5a5d9c7ea1400105de05c106
                                         </div>
                                     </div>
 
@@ -56,14 +68,18 @@ echo $header;
                                     <div class="col-12 col-lg-4">
                                         <label class="form-label mt-4">Apellido Materno *</label>
                                         <div class="input-group">
+<<<<<<< HEAD
                                             <input id="apellido_materno" name="apellido_materno" maxlength="29" pattern="[a-zA-Z ÑñáÁéÉíÍóÚ]*" class="form-control" type="text" placeholder="Thompson" required="required" onfocus="focused(this)" onfocusout="defocused(this)" value="<?= $userData['apellido_materno'] ?>">
+=======
+                                            <input id="apellido_materno" name="apellido_materno" maxlength="29" pattern="[a-zA-Z ÑñáÁéÉíÍóÚ]*{2,254}" class="form-control" type="text" placeholder="Thompson" required="required" onfocus="focused(this)" onfocusout="defocused(this)" value="<?= $userData['apellido_materno'] ?>" style="text-transform:uppercase;" onkeyup="javascript:this.value=this.value.toUpperCase();">
+>>>>>>> 48a95a3cfdfba7af5a5d9c7ea1400105de05c106
                                         </div>
                                     </div>
                                     <div class="col-sm-4 col-12">
                                         <label class="form-label mt-4">Me identifico como: *</label>
                                         <select class="form-control" style="cursor: pointer;" name="genero" id="genero" placeholder="Genero">
-                                            <!-- <option value="Hombre">Hombre</option>
-                                            <option value="Mujer">Mujer</option>
+                                            <option value="">Selecciona una opción</option>
+                                            <!-- <option value="Mujer">Mujer</option>
                                             <option value="Otro">Otro</option> -->
                                             <?php echo $optionsGenero; ?>
                                         </select>
@@ -88,12 +104,13 @@ echo $header;
                                         <div class="col-lg-3 col-12">
                                             <label class="form-label mt-4">Número de Telefono</label>
                                             <div class="input-group">
-                                                <input id="telefono" name="telefono" maxlength="10" pattern="[0-9]*{2,254}" class="form-control" type="number" placeholder="+40 735 631 620" onfocus="focused(this)" onfocusout="defocused(this)" value="<?= $userData['telefono'] ?>">
+                                                <input id="telefono" name="telefono" maxlength="10" pattern="[0-9]" class="form-control" type="number" placeholder="+40 735 631 620" onfocus="focused(this)" onfocusout="defocused(this)" value="<?= $userData['telefono'] ?>">
                                             </div>
                                         </div>
                                         <div class="col-md-4 align-self-center">
                                             <label class="form-label mt-4">Pertenezco a la Línea ASOFARMA</label>
-                                            <select class="form-control" style="cursor: pointer;" name="linea_principal" id="linea_principal" tabindex="-1" data-choice="active" readonly>
+                                            <select class="form-control" style="cursor: pointer;" name="linea_principal" id="linea_principal" tabindex="-1" data-choice="active" disabled>
+                                                <option value="" disabled>Selecciona una opción</option>
                                                 <?php echo $optionsLineaPrincipal; ?>
                                             </select>
                                         </div>
@@ -101,9 +118,10 @@ echo $header;
                                     <div class="row">
                                         <div class="col-md-3 align-self-center">
                                             <label class="form-label mt-4">Actividad: </label>
-                                            <select class="form-control" style="cursor: pointer;" required="true" name="actividad" id="actividad" tabindex="-1" data-choice="active"  readonly>
-                                                <option value="" disabled>Seleccione una actvidad</option>
-                                                <?php echo $optionActividad; ?>
+                                            <select class="form-control" style="cursor: pointer;" name="actividad" id="actividad" tabindex="-1" data-choice="active" required>
+                                                <option value="" selected disabled>Selecciona una opción</option>
+                                                <option value="caminata_3k">Caminata 3k</option>
+                                                <option value="carrera_5k">Carrera 5k</option>
                                             </select>
                                         </div>
                                         <div class="col-md-3 align-self-center">
@@ -113,14 +131,19 @@ echo $header;
                                                 <option value="Chica">Chica</option>
                                                 <option value="Mediana">Mediana</option>
                                                 <option value="Grande">Grande</option>
-                                                <option value="Extra Grande">Extra Grande</option>
+                                                <option value="Extra_Grande">Extra Grande</option>
                                             </select>
                                         </div>
                                         <div class="col-md-6">
-                                            <label class="form-label mt-4">Alergias</label>
+                                            <label class="form-label mt-4">Restricciones alimenticias</label>
                                             <input class="form-control" id="alergias" maxlength="149" name="alergias" data-color="dark" type="text" value="<?= $userData['alergias'] ?>" placeholder="Enter something" />
                                         </div>
+                                        <br>
+                                        <br>
+                                        <p> Los campos marcados con (*) son obligatorios.</p>
                                     </div>
+
+
                                     <!-- <div class="row">
                                         
                                         

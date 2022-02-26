@@ -1,9 +1,11 @@
 <?php
+
 namespace App\controllers;
-defined("APPPATH") OR die("Access denied");
-require dirname(__DIR__).'/../public/librerias/PHPMailer/Exception.php';
-require dirname(__DIR__).'/../public/librerias/PHPMailer/PHPMailer.php';
-require dirname(__DIR__).'/../public/librerias/PHPMailer/SMTP.php';
+
+defined("APPPATH") or die("Access denied");
+require dirname(__DIR__) . '/../public/librerias/PHPMailer/Exception.php';
+require dirname(__DIR__) . '/../public/librerias/PHPMailer/PHPMailer.php';
+require dirname(__DIR__) . '/../public/librerias/PHPMailer/SMTP.php';
 
 use \Core\MasterDom;
 use \Core\Controller;
@@ -11,15 +13,12 @@ use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\Exception;
 
 
-class Mailer extends Controller{
+class Mailer
+{
 
-    private $_contenedor;
 
-    function __construct(){
-        parent::__construct();
-    }
-
-    public function mailer($msg) {
+    public function mailer($msg)
+    {
         $mail = new PHPMailer(true);
 
         try {
@@ -38,27 +37,87 @@ class Mailer extends Controller{
             $mail->setFrom($msg['email'], 'Convencion CONAVE 2022 Registro');
             $mail->addAddress($msg['email'], 'a');     //Add a recipient
 
-            $message = "<h5>Thank you for submitting your pre-registration form!</h5>";
-            $message .= "<h5>".$msg['code'] ."</h5><br>";
+
+            $html = '     
+    <!DOCTYPE html>
+        <html lang="en">
+
+        <!-- Define Charset -->
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+        <!-- Responsive Meta Tag -->
+        <meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0;">
+
+        <title>Email Template</title>
+
+        <!-- Responsive and Valid Styles -->
+        <style type="text/css">
+            body {
+                width: 100%;
+                background-color: #FFF;
+                margin: 0;
+                padding: 0;
+                -webkit-font-smoothing: antialiased;
+                font-family: arial;
+            }
+
+            html {
+                width: 100%;
+            }
+            .container{
+                width: 80%;
+                padding: 20px;
+                margin: 0 auto;
+                
+            }
+
+            img{
+                width: 100%;
+            }
+
+        
+        </style>
+
+        </head>
+
+        <body leftmargin="0" topmargin="0" marginheight="0" marginwidth="0">
+            
+            <div class="container">
+            <img src="https://convencionasofarma2022.mx/img/img_email.jpeg" alt="">
+               
+                <p>
+                    Codigo de Verificación: <span
+                        style="color: #40982B;">(' . $msg['code'] . ')</span><br>
+                </p>
+                    
+                
+            </div>
+            
+                
+        </body>
+
+</html>';
+
+            // $message = "<img src='https://convencionasofarma2022.mx/img/img_email.jpeg'/>";
+            // $message .= "<h5>Thank you for submitting your pre-registration form!</h5>";
+            // $message .= "<h5>" . $msg['code'] . "</h5><br>";
 
             //Content
             $mail->isHTML(true);                                  //Set email format to HTML
             $mail->Subject = 'Código de Registro';
-            $mail->Body    = $message;
-            $mail->AltBody = 'Mensaje plano';
+            $mail->Body    = $html;
+            $mail->CharSet = 'UTF-8';
 
             $mail->send();
             //echo 'El mensaje ha sido enviado';
-        }
-        catch (Exception $e)
-        {
+        } catch (Exception $e) {
             //echo "No se pudo enviar el email: {$mail->ErrorInfo}";
         }
-
     }
 
 
-    public function mailerRegister($msg) {
+    public function mailerRegister($msg)
+    {
         $mail = new PHPMailer(true);
 
         try {
@@ -77,24 +136,86 @@ class Mailer extends Controller{
             $mail->setFrom($msg['email'], 'Convencion CONAVE 2022 Registro');
             $mail->addAddress($msg['email'], 'a');     //Add a recipient
 
-            $message = "<h2>Estimado ".$msg['name']."</h2><br>";
-            $message .= "<h5>Se ha generado tu registro exitosamente</h5><br>";
-            
+            $html = '     
+            <!DOCTYPE html>
+                <html lang="en">
+        
+                <!-- Define Charset -->
+                <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        
+                <!-- Responsive Meta Tag -->
+                <meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0;">
+        
+                <title>Email Template</title>
+        
+                <!-- Responsive and Valid Styles -->
+                <style type="text/css">
+                    body {
+                        width: 100%;
+                        background-color: #FFF;
+                        margin: 0;
+                        padding: 0;
+                        -webkit-font-smoothing: antialiased;
+                        font-family: arial;
+                    }
+        
+                    html {
+                        width: 100%;
+                    }
+                    .container{
+                        width: 80%;
+                        padding: 20px;
+                        margin: 0 auto;
+                        
+                    }
+        
+                    img{
+                        width: 100%;
+                    }
+        
+                
+                </style>
+        
+                </head>
+        
+                <body leftmargin="0" topmargin="0" marginheight="0" marginwidth="0">
+                    
+                    <div class="container">
+                    <img src="https://convencionasofarma2022.mx/img/img_email.jpeg" alt="">
+                        <p style="text-align: center !important;">
+                            <strong>Thank you for submitting your
+                                pre-registration form!</strong>
+                        </p>
+                        <p>
+                            <strong>Dear:
+                                ' . $msg['name'] . '</strong><br>
+                                <h5>Se ha generado tu registro exitosamente</h5><br>
+                        </p>  
+                        
+                    </div>
+                    
+                        
+                </body>
+        
+        </html>';
+        
+
+            // $message = "<img src='https://convencionasofarma2022.mx/img/img_email.jpeg'/>";
+            // $message .= "<h2>Estimado " . $msg['nombre'] . "</h2><br>";
+            // $message .= "<h5>Se ha generado tu registro exitosamente</h5><br>";
+
 
             //Content
             $mail->isHTML(true);                                  //Set email format to HTML
             $mail->Subject = 'Registro';
-            $mail->Body    = $message;
-            
+            $mail->Body    = $html;
+            $mail->CharSet = 'UTF-8';
+
 
             $mail->send();
             //echo 'El mensaje ha sido enviado';
-        }
-        catch (Exception $e)
-        {
+        } catch (Exception $e) {
             //echo "No se pudo enviar el email: {$mail->ErrorInfo}";
         }
-
     }
-
 }

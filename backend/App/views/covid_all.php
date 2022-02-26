@@ -67,7 +67,7 @@
                         <!-- <i class="fa fa-plus" aria-hidden="true"></i>   -->
                         Nuevo
                     </button>
-                    <button type="button" class="btn btn-secondary btn-sm">Eliminar</button>
+                    <!-- <button type="button" class="btn btn-secondary btn-sm">Eliminar</button> -->
                 </div>
                 <div class="card-body p-3">
                     <div class="row">
@@ -85,49 +85,26 @@
                                     </thead>
                                     <tbody>
                                         <?php echo $tabla; ?>
-                                        <!-- <tr>
-                                            <td>
-                                                <div class="d-flex px-2 py-1">
-                                                    <div class="d-flex flex-column justify-content-center">
-                                                        <h6 class="mb-0 text-xs">Prueba Covid Lab 2</h6>
-                                                        <p class="text-xs text-secondary mb-0">04/04/2022</p>
-                                                    </div>
-                                                </div>
-                                            </td>
-                                            <td class="align-middle text-center text-sm">
-                                                <span class="badge badge-sm badge-secondary">En Espera a Validar</span>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>
-                                                <div class="d-flex px-2 py-1">
-                                                    <div class="d-flex flex-column justify-content-center">
-                                                        <h6 class="mb-0 text-xs">Prueba Covid Lab 3</h6>
-                                                        <p class="text-xs text-secondary mb-0">04/04/2022</p>
-                                                    </div>
-                                                </div>
-                                            </td>
-                                            <td class="align-middle text-center text-sm">
-                                                <span class="badge badge-sm badge-secondary">En Espera a Validar</span>
-                                            </td>
-                                        </tr> -->
-
                                     </tbody>
                                 </table>
+                                <br>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
+        <br>
+        <br>
     </div>
+
 
     <div class="modal fade" id="Modal_Prueba_COVID" tabindex="-1" role="dialog" aria-labelledby="Modal_Prueba_COVID" aria-hidden="true">
         <div class="modal-dialog" role="document">
             <div class="modal-content">
                 <div class="modal-header">
                     <h5 class="modal-title" id="exampleModalLabel">
-                        Agregue su Prueba de Covid
+                        Agregue su Prueba SARS-CoV-2
                         
                     </h5>
                     <span type="button" class="btn btn-dark" data-dismiss="modal" aria-label="Close">
@@ -136,9 +113,9 @@
                 </div>
                 <div class="modal-header">
                     <h6>
-                        <label id="fecha_actual"><?php echo $fechaActual; ?></label>
+                        <label id="fecha_actual">Fecha máxima de validación: <?php echo $fechaActual; ?></label>
                         <br>    
-                        Por su seguridad y la de las demás personas, le pedimos que nos proporcione la Información siguiente para comprobar que no este contagiado de COVID.
+                        Por favor a continuación ingrese la información solicitada.
                     </h6>
                 </div>
 
@@ -148,21 +125,24 @@
                             <div class="row">
                                 <div class="col-md-6">
                                     <div class="form-group col-md-12">
-                                        <label class="control-label col-md-12 col-sm-3 col-xs-12" for="fecha_">Fecha de Prueba<span class="required">*</span></label>
+                                        <label class="control-label col-md-12 col-sm-3 col-xs-12" for="fecha_">Fecha de Prueba SARS-CoV2 <span class="required">*</span></label>
                                         <div class="col-md-12 col-sm-12 col-xs-12">
-                                            <input type="date" name="fecha_" id="fecha_" class="form-control col-md-7 col-xs-12">
+                                            <input type="date" name="fecha_" id="fecha_" class="form-control col-md-7 col-xs-12" required>
                                         </div>
                                         <span id="availability_"></span>
                                     </div>
                                 </div>
                                 <div class="col-md-6">
                                     <div class="form-group col-md-12">
-                                        <label class="control-label col-md-12 col-sm-3 col-xs-12" for="tipo_prueba_">Tipo de Prueba<span class="required">*</span></label>
+                                        <label class="control-label col-md-12 col-sm-3 col-xs-12" for="tipo_prueba_">Tipo de Prueba SARS-CoV2 <span class="required">*</span></label>
                                         <div class="col-md-12 col-sm-12 col-xs-12">
                                             <!-- <input type="date" name="fecha_" id="fecha_" class="form-control col-md-7 col-xs-12"> -->
-                                            <select class="form-control" name="tipo_prueba_" id="tipo_prueba_">
-                                                <option selected>Seleccione Un Tipo</option>
-                                                <option value="antigeno">Antigeno</option>
+                                            <select class="form-control" name="tipo_prueba_" id="tipo_prueba_" required>
+                                                <option selected>Seleccione un Tipo de Prueba</option>
+                                                <option value="antigeno">Prueba PCR</option>
+                                                <option value="antigeno">Prueba Antígeno</option>
+                                                <option value="antigeno">Prueba Serológica</option>
+
                                             </select>
                                         </div>
                                         <span id="availability_"></span>
@@ -170,10 +150,10 @@
                                 </div>
                                 <div class="col-md-12">
                                     <div class="form-group col-md-12">
-                                        <label class="control-label col-md-12 col-sm-12 col-xs-12" for="fecha_">Resultado<span class="required">*</span></label>
+                                        <label class="control-label col-md-12 col-sm-12 col-xs-12" for="fecha_">Resultado Prueba SARS-CoV-2<span class="required">*</span></label>
                                         <div class="col-md-12 col-sm-12 col-xs-12">
                                             <!-- <input type="date" name="fecha_" id="fecha_" class="form-control col-md-7 col-xs-12"> -->
-                                            <select class="form-control" name="resultado_" id="resultado_">
+                                            <select class="form-control" name="resultado_" id="resultado_" required>
                                                 <option selected>Seleccione Un Resultado</option>
                                                 <option value="positivo">Positivo</option>
                                                 <option value="negativo">Negativo</option>
@@ -183,14 +163,15 @@
                                     </div>
                                 </div>
                                 <div class="form-group col-md-12">
-                                    <label class="control-label col-md-12 col-sm-12 col-xs-12" for="file_">Archivo Escaneado con información de la prueba COVID: <span class="required">*</span></label>
+                                    <label class="control-label col-md-12 col-sm-12 col-xs-12" for="file_">Archivo Escaneado con información de la prueba SARS-CoV-2: <span class="required">*</span></label>
                                     <div class="col-md-12 col-sm-12 col-xs-12">
-                                        <input type="file" accept="application/pdf" class="form-control" id="file_" name="file_">
+                                        <input type="file" accept="application/pdf" class="form-control" id="file_" name="file_" required>
                                     </div>
                                     <span id="availability_4_"></span>
                                 </div>
                             </div>
-                            <input type="hidden" id="user_" name="user_" value="<?=$_SESSION["administrador_id"]?>">
+                            
+                            <input type="hidden" id="user_" name="user_" value="<?=$_SESSION["utilerias_asistentes_id"]?>">
                         </div>
                         <div class="modal-footer">
                             <button type="submit" class="btn btn-success" id="btn_upload" name="btn_upload">Aceptar</button>
@@ -204,7 +185,8 @@
     </div>
 
     <!-- MODAL VISTA - DOCUMENTO -->
-    <div class="modal fade" id="ver-documento" tabindex="-1" role="dialog" aria-labelledby="ver-documento" aria-hidden="true">
+    <?php echo $iframe_doc; ?>
+    <!-- <div class="modal fade" id="ver-documento" tabindex="-1" role="dialog" aria-labelledby="ver-documento" aria-hidden="true">
         <div class="modal-dialog" role="document" style="max-width: 590px;">
             <div class="modal-content">
                 <div class="modal-header">
@@ -213,10 +195,10 @@
                         X
                     </span>
                 </div>
-                <?php echo $iframe_doc; ?>
+                
             </div>
         </div>
-    </div>
+    </div> -->
 
     <div class="fixed-bottom navbar-dark">
         <!-- <a class="navbar-brand" href="#!">Footer</a> -->
