@@ -50,7 +50,7 @@ html;
           <div class="d-flex px-2 py-1">
             <div class="d-flex flex-column justify-content-center">
               <h6 class="mb-0 text-xs">Prueba SARS-CoV-2 Folio #{$prueba['id_prueba_covid']}</h6>
-              <p class="text-xs text-secondary mb-0"> El día {$prueba['fecha_prueba_covid']}</p>
+              <p class="text-xs text-secondary mb-0"> Cargada el día {$prueba['fecha_prueba_covid']}</p>
             </div>
           </div>
         </td>
