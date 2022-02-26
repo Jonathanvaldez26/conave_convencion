@@ -26,83 +26,6 @@ class Covid extends Controller{
     $extraHeader =<<<html
 html;
 
-    $pruebas = CovidDao::getByIdUser($_SESSION['utilerias_asistentes_id']);
-    $tabla = '';
-    $iframe_doc = '';
-    $status = '';
-    $fechaActual = date('d-m-Y');
-    foreach ($pruebas as $key => $prueba) {
-      if($prueba['status'] = 1){
-        $status =<<<html
-        <span class="badge badge-sm badge-secondary">En Espera de Validación</span>
-        
-html;
-      }elseif ($prueba['status'] = 2)
-      {
-          $status =<<<html
-          <span class="badge badge-sm badge-success">Se valido Correctamente</span>   
-html;
-      }
-
-      $tabla.=<<<html
-      <tr>
-        <td>
-          <div class="d-flex px-2 py-1">
-            <div class="d-flex flex-column justify-content-center">
-              <h6 class="mb-0 text-xs">Prueba SARS-CoV-2 Folio #{$prueba['id_prueba_covid']}</h6>
-              <p class="text-xs text-secondary mb-0"> Cargada el día {$prueba['fecha_prueba_covid']}</p>
-            </div>
-          </div>
-        </td>
-        <td class="align-middle text-center text-sm">
-          {$status}
-        </td>
-        <td>
-          <div class="text-center">
-            <div class="d-flex flex-column justify-content-center" style="text-transform: capitalize;"S>
-              <h6 class="mb-0 text-xs">{$prueba['tipo_prueba']}</h6>
-            </div>
-          </div>
-        </td>
-        <td>
-        <div class="text-center">
-            <div class="d-flex flex-column justify-content-center" style="text-transform: capitalize;">
-              <h6 class="mb-0 text-xs">{$prueba['resultado']}</h6>
-            </div>
-          </div>
-        </td>
-        <td>
-        <div class="text-center">
-            <div class="d-flex flex-column justify-content-center" style="text-transform: capitalize;">
-              <button type="button" class="btn btn-outline-primary btn-sm" data-toggle="modal" data-target="#ver-documento-{$prueba['id_prueba_covid']}">
-                Ver documento
-              </button>
-            </div>
-          </div>
-        </td>
-      </tr>
-html;
-
-
-$iframe_doc .= <<<html
-<div class="modal fade" id="ver-documento-{$prueba['id_prueba_covid']}" tabindex="-1" role="dialog" aria-labelledby="ver-documento-{$prueba['id_prueba_covid']}" aria-hidden="true">
-  <div class="modal-dialog" role="document" style="max-width: 590px;">
-      <div class="modal-content">
-          <div class="modal-header">
-              <h5 class="modal-title" id="exampleModalLabel">Documento de vacunación</h5>
-              <span type="button" class="btn btn-danger" data-dismiss="modal" aria-label="Close">
-                  X
-              </span>
-          </div>
-          <div class="modal-body">
-          <iframe src="/pruebas_covid/{$prueba['documento']}" style="width:100%; height:700px;" frameborder="0" >
-          </iframe>
-       </div>
-      </div>
-  </div>
-</div>
-html;
-    }
     $extraFooter =<<<html
     <footer class="footer pt-0">
               <div class="container-fluid">
@@ -195,15 +118,84 @@ html;
 </script>
 html;
 
-//       $iframe_doc = <<<html
-//         <div class="modal-body">
-//           <iframe src="/pruebas_covid/{$prueba['documento']}" style="width:100%; height:700px;" frameborder="0" >
-//           </iframe>
-//         </div>
-// html;
+    $pruebas = CovidDao::getByIdUser($_SESSION['utilerias_asistentes_id']);
+    $tabla = '';
+    $iframe_doc = '';
+    $status = '';
+    $fechaActual = date('d-m-Y');
+    foreach ($pruebas as $key => $prueba) {
+      if($prueba['status'] = 1){
+        $status =<<<html
+        <span class="badge badge-sm badge-secondary">En Espera de Validación</span>
+        
+html;
+      }elseif ($prueba['status'] = 2)
+      {
+          $status =<<<html
+          <span class="badge badge-sm badge-success">Se valido Correctamente</span>   
+html;
+      }
+
+      $tabla.=<<<html
+      <tr>
+        <td>
+          <div class="d-flex px-2 py-1">
+            <div class="d-flex flex-column justify-content-center">
+              <h6 class="mb-0 text-xs">Prueba SARS-CoV-2 Folio #{$prueba['id_prueba_covid']}</h6>
+              <p class="text-xs text-secondary mb-0"> Cargada el día {$prueba['fecha_prueba_covid']}</p>
+            </div>
+          </div>
+        </td>
+        <td class="align-middle text-center text-sm">
+          {$status}
+        </td>
+        <td>
+          <div class="text-center">
+            <div class="d-flex flex-column justify-content-center" style="text-transform: capitalize;"S>
+              <h6 class="mb-0 text-xs">{$prueba['tipo_prueba']}</h6>
+            </div>
+          </div>
+        </td>
+        <td>
+        <div class="text-center">
+            <div class="d-flex flex-column justify-content-center" style="text-transform: capitalize;">
+              <h6 class="mb-0 text-xs">{$prueba['resultado']}</h6>
+            </div>
+          </div>
+        </td>
+        <td>
+        <div class="text-center">
+            <div class="d-flex flex-column justify-content-center" style="text-transform: capitalize;">
+              <button type="button" class="btn btn-outline-primary btn-sm" data-toggle="modal" data-target="#ver-documento-{$prueba['id_prueba_covid']}">
+                Ver documento
+              </button>
+            </div>
+          </div>
+        </td>
+      </tr>
+html;
 
 
-    
+$iframe_doc .= <<<html
+<div class="modal fade" id="ver-documento-{$prueba['id_prueba_covid']}" tabindex="-1" role="dialog" aria-labelledby="ver-documento-{$prueba['id_prueba_covid']}" aria-hidden="true">
+  <div class="modal-dialog" role="document" style="max-width: 590px;">
+      <div class="modal-content">
+          <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">Documento de vacunación</h5>
+              <span type="button" class="btn btn-danger" data-dismiss="modal" aria-label="Close">
+                  X
+              </span>
+          </div>
+          <div class="modal-body">
+          <iframe src="/pruebas_covid/{$prueba['documento']}" style="width:100%; height:700px;" frameborder="0" >
+          </iframe>
+       </div>
+      </div>
+  </div>
+</div>
+html;
+    }
+
     View::set('iframe_doc',$iframe_doc);
     View::set('tabla',$tabla);
     View::set('fechaActual',$fechaActual);
