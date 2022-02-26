@@ -31,34 +31,14 @@ html;
         $fechaActual = date('d-m-Y');
 
         $pruebas_count = VaccinationDao::getCount($_SESSION['utilerias_asistentes_id']);
-        foreach ($pruebas_count  as $key => $value) {
+        foreach ($pruebas_count  as $key => $value)
+        {
             if($value['count']>=1)
             {
-                $pruebas = VaccinationDao::getByIdUser($_SESSION['utilerias_asistentes_id']);
-                foreach ($pruebas as $key => $prueba)
-                {
                     $tabla.=<<<html
                 holaa
 html;
-                    $iframe_doc .= <<<html
-<div class="modal fade" id="ver-documento-{$prueba['id_prueba_covid']}" tabindex="-1" role="dialog" aria-labelledby="ver-documento-{$prueba['id_prueba_covid']}" aria-hidden="true">
-  <div class="modal-dialog" role="document" style="max-width: 590px;">
-      <div class="modal-content">
-          <div class="modal-header">
-              <h5 class="modal-title" id="exampleModalLabel">Documento de vacunación</h5>
-              <span type="button" class="btn btn-danger" data-dismiss="modal" aria-label="Close">
-                  X
-              </span>
-          </div>
-          <div class="modal-body">
-          <iframe src="/comprobante_vacunacion/{$prueba['documento']}" style="width:100%; height:700px;" frameborder="0" >
-          </iframe>
-       </div>
-      </div>
-  </div>
-</div>
-html;
-                }
+
             }
             else
             {
