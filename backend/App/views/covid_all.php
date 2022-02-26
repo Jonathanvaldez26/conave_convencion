@@ -127,7 +127,7 @@
             <div class="modal-content">
                 <div class="modal-header">
                     <h5 class="modal-title" id="exampleModalLabel">
-                        Agregue su Prueba de Covid
+                        Agregue su Prueba SARS-CoV-2
                         
                     </h5>
                     <span type="button" class="btn btn-dark" data-dismiss="modal" aria-label="Close">
@@ -138,7 +138,7 @@
                     <h6>
                         <label id="fecha_actual"><?php echo $fechaActual; ?></label>
                         <br>    
-                        Por su seguridad y la de las demás personas, le pedimos que nos proporcione la Información siguiente para comprobar que no este contagiado de COVID.
+                        Por favor a continuación ingrese la información solicitada.s
                     </h6>
                 </div>
 
@@ -161,8 +161,11 @@
                                         <div class="col-md-12 col-sm-12 col-xs-12">
                                             <!-- <input type="date" name="fecha_" id="fecha_" class="form-control col-md-7 col-xs-12"> -->
                                             <select class="form-control" name="tipo_prueba_" id="tipo_prueba_">
-                                                <option selected>Seleccione Un Tipo</option>
-                                                <option value="antigeno">Antigeno</option>
+                                                <option selected>Seleccione Un Tipo de Prueba de Deteccion SARS-CoV-2</option>
+                                                <option value="antigeno">Prueba PCR</option>
+                                                <option value="antigeno">Prueba Antígeno</option>
+                                                <option value="antigeno">Prueba Serológica</option>
+
                                             </select>
                                         </div>
                                         <span id="availability_"></span>
@@ -170,7 +173,7 @@
                                 </div>
                                 <div class="col-md-12">
                                     <div class="form-group col-md-12">
-                                        <label class="control-label col-md-12 col-sm-12 col-xs-12" for="fecha_">Resultado<span class="required">*</span></label>
+                                        <label class="control-label col-md-12 col-sm-12 col-xs-12" for="fecha_">Resultado Prueba SARS-CoV-2<span class="required">*</span></label>
                                         <div class="col-md-12 col-sm-12 col-xs-12">
                                             <!-- <input type="date" name="fecha_" id="fecha_" class="form-control col-md-7 col-xs-12"> -->
                                             <select class="form-control" name="resultado_" id="resultado_">
@@ -183,7 +186,7 @@
                                     </div>
                                 </div>
                                 <div class="form-group col-md-12">
-                                    <label class="control-label col-md-12 col-sm-12 col-xs-12" for="file_">Archivo Escaneado con información de la prueba COVID: <span class="required">*</span></label>
+                                    <label class="control-label col-md-12 col-sm-12 col-xs-12" for="file_">Archivo Escaneado con información de la prueba SARS-CoV-2: <span class="required">*</span></label>
                                     <div class="col-md-12 col-sm-12 col-xs-12">
                                         <input type="file" accept="application/pdf" class="form-control" id="file_" name="file_">
                                     </div>
