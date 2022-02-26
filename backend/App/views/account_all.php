@@ -62,14 +62,26 @@
                 <div class="card card-body" id="profile">
                     <div class="row justify-content-center align-items-center">
                         <div class="col-sm-auto col-4">
-                            <div class="avatar avatar-xl position-relative">
-                                <img src="../../../assets/img/bruce-mars.jpg" alt="bruce" class="w-100 border-radius-lg shadow-sm">
+                        <form method="POST" enctype="multipart/form-data" id="form_upload_image">
+                            <input type="hidden" id="email_" name="email_" value="<?= $userData['email'] ?>" readonly>
+                            <div class="image-upload">
+                                <label for="file-input" id="lbl-image">
+                                    <div class="avatar avatar-xl position-relative">
+                                        <?php echo $imgUser; ?>
+                                    </div>
+                                </label>
+
+                                <input id="file-input" name="file-input" type="file" />
                             </div>
+                        </form>    
+
+
+
                         </div>
                         <div class="col-sm-auto col-8 my-auto">
                             <div class="h-100">
                                 <h5 class="mb-1 font-weight-bolder">
-                                    <?= $userData['nombre']." ".$userData['segundo_nombre']." ".$userData['apellido_paterno']." ".$userData['apellido_materno'] ?>
+                                    <?= $userData['nombre'] . " " . $userData['segundo_nombre'] . " " . $userData['apellido_paterno'] . " " . $userData['apellido_materno'] ?>
                                 </h5>
                                 <p class="mb-0 font-weight-bold text-sm">
                                     Equipo Asofarma
@@ -215,48 +227,83 @@
 <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 
 <script>
-    
+    $(document).ready(function() {
 
-    $( document ).ready(function() {
+        $("#update_form").on("submit", function(event) {
+            event.preventDefault();
 
-        $("#update_form").on("submit",function(event){
-    event.preventDefault();
-    
-    var formData = new FormData(document.getElementById("update_form"));
-        console.log(formData);
-        $.ajax({
-        url:"/Account/Actualizar",
-        type: "POST",
-        data: formData,
-        cache: false,
-        contentType: false,
-        processData: false,
-        beforeSend: function(){
-            console.log("Procesando....");
+            var formData = new FormData(document.getElementById("update_form"));
+            console.log(formData);
+            $.ajax({
+                url: "/Account/Actualizar",
+                type: "POST",
+                data: formData,
+                cache: false,
+                contentType: false,
+                processData: false,
+                beforeSend: function() {
+                    console.log("Procesando....");
 
-        
-        },
-        success: function(respuesta){
-            
-           if (respuesta == 'success') {
-                swal("Se actualizaron tus datos correctamente!", "", "success").
-                then((value) => {
-                    window.location.replace("/Home");
-                });
-            } else {
-                swal("Hubo un error al actualizar tus datos!", "Comunicate con el administrador del sitio", "error").
-                then((value) => {
-                    window.location.replace("/Home")
-                });
-            }
-        },
-        error:function (respuesta)
-        {
-            console.log(respuesta);
-        }
+
+                },
+                success: function(respuesta) {
+
+                    if (respuesta == 'success') {
+                        swal("Se actualizaron tus datos correctamente!", "", "success").
+                        then((value) => {
+                            window.location.replace("/Home");
+                        });
+                    } else {
+                        swal("Hubo un error al actualizar tus datos!", "Comunicate con el administrador del sitio", "error").
+                        then((value) => {
+                            window.location.replace("/Home")
+                        });
+                    }
+                },
+                error: function(respuesta) {
+                    console.log(respuesta);
+                }
+
+            });
+        });
+
+        $(document).on('change', '#file-input', function(e) {
+            $("#form_upload_image").submit();
+        });
+
+        $("#form_upload_image").on("submit", function(event) {
+            event.preventDefault();
+            // alert("funciona");
+
+            var formData = new FormData(document.getElementById("form_upload_image"));
+            console.log(formData);
+
+            $.ajax({
+                url: "/Account/uploadImage",
+                type: "POST",
+                data: formData,
+                // dataType: "json",
+                cache: false,
+                contentType: false,
+                processData: false,
+                beforeSend: function() {
+                    console.log("Procesando....");
+
+
+                },
+                success: function(respuesta) {
+                    console.log(respuesta);
+                    if(respuesta == "success"){
+                        location.reload();
+                    }
+                   
+                },
+                error: function(respuesta) {
+                    console.log(respuesta);
+                }
+
+            });
+        });
 
     });
-});
-
-});
 </script>
