@@ -109,7 +109,6 @@
                                             <!-- <input type="date" name="fecha_" id="fecha_" class="form-control col-md-7 col-xs-12"> -->
                                             <select class="form-control" name="numero_dosis" id="numero_dosis" required>
                                                 <option selected>Seleccione una Opción</option>
-                                                <option value="1">1 Dosis</option>
                                                 <option value="2">2 Dosis</option>
                                                 <option value="3">3 Dosis</option>
                                             </select>

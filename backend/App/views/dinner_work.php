@@ -29,9 +29,9 @@
             <div class="container">
                 <div class="row mt-lg-0 mt-1">
                     <div class="col-lg-5 my-auto">
-                        <h1 class="display-1 text-bolder text-gradient text-danger fadeIn1 fadeInBottom mt-5">Disculpa</h1>
-                        <h2 class="fadeIn3 fadeInBottom opacity-8">Estamos trabajando</h2>
-                        <p class="lead opacity-6 fadeIn2 fadeInBottom">Le sugerimos que vaya a la página de inicio mientras terminamos esté bloque...</p>
+                        <h1 class=" text-bolder text-gradient text-danger fadeIn1 fadeInBottom ">Proximamente Disponible</h1>
+                        <h4 class="fadeIn3 fadeInBottom opacity-8">Usted podrá consultar los restaurantes que tenemos preparados. </h4>
+                        <p class="lead opacity-6 fadeIn2 fadeInBottom">Le sugerimos que vaya a la página de inicio...</p>
                         <a href="/Home/" type="button" class="btn bg-gradient-danger mt-4 fadeIn2 fadeInBottom">Ir a la página de inicio</a>
                     </div>
                     <div class="col-lg-7 my-auto">
