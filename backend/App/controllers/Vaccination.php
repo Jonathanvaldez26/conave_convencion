@@ -141,17 +141,15 @@ html;
                                     <p class="text-gradient text-dark mb-2 text-sm">Comprobante de Vacunación Cargado</p>
                                     <a href="javascript:;">
                                         <h5>
-                                            AstraZeneca
+                                            Un Ejecutivo lo Está Validando
                                         </h5>
                                     </a>
-                                    <p class="mb-4 text-sm">
-                                        Subiste este documento <br>el 27/01/2022 10:25 a.m.
+                                    <p class="mb-4 text-sm text-center">
+                                        Subiste tu documento <br> {$value['fecha_carga_documento']}
                                     </p>
-                                    <div class="d-flex align-items-center justify-content-between">
-                                        <button type="button" class="btn btn-outline-primary btn-sm" data-toggle="modal" data-target="#ver-documento-{$value['id_comprobante_vacuna']}">
-                                            Ver documento
-                                        </button>
-                                    </div>
+                                    <p class="mb-4 text-sm text-center">
+                                        Registraste <br> {$value['numero_dosis']} Dosis 
+                                    </p>
                                 </div>
                             </div>
                         </div>
