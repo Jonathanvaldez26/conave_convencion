@@ -33,7 +33,7 @@ sql;
         $fecha_carga_documento = date("Y-m-d");
         $mysqli = Database::getInstance(1);
         $query=<<<sql
-        INSERT INTO comprobante_vacuna (id_comprobante_vacuna, utilerias_asistentes_id, fecha_carga_documento, numero_dosis, marca_dosis, documento, status) VALUES ('',:utilerias_asistentes_id, '', :numero_dosis, :marca_dosis, :documento, 1);
+        INSERT INTO comprobante_vacuna (id_comprobante_vacuna, utilerias_asistentes_id, fecha_carga_documento, numero_dosis, marca_dosis, documento, status) VALUES ('',:utilerias_asistentes_id, NULL, :numero_dosis, :marca_dosis, :documento, 1);
 sql;
         $parametros = array(
             ':utilerias_asistentes_id'=>$data->_user,
