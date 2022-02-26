@@ -5,7 +5,7 @@ use \Core\View;
 use \Core\MasterDom;
 use \App\controllers\Contenedor;
 use \Core\Controller;
-use \App\models\Covid AS CovidDao;
+use \App\models\Vaccination AS VaccinationDao;
 
 class Vaccination extends Controller{
 
@@ -26,7 +26,7 @@ class Vaccination extends Controller{
         $extraHeader =<<<html
 html;
 
-        $pruebas = CovidDao::getByIdUser($_SESSION['utilerias_asistentes_id']);
+        $pruebas = VaccinationDao::getByIdUser($_SESSION['utilerias_asistentes_id']);
         $tabla = '';
         $iframe_doc = '';
         $status = '';
@@ -203,32 +203,29 @@ html;
         View::render("proof_vacination_all");
     }
 
-    public function uploadPrueba(){
+    public function uploadComprobante(){
 
         $documento = new \stdClass();
 
         if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
-            $titulo = 'PruebaCovid';
-            $fecha_prueba = $_POST['fecha_'];
-            $tipo_prueba = $_POST['tipo_prueba_'];
-            $resultado = $_POST['resultado_'];
+            $titulo = 'ComprobanteVacunacion';
+            $numero_dosis = $_POST['numero_dosis'];
+            $marca = $_POST['marca'];
             $file = $_FILES["file_"];
             $usuario = $_POST["user_"];
             $fecha = date("Y-m-d h:i:s");
             $pdf = $this->generateRandomString();
             $ruta = $usuario.$titulo.$fecha;
 
-            move_uploaded_file($file["tmp_name"], "pruebas_covid/".$pdf.'.pdf');
+            move_uploaded_file($file["tmp_name"], "comprobante_vacunacion/".$pdf.'.pdf');
 
             $documento->_url = $pdf.'.pdf';
             $documento->_user = $usuario;
-            $documento->_fecha_prueba = $fecha_prueba;
-            $documento->_tipo_prueba = $tipo_prueba;
-            $documento->_resultado = $resultado;
+            $documento->_numero_dosis = $numero_dosis;
+            $documento->_marca_dosis = $marca;
 
-
-            $id = CovidDao::insert($documento);
+            $id = VaccinationDao::insert($documento);
 
             if ($id) {
                 echo 'success';

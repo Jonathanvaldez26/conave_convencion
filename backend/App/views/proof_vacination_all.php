@@ -23,7 +23,7 @@
                         </a>
                     </li>
                     <li class="breadcrumb-item text-sm"><a class="opacity-5 text-dark" href="/Home/">Inicio</a></li>
-                    <li class="breadcrumb-item text-sm"><a class="opacity-5 text-dark" href="javascript:;" disabled>Pruebas Covid</a></li>
+                    <li class="breadcrumb-item text-sm"><a class="opacity-5 text-dark" href="javascript:;" disabled>Comprobante de Vacunación</a></li>
                 </ol>
             </nav>
 
@@ -59,15 +59,7 @@
             <div class="card col-lg-8 mt-lg-5 mt-1" >
                 <div class="card-header pb-0 p-3">
                     <h6 class="mb-1">Mi comprobante de Vacunación</h6>
-                    <p class="text-sm">Registra tu Comprobante de Vacunación</p>
-
-                    <br>
-                    <!-- <a href="#" type="button" class="btn btn-success btn-sm">Nuevo</a> -->
-                    <button type="button" class="btn btn-success btn-sm" data-toggle="modal" data-target="#Modal_Prueba_COVID">
-                        <!-- <i class="fa fa-plus" aria-hidden="true"></i>   -->
-                        Nuevo
-                    </button>
-                    <!-- <button type="button" class="btn btn-secondary btn-sm">Eliminar</button> -->
+                    <p class="text-sm">Registra tu Comprobante de Vacunación antes del 01/04/2022</p>
                 </div><div class="card-body p-3">
                     <div class="row">
                         <div class="col-xl-4 col-md-6 mb-xl-0 mb-4"></div>
@@ -75,23 +67,13 @@
                             <div class="card card-blog card-plain">
                                 <div class="position-relative">
                                     <a class="d-block shadow-xl border-radius-xl">
-                                        <img src="../../../assets/img/rechazo.jpeg" alt="img-blur-shadow" class="img-fluid shadow border-radius-xl">
+                                        <img src="../../../assets/img/comprobante1.jpeg" alt="img-blur-shadow" class="img-fluid shadow border-radius-xl">
                                     </a>
                                 </div>
                                 <div class="card-body px-1 pb-0">
-                                    <p class="text-gradient text-dark mb-2 text-sm">Fecha Límite de Carga 01/04/2022</p>
-                                    <a href="javascript:;">
-                                        <h5>
-                                            Comprobante Rechazado
-                                        </h5>
-                                    </a>
-                                    <p class="mb-4 text-sm">
-                                        Sube un nuevo comprobante, este fue rechazado por inconsistencias.
-                                    </p>
-                                    <div class="d-flex align-items-center justify-content-between">
-                                        <button type="button" class="btn btn-outline-danger btn-sm mb-0" data-toggle="modal" data-target="#subir-comprobante">
-                                            Subir Comprobante
-                                        </button>
+                                    <p class="text-gradient text-dark mb-2 text-sm text-center">Carga tu Comprobante de Vacunación lo Antes Posible</p>
+                                    <div class="text-center">
+                                        <button type="button" class="btn btn-outline-success btn-sm mb-0 text-center" data-toggle="modal" data-target="#Modal_Vacunacion">Subir Comprobante de Vacunación</button>
                                     </div>
                                 </div>
                             </div>
@@ -105,13 +87,16 @@
         <br>
     </div>
 
+    <br>
+    <br>
 
-    <div class="modal fade" id="Modal_Prueba_COVID" tabindex="-1" role="dialog" aria-labelledby="Modal_Prueba_COVID" aria-hidden="true">
+
+    <div class="modal fade" id="Modal_Vacunacion" tabindex="-1" role="dialog" aria-labelledby="Modal_Vacunacion" aria-hidden="true">
         <div class="modal-dialog" role="document">
             <div class="modal-content">
                 <div class="modal-header">
                     <h5 class="modal-title" id="exampleModalLabel">
-                        Agregue su Prueba SARS-CoV-2
+                        Agregue su Comprobante de Vacunación
 
                     </h5>
                     <span type="button" class="btn btn-dark" data-dismiss="modal" aria-label="Close">
@@ -127,54 +112,66 @@
                 </div>
 
                 <div class="modal-body">
-                    <form method="POST" enctype="multipart/form-data" id="form_prueba_covid">
+                    <form method="POST" enctype="multipart/form-data" id="form_vacunacion">
                         <div class="form-group row">
                             <div class="row">
                                 <div class="col-md-6">
                                     <div class="form-group col-md-12">
-                                        <label class="control-label col-md-12 col-sm-3 col-xs-12" for="fecha_">Fecha de Prueba SARS-CoV2 <span class="required">*</span></label>
+                                        <label class="control-label col-md-12 col-sm-3 col-xs-12" for="numero_dosis">Seleccione el número de Dosis con el que Cuentas <span class="required">*</span></label>
                                         <div class="col-md-12 col-sm-12 col-xs-12">
-                                            <input type="date" name="fecha_" id="fecha_" class="form-control col-md-7 col-xs-12" required>
+                                            <!-- <input type="date" name="fecha_" id="fecha_" class="form-control col-md-7 col-xs-12"> -->
+                                            <select class="form-control" name="numero_dosis" id="numero_dosis" required>
+                                                <option selected>Seleccione una Opción</option>
+                                                <option value="uno">1 Dosis</option>
+                                                <option value="dos">2 Dosis</option>
+                                                <option value="tres">3 Dosis</option>
+                                            </select>
                                         </div>
                                         <span id="availability_"></span>
                                     </div>
                                 </div>
                                 <div class="col-md-6">
-                                    <div class="form-group col-md-12">
-                                        <label class="control-label col-md-12 col-sm-3 col-xs-12" for="tipo_prueba_">Tipo de Prueba SARS-CoV2 <span class="required">*</span></label>
-                                        <div class="col-md-12 col-sm-12 col-xs-12">
-                                            <!-- <input type="date" name="fecha_" id="fecha_" class="form-control col-md-7 col-xs-12"> -->
-                                            <select class="form-control" name="tipo_prueba_" id="tipo_prueba_" required>
-                                                <option selected>Seleccione un Tipo de Prueba</option>
-                                                <option value="antigeno">Prueba PCR</option>
-                                                <option value="antigeno">Prueba Antígeno</option>
-                                                <option value="antigeno">Prueba Serológica</option>
-
-                                            </select>
+                                    <label class="control-label col-md-12 col-sm-3 col-xs-12" for="marca">Seleccione las Marcas de sus Dosis <span class="required">*</span></label>
+                                    <div class="col-md-12 col-sm-12 col-xs-12 checkbox-group required">
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" value="Pfizer-BioNTech" name="checkbox_marcas[]">
+                                            <label class="form-check-label">Pfizer-BioNTech</label>
                                         </div>
-                                        <span id="availability_"></span>
-                                    </div>
-                                </div>
-                                <div class="col-md-12">
-                                    <div class="form-group col-md-12">
-                                        <label class="control-label col-md-12 col-sm-12 col-xs-12" for="fecha_">Resultado Prueba SARS-CoV-2<span class="required">*</span></label>
-                                        <div class="col-md-12 col-sm-12 col-xs-12">
-                                            <!-- <input type="date" name="fecha_" id="fecha_" class="form-control col-md-7 col-xs-12"> -->
-                                            <select class="form-control" name="resultado_" id="resultado_" required>
-                                                <option selected>Seleccione Un Resultado</option>
-                                                <option value="positivo">Positivo</option>
-                                                <option value="negativo">Negativo</option>
-                                            </select>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" value="Cansino" name="checkbox_marcas[]">
+                                            <label class="form-check-label" for="flexCheckDefault">Cansino</label>
                                         </div>
-                                        <span id="availability_"></span>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" value="COVAX" name="checkbox_marcas[]">
+                                            <label class="form-check-label" for="flexCheckDefault">COVAX</label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" value="AstraZeneca" name="checkbox_marcas[]">
+                                            <label class="form-check-label" for="flexCheckDefault">AstraZeneca</label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" value="Sputnik V" name="checkbox_marcas[]">
+                                            <label class="form-check-label" for="flexCheckDefault">Sputnik V</label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" value="Sinovac" name="checkbox_marcas[]">
+                                            <label class="form-check-label" for="flexCheckDefault">Sinovac</label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" value="Janssen" name="checkbox_marcas[]">
+                                            <label class="form-check-label" for="flexCheckDefault">Janssen</label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" value="Moderna" name="checkbox_marcas[]">
+                                            <label class="form-check-label" for="flexCheckDefault">Moderna</label>
+                                        </div>
                                     </div>
                                 </div>
                                 <div class="form-group col-md-12">
-                                    <label class="control-label col-md-12 col-sm-12 col-xs-12" for="file_">Archivo Escaneado con información de la prueba SARS-CoV-2: <span class="required">*</span></label>
+                                    <label class="control-label col-md-12 col-sm-12 col-xs-12" for="file_">Comprobante de Vacuna: <span class="required">*</span></label>
                                     <div class="col-md-12 col-sm-12 col-xs-12">
                                         <input type="file" accept="application/pdf" class="form-control" id="file_" name="file_" required>
                                     </div>
-                                    <span id="availability_4_"></span>
                                 </div>
                             </div>
 
@@ -190,22 +187,6 @@
             </div>
         </div>
     </div>
-
-    <!-- MODAL VISTA - DOCUMENTO -->
-    <?php echo $iframe_doc; ?>
-    <!-- <div class="modal fade" id="ver-documento" tabindex="-1" role="dialog" aria-labelledby="ver-documento" aria-hidden="true">
-        <div class="modal-dialog" role="document" style="max-width: 590px;">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">Documento de vacunación</h5>
-                    <span type="button" class="btn btn-danger" data-dismiss="modal" aria-label="Close">
-                        X
-                    </span>
-                </div>
-
-            </div>
-        </div>
-    </div> -->
 
     <div class="fixed-bottom navbar-dark">
         <!-- <a class="navbar-brand" href="#!">Footer</a> -->
