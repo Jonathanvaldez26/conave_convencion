@@ -162,7 +162,10 @@ html;
               event.preventDefault();
               
                   var formData = new FormData(document.getElementById("form_vacunacion"));
-                  console.log(formData);
+                  for (var value of formData.values()) 
+                  {
+                     console.log(value);
+                  }
                   $.ajax({
                       url:"/Vaccination/uploadPrueba",
                       type: "POST",
@@ -211,7 +214,7 @@ html;
 
             $usuario = $_POST["user_"];
             $numero_dosis = $_POST['numero_dosis'];
-            $marca = $_POST['marca'];
+            $marca = '';
             $file = $_FILES["file_"];
 
             $pdf = $this->generateRandomString();

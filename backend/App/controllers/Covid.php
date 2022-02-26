@@ -194,6 +194,15 @@ html;
       });
 </script>
 html;
+
+//       $iframe_doc = <<<html
+//         <div class="modal-body">
+//           <iframe src="/pruebas_covid/{$prueba['documento']}" style="width:100%; height:700px;" frameborder="0" >
+//           </iframe>
+//         </div>
+// html;
+
+
     
     View::set('iframe_doc',$iframe_doc);
     View::set('tabla',$tabla);
@@ -205,16 +214,41 @@ html;
 
   public function uploadPrueba(){
 
+      // $ticket = $_FILES["file_"];
+    // $ticket_name = $_FILES["file_"]['name'];
+    // $nota = $_POST['note_'];
+    // echo $nota;
+    // var_dump($ticket);
+    // echo $ticket_name;
+
     $documento = new \stdClass();
+
 
     if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
+
+        $titulo = 'PruebaCovid';
         $fecha_prueba = $_POST['fecha_'];
         $tipo_prueba = $_POST['tipo_prueba_'];
         $resultado = $_POST['resultado_'];
         $file = $_FILES["file_"];
         $usuario = $_POST["user_"];
+        $fecha = date("Y-m-d h:i:s");
         $pdf = $this->generateRandomString();
+        $ruta = $usuario.$titulo.$fecha;
+
+
+
+        // var_dump($fecha_prueba);
+        // echo "<br>";
+        // var_dump($tipo_prueba);
+        // echo "<br>";
+        // var_dump($resultado);
+        // echo "<br>";
+        // var_dump($file);
+        // echo "<br>";
+        // var_dump($usuario);
+        // exit;
 
         move_uploaded_file($file["tmp_name"], "pruebas_covid/".$pdf.'.pdf');
 
