@@ -130,7 +130,7 @@ html;
                 $vacuna_ = VaccinationDao::getByIdUser($_SESSION['utilerias_asistentes_id']);
                 foreach ($vacuna as $key => $value) {
                     $tabla = <<<html
-                  <div class="col-xl-4 col-md-6 mb-xl-0 mb-4">
+                    <div class="col-xl-4 col-md-6 mb-xl-0 mb-4">
                             <div class="card card-blog card-plain">
                                 <div class="position-relative">
                                     <a class="d-block shadow-xl border-radius-xl">
@@ -138,9 +138,19 @@ html;
                                     </a>
                                 </div>
                                 <div class="card-body px-1 pb-0">
-                                    <p class="text-gradient text-dark mb-2 text-sm text-center">Carga tu Comprobante de Vacunación lo Antes Posible</p>
-                                    <div class="text-center">
-                                        <button type="button" class="btn btn-outline-success btn-sm mb-0 text-center" data-toggle="modal" data-target="#Modal_Vacunacion">Ver mi Comprobante de Vacunación</button>
+                                    <p class="text-gradient text-dark mb-2 text-sm">Comprobante de Vacunación Cargado</p>
+                                    <a href="javascript:;">
+                                        <h5>
+                                            AstraZeneca
+                                        </h5>
+                                    </a>
+                                    <p class="mb-4 text-sm">
+                                        Subiste este documento <br>el 27/01/2022 10:25 a.m.
+                                    </p>
+                                    <div class="d-flex align-items-center justify-content-between">
+                                        <button type="button" class="btn btn-outline-danger btn-sm mb-0" data-toggle="modal" data-target="#ver-comprobante">
+                                            Ver comprobante
+                                        </button>
                                     </div>
                                 </div>
                             </div>
