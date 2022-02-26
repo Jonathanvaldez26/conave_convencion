@@ -107,16 +107,17 @@
                         <h5>Información Básica</h5>
                     </div>
                     <div class="card-body">
-                        <img src="../../assets/img/boleto.png" alt="bruce" class="w-100 border-radius-lg shadow-sm">
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-2">
-            </div>
-        </div>
+                        Estamos generando tu ticket
+                        <!--<img src="../../assets/img/boleto.png" alt="bruce" class="w-100 border-radius-lg shadow-sm"> -->
+                   </div>
+               </div>
+           </div>
+           <div class="col-lg-2">
+           </div>
+       </div>
 
-    </div>
-    
+   </div>
+
 </main>
 
 
