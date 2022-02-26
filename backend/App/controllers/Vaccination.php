@@ -29,7 +29,7 @@ html;
         $iframe_doc = '';
         $status = '';
         $fechaActual = date('d-m-Y');
-        
+
         $pruebas_count = VaccinationDao::getCount($_SESSION['utilerias_asistentes_id']);
         if($pruebas_count['count'] >=1)
         {
@@ -46,12 +46,13 @@ html;
                             <div class="card-body px-1 pb-0">
                             <p class="text-gradient text-dark mb-2 text-sm text-center">Carga tu Comprobante de Vacunación lo Antes Posible</p>
                             <div class="text-center">
-                           <button type="button" class="btn btn-outline-success btn-sm mb-0 text-center" data-toggle="modal" data-target="#Modal_Vacunacion">Subir Comprobante de Vacunación</button>
+                           <button type="button" class="btn btn-outline-success btn-sm mb-0 text-center" data-toggle="modal" data-target="#Modal_Vacunacion">Ver</button>
                         </div>
                   </div>
             </div>
       </div>
 html;
+
 
                 $iframe_doc .= <<<html
 <div class="modal fade" id="ver-documento-{$prueba['id_prueba_covid']}" tabindex="-1" role="dialog" aria-labelledby="ver-documento-{$prueba['id_prueba_covid']}" aria-hidden="true">
