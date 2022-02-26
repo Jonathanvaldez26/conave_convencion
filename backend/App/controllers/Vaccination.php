@@ -167,7 +167,7 @@ html;
                      console.log(value);
                   }
                   $.ajax({
-                      url:"/Vaccination/uploadPrueba",
+                      url:"/Vaccination/uploadComprobante",
                       type: "POST",
                       data: formData,
                       cache: false,
