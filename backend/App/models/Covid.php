@@ -13,7 +13,7 @@ class Covid{
       $mysqli = Database::getInstance();
       $query=<<<sql
         SELECT id_prueba_covid, fecha_carga_documento, fecha_prueba_covid, tipo_prueba, resultado, documento, status FROM prueba_covid ORDER BY id_prueba_covid ASC;
-      sql;
+sql;
       return $mysqli->queryAll($query);
     }
 
@@ -25,7 +25,7 @@ class Covid{
       $mysqli = Database::getInstance();
       $query=<<<sql
         SELECT id_prueba_covid, fecha_carga_documento, fecha_prueba_covid, tipo_prueba, resultado, documento, status FROM prueba_covid WHERE utilerias_asistentes_id = $id ORDER BY id_prueba_covid ASC;
-      sql;
+sql;
       return $mysqli->queryAll($query);
     }
 
