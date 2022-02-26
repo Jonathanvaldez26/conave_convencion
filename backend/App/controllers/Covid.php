@@ -201,14 +201,14 @@ html;
 //         </div>
 // html;
 
-       
+
     
     View::set('iframe_doc',$iframe_doc);
     View::set('tabla',$tabla);
     View::set('fechaActual',$fechaActual);
     View::set('header',$this->_contenedor->header($extraHeader));
     View::set('footer',$extraFooter);
-    View::render("work");
+    View::render("covid_all");
   }
 
   public function uploadPrueba(){
