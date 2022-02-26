@@ -9,7 +9,7 @@ echo $header;
                 <div class="row justify-content-center">
                     <div class="col-lg-5 text-center mx-auto">
                         <h1 class="text-white mb-2 mt-5">¡Bienvenido!</h1>
-                        <p class="text-lead text-white">Convención Nacional CONAVE 2022, Crece sin Límites. </p>
+                        <p class="text-lead text-white">Convención Nacional CONAVE 2022, Creciendo 5in Límites. </p>
                     </div>
                 </div>
             </div>
@@ -19,7 +19,7 @@ echo $header;
                 <div class="col-xl-4 col-lg-5 col-md-7 mx-auto">
                         <div class="card z-index-0">
                             <div class="card-header text-center pt-4">
-                                <p>Introduce tu email para crear tu cuenta</p>
+                                <p>Introduce tu Cuenta de Correo Electrónico Institucional para Crear tu Cuenta</p>
                                 <p class="text-sm font-weight-bold mb-2 text-secondary text-border d-inline z-index-2 bg-white px-3">
                                     <i class="fa fa-user-circle"></i>
                                 </p>
@@ -27,15 +27,15 @@ echo $header;
                             <div class="card-body pt-1">
                                 <form class="form-horizontal" id="email_form" action="/Register/Success" method="POST">
                                     <div class="mb-3 form-group">
-                                        <label>Correo Eléctronico Institucional *</label>
+                                        <label style="font-weight:bold; font-size: 15px">Correo Eléctronico Institucional *</label>
                                         <input type="email" id="email" name="email" class="form-control" placeholder="Ej. usuario@asofarma.com.mx" aria-label="Correo Eléctronico" required="required">
                                     </div>
                                     <div class="mb-3 form-group">
-                                        <label>Confirma tu Email *</label>
+                                        <label style="font-weight:bold; font-size: 15px">Confirma tu Correo Eléctronico Institucional *</label>
                                         <input type="email" id="confirm_email" name="confirm_email" class="form-control" placeholder="Ej. usuario@asofarma.com.mx" aria-label="Confirmar tu Correo Eléctronico" required="required">
                                     </div>
                                     <div class="form-group text-center">
-                                        <button class="btn btn-outline-danger w-100 my-4 mb-2 ms-auto" type="submit" id="btn_registro_email">Registrar</button>
+                                        <button class="btn btn-outline-danger w-100 my-4 mb-2 ms-auto" type="submit" id="btn_registro_email">Registrarme</button>
                                     </div>
                                     
                                 </form>

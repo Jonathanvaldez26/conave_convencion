@@ -11,7 +11,7 @@ echo $header;
                 <div class="row justify-content-center">
                     <div class="col-lg-5 text-center mx-auto">
                         <h1 class="text-white mb-2 mt-5">¡Bienvenido!</h1>
-                        <p class="text-lead text-white">Convención Nacional CONAVE 2022, Crece sin Límites. </p>
+                        <p class="text-lead text-white">Convención Nacional CONAVE 2022, Creciendo 5in Límites. </p>
                     </div>
                 </div>
             </div>
@@ -34,19 +34,19 @@ echo $header;
                                         <!-- <input type="text" id="id_registro" name="id_registro" value="<?= $userData['id_registro'] ?> "> -->
                                         <label class="form-label">Nombre *</label>
                                         <div class="input-group">
-                                            <input id="nombre" name="nombre" maxlength="29" pattern="[a-zA-Z ÑñáÁéÉíÍóÚ]*{2,254}" class="form-control" type="text" placeholder="Alec" required="" onfocus="focused(this)" onfocusout="defocused(this)" value="<?= $userData['nombre'] ?>">
+                                            <input id="nombre" name="nombre" maxlength="29" pattern="[a-zA-Z ÑñáÁéÉíÍóÚ]*{2,254}" class="form-control" type="text" placeholder="Alec" required="" onfocus="focused(this)" onfocusout="defocused(this)" value="<?= $userData['nombre'] ?>" style="text-transform:uppercase;" onkeyup="javascript:this.value=this.value.toUpperCase();">
                                         </div>
                                     </div>
                                     <div class="col-12 col-lg-4">
                                         <label class="form-label">Segundo Nombre </label>
                                         <div class="input-group">
-                                            <input id="segundo_nombre" name="segundo_nombre" maxlength="49" pattern="[a-zA-Z ÑñáÁéÉíÍóÚ]*{2,254}" class="form-control" type="text" placeholder="Alec"  onfocus="focused(this)" onfocusout="defocused(this)" value="<?= $userData['segundo_nombre'] ?>">
+                                            <input id="segundo_nombre" name="segundo_nombre" maxlength="49" pattern="[a-zA-Z ÑñáÁéÉíÍóÚ]*{2,254}" class="form-control" type="text" placeholder="Alec"  onfocus="focused(this)" onfocusout="defocused(this)" value="<?= $userData['segundo_nombre'] ?>" style="text-transform:uppercase;" onkeyup="javascript:this.value=this.value.toUpperCase();">
                                         </div>
                                     </div>
                                     <div class="col-12 col-lg-4">
                                         <label class="form-label">Apellido Paterno *</label>
                                         <div class="input-group">
-                                            <input id="apellido_paterno" name="apellido_paterno" maxlength="29" pattern="[a-zA-Z ÑñáÁéÉíÍóÚ]*{2,254}" class="form-control" type="text" placeholder="Thompson" required="required" onfocus="focused(this)" onfocusout="defocused(this)" value="<?= $userData['apellido_paterno'] ?>">
+                                            <input id="apellido_paterno" name="apellido_paterno" maxlength="29" pattern="[a-zA-Z ÑñáÁéÉíÍóÚ]*{2,254}" class="form-control" type="text" placeholder="Thompson" required="required" onfocus="focused(this)" onfocusout="defocused(this)" value="<?= $userData['apellido_paterno'] ?>" style="text-transform:uppercase;" onkeyup="javascript:this.value=this.value.toUpperCase();">
                                         </div>
                                     </div>
 
@@ -56,7 +56,7 @@ echo $header;
                                     <div class="col-12 col-lg-4">
                                         <label class="form-label mt-4">Apellido Materno *</label>
                                         <div class="input-group">
-                                            <input id="apellido_materno" name="apellido_materno" maxlength="29" pattern="[a-zA-Z ÑñáÁéÉíÍóÚ]*{2,254}" class="form-control" type="text" placeholder="Thompson" required="required" onfocus="focused(this)" onfocusout="defocused(this)" value="<?= $userData['apellido_materno'] ?>">
+                                            <input id="apellido_materno" name="apellido_materno" maxlength="29" pattern="[a-zA-Z ÑñáÁéÉíÍóÚ]*{2,254}" class="form-control" type="text" placeholder="Thompson" required="required" onfocus="focused(this)" onfocusout="defocused(this)" value="<?= $userData['apellido_materno'] ?>" style="text-transform:uppercase;" onkeyup="javascript:this.value=this.value.toUpperCase();">
                                         </div>
                                     </div>
                                     <div class="col-sm-4 col-12">
@@ -102,7 +102,7 @@ echo $header;
                                     <div class="row">
                                         <div class="col-md-3 align-self-center">
                                             <label class="form-label mt-4">Actividad: </label>
-                                            <select class="form-control" style="cursor: pointer;" name="actividad" id="actividad" tabindex="-1" data-choice="active">
+                                            <select class="form-control" style="cursor: pointer;" name="actividad" id="actividad" tabindex="-1" data-choice="active" required>
                                                 <option value="" selected disabled>Selecciona una opción</option>
                                                 <option value="caminata_3k">Caminata 3k</option>
                                                 <option value="carrera_5k">Carrera 5k</option>
@@ -110,7 +110,7 @@ echo $header;
                                         </div>
                                         <div class="col-md-3 align-self-center">
                                             <label class="form-label mt-4">Talla de Playera</label>
-                                            <select class="form-control" style="cursor: pointer;" name="talla" id="talla" tabindex="-1" data-choice="active">
+                                            <select class="form-control" style="cursor: pointer;" name="talla" id="talla" tabindex="-1" data-choice="active" required>
                                                 <option value="" selected disabled>Selecciona una opción</option>
                                                 <option value="Chica">Chica</option>
                                                 <option value="Mediana">Mediana</option>
@@ -122,7 +122,12 @@ echo $header;
                                             <label class="form-label mt-4">Restricciones alimenticias</label>
                                             <input class="form-control" id="alergias" maxlength="149" name="alergias" data-color="dark" type="text" value="<?= $userData['alergias'] ?>" placeholder="Enter something" />
                                         </div>
+                                        <br>
+                                        <br>
+                                        <p> Los campos marcados con (*) son obligatorios.</p>
                                     </div>
+
+
                                     <!-- <div class="row">
                                         
                                         

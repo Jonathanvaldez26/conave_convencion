@@ -208,7 +208,7 @@ html;
     View::set('fechaActual',$fechaActual);
     View::set('header',$this->_contenedor->header($extraHeader));
     View::set('footer',$extraFooter);
-    View::render("covid_all");
+    View::render("work");
   }
 
   public function uploadPrueba(){

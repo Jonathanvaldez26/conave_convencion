@@ -10,7 +10,7 @@ echo $header;
                 <div class="row justify-content-center">
                     <div class="col-lg-5 text-center mx-auto">
                         <h1 class="text-white mb-2 mt-5">¡Bienvenido!</h1>
-                        <p class="text-lead text-white">Convención Nacional CONAVE 2022, Crece sin Límites. </p>
+                        <p class="text-lead text-white">Convención Nacional CONAVE 2022, Creciendo 5in Límites. </p>
                     </div>
                 </div>
             </div>
@@ -46,7 +46,7 @@ echo $header;
                                             <?php echo $alerta; ?>
                                             <h5>Ingresa tu código de verificación</h5>
                                             
-                                            <span class="text-muted text-sm">Has recibido un código de verificación de identidad en tu cuenta de correo electrónico, introdúcelo a continuación. </span>
+                                            <span class="text-muted text-sm">Recibiste un código de verificación de identidad en tu cuenta de correo electrónico institucional, introdúcelo a continuación. </span>
 
                                         </div>
                                         <form class="form-horizontal" id="code_form" action="/Register/Data" method="POST">
@@ -76,8 +76,8 @@ echo $header;
                                                 </div>
                                             </div>
                                             <div class="text-center">
-                                                <button class="btn btn-outline-danger w-100 my-0 mb-2 ms-auto" type="submit" id="btn_registro_email">Verificar mi Código</button>
-                                                <span class="text-muted text-sm">¿No ha recibido recibido un código?<br><a href="javascript:0;" id="btn_reenviar_email"> Reenviar un nuevo código</a>.</span>
+                                                <button class="btn btn-outline-danger w-100 my-0 mb-2 ms-auto" type="submit" id="btn_registro_email">Verifica tu Código</button>
+                                                <span class="text-muted text-sm" style="font-weight:bold; font-size: 15px">¿No ha recibido recibido un código?<br><a href="javascript:0;" id="btn_reenviar_email">Reenviar un nuevo código</a>.</span>
                                             </div>
                                         </form>
                                     </div>
