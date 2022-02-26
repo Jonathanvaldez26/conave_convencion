@@ -15,8 +15,7 @@ class Vaccination{
         $query =<<<sql
         SELECT COUNT(*) as count FROM comprobante_vacuna WHERE utilerias_asistentes_id = $id ORDER BY id_comprobante_vacuna ASC;
 sql;
-        $dato = $mysqli->queryOne($query);
-        return ($dato>=1) ;
+        return $mysqli->queryOne($query);
     }
 
     public static function getAll(){
