@@ -33,7 +33,7 @@ sql;
     public static function getByIdUser($id){
       $mysqli = Database::getInstance();
       $query=<<<sql
-        SELECT * FROM comprobante_vacuna WHERE utilerias_asistentes_id = $id ORDER BY id_comprobante_vacuna ASC;
+        SELECT * FROM comprobante_vacuna WHERE utilerias_asistentes_id = $id and status = 1 ORDER BY id_comprobante_vacuna ASC;
 sql;
       return $mysqli->queryAll($query);
     }

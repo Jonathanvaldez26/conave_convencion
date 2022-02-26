@@ -64,7 +64,7 @@
                 <div class="card-body p-3">
                     <div class="row">
                         <div class="col-xl-4 col-md-6 mb-xl-0 mb-4"></div>
-                        <?php echo $tabla; ?>
+                        <?php echo $tabla ?>
 
                         <div class="col-xl-4 col-md-6 mb-xl-0 mb-4"></div>
                     </div>
