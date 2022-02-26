@@ -58,8 +58,8 @@
             </div>
             <div class="card col-lg-8 mt-lg-5 mt-1" >
                 <div class="card-header pb-0 p-3">
-                    <h6 class="mb-1">Mis pruebas Covid</h6>
-                    <p class="text-sm">Registra la primera prueba Covid con anticipación de 24 o 48 horas a tu vuelo</p>
+                    <h6 class="mb-1">Mi comprobante de Vacunación</h6>
+                    <p class="text-sm">Registra tu Comprobante de Vacunación</p>
 
                     <br>
                     <!-- <a href="#" type="button" class="btn btn-success btn-sm">Nuevo</a> -->
@@ -68,28 +68,35 @@
                         Nuevo
                     </button>
                     <!-- <button type="button" class="btn btn-secondary btn-sm">Eliminar</button> -->
-                </div>
-                <div class="card-body p-3">
+                </div><div class="card-body p-3">
                     <div class="row">
-                        <div class="card">
-                            <div class="table-responsive">
-                                <table class="table align-items-center mb-4">
-                                    <thead>
-                                    <tr>
-                                        <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Prueba</th>
-                                        <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Estatus</th>
-                                        <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Tipo de Prueba</th>
-                                        <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Resultado</th>
-                                        <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Documento</th>
-                                    </tr>
-                                    </thead>
-                                    <tbody>
-                                    <?php echo $tabla; ?>
-                                    </tbody>
-                                </table>
-                                <br>
+                        <div class="col-xl-4 col-md-6 mb-xl-0 mb-4"></div>
+                        <div class="col-xl-4 col-md-6 mb-xl-0 mb-4">
+                            <div class="card card-blog card-plain">
+                                <div class="position-relative">
+                                    <a class="d-block shadow-xl border-radius-xl">
+                                        <img src="../../../assets/img/rechazo.jpeg" alt="img-blur-shadow" class="img-fluid shadow border-radius-xl">
+                                    </a>
+                                </div>
+                                <div class="card-body px-1 pb-0">
+                                    <p class="text-gradient text-dark mb-2 text-sm">Fecha Límite de Carga 01/04/2022</p>
+                                    <a href="javascript:;">
+                                        <h5>
+                                            Comprobante Rechazado
+                                        </h5>
+                                    </a>
+                                    <p class="mb-4 text-sm">
+                                        Sube un nuevo comprobante, este fue rechazado por inconsistencias.
+                                    </p>
+                                    <div class="d-flex align-items-center justify-content-between">
+                                        <button type="button" class="btn btn-outline-danger btn-sm mb-0" data-toggle="modal" data-target="#subir-comprobante">
+                                            Subir Comprobante
+                                        </button>
+                                    </div>
+                                </div>
                             </div>
                         </div>
+                        <div class="col-xl-4 col-md-6 mb-xl-0 mb-4"></div>
                     </div>
                 </div>
             </div>
