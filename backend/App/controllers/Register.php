@@ -768,10 +768,8 @@ html;
         <link rel="stylesheet" href="/css/alertify/alertify.core.css" />
         <link rel="stylesheet" href="/css/alertify/alertify.default.css" id="toggleCSS" />
         <!--script src="../../../assets/js/plugins/choices.min.js"></script-->
-
         
-        
-        
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>  
 
 html;
         $extraFooter =<<<html

@@ -36801,4 +36801,14 @@ svg.leaflet-image-layer.leaflet-interactive path {
   transform: scale(1);
 }
 
+.text-scroll{
+  overflow-y: scroll !important;
+  max-height: 400px;
+  height: 10%;
+}
+
+.text-left{
+  text-align: left !important;
+}
+
 /*# sourceMappingURL=dashboard-pro.css.map */
