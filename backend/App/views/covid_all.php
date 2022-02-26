@@ -136,7 +136,7 @@
                 </div>
                 <div class="modal-header">
                     <h6>
-                        <label id="fecha_actual"><?php echo $fechaActual; ?></label>
+                        <label id="fecha_actual">Fecha máxima de validación: <?php echo $fechaActual; ?></label>
                         <br>    
                         Por favor a continuación ingrese la información solicitada.
                     </h6>
