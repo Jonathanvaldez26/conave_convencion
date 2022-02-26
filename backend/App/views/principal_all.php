@@ -274,6 +274,7 @@
                             </div>
                         </div>
                     </div>
+
                 </div>
             </div>
         </div>
@@ -293,14 +294,19 @@
                     <p>Por su seguridad y la de las demás personas, le pedimos que nos proporcione la Información siguiente para comprobar que no este contagiado de COVID.</p>
                 </div> -->
                 <div class="modal-body">
-                    <!-- <iframe src="../assets/pdf/complements/PruebaCovid.pdf"
-                            style="width:100%; height:780px;" frameborder="0" >
-                    </iframe> -->
-                    <iframe src="/assets/pdf/complements/PruebaCovid.pdf" style="width:100%; height:700px;" frameborder="0" >
-                    </iframe>
-                    <!-- <object data="your_url_to_pdf"  style="width:100%; height:700px;" type="application/pdf">
-                        <iframe src="/assets/pdf/complements/PruebaCovid.pdf"></iframe>
-                    </object> -->
+                        <div class="container">
+                            <div class="row mt-lg-0 mt-8">
+                                <div class="col-lg-12 my-auto">
+                                    <h1 class="display-1 text-bolder text-gradient text-danger fadeIn1 fadeInBottom mt-5">Estamos preparando tu PickUp</h1>
+                                    <h2 class="fadeIn3 fadeInBottom opacity-8">Equipo Asofarma</h2>
+                                    <p class="lead opacity-6 fadeIn2 fadeInBottom">Le sugerimos consultar más tarde...</p>
+                                </div>
+                            </div>
+                            <br>
+                            <br>
+                            <br>
+                            <br>
+                        </div>
                 </div>
             </div>
         </div>
