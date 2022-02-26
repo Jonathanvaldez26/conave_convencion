@@ -9,10 +9,20 @@ use \App\controllers\UtileriasLog;
 
 class Vaccination{
 
+    public static function getCount($id){
+
+        $mysqli = Database::getInstance(true);
+        $query =<<<sql
+        SELECT COUNT(*) as count FROM comprobante_vacuna WHERE utilerias_asistentes_id = $id ORDER BY id_comprobante_vacuna ASC;
+sql;
+        $dato = $mysqli->queryOne($query);
+        return ($dato>=1) ;
+    }
+
     public static function getAll(){
       $mysqli = Database::getInstance();
       $query=<<<sql
-        SELECT id_prueba_covid, fecha_carga_documento, fecha_prueba_covid, tipo_prueba, resultado, documento, status FROM prueba_covid ORDER BY id_prueba_covid ASC;
+        SELECT * FROM comprobante_vacuna ORDER BY comprobante_vacuna ASC;
 sql;
       return $mysqli->queryAll($query);
     }
@@ -24,7 +34,7 @@ sql;
     public static function getByIdUser($id){
       $mysqli = Database::getInstance();
       $query=<<<sql
-        SELECT id_prueba_covid, fecha_carga_documento, fecha_prueba_covid, tipo_prueba, resultado, documento, status FROM prueba_covid WHERE utilerias_asistentes_id = $id ORDER BY id_prueba_covid ASC;
+        SELECT * FROM comprobante_vacuna WHERE utilerias_asistentes_id = $id ORDER BY id_comprobante_vacuna ASC;
 sql;
       return $mysqli->queryAll($query);
     }
