@@ -95,7 +95,7 @@ html;
               </span>
           </div>
           <div class="modal-body">
-          <iframe src="/pruebas_covid/{$prueba['documento']}" style="width:100%; height:700px;" frameborder="0" >
+          <iframe src="/comprobante_vacunacion/{$prueba['documento']}" style="width:100%; height:700px;" frameborder="0" >
           </iframe>
        </div>
       </div>
@@ -158,13 +158,13 @@ html;
    <script>
     $( document ).ready(function() {
 
-          $("#form_prueba_covid").on("submit",function(event){
+          $("#form_vacunacion").on("submit",function(event){
               event.preventDefault();
               
-                  var formData = new FormData(document.getElementById("form_prueba_covid"));
+                  var formData = new FormData(document.getElementById("form_vacunacion"));
                   console.log(formData);
                   $.ajax({
-                      url:"/Covid/uploadPrueba",
+                      url:"/Vaccination/uploadPrueba",
                       type: "POST",
                       data: formData,
                       cache: false,
@@ -179,7 +179,7 @@ html;
                          
                           swal("Se ha guardado tu la prueba correctamente!!", "", "success").
                           then((value) => {
-                              window.location.replace("/Covid/");
+                              window.location.replace("/Vaccination/");
                           });
                       }
                       console.log(respuesta);
@@ -209,14 +209,12 @@ html;
 
         if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
-            $titulo = 'ComprobanteVacunacion';
+            $usuario = $_POST["user_"];
             $numero_dosis = $_POST['numero_dosis'];
             $marca = $_POST['marca'];
             $file = $_FILES["file_"];
-            $usuario = $_POST["user_"];
-            $fecha = date("Y-m-d h:i:s");
+
             $pdf = $this->generateRandomString();
-            $ruta = $usuario.$titulo.$fecha;
 
             move_uploaded_file($file["tmp_name"], "comprobante_vacunacion/".$pdf.'.pdf');
 

@@ -209,15 +209,12 @@ html;
 
     if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
-        $titulo = 'PruebaCovid';
         $fecha_prueba = $_POST['fecha_'];
         $tipo_prueba = $_POST['tipo_prueba_'];
         $resultado = $_POST['resultado_'];
         $file = $_FILES["file_"];
         $usuario = $_POST["user_"];
-        $fecha = date("Y-m-d h:i:s");
         $pdf = $this->generateRandomString();
-        $ruta = $usuario.$titulo.$fecha;
 
         move_uploaded_file($file["tmp_name"], "pruebas_covid/".$pdf.'.pdf');
 
