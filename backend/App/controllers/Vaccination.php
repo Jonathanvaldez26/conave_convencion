@@ -200,7 +200,7 @@ html;
         View::set('fechaActual',$fechaActual);
         View::set('header',$this->_contenedor->header($extraHeader));
         View::set('footer',$extraFooter);
-        View::render("proof_vaccination_all");
+        View::render("proof_vacination_all");
     }
 
     public function uploadPrueba(){
