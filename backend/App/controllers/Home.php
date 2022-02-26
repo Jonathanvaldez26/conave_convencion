@@ -28,24 +28,24 @@ class Home extends Controller{
 html;
 
         $card_permisos = HomeDao::getCountByUser($_SESSION['utilerias_asistentes_id']);
-        $pickup_permisos = HomeDao::getCountPickUp($_SESSION['utilerias_asistentes_id']);
+        //$pickup_permisos = HomeDao::getCountPickUp($_SESSION['utilerias_asistentes_id']);
         $tabla = '';
 
-        foreach ($pickup_permisos as $key => $value) {
-            if ($value['count'] >= 0) {
-                $tabla.= <<<html
-                aaaaaaas
-html;
-            } else {
-                $tabla.= <<<html
-                ssssss
-html;
+        //foreach ($pickup_permisos as $key => $value) {
+        //    if ($value['count'] >= 0) {
+        //        $tabla.= <<<html
+        //        aaaaaaas
+//html;
+  //          } else {
+    //            $tabla.= <<<html
+    //            ssssss
+//html;
 
-            }
-        }
+          //  }
+        //}
 
         View::set('header',$this->_contenedor->header($extraHeader));
-        View::set('tabla',$tabla);
+        //View::set('tabla',$tabla);
         View::render("principal_all");
     }
 
