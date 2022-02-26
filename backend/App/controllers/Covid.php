@@ -3,13 +3,9 @@ namespace App\controllers;
 
 use \Core\View;
 use \Core\MasterDom;
-use \App\models\Register AS RegisterDao;
-use \App\models\LineaGeneral AS LineaGeneralDao;
-use \App\models\Data AS DataDao; 
-use \App\models\Covid AS CovidDao;
-use \App\controllers\Mailer;
 use \App\controllers\Contenedor;
-use Core\Controller;
+use \Core\Controller;
+use \App\models\Covid AS CovidDao;
 
 class Covid extends Controller{
 
