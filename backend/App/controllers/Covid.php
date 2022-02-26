@@ -27,9 +27,7 @@ class Covid extends Controller{
       $extraHeader =<<<html
 html;
 
-      $pruebas = CovidDao::getByIdUser($_SESSION['utilerias_asistentes_id']);
-
-      var_dump($pruebas);
+      $pruebas = CovidDao::getById($_SESSION['utilerias_asistentes_id']);
       $tabla = '';
       $iframe_doc = '';
       $status = '';

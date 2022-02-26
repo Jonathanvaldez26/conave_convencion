@@ -7,7 +7,7 @@ use \Core\MasterDom;
 use \App\interfaces\Crud;
 use \App\controllers\UtileriasLog;
 
-class Covid{
+class Covid implements Crud{
 
     public static function getAll(){
       $mysqli = Database::getInstance();
