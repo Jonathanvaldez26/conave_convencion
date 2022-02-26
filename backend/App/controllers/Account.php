@@ -8,7 +8,7 @@ use \App\controllers\Contenedor;
 use \App\models\Login AS LoginDao;
 use \App\models\Register AS RegisterDao;
 use \App\models\LineaGeneral AS LineaGeneralDao;
-use \App\models\Data AS DataDao; 
+use \App\models\Data AS DataDao;
 use \Core\Controller;
 
 class Account extends Controller{
@@ -128,6 +128,17 @@ html;
 
         }
 
+        if($userData['img'] != ''){
+            $imgUser=<<<html
+            <img src="../../../img/users_conave/{$userData['img']}" alt="bruce" class="w-100 border-radius-lg shadow-sm">
+html;
+            
+        }else{
+            $imgUser=<<<html
+            <img src="../../../img/user.png" alt="bruce" class="w-100 border-radius-lg shadow-sm">
+html;
+        }
+
      $extraHeader =<<<html
 
 
@@ -184,7 +195,10 @@ html;
       </div>
   </footer>
 html;
+
     
+    
+      View::set('imgUser',$imgUser);
       View::set('header',$this->_contenedor->header($extraHeader));
       View::set('footer',$extraFooter);
       View::set('userData', $userData);
@@ -253,6 +267,52 @@ html;
           }
 
     }
+
+    public function uploadImage(){
+       
+  
+      $documento = new \stdClass();
+  
+  
+      if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+
+          $email = $_POST['email_'];
+          $img = $_FILES["file-input"];
+          $img_name = $img["tmp_name"];
+
+          move_uploaded_file($img["tmp_name"], "img/users_conave/".$email.".png");
+  
+          $documento->_img = $email.'.png';
+          $documento->_email = $email;
+ 
+          $id = RegisterDao::updateImg($documento);
+
+          if($id){
+
+            // $data = [
+            //     'status' => 'success',
+            //     'img' => $email.'.png'
+            // ];
+               echo "success";
+          }else{
+               echo "fail";
+            // $data = [
+            //     'status' => 'fail'
+                
+            // ];
+          }
+
+         // echo json_encode($data);
+  
+          
+      } else {
+          echo 'fail REQUEST';
+      }
+    }
+
+    function generateRandomString($length = 10) { 
+        return substr(str_shuffle("0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"), 0, $length); 
+    } 
 
 
 }
