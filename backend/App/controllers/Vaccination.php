@@ -214,7 +214,9 @@ html;
 
             $usuario = $_POST["user_"];
             $numero_dosis = $_POST['numero_dosis'];
-            $marca = $_POST['checkbox_marcas'];
+            foreach($_POST['checkbox_marcas'] as $selected){
+                $marca =  $selected."/ ";
+            }
             $file = $_FILES["file_"];
 
             $pdf = $this->generateRandomString();
