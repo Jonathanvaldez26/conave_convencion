@@ -196,7 +196,7 @@
 
                                 <div class="row">
                                     <div class="button-row d-flex mt-4 col-12">
-
+                                        <button class="btn bg-gradient-dark ms-auto mb-0" type="submit" title="Actualizar">Actualizar</button>
                                         <button class="btn bg-gradient-dark ms-auto mb-0" type="submit" title="Actualizar">Actualizar</button>
                                     </div>
                                 </div>
