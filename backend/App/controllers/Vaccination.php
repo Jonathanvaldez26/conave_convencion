@@ -31,29 +31,14 @@ html;
         $fechaActual = date('d-m-Y');
 
         $pruebas_count = VaccinationDao::getCount($_SESSION['utilerias_asistentes_id']);
-        if($pruebas_count['count'] >=1)
+        if($pruebas_count['count']>=1)
         {
             $pruebas = VaccinationDao::getByIdUser($_SESSION['utilerias_asistentes_id']);
-            foreach ($pruebas as $key => $prueba) {
+            foreach ($pruebas as $key => $prueba)
+            {
                 $tabla.=<<<html
-      <div class="col-xl-4 col-md-6 mb-xl-0 mb-4">
-                           <div class="card card-blog card-plain">
-                           <div class="position-relative">
-                                <a class="d-block shadow-xl border-radius-xl">
-                                      <img src="../../../assets/img/comprobante1.jpeg" alt="img-blur-shadow" class="img-fluid shadow border-radius-xl">
-                                 </a>
-                            </div>
-                            <div class="card-body px-1 pb-0">
-                            <p class="text-gradient text-dark mb-2 text-sm text-center">Carga tu Comprobante de Vacunación lo Antes Posible</p>
-                            <div class="text-center">
-                           <button type="button" class="btn btn-outline-success btn-sm mb-0 text-center" data-toggle="modal" data-target="#Modal_Vacunacion">Ver</button>
-                        </div>
-                  </div>
-            </div>
-      </div>
+                holaa
 html;
-
-
                 $iframe_doc .= <<<html
 <div class="modal fade" id="ver-documento-{$prueba['id_prueba_covid']}" tabindex="-1" role="dialog" aria-labelledby="ver-documento-{$prueba['id_prueba_covid']}" aria-hidden="true">
   <div class="modal-dialog" role="document" style="max-width: 590px;">
