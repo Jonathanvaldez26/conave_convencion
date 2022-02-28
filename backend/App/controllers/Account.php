@@ -63,7 +63,10 @@ html;
                     event.preventDefault();
         
                     var formData = new FormData(document.getElementById("update_form"));
-                    console.log(formData);
+                    for (var value of formData.values()) {
+                       console.log(value);
+                    }
+  
                     $.ajax({
                         url: "/Account/Actualizar",
                         type: "POST",
