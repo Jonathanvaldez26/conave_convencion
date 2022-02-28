@@ -44,6 +44,7 @@ class Contenedor extends Controller{
             <!-- TEMPLATE VIEJO-->
             <link rel="stylesheet" href="/css/alertify/alertify.core.css" />
             <link rel="stylesheet" href="/css/alertify/alertify.default.css" id="toggleCSS" />
+            <link id="pagestyle" href="/assets/css/style.css" rel="stylesheet" />
 
 
            <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
