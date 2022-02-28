@@ -185,11 +185,8 @@
                                     <div class="col-md-3 align-self-center">
                                         <label class="form-label mt-4">Actividad: </label>
                                         <select class="form-control" style="cursor: pointer;" name="actividad" id="actividad" tabindex="-1" data-choice="active" disabled>
-                                            <option value="" selected disabled>Selecciona una opción</option>
                                             <?php echo $optionsActividad; ?>
                                         </select>
-
-
                                     </div>
                                     <div class="col-md-3 align-self-center">
                                         <label class="form-label mt-4">Talla de Playera</label>
