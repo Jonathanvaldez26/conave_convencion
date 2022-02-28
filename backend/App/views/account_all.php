@@ -197,12 +197,12 @@
                                 </div>
                                 <!-- <div class="row">
                                         
-                                        
-                                    </div> -->
 
+                                    </div> -->
+                     
                                 <div class="row">
                                     <div class="button-row d-flex mt-4 col-12">
-                                        <button class="btn bg-gradient-dark ms-auto mb-0" type="submit" title="Actualizar">Actualizar</button>
+                                        <a class="btn bg-gradient-light mb-0 js-btn-prev" href="/Register" title="Prev">Regresar</a>
                                         <button class="btn bg-gradient-dark ms-auto mb-0" type="submit" title="Actualizar">Actualizar</button>
                                     </div>
                                 </div>
