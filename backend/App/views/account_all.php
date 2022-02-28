@@ -183,10 +183,8 @@
                                 </div>
                                 <div class="row">
                                     <div class="col-md-3 align-self-center">
-                                        <label class="form-label mt-4">Actividad: </label>
-                                        <select class="form-control" style="cursor: pointer;" name="actividad" id="actividad" tabindex="-1" data-choice="active" disabled>
-                                            <?php echo $optionsActividad; ?>
-                                        </select>
+                                        <label class="form-label mt-4">Actividad</label>
+                                        <input class="form-control" id="actividad" name="actividad" type="text" value="<?= $userData['actividad'] ?>" readonly />
                                     </div>
                                     <div class="col-md-3 align-self-center">
                                         <label class="form-label mt-4">Talla de Playera</label>
@@ -197,14 +195,10 @@
                                         <input class="form-control" id="alergias" maxlength="149" name="alergias" data-color="dark" type="text" value="<?= $userData['alergias'] ?>" placeholder="Enter something" />
                                     </div>
                                 </div>
-                                <!-- <div class="row">
-                                        
-                                        
-                                    </div> -->
 
                                 <div class="row">
                                     <div class="button-row d-flex mt-4 col-12">
-                                        <button class="btn bg-gradient-dark ms-auto mb-0" type="submit" title="Actualizar">Actualizar</button>
+                                        <a class="btn bg-gradient-light mb-0 js-btn-prev" href="/Home/" title="Prev">Regresar</a>
                                         <button class="btn bg-gradient-dark ms-auto mb-0" type="submit" title="Actualizar">Actualizar</button>
                                     </div>
                                 </div>

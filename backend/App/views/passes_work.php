@@ -29,13 +29,13 @@
             <div class="container">
                 <div class="row mt-lg-0 mt-1">
                     <div class="col-lg-5 my-auto">
-                        <h1 class=" text-bolder text-gradient text-danger fadeIn1 fadeInBottom ">Próximamente Disponible</h1>
-                        <h4 class="fadeIn3 fadeInBottom opacity-8">Usted podrá consultar los restaurantes que tenemos preparados. </h4>
+                        <h1 class=" text-bolder text-gradient text-danger fadeIn1 fadeInBottom ">Estamos preparando sus Pases de Abordar</h1>
+                        <h4 class="fadeIn3 fadeInBottom opacity-8">Estarán activos una vez que se valide tu comprobante de vacunación y tu prueba SARS-CoV-2. </h4>
                         <p class="lead opacity-6 fadeIn2 fadeInBottom">Le sugerimos que vaya a la página de inicio...</p>
                         <a href="/Home/" type="button" class="btn bg-gradient-danger mt-4 fadeIn2 fadeInBottom">Ir a la página de inicio</a>
                     </div>
                     <div class="col-lg-7 my-auto">
-                        <img class="w-100 fadeIn1 fadeInBottom" src="../../../assets/img/illustrations/menu.png" alt="500-error">
+                        <img class="w-100 fadeIn1 fadeInBottom" src="../../../assets/img/illustrations/viaje.png" alt="500-error">
                     </div>
                 </div>
             </div>
