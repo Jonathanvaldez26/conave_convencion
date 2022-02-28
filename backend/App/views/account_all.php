@@ -195,14 +195,10 @@
                                         <input class="form-control" id="alergias" maxlength="149" name="alergias" data-color="dark" type="text" value="<?= $userData['alergias'] ?>" placeholder="Enter something" />
                                     </div>
                                 </div>
-                                <!-- <div class="row">
-                                        
 
-                                    </div> -->
-                     
                                 <div class="row">
                                     <div class="button-row d-flex mt-4 col-12">
-                                        <a class="btn bg-gradient-light mb-0 js-btn-prev" href="/Register" title="Prev">Regresar</a>
+                                        <a class="btn bg-gradient-light mb-0 js-btn-prev" href="/Home/" title="Prev">Regresar</a>
                                         <button class="btn bg-gradient-dark ms-auto mb-0" type="submit" title="Actualizar">Actualizar</button>
                                     </div>
                                 </div>
