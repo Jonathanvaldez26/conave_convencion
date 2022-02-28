@@ -130,12 +130,12 @@ html;
 
         if($userData['img'] != ''){
             $imgUser=<<<html
-            <img src="../../../img/users_conave/{$userData['img']}" id="img-user" alt="bruce" class="w-100 border-radius-lg shadow-sm">
+            <img src="../../../img/users_conave/{$userData['img']}" alt="bruce" class="w-100 border-radius-lg shadow-sm">
 html;
-            
+
         }else{
             $imgUser=<<<html
-            <img src="../../../img/user.png" alt="bruce" id="img-user" class="w-100 border-radius-lg shadow-sm">
+            <img src="../../../img/user.png" alt="bruce" class="w-100 border-radius-lg shadow-sm">
 html;
         }
 
@@ -196,8 +196,8 @@ html;
   </footer>
 html;
 
-    
-    
+
+
       View::set('imgUser',$imgUser);
       View::set('header',$this->_contenedor->header($extraHeader));
       View::set('footer',$extraFooter);
@@ -216,10 +216,10 @@ html;
 
     public function Actualizar(){
 
-    
+
         $documento = new \stdClass();
-  
-  
+
+
           if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
               $id_registro = $_POST['id_registro'];
@@ -231,9 +231,10 @@ html;
               $fecha_nacimiento = $_POST['fecha_nacimiento'];
               $email = $_POST['email'];
               $telefono = $_POST['telefono'];
+              $linea_principal = $_POST['linea_principal'];
               $alergias = $_POST['alergias'];
-             
-  
+
+
               $documento->_nombre = $nombre;
               $documento->_segundo_nombre = $segundo_nombre;
               $documento->_apellido_paterno = $apellido_paterno;
@@ -242,6 +243,7 @@ html;
               $documento->_fecha_nacimiento = $fecha_nacimiento;
               $documento->_email = $email;
               $documento->_telefono = $telefono;
+              $documento->_linea_principal = $linea_principal;
               $documento->_alergias = $alergias;
 
 
@@ -254,8 +256,8 @@ html;
                   echo "fail";
                // header("Location: /Home/");
               }
-  
-              
+
+
           } else {
               echo 'fail REQUEST';
           }
@@ -263,54 +265,49 @@ html;
     }
 
     public function uploadImage(){
-     
+
+
       $documento = new \stdClass();
+
+
       if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
-          $numero_rand = $this->generateRandomString();
           $email = $_POST['email_'];
           $img = $_FILES["file-input"];
           $img_name = $img["tmp_name"];
 
-          $this->deleteFile($email);
+          move_uploaded_file($img["tmp_name"], "img/users_conave/".$email.".png");
 
-          move_uploaded_file($img["tmp_name"], "img/users_conave/".$numero_rand.".png");
-  
-          $documento->_img = $numero_rand.'.png';
+          $documento->_img = $email.'.png';
           $documento->_email = $email;
- 
+
           $id = RegisterDao::updateImg($documento);
 
           if($id){
 
-            $data = [
-                'status' => 'success',
-                'img' => $numero_rand.'.png'
-            ];
-               //echo "success";
+            // $data = [
+            //     'status' => 'success',
+            //     'img' => $email.'.png'
+            // ];
+               echo "success";
           }else{
-               //echo "fail";
-            $data = [
-                'status' => 'fail'
-                
-            ];
+               echo "fail";
+            // $data = [
+            //     'status' => 'fail'
+
+            // ];
           }
-          echo json_encode($data);
+
+         // echo json_encode($data);
+
+
       } else {
           echo 'fail REQUEST';
       }
     }
 
-    function generateRandomString($length = 10) { 
-        return substr(str_shuffle("0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"), 0, $length); 
-    } 
-    
-    public function deleteFile($id_registro){
-        $regitser = RegisterDao::getUserRegister($id_registro)[0];
-        if (file_exists('img/users_conave/'.$regitser['img'])) {
-           // echo "El fichero ". $regitser['img']." existe";
-            unlink('img/users_conave/'.$regitser['img']);
-        }
+    function generateRandomString($length = 10) {
+        return substr(str_shuffle("0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"), 0, $length);
     }
 
 
