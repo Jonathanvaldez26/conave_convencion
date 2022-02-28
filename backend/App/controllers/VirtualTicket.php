@@ -27,7 +27,7 @@ class VirtualTicket extends Controller{
 html;
       View::set('header',$this->_contenedor->header($extraHeader));
       View::set('footer',$this->_contenedor->footer($extraFooter));
-      View::render("virtual_ticket_all");
+      View::render("ticket_work");
     }
 
 }
