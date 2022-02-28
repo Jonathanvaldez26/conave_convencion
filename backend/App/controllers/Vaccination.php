@@ -128,7 +128,8 @@ html;
             if($value['count'] >= 1){
                 $vacunas = VaccinationDao::getByIdUser($_SESSION['utilerias_asistentes_id']);
                 foreach ($vacunas as $key => $value) {
-                    $tabla = <<<html
+
+                    $tabla .=<<<html
                     <div class="col-xl-4 col-md-6 mb-xl-0 mb-4">
                             <div class="card card-blog card-plain">
                                 <div class="position-relative">
@@ -137,12 +138,25 @@ html;
                                     </a>
                                 </div>
                                 <div class="card-body px-1 pb-0">
-                                    <p class="text-gradient text-dark mb-2 text-sm text-center">Comprobante de Vacunación Cargado el {$value['fecha_carga_documento']}. Registro {$value['numero_dosis']} Dosis para su comprobante.</p>
-                                    <a>
-                                        <h6 class="text-center">
-                                            Un Ejecutivo Está Validando su Comprobante de Vacunación.
-                                        </h6>
-                                    </a>
+                                    <p class="text-gradient text-dark mb-2 text-sm text-center">Comprobante de Vacunación Cargado el {$value['fecha_carga_documento']}. Registró {$value['numero_dosis']} Dosis para su comprobante.</p>
+html;
+//                     if ($vale['validado'] != 1) {
+//                         $tabla .= <<<html
+//                         <h6 class="text-center">
+//                             Se ha Validado Correctamente su Comprobante de Vacunación.
+//                         </h6>
+// html;
+//                     } else {
+//                         $tabla .= <<<html
+//                         <h6 class="text-center">
+//                             Un Ejecutivo Está Validando su Comprobante de Vacunación.
+//                         </h6>
+// html;
+//                     }
+
+                    $tabla .= <<<html
+                                   
+                                    
                                 </div>
                                 <br>
                                 <div class="text-center">
