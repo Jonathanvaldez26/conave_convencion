@@ -87,7 +87,7 @@ html;
                                     window.location.replace("/Account/");
                                 });
                             } else {
-                                swal("Hubo un error al actualizar tus datos!", "Comunicate con el administrador del sitio", "error").
+                                swal("Usted No Actualizo Nada!", "", "warning").
                                 then((value) => {
                                     window.location.replace("/Account/")
                                 });
@@ -188,78 +188,6 @@ html;
         }      
 
         $userData = RegisterDao::getUserRegister($userData['email'])[0];
-
-        //genero
-        if($userData['genero'] == 'Hombre'){
-            $optionsGenero =<<<html
-                <option value="Hombre" selected>Hombre</option>
-                <option value="Mujer">Mujer</option>
-                <option value="Otro">Otro</option>
-html;
-
-        }elseif($userData['genero'] == 'Mujer'){
-            $optionsGenero =<<<html
-                <option value="Hombre">Hombre</option>
-                <option value="Mujer" selected>Mujer</option>
-                <option value="Otro">Otro</option>
-html;
-
-        }else{
-            $optionsGenero =<<<html
-                <option value="Hombre">Hombre</option>
-                <option value="Mujer">Mujer</option>
-                <option value="Otro" selected>Otro</option>
-html;
-
-        }
-
-        //actividad
-        if($userData['actividad'] == 'caminata_3k'){
-            $optionsActividad =<<<html
-            <input value="caminata_3k">Caminata 3k</input>
-html;
-
-        }elseif($userData['actividad'] == 'carrera_5k'){
-            $optionsActividad =<<<html
-            <option value="carrera_5k" selected>Carrera 5k</option>
-html;
-
-        }
-
-        //talla
-        if($userData['talla_playera'] == 'Chica'){
-            $optionsTalla =<<<html
-            <option value="Chica" selected>Chica</option>
-            <option value="Mediana">Mediana</option>
-            <option value="Grande">Grande</option>
-            <option value="Extra_Grande">Extra Grande</option>
-html;
-
-        }elseif($userData['talla_playera'] == 'Mediana'){
-            $optionsTalla =<<<html
-            <option value="Chica">Chica</option>
-            <option value="Mediana" selected>Mediana</option>
-            <option value="Grande">Grande</option>
-            <option value="Extra_Grande">Extra Grande</option>
-html;
-
-        }elseif($userData['talla_playera'] == 'Grande'){
-            $optionsTalla =<<<html
-            <option value="Chica">Chica</option>
-            <option value="Mediana">Mediana</option>
-            <option value="Grande" selected >Grande</option>
-            <option value="Extra_Grande">Extra Grande</option>
-html;
-
-        }elseif($userData['talla_playera'] == 'Extra_Grande'){
-            $optionsTalla =<<<html
-            <option value="Chica">Chica</option>
-            <option value="Mediana">Mediana</option>
-            <option value="Grande">Grande</option>
-            <option value="Extra_Grande" selected>Extra Grande</option>
-html;
-
-        }
 
         if($userData['img'] != ''){
             $imgUser=<<<html
