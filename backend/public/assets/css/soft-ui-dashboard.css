@@ -36819,4 +36819,9 @@ svg.leaflet-image-layer.leaflet-interactive path {
   background: white;
 }
 
+#btn-edit:hover{
+  background: white;
+  opacity: 100%;
+}
+
 /*# sourceMappingURL=dashboard-pro.css.map */

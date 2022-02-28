@@ -69,7 +69,7 @@
                                     <div class="avatar avatar-xl position-relative">
                                         <?php echo $imgUser; ?>
                                     </div>
-                                    <button id="btn-edit" class="btn btn-icon-only btn-rounded btn-outline-success mb-0 me-2 btn-sm d-flex align-items-center justify-content-center"><i class="fas fa-edit" aria-hidden="true"></i></button> 
+                                    <span id="btn-edit" class="btn btn-icon-only btn-rounded btn-outline-success mb-0 me-2 btn-sm d-flex align-items-center justify-content-center"><i class="fas fa-edit" aria-hidden="true"></i></span> 
                                 </label>
                                 
                                 <input id="file-input" name="file-input" type="file" />
