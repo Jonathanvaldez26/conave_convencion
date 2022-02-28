@@ -200,7 +200,7 @@ html;
     
       View::set('imgUser',$imgUser);
       View::set('header',$this->_contenedor->header($extraHeader));
-      View::set('footer',$extraFooter);
+      View::set('footer',$this->_contenedor->header($extraFooter));
       View::set('userData', $userData);
       View::set('optionsLineaPrincipal',$optionsLineaPrincipal);
       View::set('optionsGenero',$optionsGenero);
