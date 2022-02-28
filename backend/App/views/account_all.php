@@ -136,7 +136,7 @@
                                         <input id="apellido_materno" name="apellido_materno" maxlength="29" pattern="[a-zA-Z ÑñáÁéÉíÍóÚ]*{2,254}" class="form-control" type="text" placeholder="Thompson" required="required" onfocus="focused(this)" onfocusout="defocused(this)" value="<?= $userData['apellido_materno'] ?>" style="text-transform:uppercase;" onkeyup="javascript:this.value=this.value.toUpperCase();">
                                     </div>
                                 </div>
-                                <div class="col-sm-4 col-12">
+                                <div class="col-sm-6 col-12 col-lg-4">
                                     <label class="form-label mt-4">Me identifico como: *</label>
                                     <select class="form-control" style="cursor: pointer;" name="genero" id="genero" placeholder="Genero">
                                         <option value="">Selecciona una opción</option>
@@ -146,7 +146,7 @@
                                     </select>
                                     <!-- <input type="text" class="form-control" value="<?= $userData['genero'] ?>" disabled> -->
                                 </div>
-                                <div class="col-sm-4 col-12">
+                                <div class="col-sm-6 col-12 col-lg-4">
 
                                     <label class="form-label mt-4">Fecha de Nacimiento *</label>
 
@@ -171,7 +171,7 @@
                                             <input id="telefono" name="telefono" maxlength="10" pattern="[0-9]" class="form-control" type="number" placeholder="+40 735 631 620" onfocus="focused(this)" onfocusout="defocused(this)" value="<?= $userData['telefono'] ?>">
                                         </div>
                                     </div>
-                                    <div class="col-md-4 align-self-center">
+                                    <div class="col-lg-4 col-12">
                                         <label class="form-label mt-4">Pertenezco a la Línea ASOFARMA</label>
                                         <!-- <select class="form-control" style="cursor: pointer;" name="linea_principal" id="linea_principal" tabindex="-1" data-choice="active">
                                                 <option value="" disabled>Selecciona una opción</option>

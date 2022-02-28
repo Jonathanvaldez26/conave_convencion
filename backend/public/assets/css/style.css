@@ -2,7 +2,7 @@
     height: 350px !important;
 }
 
-@media (max-width: 576px) {
+@media (max-width: 990px) {
     #days-desk{
         display: none !important;
     }
@@ -16,7 +16,7 @@
     }
 }
 
-@media (min-width: 576px) {
+@media (min-width: 990px) {
     #days-movil{
         display: none !important;
     }
