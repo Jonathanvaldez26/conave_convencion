@@ -1030,9 +1030,6 @@ html;
                     }
                 });
 
-                
-
-
             });
         </script>
        
@@ -1050,8 +1047,6 @@ html;
         View::set('header',$extraHeader);
         View::set('footer',$extraFooter);
         View::render('confirm_pass');
-       
-        
     }
 
     public function finalize(){

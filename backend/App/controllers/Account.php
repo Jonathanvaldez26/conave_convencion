@@ -216,7 +216,7 @@ html;
         //actividad
         if($userData['actividad'] == 'caminata_3k'){
             $optionsActividad =<<<html
-            <option value="caminata_3k" selected>Caminata 3k</option>
+            <input value="caminata_3k">Caminata 3k</input>
 html;
 
         }elseif($userData['actividad'] == 'carrera_5k'){
@@ -308,7 +308,6 @@ html;
               $actividad = $_POST['actividad'];
               $alergias = $_POST['alergias'];
 
-
               $documento->_nombre = $nombre;
               $documento->_segundo_nombre = $segundo_nombre;
               $documento->_apellido_paterno = $apellido_paterno;
@@ -322,7 +321,6 @@ html;
               $documento->_actividad = $actividad;
               $documento->_alergias = $alergias;
 
-
               $id = DataDao::update($documento);
 
               if($id){
@@ -332,7 +330,6 @@ html;
                   echo "fail";
                // header("Location: /Home/");
               }
-
 
           } else {
               echo 'fail REQUEST';
