@@ -190,10 +190,6 @@
                                     </div>
                                     <div class="col-md-3 align-self-center">
                                         <label class="form-label mt-4">Talla de Playera</label>
-                                        <!-- <select class="form-control" style="cursor: pointer;" name="talla" id="talla" tabindex="-1" data-choice="active">
-                                                <option value="" selected disabled>Selecciona una opción</option>
-                                                
-                                            </select> -->
                                         <input class="form-control" id="talla" name="talla" type="text" value="<?= $userData['talla_playera'] ?>" readonly />
                                     </div>
                                     <div class="col-md-6">

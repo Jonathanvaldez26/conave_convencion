@@ -48,11 +48,8 @@ class Account extends Controller{
                
 html;
         }      
-        
 
-        
         $userData = RegisterDao::getUserRegister($userData['email'])[0];
-
 
         //genero
         if($userData['genero'] == 'Hombre'){
@@ -82,12 +79,10 @@ html;
         if($userData['actividad'] == 'caminata_3k'){
             $optionsActividad =<<<html
             <option value="caminata_3k" selected>Caminata 3k</option>
-            <option value="carrera_5k">Carrera 5k</option>
 html;
 
         }elseif($userData['actividad'] == 'carrera_5k'){
             $optionsActividad =<<<html
-            <option value="caminata_3k">Caminata 3k</option>
             <option value="carrera_5k" selected>Carrera 5k</option>
 html;
 
