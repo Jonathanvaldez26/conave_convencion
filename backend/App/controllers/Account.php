@@ -305,6 +305,7 @@ html;
               $telefono = $_POST['telefono'];
               $linea_principal = $_POST['linea_principal'];
               $talla = $_POST['talla'];
+              $actividad = $_POST['actividad'];
               $alergias = $_POST['alergias'];
 
 
@@ -318,6 +319,7 @@ html;
               $documento->_telefono = $telefono;
               $documento->_linea_principal = $linea_principal;
               $documento->_talla = $talla;
+              $documento->_actividad = $actividad;
               $documento->_alergias = $alergias;
 
 
