@@ -190,10 +190,6 @@
                                     </div>
                                     <div class="col-md-3 align-self-center">
                                         <label class="form-label mt-4">Talla de Playera</label>
-                                        <!-- <select class="form-control" style="cursor: pointer;" name="talla" id="talla" tabindex="-1" data-choice="active">
-                                                <option value="" selected disabled>Selecciona una opción</option>
-                                                
-                                            </select> -->
                                         <input class="form-control" id="talla" name="talla" type="text" value="<?= $userData['talla_playera'] ?>" readonly />
                                     </div>
                                     <div class="col-md-6">
@@ -220,88 +216,3 @@
         </div>
         <?php echo $footer; ?>
 </main>
-<script src="/js/jquery.min.js"></script>
-<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
-
-<script>
-    $(document).ready(function() {
-
-        $("#update_form").on("submit", function(event) {
-            event.preventDefault();
-
-            var formData = new FormData(document.getElementById("update_form"));
-            console.log(formData);
-            $.ajax({
-                url: "/Account/Actualizar",
-                type: "POST",
-                data: formData,
-                cache: false,
-                contentType: false,
-                processData: false,
-                beforeSend: function() {
-                    console.log("Procesando....");
-
-
-                },
-                success: function(respuesta) {
-
-                    if (respuesta == 'success') {
-                        swal("Se actualizaron tus datos correctamente!", "", "success").
-                        then((value) => {
-                            window.location.replace("/Home");
-                        });
-                    } else {
-                        swal("Hubo un error al actualizar tus datos!", "Comunicate con el administrador del sitio", "error").
-                        then((value) => {
-                            window.location.replace("/Home")
-                        });
-                    }
-                },
-                error: function(respuesta) {
-                    console.log(respuesta);
-                }
-
-            });
-        });
-
-        $(document).on('change', '#file-input', function(e) {
-            $("#form_upload_image").submit();
-        });
-
-        $("#form_upload_image").on("submit", function(event) {
-            event.preventDefault();
-            // alert("funciona");
-
-            var formData = new FormData(document.getElementById("form_upload_image"));
-            console.log(formData);
-
-            $.ajax({
-                url: "/Account/uploadImage",
-                type: "POST",
-                data: formData,
-                dataType: "json",
-                cache: false,
-                contentType: false,
-                processData: false,
-                beforeSend: function() {
-                    console.log("Procesando....");
-
-
-                },
-                success: function(respuesta) {
-                    console.log(respuesta);
-                    if(respuesta.status == "success"){
-                        //location.reload();
-                        $("#img-user").attr("src","../../../img/users_conave/"+respuesta.img);
-                    }
-                   
-                },
-                error: function(respuesta) {
-                    console.log(respuesta);
-                }
-
-            });
-        });
-
-    });
-</script>
