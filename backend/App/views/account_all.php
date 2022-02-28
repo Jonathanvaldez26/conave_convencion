@@ -69,8 +69,9 @@
                                     <div class="avatar avatar-xl position-relative">
                                         <?php echo $imgUser; ?>
                                     </div>
+                                    <button id="btn-edit" class="btn btn-icon-only btn-rounded btn-outline-success mb-0 me-2 btn-sm d-flex align-items-center justify-content-center"><i class="fas fa-edit" aria-hidden="true"></i></button> 
                                 </label>
-
+                                
                                 <input id="file-input" name="file-input" type="file" />
                             </div>
                         </form>    
@@ -101,6 +102,7 @@
                     <div class="card-header">
                         <h5>Información Básica</h5>
                         <?php $prueba; ?>
+                        
                         <?php //$userData; 
                         ?>
                     </div>
