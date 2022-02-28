@@ -179,8 +179,8 @@
                         </div>
                     </div>
                 </div>
-                <div class="row mt-4">
-                    <div class="col-md-6">
+                <div class="row  mt-md-4 mt-0">
+                    <div class="col-md-6 mt-md-0 mt-4">
                         <div class="card">
                             <div class="card-body text-center">
                                 <div class="col-12 text-end">
@@ -191,7 +191,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-6 mt-md-0 mt-5">
+                    <div class="col-md-6 mt-md-0 mt-4">
                         <div class="card">
                             <div class="card-body text-center">
                                 <div class="col-12 text-end">
@@ -215,7 +215,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-6 mt-md-0 mt-5">
+                    <div class="col-md-6 mt-md-0 mt-4">
                         <div class="card">
                             <div class="card-body text-center">
                                 <div class="col-12 text-end">
@@ -239,7 +239,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-6 mt-md-0 mt-5">
+                    <div class="col-md-6 mt-md-0 mt-4">
                         <div class="card">
                             <div class="card-body text-center">
                                 <div class="col-12 text-end">
@@ -263,7 +263,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-6 mt-md-0 mt-5">
+                    <div class="col-md-6 mt-md-0 mt-4">
                         <div class="card">
                             <div class="card-body text-center">
                                 <div class="col-12 text-end">
