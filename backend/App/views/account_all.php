@@ -282,7 +282,7 @@
                 url: "/Account/uploadImage",
                 type: "POST",
                 data: formData,
-                // dataType: "json",
+                dataType: "json",
                 cache: false,
                 contentType: false,
                 processData: false,
@@ -293,8 +293,9 @@
                 },
                 success: function(respuesta) {
                     console.log(respuesta);
-                    if(respuesta == "success"){
-                        location.reload();
+                    if(respuesta.status == "success"){
+                        //location.reload();
+                        $("#img-user").attr("src","../../../img/users_conave/"+respuesta.img);
                     }
                    
                 },
