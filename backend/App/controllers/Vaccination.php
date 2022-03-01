@@ -152,7 +152,7 @@ html;
 //                             Un Ejecutivo Está Validando su Comprobante de Vacunación.
 //                         </h6>
 // html;
-//                     } else {
+//                     } else if ($value['status'] == 0) {
 //                         $tabla .=<<<html
 //                             <div class="col-xl-4 col-md-6 mb-xl-0 mb-4">
 //                                 <div class="card card-blog card-plain">

@@ -36824,4 +36824,8 @@ svg.leaflet-image-layer.leaflet-interactive path {
   opacity: 100%;
 }
 
+#email-error{
+  color: red;
+}
+
 /*# sourceMappingURL=dashboard-pro.css.map */
