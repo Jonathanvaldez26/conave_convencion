@@ -736,7 +736,7 @@ html;
         }
 
 
-        if($userData['code'] === $code_received){
+        if($userData['code'] == $code_received){
             //echo "Se verifico codigo correctamente";
             View::set('optionsLineaPrincipal',$optionsLineaPrincipal);
             View::set('userData', $userData);
