@@ -682,7 +682,7 @@ html;
         $lineaGeneral = LineaGeneralDao::getLineaPrincialAll();
 
         foreach ($lineaGeneral as $key => $value) {
-            $optionsLineaPrincipal.=<<<html
+            $optionsLineaPrincipal =<<<html
                 <option value="{$value['id_linea_principal']}">{$value['nombre']}</option>
 html;
         }    
@@ -690,7 +690,7 @@ html;
         $UnidadNegocio = UnidadNegocioDao::getBuAll();
 
         foreach ($UnidadNegocio as $key => $value) {
-            $optionsBu.=<<<html
+            $optionsBu =<<<html
                 <option value="{$value['id_bu']}">{$value['nombre']}</option>
 html;
         }
@@ -698,7 +698,7 @@ html;
         $Posiciones = PosicionesDao::getPosicionesAll();
 
         foreach ($Posiciones as $key => $value) {
-            $optionsPosiciones.=<<<html
+            $optionsPosiciones =<<<html
                 <option value="{$value['id_posicion']}">{$value['nombre']}</option>
 html;
         } 
@@ -706,7 +706,7 @@ html;
         $Estados = RegisterDao::getEstadosAll();
 
         foreach ($Estados as $key => $value) {
-            $optionsEstados.=<<<html
+            $optionsEstados =<<<html
                 <option value="{$value['id_estado']}">{$value['nombre']}</option>
 html;
         } 
@@ -721,14 +721,14 @@ html;
 html;
 
         }elseif($userData['genero'] == 'Mujer'){
-            $optionsGenero .=<<<html
+            $optionsGenero =<<<html
                 <option value="Hombre">Masculino</option>
                 <option value="Mujer" selected>Femenino</option>
                
 html;
 
         }else{
-            $optionsGenero .=<<<html
+            $optionsGenero =<<<html
                 <option value="Hombre">Masculino</option>
                 <option value="Mujer">Femenino</option>
         
