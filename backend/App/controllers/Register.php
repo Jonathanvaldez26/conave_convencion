@@ -713,26 +713,24 @@ html;
         
         $userData = RegisterDao::getUserRegister($email)[0];
 
-        if($userData['genero'] == 'Hombre'){
-            $optionsGenero .=<<<html
+        if($userData['genero'] == "Hombre"){
+            $optionsGenero = <<<html
                 <option value="Hombre" selected>Masculino</option>
                 <option value="Mujer">Femenino</option>
-                
 html;
 
-        }elseif($userData['genero'] == 'Mujer'){
-            $optionsGenero .=<<<html
+        }
+        elseif($userData['genero'] == "Mujer"){
+            $optionsGenero = <<<html
                 <option value="Hombre">Masculino</option>
                 <option value="Mujer" selected>Femenino</option>
-               
 html;
 
         }
 //         else{
-//             $optionsGenero =<<<html
+//             $optionsGenero = <<<html
 //                 <option value="Hombre">Masculino</option>
 //                 <option value="Mujer">Femenino</option>
-        
 // html;   
 //         }
 
@@ -743,7 +741,7 @@ html;
             View::set('userData', $userData);
             View::set('fecha_min', $fecha_min);
             View::set('fecha_max', $fecha_max);
-            // View::set('optionsGenero',$optionsGenero);
+            View::set('optionsGenero',$optionsGenero);
             View::set('optionsBu',$optionsBu);
             View::set('optionsPosiciones',$optionsPosiciones);
             View::set('optionsEstados',$optionsEstados);
