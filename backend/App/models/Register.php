@@ -71,4 +71,13 @@ sql;
           return $mysqli->update($query1, $parametros1);
       }
 
+      public static function getEstadosAll(){
+        $mysqli = Database::getInstance(true);
+        $query =<<<sql
+        SELECT * FROM estados
+sql;
+
+        return $mysqli->queryAll($query);
+    }
+
 }

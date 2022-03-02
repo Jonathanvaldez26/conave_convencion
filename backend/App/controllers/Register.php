@@ -5,9 +5,12 @@ use \Core\View;
 use \Core\MasterDom;
 use \App\models\Register AS RegisterDao;
 use \App\models\LineaGeneral AS LineaGeneralDao;
+use \App\models\UnidadNegocio AS UnidadNegocioDao;
+use \App\models\Posiciones AS PosicionesDao;
 use \App\models\Data AS DataDao; 
 use \App\controllers\Mailer;
 use \App\controllers\Contenedor;
+use App\models\UnidadNegocio;
 use Core\Controller;
 
 class Register{
@@ -672,39 +675,64 @@ html;
         $code_received  = $digit1.$digit2.$digit3.$digit4;
         $optionsGenero = '';
         $optionsLineaPrincipal = '';
+        $optionsBu = '';
+        $optionsPosiciones = '';
+        $optionsEstados = '';
 
         $lineaGeneral = LineaGeneralDao::getLineaPrincialAll();
 
         foreach ($lineaGeneral as $key => $value) {
             $optionsLineaPrincipal.=<<<html
                 <option value="{$value['id_linea_principal']}">{$value['nombre']}</option>
-               
 html;
-        }        
+        }    
+        
+        $UnidadNegocio = UnidadNegocioDao::getBuAll();
+
+        foreach ($UnidadNegocio as $key => $value) {
+            $optionsBu.=<<<html
+                <option value="{$value['id_bu']}">{$value['nombre']}</option>
+html;
+        }
+
+        $Posiciones = PosicionesDao::getPosicionesAll();
+
+        foreach ($Posiciones as $key => $value) {
+            $optionsPosiciones.=<<<html
+                <option value="{$value['id_posicion']}">{$value['nombre']}</option>
+html;
+        } 
+
+        $Estados = RegisterDao::getEstadosAll();
+
+        foreach ($Estados as $key => $value) {
+            $optionsEstados.=<<<html
+                <option value="{$value['id_estado']}">{$value['nombre']}</option>
+html;
+        } 
         
         $userData = RegisterDao::getUserRegister($email)[0];
 
         if($userData['genero'] == 'Hombre'){
             $optionsGenero =<<<html
-                <option value="Hombre" selected>Hombre</option>
-                <option value="Mujer">Mujer</option>
-                <option value="Otro">Otro</option>
+                <option value="Hombre" selected>Masculino</option>
+                <option value="Mujer">Femenino</option>
+                
 html;
 
         }elseif($userData['genero'] == 'Mujer'){
             $optionsGenero =<<<html
-                <option value="Hombre">Hombre</option>
-                <option value="Mujer" selected>Mujer</option>
-                <option value="Otro">Otro</option>
+                <option value="Hombre">Masculino</option>
+                <option value="Mujer" selected>Femenino</option>
+               
 html;
 
         }else{
             $optionsGenero =<<<html
-                <option value="Hombre">Hombre</option>
-                <option value="Mujer">Mujer</option>
-                <option value="Otro" selected>Otro</option>
-html;
-
+                <option value="Hombre">Masculino</option>
+                <option value="Mujer">Femenino</option>
+        
+html;   
         }
 
 
@@ -715,6 +743,9 @@ html;
             View::set('fecha_min', $fecha_min);
             View::set('fecha_max', $fecha_max);
             View::set('optionsGenero',$optionsGenero);
+            View::set('optionsBu',$optionsBu);
+            View::set('optionsPosiciones',$optionsPosiciones);
+            View::set('optionsEstados',$optionsEstados);
            // View::set('optionActividad',$optionActividad);
             View::set('email',$email);
             View::set('header',$extraHeader);
@@ -863,6 +894,7 @@ html;
 
               $id_registro = $_POST['id_registro'];
               $nombre = $_POST['nombre'];
+              $numero_empleado = $_POST['numero_empleado'];
               $segundo_nombre = $_POST['segundo_nombre'];
               $apellido_paterno = $_POST['apellido_paterno'];
               $apellido_materno = $_POST['apellido_materno'];
@@ -871,9 +903,13 @@ html;
               $email = $_POST['email'];
               $telefono = $_POST['telefono'];
               $linea_principal = $_POST['linea_principal'];
+              $bu = $_POST['bu'];
+              $posicion = $_POST['posicion'];
               $actividad = $_POST['actividad'];
-              $talla = $_POST['talla'];
+              $talla = $_POST['talla_playera'];
               $alergias = $_POST['alergias'];
+              $residencia = $_POST['residencia'];
+              $aeropuerto = $_POST['aeropuerto'];
              
   
               $documento->_nombre = $nombre;
@@ -888,6 +924,12 @@ html;
               $documento->_actividad = $actividad;
               $documento->_talla = $talla;
               $documento->_alergias = $alergias;
+              $documento->_numero_empleado = $numero_empleado;
+              $documento->_bu = $bu;
+              $documento->_posicion = $posicion;
+              $documento->_residencia = $residencia;
+              $documento->_aeropuerto = $aeropuerto;
+              
 
 
               $id = DataDao::update($documento);
