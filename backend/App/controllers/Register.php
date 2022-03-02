@@ -727,16 +727,10 @@ html;
                
 html;
 
-        }else{
-            $optionsGenero =<<<html
-                <option value="Hombre">Masculino</option>
-                <option value="Mujer">Femenino</option>
-        
-html;   
         }
 
 
-        if($userData['code'] == $code_received){
+        if($userData['code'] === $code_received){
             //echo "Se verifico codigo correctamente";
             View::set('optionsLineaPrincipal',$optionsLineaPrincipal);
             View::set('userData', $userData);
