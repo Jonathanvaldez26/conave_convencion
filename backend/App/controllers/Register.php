@@ -552,9 +552,20 @@ html;
             <link id="pagestyle" href="/assets/css/soft-ui-dashboard.css?v=1.0.5" rel="stylesheet" />
             <link rel="stylesheet" href="/css/alertify/alertify.core.css" />
             <link rel="stylesheet" href="/css/alertify/alertify.default.css" id="toggleCSS" />
+            <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
+            <style>
+            .select2-container--default .select2-selection--single {
+            height: 38px!important;
+            border-radius: 8px!important;
+            }
+            .select2-container--default .select2-selection--single .select2-selection__rendered {
+                color: #444;
+                line-height: 32px;
+            }
+            </style>
+           
+            
             <!--script src="../../../assets/js/plugins/choices.min.js"></script-->
-
-
 html;
         $extraFooter =<<<html
      
@@ -567,27 +578,27 @@ html;
             <script src="../../../assets/js/core/bootstrap.min.js"></script>
             <script src="../../../assets/js/plugins/perfect-scrollbar.min.js"></script>
             <script src="../../../assets/js/plugins/smooth-scrollbar.min.js"></script>
-            <script src="../../../assets/js/plugins/multistep-form.js"></script>
+            <!--<script src="../../../assets/js/plugins/multistep-form.js"></script>-->
             <script src="../../../assets/js/plugins/choices.min.js"></script>
             <script type="text/javascript" wfd-invisible="true">
-                if (document.getElementById('choices-button')) {
-                    var element = document.getElementById('choices-button');
-                    const example = new Choices(element, {});
-                }
-                var choicesTags = document.getElementById('choices-tags');
-                var color = choicesTags.dataset.color;
-                if (choicesTags) {
-                    const example = new Choices(choicesTags, {
-                    delimiter: ',',
-                    editItems: true,
-                    maxItemCount: 5,
-                    removeItemButton: true,
-                    addItems: true,
-                    classNames: {
-                        item: 'badge rounded-pill choices-' + color + ' me-2'
-                    }
-                    });
-                }
+                // if (document.getElementById('choices-button')) {
+                //     var element = document.getElementById('choices-button');
+                //     const example = new Choices(element, {});
+                // }
+                // var choicesTags = document.getElementById('choices-tags');
+                // var color = choicesTags.dataset.color;
+                // if (choicesTags) {
+                //     const example = new Choices(choicesTags, {
+                //     delimiter: ',',
+                //     editItems: true,
+                //     maxItemCount: 5,
+                //     removeItemButton: true,
+                //     addItems: true,
+                //     classNames: {
+                //         item: 'badge rounded-pill choices-' + color + ' me-2'
+                //     }
+                //     });
+                // }
             </script>
             <!-- Kanban scripts -->
             <script src="../../../assets/js/plugins/dragula/dragula.min.js"></script>
@@ -604,6 +615,12 @@ html;
             <!-- Github buttons -->
             <script async defer src="https://buttons.github.io/buttons.js"></script>
             <!-- Control Center for Soft Dashboard: parallax effects, scripts for the example pages etc -->
+            <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+            <script>
+            $(document).ready(function() {
+                $('#cp').select2();
+            });
+            </script>
             <script>
                 $(document).ready(function(){
                     $.validator.addMethod("checkUserCorreo",function(value, element) {
@@ -651,9 +668,7 @@ html;
                             }
                         }
                     });
-
                 });
-                
             
             </script>
       
@@ -678,30 +693,7 @@ html;
         $optionsBu = '';
         $optionsPosiciones = '';
         $optionsEstados = '';
-
-        $lineaGeneral = LineaGeneralDao::getLineaPrincialAll();
-
-        foreach ($lineaGeneral as $key => $value) {
-            $optionsLineaPrincipal .=<<<html
-                <option value="{$value['id_linea_principal']}">{$value['nombre']}</option>
-html;
-        }    
-        
-        $UnidadNegocio = UnidadNegocioDao::getBuAll();
-
-        foreach ($UnidadNegocio as $key => $value) {
-            $optionsBu .=<<<html
-                <option value="{$value['id_bu']}">{$value['nombre']}</option>
-html;
-        }
-
-        $Posiciones = PosicionesDao::getPosicionesAll();
-
-        foreach ($Posiciones as $key => $value) {
-            $optionsPosiciones .=<<<html
-                <option value="{$value['id_posicion']}">{$value['nombre']}</option>
-html;
-        } 
+        $optionsCP = '';
 
          $userData = RegisterDao::getUserRegister($email)[0];
 
@@ -733,7 +725,41 @@ html;
                 <option value="{$value['id_estado']}">{$value['nombre']}</option>
 html;
         } 
+
+        $lineaGeneral = LineaGeneralDao::getLineaPrincialAll();
+
+        foreach ($lineaGeneral as $key => $value) {
+            $optionsLineaPrincipal .=<<<html
+                <option value="{$value['id_linea_principal']}">{$value['nombre']}</option>
+html;
+        }    
         
+        $UnidadNegocio = UnidadNegocioDao::getBuAll();
+
+        foreach ($UnidadNegocio as $key => $value) {
+            $optionsBu .=<<<html
+                <option value="{$value['id_bu']}">{$value['nombre']}</option>
+html;
+        }
+
+        $Posiciones = PosicionesDao::getPosicionesAll();
+
+        foreach ($Posiciones as $key => $value) {
+            $optionsPosiciones .=<<<html
+                <option value="{$value['id_posicion']}">{$value['nombre']}</option>
+html;
+        } 
+
+//         $id = 9;
+
+//         $Cp = RegisterDao::getCp($id);
+//         foreach ($Cp as $key => $value) {
+//             $optionsCP .=<<<html
+//                 <option value="{$value['id']}">{$value['codigo_postal']} - {$value['colonia']} - {$value['del_mpio']} - {$value['estado']}</option>
+// html;
+//         } 
+
+
         if($userData['code'] === $code_received){
             //echo "Se verifico codigo correctamente";
             View::set('optionsLineaPrincipal',$optionsLineaPrincipal);
@@ -744,6 +770,7 @@ html;
             View::set('optionsBu',$optionsBu);
             View::set('optionsPosiciones',$optionsPosiciones);
             View::set('optionsEstados',$optionsEstados);
+            View::set('optionsCp',$optionsCP);
            // View::set('optionActividad',$optionActividad);
             View::set('email',$email);
             View::set('header',$extraHeader);
@@ -761,6 +788,15 @@ html;
 
         // print_r($user_register);
 
+    }
+
+    public function getCodesByState(){
+        $estado = $_POST['estado'];
+        $Cp = RegisterDao::getCp($estado);
+        
+        echo json_encode($Cp);
+
+        
     }
 
     public function Politicas(){
@@ -908,6 +944,7 @@ html;
               $alergias = $_POST['alergias'];
               $residencia = $_POST['residencia'];
               $aeropuerto = $_POST['aeropuerto'];
+              $cp = $_POST['cp'];
              
   
               $documento->_nombre = $nombre;
@@ -927,6 +964,7 @@ html;
               $documento->_posicion = $posicion;
               $documento->_residencia = $residencia;
               $documento->_aeropuerto = $aeropuerto;
+              $documento->_cp = $cp;
               
 
 

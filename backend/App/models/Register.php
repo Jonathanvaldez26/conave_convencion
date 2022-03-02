@@ -80,4 +80,13 @@ sql;
         return $mysqli->queryAll($query);
     }
 
+    public static function getCp($id){
+      $mysqli = Database::getInstance(true);
+      $query =<<<sql
+      SELECT * FROM cp where id_estado = $id
+sql;
+
+      return $mysqli->queryAll($query);
+  }
+
 }

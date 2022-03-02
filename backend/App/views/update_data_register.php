@@ -1,7 +1,8 @@
 <?php
 echo $header;
 ?>
-<script src="/backend/public/assets/js/plugins/choices.min.js"></script>
+
+<!-- <script src="/backend/public/assets/js/plugins/choices.min.js"></script> -->
 
 <body class="">
     <main class="main-content mt-0 ps">
@@ -142,17 +143,29 @@ echo $header;
                                             </select>
                                         </div>
 
-                                        <div class="col-lg-4 align-self-center">
-                                            <label class="form-label mt-4">Salgo del aeropuerto ubicado en la ciudad: </label>
-                                            <select class="form-control" style="cursor: pointer;" name="aeropuerto" id="aeropuerto" tabindex="-1" data-choice="active" required>
-                                                <option value="" disabled selected>Selecciona una opción</option>
-                                                <?php echo $optionsEstados; ?>
-                                            </select>
+                                        
+                                        <div class="col-md-4 align-self-center col-cp">
+                                            <div id="show-cp" style="visibility: hidden;">
+                                            <label class="form-label mt-4">Codigo Postal: </label>
+                                                <select class="form-control" name="cp" id="cp"> 
+                                                    <option value="" disabled selected>Seleccione una opción</option>
+                                                    <?php echo $optionsCp; ?>
+                                                </select>
+                                            </div>
+                                               
                                         </div>
+                                    </div>    
 
 
 
                                         <div class="row">
+                                            <div class="col-lg-3 align-self-center">
+                                                <label class="form-label mt-4">Aeropuerto: </label>
+                                                <select class="form-control" style="cursor: pointer;" name="aeropuerto" id="aeropuerto" tabindex="-1" data-choice="active" required>
+                                                    <option value="" disabled selected>Selecciona una opción</option>
+                                                    <?php echo $optionsEstados; ?>
+                                                </select>
+                                            </div>
                                             <div class="col-md-3 align-self-center">
                                                 <label class="form-label mt-4">Actividad: </label>
                                                 <select class="form-control" style="cursor: pointer;" name="actividad" id="actividad" tabindex="-1" data-choice="active" required>
@@ -171,15 +184,18 @@ echo $header;
                                                     <option value="Extra_Grande">Extra Grande</option>
                                                 </select>
                                             </div>
-                                            <div class="col-md-6">
+                                            <div class="col-md-3">
                                                 <label class="form-label mt-4">Restricciones alimenticias</label>
                                                 <input class="form-control" id="alergias" maxlength="149" name="alergias" data-color="dark" type="text" value="<?= $userData['alergias'] ?>" placeholder="Enter something" />
                                             </div>
                                         </div>
+                                        
+                                       
+
                                         <br>
                                         <br>
                                         <p> Los campos marcados con (*) son obligatorios.</p>
-                                    </div>
+                                    
 
 
                                     <!-- <div class="row">
@@ -205,3 +221,52 @@ echo $header;
 </body>
 
 <?php echo $footer; ?>
+
+<script>
+    $(document).ready(function(){
+        $("#residencia").on("change",function(){
+            // $(".col-cp").removeClass('d-none');
+            $("#show-cp").css('visibility','visible');
+            var estado = $(this).val();
+
+            // alert($(this).val());
+            $.ajax({
+                url: "/Register/getCodesByState",
+                type: "POST",
+                dataType: "json",
+                data: {estado},
+
+                cache: false,
+                beforeSend: function() {
+                    console.log("Procesando....");
+                    $('#cp')
+                        .find('option')
+                        .remove()
+                        .end();
+
+                },
+                success: function(respuesta) {
+                   // console.log(respuesta);
+
+                    var response = JSON.parse(JSON.stringify(respuesta));
+
+                    console.log(response);
+                    
+                    $.each(response, function(key, value) {
+                        console.log(key);
+                        console.log(value);
+                        $('#cp')
+                            .append($('<option>', { value : value.id })
+                            .text(value.codigo_postal + ' - ' + value.colonia + ' - ' + value.del_mpio + ' - ' +value.estado));
+                            
+                    });
+
+                },
+                error: function(respuesta) {
+                    console.log(respuesta);
+                }
+
+            });
+        });
+    });
+</script>
