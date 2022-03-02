@@ -107,8 +107,8 @@ echo $header;
                                         </div>
 
                                         <div class="col-lg-3 align-self-center">
-                                            <label class="form-label mt-4">Unidad de Negocio</label>
-                                            <select class="form-control" style="cursor: pointer;" name="bu" id="bu" tabindex="-1" data-choice="active" >
+                                            <label class="form-label mt-4">Unidad de Negocio *</label>
+                                            <select class="form-control" style="cursor: pointer;" name="bu" id="bu" tabindex="-1" data-choice="active" required >
                                                 <option value="" disabled selected>Selecciona una opción</option>
                                                 <?php echo $optionsBu; ?>
                                             </select>
@@ -135,7 +135,7 @@ echo $header;
                                         </div>
 
                                         <div class="col-lg-4 align-self-center">
-                                            <label class="form-label mt-4">Lugar de Residencia: </label>
+                                            <label class="form-label mt-4">Ciudad de Residencia: </label>
                                             <select class="form-control" style="cursor: pointer;" name="residencia" id="residencia" tabindex="-1" data-choice="active" required>
                                                 <option value="" disabled selected>Selecciona una opción</option>
                                                 <?php echo $optionsEstados; ?>

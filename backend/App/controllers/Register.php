@@ -703,15 +703,7 @@ html;
 html;
         } 
 
-        $Estados = RegisterDao::getEstadosAll();
-
-        foreach ($Estados as $key => $value) {
-            $optionsEstados .=<<<html
-                <option value="{$value['id_estado']}">{$value['nombre']}</option>
-html;
-        } 
-        
-        $userData = RegisterDao::getUserRegister($email)[0];
+         $userData = RegisterDao::getUserRegister($email)[0];
 
         if($userData['genero'] == "Hombre"){
             $optionsGenero = <<<html
@@ -727,14 +719,21 @@ html;
 html;
 
         }
-//         else{
-//             $optionsGenero = <<<html
-//                 <option value="Hombre">Masculino</option>
-//                 <option value="Mujer">Femenino</option>
-// html;   
-//         }
+        else{
+            $optionsGenero = <<<html
+                <option value="Hombre">Masculino</option>
+                <option value="Mujer">Femenino</option>
+html;   
+        }
 
+        $Estados = RegisterDao::getEstadosAll();
 
+        foreach ($Estados as $key => $value) {
+            $optionsEstados .=<<<html
+                <option value="{$value['id_estado']}">{$value['nombre']}</option>
+html;
+        } 
+        
         if($userData['code'] === $code_received){
             //echo "Se verifico codigo correctamente";
             View::set('optionsLineaPrincipal',$optionsLineaPrincipal);
