@@ -105,6 +105,14 @@ echo $header;
                                                 <input id="email" name="email" maxlength="49" class="form-control" type="email" placeholder="example@email.com" onfocus="focused(this)" onfocusout="defocused(this)" value="<?= $userData['email'] ?>" readonly>
                                             </div>
                                         </div>
+
+                                        <div class="col-lg-3 align-self-center">
+                                            <label class="form-label mt-4">Unidad de Negocio</label>
+                                            <select class="form-control" style="cursor: pointer;" name="bu" id="bu" tabindex="-1" data-choice="active" >
+                                                <option value="" disabled selected>Selecciona una opción</option>
+                                                <?php echo $optionsBu; ?>
+                                            </select>
+                                        </div>
                                         
                                         <div class="col-lg-3 align-self-center">
                                             <label class="form-label mt-4">Pertenezco a la Línea ASOFARMA</label>
@@ -114,13 +122,7 @@ echo $header;
                                             </select>
                                         </div>
 
-                                        <div class="col-lg-3 align-self-center">
-                                            <label class="form-label mt-4">Unidad de Negocio</label>
-                                            <select class="form-control" style="cursor: pointer;" name="bu" id="bu" tabindex="-1" data-choice="active" >
-                                                <option value="" disabled selected>Selecciona una opción</option>
-                                                <?php echo $optionsBu; ?>
-                                            </select>
-                                        </div>
+                                        
                                     </div>
                                     <div class="row">
 

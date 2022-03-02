@@ -698,7 +698,7 @@ html;
         $Posiciones = PosicionesDao::getPosicionesAll();
 
         foreach ($Posiciones as $key => $value) {
-            $optionsPosiciones =<<<html
+            $optionsPosiciones .=<<<html
                 <option value="{$value['id_posicion']}">{$value['nombre']}</option>
 html;
         } 
