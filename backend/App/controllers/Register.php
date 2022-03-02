@@ -727,13 +727,14 @@ html;
                
 html;
 
-        }else{
-            $optionsGenero =<<<html
-                <option value="Hombre">Masculino</option>
-                <option value="Mujer">Femenino</option>
-        
-html;   
         }
+//         else{
+//             $optionsGenero =<<<html
+//                 <option value="Hombre">Masculino</option>
+//                 <option value="Mujer">Femenino</option>
+        
+// html;   
+//         }
 
 
         if($userData['code'] === $code_received){
