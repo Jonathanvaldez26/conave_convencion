@@ -127,7 +127,7 @@ echo $header;
                                     <div class="row">
 
                                         <div class="col-lg-4 align-self-center">
-                                            <label class="form-label mt-4">Soy: </label>
+                                            <label class="form-label mt-4">Posición: </label>
                                             <select class="form-control" style="cursor: pointer;" name="posicion" id="posicion" tabindex="-1" data-choice="active" required>
                                                 <option value="" disabled selected>Selecciona una opción</option>
                                                 <?php echo $optionsPosiciones; ?>
