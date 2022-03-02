@@ -727,6 +727,12 @@ html;
                
 html;
 
+        }else{
+            $optionsGenero =<<<html
+                <option value="Hombre">Masculino</option>
+                <option value="Mujer">Femenino</option>
+        
+html;   
         }
 
 
@@ -736,7 +742,7 @@ html;
             View::set('userData', $userData);
             View::set('fecha_min', $fecha_min);
             View::set('fecha_max', $fecha_max);
-            View::set('optionsGenero',$optionsGenero);
+            // View::set('optionsGenero',$optionsGenero);
             View::set('optionsBu',$optionsBu);
             View::set('optionsPosiciones',$optionsPosiciones);
             View::set('optionsEstados',$optionsEstados);
