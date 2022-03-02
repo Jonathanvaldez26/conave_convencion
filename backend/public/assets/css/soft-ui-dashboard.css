@@ -36811,4 +36811,21 @@ svg.leaflet-image-layer.leaflet-interactive path {
   text-align: left !important;
 }
 
+#btn-edit{
+  position: relative;
+  z-index: 100;
+  bottom: 20px;
+  left: 60px;
+  background: white;
+}
+
+#btn-edit:hover{
+  background: white;
+  opacity: 100%;
+}
+
+#email-error{
+  color: red;
+}
+
 /*# sourceMappingURL=dashboard-pro.css.map */

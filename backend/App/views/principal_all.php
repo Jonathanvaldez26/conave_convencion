@@ -1,4 +1,5 @@
 <?php echo $header; ?>
+<link id="pagestyle" href="/assets/css/soft-ui-dashboard.css?v=1.0.5" rel="stylesheet" />
 <main class="main-content position-relative max-height-vh-100 h-100 border-radius-lg ">
     <!-- Navbar -->
     <nav class="navbar navbar-main navbar-expand-lg position-sticky mt-4 top-1 px-0 mx-4 shadow-none border-radius-xl z-index-sticky" id="navbarBlur" data-scroll="true">
@@ -98,10 +99,10 @@
                         </div>
                     </div>
                     
-                    <div id="days-movil" class="card-header d-flex pb-0 p-3">
-                        <div class="nav-wrapper position-relative">
-                            <h6 id="titulo-program" class="my-auto">Programa</h6>
-                            <ul class="nav nav-pills nav-fill p-1" role="tablist">
+                    <div id="days-movil" class="card-header pb-0 p-3">
+                        <h6 id="titulo-program" class="">Programa</h6>
+                        <div class="nav-wrapper position-relative ms-auto">
+                            <ul class="nav nav-pills nav-fill p-1 " role="tablist">
                                 <li id="movil-li" class="nav-item">
                                     <a id="nav-day" class="nav-link mb-0 px-3 py-1 active" data-bs-toggle="tab" href="#cam1" role="tab" aria-controls="cam1" aria-selected="true">
                                         Mi.
@@ -122,25 +123,24 @@
                                         Sa.
                                     </a>
                                 </li>
-                                <div class="moving-tab position-absolute nav-link" style="padding: 0px; transition: all 0.5s ease 0s; transform: translate3d(0px, 0px, 0px);">
-                                    <a class="nav-link mb-0 px-0 py-1 active" data-bs-toggle="tab" href="#cam1" role="tab" aria-controls="cam1" aria-selected="true">-</a>
+                                <div class="dropdown pt-1">
+                                    <a href="javascript:;" class="text-secondary ps-4" id="dropdownCam" data-bs-toggle="dropdown" aria-expanded="false">
+                                        <i class="fas fa-ellipsis-v" aria-hidden="true"></i>
+                                    </a>
+                                    <ul class="dropdown-menu dropdown-menu-end me-sm-n4 px-2 py-3" aria-labelledby="dropdownCam">
+                                        <li><a class="dropdown-item border-radius-md" href="/Dinners/">Mis cenas</a></li>
+                                        <li><a class="dropdown-item border-radius-md" href="javascript:;">Reservar cena para mi y mis amigos</a></li>
+
+                                        <li>
+                                            <hr class="dropdown-divider">
+                                        </li>
+                                        <li><a class="dropdown-item border-radius-md text-danger" href="javascript:;">Cancelar Reservacion (Cena)</a></li>
+                                    </ul>
                                 </div>
                             </ul>
+                            
                         </div>
-                        <div class="dropdown pt-2">
-                            <a href="javascript:;" class="text-secondary ps-4" id="dropdownCam" data-bs-toggle="dropdown" aria-expanded="false">
-                                <i class="fas fa-ellipsis-v" aria-hidden="true"></i>
-                            </a>
-                            <ul class="dropdown-menu dropdown-menu-end me-sm-n4 px-2 py-3" aria-labelledby="dropdownCam">
-                                <li><a class="dropdown-item border-radius-md" href="/Dinners/">Mis cenas</a></li>
-                                <li><a class="dropdown-item border-radius-md" href="javascript:;">Reservar cena para mi y mis amigos</a></li>
-
-                                <li>
-                                    <hr class="dropdown-divider">
-                                </li>
-                                <li><a class="dropdown-item border-radius-md text-danger" href="javascript:;">Cancelar Reservacion (Cena)</a></li>
-                            </ul>
-                        </div>
+                        
                     </div>
                     <div class="card-body p-3 mt-2">
                         <div class="tab-content" id="v-pills-tabContent">

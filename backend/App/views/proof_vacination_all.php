@@ -67,6 +67,11 @@
                         <?php echo $tabla ?>
                         <div class="col-xl-4 col-md-0 mb-xl-0 mb-4"></div>
                     </div>
+                    <div class="row">
+                        <div class="button-row d-flex mt-4 col-12">
+                            <a class="btn bg-gradient-light mb-0 js-btn-prev" href="/Home/" title="Prev">Regresar</a>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>

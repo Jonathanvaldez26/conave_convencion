@@ -2,7 +2,7 @@
 <link id="pagestyle" href="/assets/css/soft-ui-dashboard.css?v=1.0.5" rel="stylesheet" />
 <main class="main-content position-relative max-height-vh-100 h-100 border-radius-lg ">
     <!-- Navbar -->
-    <nav class="navbar navbar-main navbar-expand-lg position-sticky mt-4 top-1 px-0 mx-4 shadow-none border-radius-xl z-index-sticky" id="navbarBlur" data-scroll="true">
+    <nav class="navbar navbar-main navbar-expand-lg position-sticky mt-4 top-1 px-0 mx-4 border-radius-xl z-index-sticky blur shadow-blur left-auto" id="navbarBlur" data-scroll="true">
         <div class="container-fluid py-1 px-3">
             <nav aria-label="breadcrumb">
                 <ol class="breadcrumb bg-transparent mb-0 pb-0 pt-1 px-0 me-sm-6 me-2">
@@ -69,8 +69,9 @@
                                     <div class="avatar avatar-xl position-relative">
                                         <?php echo $imgUser; ?>
                                     </div>
+                                    <span id="btn-edit" class="btn btn-icon-only btn-rounded btn-outline-success mb-0 me-2 btn-sm d-flex align-items-center justify-content-center"><i class="fas fa-edit" aria-hidden="true"></i></span> 
                                 </label>
-
+                                
                                 <input id="file-input" name="file-input" type="file" />
                             </div>
                         </form>    
@@ -101,6 +102,7 @@
                     <div class="card-header">
                         <h5>Información Básica</h5>
                         <?php $prueba; ?>
+                        
                         <?php //$userData; 
                         ?>
                     </div>
@@ -136,7 +138,7 @@
                                         <input id="apellido_materno" name="apellido_materno" maxlength="29" pattern="[a-zA-Z ÑñáÁéÉíÍóÚ]*{2,254}" class="form-control" type="text" placeholder="Thompson" required="required" onfocus="focused(this)" onfocusout="defocused(this)" value="<?= $userData['apellido_materno'] ?>" style="text-transform:uppercase;" onkeyup="javascript:this.value=this.value.toUpperCase();">
                                     </div>
                                 </div>
-                                <div class="col-sm-4 col-12">
+                                <div class="col-sm-6 col-12 col-lg-4">
                                     <label class="form-label mt-4">Me identifico como: *</label>
                                     <select class="form-control" style="cursor: pointer;" name="genero" id="genero" placeholder="Genero">
                                         <option value="">Selecciona una opción</option>
@@ -146,7 +148,7 @@
                                     </select>
                                     <!-- <input type="text" class="form-control" value="<?= $userData['genero'] ?>" disabled> -->
                                 </div>
-                                <div class="col-sm-4 col-12">
+                                <div class="col-sm-6 col-12 col-lg-4">
 
                                     <label class="form-label mt-4">Fecha de Nacimiento *</label>
 
@@ -155,9 +157,12 @@
 
 
                                 </div>
-                                <div class="row">
+
+                            </div>
+
+                            <div class="row">
                                     <div class="col-lg-5 col-12">
-                                        <label class="form-label mt-4">Email Rregistrado y Verificado</label>
+                                        <label class="form-label mt-4">Email Registrado y Verificado</label>
                                         <div class="input-group">
                                             <input id="email" name="email" maxlength="49" class="form-control" type="email" placeholder="example@email.com" onfocus="focused(this)" onfocusout="defocused(this)" value="<?= $userData['email'] ?>" readonly>
                                         </div>
@@ -168,7 +173,7 @@
                                             <input id="telefono" name="telefono" maxlength="10" pattern="[0-9]" class="form-control" type="number" placeholder="+40 735 631 620" onfocus="focused(this)" onfocusout="defocused(this)" value="<?= $userData['telefono'] ?>">
                                         </div>
                                     </div>
-                                    <div class="col-md-4 align-self-center">
+                                    <div class="col-lg-4 col-12">
                                         <label class="form-label mt-4">Pertenezco a la Línea ASOFARMA</label>
                                         <!-- <select class="form-control" style="cursor: pointer;" name="linea_principal" id="linea_principal" tabindex="-1" data-choice="active">
                                                 <option value="" disabled>Selecciona una opción</option>
@@ -180,20 +185,11 @@
                                 </div>
                                 <div class="row">
                                     <div class="col-md-3 align-self-center">
-                                        <label class="form-label mt-4">Actividad: </label>
-                                        <select class="form-control" style="cursor: pointer;" name="actividad" id="actividad" tabindex="-1" data-choice="active" disabled>
-                                            <option value="" selected disabled>Selecciona una opción</option>
-                                            <?php echo $optionsActividad; ?>
-                                        </select>
-
-
+                                        <label class="form-label mt-4">Actividad</label>
+                                        <input class="form-control" id="actividad" name="actividad" type="text" value="<?= $userData['actividad'] ?>" readonly />
                                     </div>
                                     <div class="col-md-3 align-self-center">
                                         <label class="form-label mt-4">Talla de Playera</label>
-                                        <!-- <select class="form-control" style="cursor: pointer;" name="talla" id="talla" tabindex="-1" data-choice="active">
-                                                <option value="" selected disabled>Selecciona una opción</option>
-                                                
-                                            </select> -->
                                         <input class="form-control" id="talla" name="talla" type="text" value="<?= $userData['talla_playera'] ?>" readonly />
                                     </div>
                                     <div class="col-md-6">
@@ -201,20 +197,13 @@
                                         <input class="form-control" id="alergias" maxlength="149" name="alergias" data-color="dark" type="text" value="<?= $userData['alergias'] ?>" placeholder="Enter something" />
                                     </div>
                                 </div>
-                                <!-- <div class="row">
-                                        
-                                        
-                                    </div> -->
 
                                 <div class="row">
                                     <div class="button-row d-flex mt-4 col-12">
-                                        <button class="btn bg-gradient-dark ms-auto mb-0" type="submit" title="Actualizar">Actualizar</button>
+                                        <a class="btn bg-gradient-light mb-0 js-btn-prev" href="/Home/" title="Prev">Regresar</a>
                                         <button class="btn bg-gradient-dark ms-auto mb-0" type="submit" title="Actualizar">Actualizar</button>
                                     </div>
                                 </div>
-                            </div>
-
-
                         </div>
                     </form>
                 </div>
@@ -223,88 +212,3 @@
         </div>
         <?php echo $footer; ?>
 </main>
-<script src="/js/jquery.min.js"></script>
-<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
-
-<script>
-    $(document).ready(function() {
-
-        $("#update_form").on("submit", function(event) {
-            event.preventDefault();
-
-            var formData = new FormData(document.getElementById("update_form"));
-            console.log(formData);
-            $.ajax({
-                url: "/Account/Actualizar",
-                type: "POST",
-                data: formData,
-                cache: false,
-                contentType: false,
-                processData: false,
-                beforeSend: function() {
-                    console.log("Procesando....");
-
-
-                },
-                success: function(respuesta) {
-
-                    if (respuesta == 'success') {
-                        swal("Se actualizaron tus datos correctamente!", "", "success").
-                        then((value) => {
-                            window.location.replace("/Home");
-                        });
-                    } else {
-                        swal("Hubo un error al actualizar tus datos!", "Comunicate con el administrador del sitio", "error").
-                        then((value) => {
-                            window.location.replace("/Home")
-                        });
-                    }
-                },
-                error: function(respuesta) {
-                    console.log(respuesta);
-                }
-
-            });
-        });
-
-        $(document).on('change', '#file-input', function(e) {
-            $("#form_upload_image").submit();
-        });
-
-        $("#form_upload_image").on("submit", function(event) {
-            event.preventDefault();
-            // alert("funciona");
-
-            var formData = new FormData(document.getElementById("form_upload_image"));
-            console.log(formData);
-
-            $.ajax({
-                url: "/Account/uploadImage",
-                type: "POST",
-                data: formData,
-                dataType: "json",
-                cache: false,
-                contentType: false,
-                processData: false,
-                beforeSend: function() {
-                    console.log("Procesando....");
-
-
-                },
-                success: function(respuesta) {
-                    console.log(respuesta);
-                    if(respuesta.status == "success"){
-                        //location.reload();
-                        $("#img-user").attr("src","../../../img/users_conave/"+respuesta.img);
-                    }
-                   
-                },
-                error: function(respuesta) {
-                    console.log(respuesta);
-                }
-
-            });
-        });
-
-    });
-</script>

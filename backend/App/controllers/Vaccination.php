@@ -128,7 +128,8 @@ html;
             if($value['count'] >= 1){
                 $vacunas = VaccinationDao::getByIdUser($_SESSION['utilerias_asistentes_id']);
                 foreach ($vacunas as $key => $value) {
-                    $tabla = <<<html
+
+                    $tabla .=<<<html
                     <div class="col-xl-4 col-md-6 mb-xl-0 mb-4">
                             <div class="card card-blog card-plain">
                                 <div class="position-relative">
@@ -137,12 +138,44 @@ html;
                                     </a>
                                 </div>
                                 <div class="card-body px-1 pb-0">
-                                    <p class="text-gradient text-dark mb-2 text-sm text-center">Comprobante de Vacunación Cargado el {$value['fecha_carga_documento']}. Registro {$value['numero_dosis']} Dosis para su comprobante.</p>
-                                    <a>
-                                        <h6 class="text-center">
-                                            Un Ejecutivo Está Validando su Comprobante de Vacunación.
-                                        </h6>
-                                    </a>
+                                    <p class="text-gradient text-dark mb-2 text-sm text-center">Comprobante de Vacunación Cargado el {$value['fecha_carga_documento']}. Registró {$value['numero_dosis']} Dosis para su comprobante.</p>
+html;
+//                     if ($value['validez'] == 1) {
+//                         $tabla .= <<<html
+//                         <h6 class="text-center">
+//                             Se ha Validado Correctamente su Comprobante de Vacunación.
+//                         </h6>
+// html;
+//                     } else  if ($value['validez'] == 0) {
+//                         $tabla .= <<<html
+//                         <h6 class="text-center">
+//                             Un Ejecutivo Está Validando su Comprobante de Vacunación.
+//                         </h6>
+// html;
+//                     } else if ($value['status'] == 0) {
+//                         $tabla .=<<<html
+//                             <div class="col-xl-4 col-md-6 mb-xl-0 mb-4">
+//                                 <div class="card card-blog card-plain">
+//                                     <div class="position-relative">
+//                                         <a class="d-block shadow-xl border-radius-xl">
+//                                             <img src="../../../assets/img/comprobante1.jpeg" alt="img-blur-shadow" class="img-fluid shadow border-radius-xl">
+//                                         </a>
+//                                     </div>
+//                                     <div class="card-body px-1 pb-0">
+//                                         <p class="text-gradient text-dark mb-2 text-sm text-center">Carga tu Comprobante de Vacunación lo Antes Posible</p>
+//                                         <div class="text-center">
+//                                             <button type="button" class="btn btn-outline-success btn-sm mb-0 text-center" data-toggle="modal" data-target="#Modal_Vacunacion">Subir Comprobante de Vacunación</button>
+//                                         </div>
+
+//                                     </div>
+//                                 </div>
+//                             </div>
+// html;
+//                     }
+
+                    $tabla .= <<<html
+                                   
+                                    
                                 </div>
                                 <br>
                                 <div class="text-center">
