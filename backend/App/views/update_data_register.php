@@ -68,7 +68,7 @@ echo $header;
                                         <select class="form-control" style="cursor: pointer;" name="genero" id="genero" placeholder="Genero">
                                             <option value="" disabled>Selecciona una opción</option>
                                             <option value="Mujer">Mujer</option>
-                                            <option value="Otro">Otro</option>
+                                            <option value="Hombre">Hombre</option>
                                             <!-- <?php echo $optionsGenero; ?> -->
                                         </select>
                                         <!-- <input type="text" class="form-control" value="<?= $userData['genero'] ?>" disabled> -->
