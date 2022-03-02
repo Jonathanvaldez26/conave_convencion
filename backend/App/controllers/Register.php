@@ -714,21 +714,21 @@ html;
         $userData = RegisterDao::getUserRegister($email)[0];
 
         if($userData['genero'] == 'Hombre'){
-            $optionsGenero =<<<html
+            $optionsGenero .=<<<html
                 <option value="Hombre" selected>Masculino</option>
                 <option value="Mujer">Femenino</option>
                 
 html;
 
         }elseif($userData['genero'] == 'Mujer'){
-            $optionsGenero =<<<html
+            $optionsGenero .=<<<html
                 <option value="Hombre">Masculino</option>
                 <option value="Mujer" selected>Femenino</option>
                
 html;
 
         }else{
-            $optionsGenero =<<<html
+            $optionsGenero .=<<<html
                 <option value="Hombre">Masculino</option>
                 <option value="Mujer">Femenino</option>
         
