@@ -6,8 +6,8 @@ echo $header;
 
 <body class="">
     <main class="main-content mt-0 ps">
-        <div class="page-header align-items-start min-vh-50 pt-5 pb-11 m-3 border-radius-lg" style="background-image: url('../../../assets/img/curved-images/curved9.jpg');">
-            <span class="mask bg-gradient-dark opacity-6"></span>
+        <div class="page-header align-items-start min-vh-50 pt-5 pb-11 m-3 border-radius-lg" style="background-image: url('../../../assets/img/curved-images/Cintillo-04.png');">
+            <span class="mask bg-gradient-danger opacity-0"></span>
             <div class="container">
                 <div class="row justify-content-center">
                     <div class="col-lg-5 text-center mx-auto">
@@ -144,15 +144,12 @@ echo $header;
                                     </div>
 
 
-                                    <div class="col-md-4 col-sm-12 col-cp">
-                                        <div id="show-cp" style="visibility: hidden;">
-                                            <label class="form-label mt-4">Codigo Postal *</label>
-                                            <select class="form-control" name="cp" id="cp" required>
-                                                <option value="" disabled selected>Seleccione una opción</option>
-                                                <?php echo $optionsCp; ?>
-                                            </select>
-                                        </div>
-
+                                    <div class="col-md-4 col-sm-12"  id="show-cp" style="display: none;">
+                                        <label class="form-label mt-4">Codigo Postal *</label><br>
+                                        <select class="form-control" name="cp" id="cp" required>
+                                            <option value="" disabled selected>Seleccione una opción</option>
+                                            <?php echo $optionsCp; ?>
+                                        </select>
                                     </div>
                                 </div>
 
@@ -194,7 +191,7 @@ echo $header;
                                     <div class="col-md-3 col-sm-12">
                                         <label class="form-label mt-4">Restricciones Alimenticias *</label>
                                         <div class="form-check">
-                                            <input class="form-check-input" type="radio" name="restricciones_alimenticias" id="res_ali_1" value="vegetariano" checked>
+                                            <input class="form-check-input" type="radio" name="restricciones_alimenticias" id="res_ali_1" value="vegetariano">
                                             <label class="form-check-label" for="res_ali_1">
                                                 Vegetariano
                                             </label>
@@ -211,6 +208,7 @@ echo $header;
                                                 Kosher
                                             </label>
                                         </div>
+<<<<<<< HEAD
                                     </div>
 
                                     <div class="col-md-4 col-sm-12">
@@ -232,6 +230,17 @@ echo $header;
 
                                 <div class="row">
                                     <div class="col-md-3 col-sm-12">
+=======
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="radio" name="restricciones_alimenticias" id="res_ali_3" value="ninguna" checked>
+                                            <label class="form-check-label" for="res_ali_3">
+                                                Ninguna
+                                            </label>
+                                        </div>
+                                    </div> 
+
+                                    <div class="col-md-4 col-sm-12">
+>>>>>>> 6def41129e3d6b8d71d74bf3354f932dcc46b1b3
                                         <label class="form-label mt-4">¿Es usted alergico a un medicamento?</label>
                                         <div class="form-check">
                                             <input class="form-check-input" type="radio" name="confirm_alergia" id="confirm_alergia_si" value="si">
@@ -245,14 +254,55 @@ echo $header;
                                                 No
                                             </label>
                                         </div>
+<<<<<<< HEAD
 
+=======
+                                        
+                                        <div class="col-md-12 col-sm-12 medicamento_cual" style="display: none!important;">
+                                            <label class="form-label mt-4">¿Cual?</label>
+                                            <input id="alergia_medicamento_cual" name="alergia_medicamento_cual" maxlength="29" pattern="[a-zA-Z0-9]*" class="form-control" type="text" placeholder=""   value="">
+                                                
+                                        </div>
+>>>>>>> 6def41129e3d6b8d71d74bf3354f932dcc46b1b3
                                     </div>
+                                    
+                                    <div class="col-md-5 col-sm-12">
+                                        <div class="col-md-12 col-sm-12">  
+                                            <label class="form-label mt-4">Alergico a *</label>
+                                            <select class="form-control" name="alergias[]" id="select_alergico" multiple="multiple">
+                                                <option value="lacteos">Lacteos</option>
+                                                <option value="gluten">Gluten</option>
+                                                <option value="mariscos">Pescados y/o mariscos</option>
+                                                <option value="otros">Otros</option>
+                                            </select>
+                                        </div>
 
+<<<<<<< HEAD
                                     <div class="col-md-9 col-sm-12 medicamento_cual" style="display: none!important;">
                                         <label class="form-label mt-4">¿Cual?</label>
                                         <input id="alergia_medicamento_cual" name="alergia_medicamento_cual" maxlength="29" pattern="[a-zA-Z0-9]*" class="form-control" type="text" placeholder="" value="">
 
                                     </div>
+=======
+                                        <div class="col-md-12 col-sm-12 cont_alergia_otro" style="display: none;">
+                                            <label class="form-label mt-4">Especifique </label>
+                                            <input class="form-control" id="alergia_otro" maxlength="149" name="alergia_otro" data-color="dark" type="text" value="" placeholder="Escriba su alergia" />
+                                        </div>
+                                    </div>  
+
+                                    <!-- <div class="col-md-5 col-sm-12 cont_alergia_otro" style="display: none;">
+                                        <label class="form-label mt-4">Especifique </label>
+                                        <input class="form-control" id="alergia_otro" maxlength="149" name="alergia_otro" data-color="dark" type="text" value="" placeholder="Escriba su alergia" />
+                                    </div> -->
+
+                                    
+                                    
+
+                                </div>
+
+                                <div class="row">
+                                    
+>>>>>>> 6def41129e3d6b8d71d74bf3354f932dcc46b1b3
                                 </div>
 
 
@@ -290,8 +340,14 @@ echo $header;
     $(document).ready(function() {
         $("#residencia").on("change", function() {
             // $(".col-cp").removeClass('d-none');
-            $("#show-cp").css('visibility', 'visible');
+            // $("#show-cp").css('visibility', 'visible');
+            $("#show-cp").css('display', 'block');
             var estado = $(this).val();
+
+            
+            $('span.select2-selection.select2-selection--multiple').addClass('form-control').css('border-color', '#ccc');
+            $('span.select2.select2-container.select2-container--default').addClass("width-wk");
+            $('span.select2-selection.select2-selection--single').css('border-color', '#ccc');
 
             // alert($(this).val());
             $.ajax({
