@@ -104,6 +104,9 @@ html;
                           then((value) => {
                               window.location.replace("/Vaccination/");
                           });
+                      }else if(respuesta == 'no_permitido'){
+                        swal("Error al cargar, formato no permitido!!", "Seleccione un archivo en formato pdf", "info");
+                        
                       }
                       console.log(respuesta);
                   },
@@ -265,23 +268,32 @@ html;
             $marca = $marca_;
             $file = $_FILES["file_"];
 
-            $pdf = $this->generateRandomString();
+            $formatos_permitidos =  array('pdf');
+            $file_name = $_FILES['file_']['name'];
+            $extension = pathinfo($file_name, PATHINFO_EXTENSION);
+            if(!in_array($extension, $formatos_permitidos) ) {
+                echo 'no_permitido';
+            }else{
+                $pdf = $this->generateRandomString();
 
-            move_uploaded_file($file["tmp_name"], "comprobante_vacunacion/".$pdf.'.pdf');
+                move_uploaded_file($file["tmp_name"], "comprobante_vacunacion/".$pdf.'.pdf');
 
-            $documento->_url = $pdf.'.pdf';
-            $documento->_user = $usuario;
-            $documento->_numero_dosis = $numero_dosis;
-            $documento->_marca_dosis = $marca;
+                $documento->_url = $pdf.'.pdf';
+                $documento->_user = $usuario;
+                $documento->_numero_dosis = $numero_dosis;
+                $documento->_marca_dosis = $marca;
 
-            $id = VaccinationDao::insert($documento);
+                $id = VaccinationDao::insert($documento);
 
-            if ($id) {
-                echo 'success';
+                if ($id) {
+                    echo 'success';
 
-            } else {
-                echo 'fail';
+                } else {
+                    echo 'fail';
+                }
             }
+
+            
         } else {
             echo 'fail REQUEST';
         }
@@ -290,5 +302,7 @@ html;
     function generateRandomString($length = 10) {
         return substr(str_shuffle("0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"), 0, $length);
     }
+
+   
 
 }
