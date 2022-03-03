@@ -91,7 +91,7 @@
                         Agregue su Comprobante de Vacunación
 
                     </h5>
-                    <span type="button" class="btn btn-dark" data-dismiss="modal" aria-label="Close">
+                    <span type="button" class="btn bg-gradient-danger" data-dismiss="modal" aria-label="Close">
                         X
                     </span>
                 </div>
@@ -169,8 +169,8 @@
                             <input type="hidden" id="user_" name="user_" value="<?=$_SESSION["utilerias_asistentes_id"]?>">
                         </div>
                         <div class="modal-footer">
-                            <button type="submit" class="btn btn-success" id="btn_upload" name="btn_upload">Aceptar</button>
-                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
+                            <button type="submit" class="btn bg-gradient-success" id="btn_upload" name="btn_upload">Aceptar</button>
+                            <button type="button" class="btn bg-gradient-secondary" data-dismiss="modal">Cancelar</button>
                         </div>
                     </form>
                 </div>
@@ -181,7 +181,7 @@
 
     <?php echo $iframe_doc; ?>
 
-    <div class="fixed-bottom navbar-dark">
+    <div class="fixed-bottom navbar-dark hide-movil" style="z-index: -1;">
         <!-- <a class="navbar-brand" href="#!">Footer</a> -->
         <?php echo $footer; ?>
     </div>

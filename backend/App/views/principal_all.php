@@ -53,7 +53,7 @@
     </nav>
     <!-- End Navbar -->
     <div class="container-fluid py-0">
-        <div class="row mt-4">
+        <div class="row mt-4 mb-4">
             <div class="col-xl-7">
                 <div class="card">
                     
@@ -179,100 +179,120 @@
                         </div>
                     </div>
                 </div>
-                <div class="row  mt-md-4 mt-0">
-                    <div class="col-md-6 mt-md-0 mt-4">
-                        <div class="card">
-                            <div class="card-body text-center">
-                                <div class="col-12 text-end">
-                                    <img class="w-30" src="../../assets/img/small-logos/asofarma_user.png">
+                <div class="row mt-md-4 mt-0">
+                    
+                    <div class="col-md-6 mt-md-0 mt-4 ">
+                        <a href="/Account/">
+                            <div class="card card-link" style="display: block;">
+                                
+                                <div class="card-body text-center">
+                                    <div class="col-12 text-end">
+                                        <img class="w-30" src="../../assets/img/small-logos/asofarma_user.png">
+                                    </div>
+                                    <h6 class="mb-0 font-weight-bolder">Datos Personales</h6>
+                                    <p class="opacity-8 mb-0 text-sm">Disponible <i class="fa fa-check-circle me-sm-0" style="color: #01a31c"></i></p>
                                 </div>
-                                <h6 class="mb-0 font-weight-bolder"><a href="/Account/">Datos Personales</a></h6>
-                                <p class="opacity-8 mb-0 text-sm">Disponible <i class="fa fa-check-circle me-sm-0" style="color: #01a31c"></i></p>
+                            
                             </div>
-                        </div>
+                        </a>  
                     </div>
+                
                     <div class="col-md-6 mt-md-0 mt-4">
-                        <div class="card">
-                            <div class="card-body text-center">
-                                <div class="col-12 text-end">
-                                    <img class="w-30" src="../../assets/img/small-logos/asofarma_comprobante_vacuna.png">
+                        <div class="card card-link">
+                            <a href="/Vaccination/">
+                                <div class="card-body text-center">
+                                    <div class="col-12 text-end">
+                                        <img class="w-30" src="../../assets/img/small-logos/asofarma_comprobante_vacuna.png">
+                                    </div>
+                                    <h6 class="mb-0 font-weight-bolder">Comprobantes Vacuna</h6>
+                                    <p class="opacity-8 mb-0 text-sm">Disponible <i class="fa fa-check-circle me-sm-0" style="color: #01a31c"></i></p>
                                 </div>
-                                <h6 class="mb-0 font-weight-bolder"><a href="/Vaccination/">Comprobantes Vacuna</a></h6>
-                                <p class="opacity-8 mb-0 text-sm">Disponible <i class="fa fa-check-circle me-sm-0" style="color: #01a31c"></i></p>
-                            </div>
+                            </a>
                         </div>
                     </div>
                 </div>
                 <div class="row mt-4">
                     <div class="col-md-6">
-                        <div class="card">
-                            <div class="card-body text-center">
-                                <div class="col-12 text-end">
-                                    <img class="w-30" src="../../assets/img/small-logos/asofarma_prueba_covid.png">
+                        <div class="card card-link">
+                            <a href="/Covid/">
+                                <div class="card-body text-center">
+                                    <div class="col-12 text-end">
+                                        <img class="w-30" src="../../assets/img/small-logos/asofarma_prueba_covid.png">
+                                    </div>
+                                    <h6 class="mb-0 font-weight-bolder">Mis Pruebas Covid</h6>
+                                    <p class="opacity-8 mb-0 text-sm">Disponible <i class="fa fa-clock me-sm-0" style="color: #8a6d3b"></i></p>
                                 </div>
-                                <h6 class="mb-0 font-weight-bolder"><a href="/Covid/">Mis Pruebas Covid</a></h6>
-                                <p class="opacity-8 mb-0 text-sm">Disponible <i class="fa fa-clock me-sm-0" style="color: #8a6d3b"></i></p>
-                            </div>
+                            </a>
                         </div>
                     </div>
                     <div class="col-md-6 mt-md-0 mt-4">
-                        <div class="card">
-                            <div class="card-body text-center">
-                                <div class="col-12 text-end">
-                                    <img class="w-30" src="../../assets/img/small-logos/asofarma_pase_abordar.png">
+                        <div class="card card-link">
+                            <a href="/Passes/">
+                                <div class="card-body text-center">
+                                    <div class="col-12 text-end">
+                                        <img class="w-30" src="../../assets/img/small-logos/asofarma_pase_abordar.png">
+                                    </div>
+                                    <h6 class="mb-0 font-weight-bolder">Pases de Abordar</h6>
+                                    <p class="opacity-8 mb-0 text-sm">Disponible <i class="fa fa-check-circle me-sm-0" style="color: #01a31c"></i></p>
                                 </div>
-                                <h6 class="mb-0 font-weight-bolder"><a href="/Passes/">Pases de Abordar</a></h6>
-                                <p class="opacity-8 mb-0 text-sm">Disponible <i class="fa fa-check-circle me-sm-0" style="color: #01a31c"></i></p>
-                            </div>
+                            </a>
                         </div>
                     </div>
                 </div>
                 <div class="row mt-4">
                     <div class="col-md-6">
-                        <div class="card">
-                            <div class="card-body text-center">
-                                <div class="col-12 text-end">
-                                    <img class="w-30" src="../../assets/img/small-logos/asofarma_boleto_virtual.png">
+                        <div class="card card-link">
+                            <a href="/VirtualTicket/">
+                                <div class="card-body text-center">
+                                    <div class="col-12 text-end">
+                                        <img class="w-30" src="../../assets/img/small-logos/asofarma_boleto_virtual.png">
+                                    </div>
+                                    <h6 class="mb-0 font-weight-bolder">Mi boleto Virtual</h6>
+                                    <p class="opacity-8 mb-0 text-sm">A un click tus asistencias</p>
                                 </div>
-                                <h6 class="mb-0 font-weight-bolder"><a href="/VirtualTicket/">Mi boleto Virtual</a></h6>
-                                <p class="opacity-8 mb-0 text-sm">A un click tus asistencias</p>
-                            </div>
+                            </a>
                         </div>
                     </div>
                     <div class="col-md-6 mt-md-0 mt-4">
-                        <div class="card">
-                            <div class="card-body text-center">
-                                <div class="col-12 text-end">
-                                    <img class="w-30" src="../../assets/img/small-logos/asofarma_cenas.png">
+                        <div class="card card-link">
+                            <a href="/Dinners/">
+                                <div class="card-body text-center">
+                                    <div class="col-12 text-end">
+                                        <img class="w-30" src="../../assets/img/small-logos/asofarma_cenas.png">
+                                    </div>
+                                    <h6 class="mb-0 font-weight-bolder">Cenas</h6>
+                                    <p class="opacity-8 mb-0 text-sm">Reserva y disfruta</p>
                                 </div>
-                                <h6 class="mb-0 font-weight-bolder"><a href="/Dinners/">Cenas</a></h6>
-                                <p class="opacity-8 mb-0 text-sm">Reserva y disfruta</p>
-                            </div>
+                            </a>
                         </div>
                     </div>
                 </div>
                 <div class="row mt-4">
                     <div class="col-md-6">
-                        <div class="card">
-                            <div class="card-body text-center">
-                                <div class="col-12 text-end">
-                                    <img class="w-30" src="../../assets/img/small-logos/asofarma_pickup.png">
+                        <a type="button" data-toggle="modal" data-target="#ver-pickup">
+                            <div class="card card-link">
+                                <div class="card-body text-center">
+                                    <div class="col-12 text-end">
+                                        <img class="w-30" src="../../assets/img/small-logos/asofarma_pickup.png">
+                                    </div>
+                                    <h6 class="mb-0 font-weight-bolder">PICK UP</h6>
+                                    <p class="opacity-8 mb-0 text-sm">A un click tus asistencias</p>
                                 </div>
-                                <h6 class="mb-0 font-weight-bolder"><a type="button" data-toggle="modal" data-target="#ver-pickup">PICK UP</a></h6>
-                                <p class="opacity-8 mb-0 text-sm">A un click tus asistencias</p>
                             </div>
-                        </div>
+                        </a>
                     </div>
                     <div class="col-md-6 mt-md-0 mt-4">
-                        <div class="card">
-                            <div class="card-body text-center">
-                                <div class="col-12 text-end">
-                                    <img class="w-30" src="../../assets/img/small-logos/asofarma_1.png">
+                        <a href="/News/">
+                            <div class="card card-link">
+                                <div class="card-body text-center">
+                                    <div class="col-12 text-end">
+                                        <img class="w-30" src="../../assets/img/small-logos/asofarma_1.png">
+                                    </div>
+                                    <h6 class="mb-0 font-weight-bolder">NOTIASOFARMA</h6>
+                                    <p class="opacity-8 mb-0 text-sm">A un click</p>
                                 </div>
-                                <h6 class="mb-0 font-weight-bolder"><a href="/News/">NOTIASOFARMA</a></h6>
-                                <p class="opacity-8 mb-0 text-sm">A un click</p>
                             </div>
-                        </div>
+                        </a>
                     </div>
 
                 </div>
@@ -286,7 +306,7 @@
             <div class="modal-content">
                 <div class="modal-header">
                     <h5 class="modal-title" id="exampleModalLabel">PICKUP Convención 2022</h5>
-                    <span type="button" class="btn btn-danger" data-dismiss="modal" aria-label="Close">
+                    <span type="button" class="btn bg-gradient-danger" data-dismiss="modal" aria-label="Close">
                             X
                         </span>
                 </div>
