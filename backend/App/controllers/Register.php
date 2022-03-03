@@ -157,6 +157,7 @@ html;
                 
 
             });
+            
         </script>
        
 html;
@@ -674,6 +675,109 @@ html;
                 });
             
             </script>
+
+            <script>
+            $(document).ready(function() {
+                $("#residencia").on("change", function() {
+                    // $(".col-cp").removeClass('d-none');
+                    // $("#show-cp").css('visibility', 'visible');
+                    $("#show-cp").css('display', 'block');
+                    var estado = $(this).val();
+        
+                    
+                    $('span.select2.select2-container.select2-container--default').css('border-color','#ccc').addClass("width-wk");
+                    $('span.select2-selection.select2-selection--single').css('border-color', '#ccc');
+                    $('.select2-container--default .select2-selection--single .select2-selection__arrow').css('color', '#fff');
+        
+                    // alert($(this).val());
+                    $.ajax({
+                        url: "/Register/getCodesByState",
+                        type: "POST",
+                        dataType: "json",
+                        data: {
+                            estado
+                        },
+        
+                        cache: false,
+                        beforeSend: function() {
+                            console.log("Procesando....");
+                            $('#cp')
+                                .find('option')
+                                .remove()
+                                .end();
+        
+                        },
+                        success: function(respuesta) {
+                            // console.log(respuesta);
+        
+                            var response = JSON.parse(JSON.stringify(respuesta));
+        
+                            console.log(response);
+        
+                            $.each(response, function(key, value) {
+                                console.log(key);
+                                console.log(value);
+                                $('#cp')
+                                    .append($('<option>', {
+                                            value: value.id
+                                        })
+                                        .text(value.codigo_postal + ' - ' + value.colonia + ' - ' + value.del_mpio + ' - ' + value.estado));
+        
+                            });
+        
+                        },
+                        error: function(respuesta) {
+                            console.log(respuesta);
+                        }
+        
+                    });
+                });
+        
+        
+                $('#cp').select2();
+        
+        
+                $('#select_alergico').select2();
+        
+                $('#select_alergico').on("change", function() {
+        
+                    var valores = $(this).val();
+        
+                    console.log(valores);
+                    if (valores != null) {
+                        if (valores.length) {
+        
+                            console.log(valores.length);
+        
+                            $.each(valores, function(key, value) {
+                                if (value == 'otros') {
+                                    console.log(value);
+                                    $(".cont_alergia_otro").css('display', 'block');
+                                    $("#alergia_otro").val("");
+                                } else {
+                                    $(".cont_alergia_otro").css('display', 'none');
+                                }
+        
+                            });
+        
+                        }
+                    } else {
+                        $(".cont_alergia_otro").css('display', 'none');
+                    }
+                });
+        
+                $('input:radio[name="confirm_alergia"]').change(function() {
+                    if ($("#confirm_alergia_no").is(':checked')) {
+                        $(".medicamento_cual").css("display", "none");
+                        $("#alergia_medicamento_cual").val("");
+                    }
+        
+                    if ($("#confirm_alergia_si").is(':checked')) {
+                        $(".medicamento_cual").css("display", "block");
+                    }
+                });
+            });
+            </script>
       
 html;
         if (strlen((date('y')-18))!=1) {
@@ -817,10 +921,9 @@ html;
         $extraHeader =<<<html
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-        <link rel="apple-touch-icon" sizes="76x76" href="../../../assets/img/aso_icon.png">
-        <link rel="icon" type="image/vnd.microsoft.icon" href="../../../assets/img/aso_icon.png">
+        <link rel="icon" href="../../../assets/img/aso_icon.png">
         <title>
-            Registro Conave
+            Registro Conave - Politicas
         </title>
         <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet" />
         <!-- Nucleo Icons -->

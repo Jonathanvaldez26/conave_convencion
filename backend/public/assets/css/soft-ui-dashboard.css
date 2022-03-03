@@ -36857,6 +36857,10 @@ svg.leaflet-image-layer.leaflet-interactive path {
   width: -webkit-fill-available !important;
 }
 
+.width-wk:focus{
+  border-color: #ddd; 
+}
+
 .form-control:focus{
   color: #495057;
   background-color: #fff !important;
@@ -36865,7 +36869,8 @@ svg.leaflet-image-layer.leaflet-interactive path {
   box-shadow: 0 0 0 2px #e9aede;
 }
 
-.select2-search__field:focus{
+.select2-search__field:focus-visible{
   border-color: #ddd; 
 }
+
 /*# sourceMappingURL=dashboard-pro.css.map */
