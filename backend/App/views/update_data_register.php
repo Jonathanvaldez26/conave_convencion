@@ -101,13 +101,13 @@ echo $header;
                                     </div>
 
                                     <div class="col-lg-4 col-12">
-                                        <label class="form-label mt-4">Email Registrado y Verificado</label>
+                                        <label class="form-label mt-4">Email Registrado y Verificado *</label>
                                         <div class="input-group">
                                             <input id="email" name="email" maxlength="49" class="form-control" type="email" placeholder="example@email.com" onfocus="focused(this)" onfocusout="defocused(this)" value="<?= $userData['email'] ?>" readonly>
                                         </div>
                                     </div>
 
-                                    <div class="col-lg-3 align-self-center">
+                                    <div class="col-lg-3 col-sm-12">
                                         <label class="form-label mt-4">Unidad de Negocio *</label>
                                         <select class="form-control" style="cursor: pointer;" name="bu" id="bu" tabindex="-1" data-choice="active" required>
                                             <option value="" disabled selected>Selecciona una opción</option>
@@ -115,8 +115,8 @@ echo $header;
                                         </select>
                                     </div>
 
-                                    <div class="col-lg-3 align-self-center">
-                                        <label class="form-label mt-4">Pertenezco a la Línea ASOFARMA</label>
+                                    <div class="col-lg-3 col-sm-12">
+                                        <label class="form-label mt-4">Pertenezco a la Línea ASOFARMA *</label>
                                         <select class="form-control" style="cursor: pointer;" name="linea_principal" id="linea_principal" tabindex="-1" data-choice="active">
                                             <option value="" disabled selected>Selecciona una opción</option>
                                             <?php echo $optionsLineaPrincipal; ?>
@@ -128,15 +128,15 @@ echo $header;
                                 <div class="row">
 
                                     <div class="col-lg-4 align-self-center">
-                                        <label class="form-label mt-4">Posición: </label>
+                                        <label class="form-label mt-4">Posición *</label>
                                         <select class="form-control" style="cursor: pointer;" name="posicion" id="posicion" tabindex="-1" data-choice="active" required>
                                             <option value="" disabled selected>Selecciona una opción</option>
                                             <?php echo $optionsPosiciones; ?>
                                         </select>
                                     </div>
 
-                                    <div class="col-lg-4 align-self-center">
-                                        <label class="form-label mt-4">Ciudad de Residencia: </label>
+                                    <div class="col-lg-4 col-sm-12">
+                                        <label class="form-label mt-4">Ciudad de Residencia *</label>
                                         <select class="form-control" style="cursor: pointer;" name="residencia" id="residencia" tabindex="-1" data-choice="active" required>
                                             <option value="" disabled selected>Selecciona una opción</option>
                                             <?php echo $optionsEstados; ?>
@@ -144,10 +144,10 @@ echo $header;
                                     </div>
 
 
-                                    <div class="col-md-4 align-self-center col-cp">
+                                    <div class="col-md-4 col-sm-12 col-cp">
                                         <div id="show-cp" style="visibility: hidden;">
-                                            <label class="form-label mt-4">Codigo Postal: </label>
-                                            <select class="form-control" name="cp" id="cp">
+                                            <label class="form-label mt-4">Codigo Postal *</label>
+                                            <select class="form-control" name="cp" id="cp" required>
                                                 <option value="" disabled selected>Seleccione una opción</option>
                                                 <?php echo $optionsCp; ?>
                                             </select>
@@ -159,23 +159,23 @@ echo $header;
 
 
                                 <div class="row">
-                                    <div class="col-lg-3 align-self-center">
-                                        <label class="form-label mt-4">Aeropuerto: </label>
+                                    <div class="col-lg-6 col-sm-12">
+                                        <label class="form-label mt-4">Aeropuerto *</label>
                                         <select class="form-control" style="cursor: pointer;" name="aeropuerto" id="aeropuerto" tabindex="-1" data-choice="active" required>
                                             <option value="" disabled selected>Selecciona una opción</option>
-                                            <?php echo $optionsEstados; ?>
+                                            <?php echo $optionsAeropuertos; ?>
                                         </select>
                                     </div>
-                                    <div class="col-md-3 align-self-center">
-                                        <label class="form-label mt-4">Actividad: </label>
+                                    <div class="col-md-3 col-sm-12">
+                                        <label class="form-label mt-4">Actividad *</label>
                                         <select class="form-control" style="cursor: pointer;" name="actividad" id="actividad" tabindex="-1" data-choice="active" required>
                                             <option value disabled>Selecciona una opción</option>
                                             <option value="caminata_3k">Caminata 3k</option>
                                             <option value="carrera_5k">Carrera 5k</option>
                                         </select>
                                     </div>
-                                    <div class="col-md-3 align-self-center">
-                                        <label class="form-label mt-4">Talla de Playera</label>
+                                    <div class="col-md-3 col-sm-12">
+                                        <label class="form-label mt-4">Talla de Playera *</label>
                                         <select class="form-control" style="cursor: pointer;" required="true" name="talla_playera" id="talla_playera" tabindex="-1" data-choice="active">
                                             <option value="" disabled>Seleccione una Talla</option>
                                             <option value="Chica">Chica</option>
@@ -184,12 +184,76 @@ echo $header;
                                             <option value="Extra_Grande">Extra Grande</option>
                                         </select>
                                     </div>
-                                    <div class="col-md-3">
+                                    <!-- <div class="col-md-3 col-sm-12">
                                         <label class="form-label mt-4">Restricciones alimenticias</label>
                                         <input class="form-control" id="alergias" maxlength="149" name="alergias" data-color="dark" type="text" value="<?= $userData['alergias'] ?>" placeholder="Enter something" />
-                                    </div>
+                                    </div> -->
                                 </div>
 
+                                <div class="row">
+                                    <div class="col-md-3 col-sm-12">
+                                        <label class="form-label mt-4">Restricciones Alimenticias *</label>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="radio" name="restricciones_alimenticias" id="res_ali_1" value="vegetariano" checked>
+                                            <label class="form-check-label" for="res_ali_1">
+                                                Vegetariano
+                                            </label>
+                                            </div>
+                                            <div class="form-check">
+                                            <input class="form-check-input" type="radio" name="restricciones_alimenticias" id="res_ali_2" value="vegano">
+                                            <label class="form-check-label" for="res_ali_2">
+                                                Vegano
+                                            </label>
+                                            </div>
+                                            <div class="form-check">
+                                            <input class="form-check-input" type="radio" name="restricciones_alimenticias" id="res_ali_3" value="kosher">
+                                            <label class="form-check-label" for="res_ali_3">
+                                                Kosher
+                                            </label>
+                                        </div>
+                                    </div> 
+                                    
+                                    <div class="col-md-4 col-sm-12">
+                                        <label class="form-label mt-4">Alergico a *</label>
+                                        <select class="form-control" name="alergias[]" id="select_alergico" multiple="multiple">
+                                            <option value="lacteos">Lacteos</option>
+                                            <option value="gluten">Gluten</option>
+                                            <option value="mariscos">Pescados y/o mariscos</option>
+                                            <option value="otros">Otros</option>
+                                        </select>
+                                    </div>  
+
+                                    <div class="col-md-5 col-sm-12 cont_alergia_otro" style="display: none;">
+                                        <label class="form-label mt-4">Especifique </label>
+                                        <input class="form-control" id="alergia_otro" maxlength="149" name="alergia_otro" data-color="dark" type="text" value="" placeholder="Escriba su alergia" />
+                                    </div>
+
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-md-3 col-sm-12">
+                                        <label class="form-label mt-4">¿Es usted alergico a un medicamento?</label>
+                                        <div class="form-check">
+                                        <input class="form-check-input" type="radio" name="confirm_alergia" id="confirm_alergia_si" value="si" >
+                                        <label class="form-check-label" for="confirm_alergia_si">
+                                            Si
+                                        </label>
+                                        </div>
+                                        <div class="form-check">
+                                        <input class="form-check-input" type="radio" name="confirm_alergia" id="confirm_alergia_no" value="no" checked>
+                                        <label class="form-check-label" for="confirm_alergia_no">
+                                            No
+                                        </label>
+                                        </div>
+                                            
+                                    </div>
+
+                                    <div class="col-md-9 col-sm-12 medicamento_cual" style="display: none!important;">
+                                        <label class="form-label mt-4">¿Cual?</label>
+                                        <input id="alergia_medicamento_cual" name="alergia_medicamento_cual" maxlength="29" pattern="[a-zA-Z0-9]*" class="form-control" type="text" placeholder=""   value="">
+                                            
+                                    </div>
+                                </div>
 
 
                                 <br>
@@ -273,4 +337,57 @@ echo $header;
             });
         });
     });
+</script>
+
+<script>
+        $(document).ready(function() {
+            $('#cp').select2();
+
+            
+            $('#select_alergico').select2();
+
+            $('#select_alergico').on("change", function(){
+                
+                var valores = $(this).val();
+
+                console.log(valores);
+                if(valores != null){
+                    if(valores.length){
+                    
+                    console.log(valores.length);
+
+                    $.each(valores, function(key, value) {
+                        if(value == 'otros'){
+                        console.log(value);
+                        $(".cont_alergia_otro").css('display','block');
+                        $("#alergia_otro").val("");
+                        }else{
+                            $(".cont_alergia_otro").css('display','none');
+                        }
+                    
+                    });
+
+                    }
+                }else{
+                    $(".cont_alergia_otro").css('display','none');
+                }
+            });
+
+            $('input:radio[name="confirm_alergia"]').change(function(){
+                if($("#confirm_alergia_no").is(':checked')){
+                $(".medicamento_cual").css("display","none");
+                $("#alergia_medicamento_cual").val("");
+                }
+
+                if($("#confirm_alergia_si").is(':checked')){
+                    $(".medicamento_cual").css("display","block");
+                }
+            });
+
+
+
+            
+            
+            
+        });
 </script>

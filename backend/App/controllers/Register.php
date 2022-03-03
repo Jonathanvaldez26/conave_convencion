@@ -562,6 +562,15 @@ html;
                 color: #444;
                 line-height: 32px;
             }
+            .select2-container--default.select2-container--focus .select2-selection--multiple {
+               // height: 38px!important;
+                border-radius: 8px!important;
+            }
+            
+            // .select2-container--default .select2-selection--multiple {
+            //     height: 38px!important;
+            //     border-radius: 8px!important;
+            // }
             </style>
            
             
@@ -616,11 +625,7 @@ html;
             <script async defer src="https://buttons.github.io/buttons.js"></script>
             <!-- Control Center for Soft Dashboard: parallax effects, scripts for the example pages etc -->
             <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
-            <script>
-            $(document).ready(function() {
-                $('#cp').select2();
-            });
-            </script>
+           
             <script>
                 $(document).ready(function(){
                     $.validator.addMethod("checkUserCorreo",function(value, element) {
@@ -694,6 +699,7 @@ html;
         $optionsPosiciones = '';
         $optionsEstados = '';
         $optionsCP = '';
+        $optionsAeropuertos = '';
 
          $userData = RegisterDao::getUserRegister($email)[0];
 
@@ -723,6 +729,14 @@ html;
         foreach ($Estados as $key => $value) {
             $optionsEstados .=<<<html
                 <option value="{$value['id_estado']}">{$value['nombre']}</option>
+html;
+        } 
+
+        $Aeropuertos = RegisterDao::getAeropuertosAll();
+
+        foreach ($Aeropuertos as $key => $value) {
+            $optionsAeropuertos .=<<<html
+                <option value="{$value['id_aeropuerto']}">{$value['aeropuerto']}</option>
 html;
         } 
 
@@ -771,6 +785,7 @@ html;
             View::set('optionsPosiciones',$optionsPosiciones);
             View::set('optionsEstados',$optionsEstados);
             View::set('optionsCp',$optionsCP);
+            View::set('optionsAeropuertos',$optionsAeropuertos);
            // View::set('optionActividad',$optionActividad);
             View::set('email',$email);
             View::set('header',$extraHeader);
@@ -945,6 +960,21 @@ html;
               $residencia = $_POST['residencia'];
               $aeropuerto = $_POST['aeropuerto'];
               $cp = $_POST['cp'];
+              $restricciones_alimenticias = $_POST['restricciones_alimenticias'];
+              $alergias = $_POST['alergias'];+
+              $alergias_ = implode(",", $alergias);
+              if(isset($_POST['alergia_otro'])){
+                $alergia_otro = $_POST['alergia_otro'];
+              }else{
+                $alergia_otro = '';
+              }
+              $alergia_medicamento = $_POST['confirm_alergia'];
+
+              if(isset($_POST['alergia_medicamento_cual'])){
+              $alergia_medicamento_cual = $_POST['alergia_medicamento_cual'];
+              }else{
+              $alergia_medicamento_cual = '';
+              }
              
   
               $documento->_nombre = $nombre;
@@ -958,13 +988,17 @@ html;
               $documento->_linea_principal = $linea_principal;
               $documento->_actividad = $actividad;
               $documento->_talla = $talla;
-              $documento->_alergias = $alergias;
               $documento->_numero_empleado = $numero_empleado;
               $documento->_bu = $bu;
               $documento->_posicion = $posicion;
               $documento->_residencia = $residencia;
               $documento->_aeropuerto = $aeropuerto;
               $documento->_cp = $cp;
+              $documento->_restricciones_alimenticias = $restricciones_alimenticias;
+              $documento->_alergias = $alergias_;
+              $documento->_alergia_otro = $alergia_otro;
+              $documento->_alergia_medicamento = $alergia_medicamento;
+              $documento->_alergia_medicamento_cual = $alergia_medicamento_cual;
               
 
 
