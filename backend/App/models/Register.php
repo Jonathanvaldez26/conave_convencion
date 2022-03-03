@@ -16,6 +16,33 @@ sql;
         return $mysqli->queryAll($query);
     }
 
+    public static function getUserRegisterUpdateData($email){
+      $mysqli = Database::getInstance(true);
+      $query =<<<sql
+      SELECT ra.*, ua.* , bu.nombre as nombre_bu, lp.nombre as nombre_linea, p.nombre as nombre_posicion, e.nombre as nombre_estado, cp.del_mpio, cp.colonia, cp.codigo_postal, a.nombre as nombre_aeropuerto
+      FROM registros_acceso ra 
+      INNER JOIN utilerias_asistentes ua 
+      INNER JOIN bu 
+      INNER JOIN linea_principal lp
+      INNER JOIN posiciones p 
+      INNER JOIN estados e
+      INNER JOIN cp
+      INNER JOIN estados a
+      WHERE ra.id_registro_acceso = ua.id_registro_acceso
+      and ra.id_bu = bu.id_bu
+      and ra.id_linea_principal = lp.id_linea_principal
+      and ra.id_posicion = p.id_posicion
+      and ra.id_residencia = e.id_estado 
+      and ra.id_cp = cp.id
+      and ra.id_aeropuerto = a.id_estado
+      and ra.email = '$email'
+sql;
+
+
+
+      return $mysqli->queryAll($query);
+  }
+
     public static function update($registro){
         $mysqli = Database::getInstance(true);
         $query=<<<sql

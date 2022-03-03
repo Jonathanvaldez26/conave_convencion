@@ -175,6 +175,27 @@ html;
         $idLineaPrincipal = '';
         $nombreLineaPrincipal = '';
 
+        if($userData['genero'] == "Hombre"){
+            $optionsGenero = <<<html
+                <option value="Hombre" selected>Masculino</option>
+                <option value="Mujer">Femenino</option>
+html;
+
+        }
+        elseif($userData['genero'] == "Mujer"){
+            $optionsGenero = <<<html
+                <option value="Hombre">Masculino</option>
+                <option value="Mujer" selected>Femenino</option>
+html;
+
+        }
+        else{
+            $optionsGenero = <<<html
+                <option value="Hombre">Masculino</option>
+                <option value="Mujer">Femenino</option>
+html;   
+        }
+
         foreach ($lineaGeneral as $key => $value) {
 
             if($userData['id_linea_principal'] == $value['id_linea_principal']){
@@ -187,7 +208,7 @@ html;
 html;
         }      
 
-        $userData = RegisterDao::getUserRegister($userData['email'])[0];
+        $userData = RegisterDao::getUserRegisterUpdateData($userData['email'])[0];
 
         if($userData['img'] != ''){
             $imgUser=<<<html
@@ -231,9 +252,9 @@ html;
               $fecha_nacimiento = $_POST['fecha_nacimiento'];
               $email = $_POST['email'];
               $telefono = $_POST['telefono'];
-              $linea_principal = $_POST['linea_principal'];
-              $talla = $_POST['talla'];
-              $actividad = $_POST['actividad'];
+            //   $linea_principal = $_POST['linea_principal'];
+            //   $talla = $_POST['talla'];
+            //   $actividad = $_POST['actividad'];
               $alergias = $_POST['alergias'];
 
               $documento->_nombre = $nombre;
@@ -244,12 +265,12 @@ html;
               $documento->_fecha_nacimiento = $fecha_nacimiento;
               $documento->_email = $email;
               $documento->_telefono = $telefono;
-              $documento->_linea_principal = $linea_principal;
-              $documento->_talla = $talla;
-              $documento->_actividad = $actividad;
+              //$documento->_linea_principal = $linea_principal;
+              //$documento->_talla = $talla;
+              //$documento->_actividad = $actividad;
               $documento->_alergias = $alergias;
 
-              $id = DataDao::update($documento);
+              $id = DataDao::updateInAdmin($documento);
 
               if($id){
                   echo "success";
