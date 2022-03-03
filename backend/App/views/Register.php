@@ -3,8 +3,8 @@ echo $header;
 ?>
     <body class="">
     <main class="main-content mt-0 ps">
-        <div class="page-header align-items-start min-vh-50 pt-5 pb-11 m-3 border-radius-lg" style="background-image: url('../../../assets/img/curved-images/curved9.jpg');">
-            <span class="mask bg-gradient-dark opacity-6"></span>
+        <div class="page-header align-items-start min-vh-50 pt-5 pb-11 m-3 border-radius-lg" style="background-image: url('../../../assets/img/curved-images/Cintillo-03.png');">
+            <span class="mask bg-gradient-dark opacity-0"></span>
             <div class="container">
                 <div class="row justify-content-center">
                     <div class="col-lg-5 text-center mx-auto">
@@ -35,15 +35,16 @@ echo $header;
                                         <input type="email" id="confirm_email" name="confirm_email" class="form-control" placeholder="Ej. usuario@asofarma.com.mx" aria-label="Confirmar tu Correo Eléctronico" required="required">
                                     </div>
                                     <div class="form-group text-center">
-                                        <button class="btn btn-outline-danger w-100 my-4 mb-2 ms-auto" type="submit" id="btn_registro_email">Registrarme</button>
+                                        <button class="btn btn-outline-danger w-100 my-4 mb-0 ms-auto" type="submit" id="btn_registro_email">Registrarme</button>
                                     </div>
                                     
                                 </form>
+                                <div class="text-center">
+                                    <a class="btn btn-outline-dark w-100 ms-auto" href="/Login/">Regresar</a>
+                                </div>
                             </div>
 
-                            <div class="text-center">
-                                <a class="btn btn-outline-info" href="/Home/">Inicio</a>
-                            </div>
+                            
                         </div>
                 </div>
             </div>
