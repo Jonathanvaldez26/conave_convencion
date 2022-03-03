@@ -220,7 +220,7 @@
                                         <img class="w-30" src="../../assets/img/small-logos/asofarma_prueba_covid.png">
                                     </div>
                                     <h6 class="mb-0 font-weight-bolder">Mis Pruebas Covid</h6>
-                                    <p class="opacity-8 mb-0 text-sm"><?php echo $active_pruebas_covid;?></p>
+                                    <p class="opacity-8 mb-0 text-sm">Disponible <i class="fa fa-clock me-sm-0" style="color: #8a6d3b"></i></p>
                                 </div>
                             </a>
                         </div>
@@ -233,7 +233,7 @@
                                         <img class="w-30" src="../../assets/img/small-logos/asofarma_pase_abordar.png">
                                     </div>
                                     <h6 class="mb-0 font-weight-bolder">Pases de Abordar</h6>
-                                    <p class="opacity-8 mb-0 text-sm"><?php echo $active_pase_abordar;?></p>
+                                    <p class="opacity-8 mb-0 text-sm">Disponible <i class="fa fa-check-circle me-sm-0" style="color: #01a31c"></i></p>
                                 </div>
                             </a>
                         </div>
@@ -333,9 +333,7 @@
     </div>
 
 </main>
-
-<?php echo $footer; ?>
-</body
+</body>
 
 
 
