@@ -64,7 +64,6 @@
                     <br>
                     <!-- <a href="#" type="button" class="btn btn-success btn-sm">Nuevo</a> -->
                     <button type="button" class="btn bg-gradient-success btn-sm" data-toggle="modal" data-target="#Modal_Prueba_COVID">
-                        <!-- <i class="fa fa-plus" aria-hidden="true"></i>   -->
                         Nuevo
                     </button>
                     <!-- <button type="button" class="btn btn-secondary btn-sm">Eliminar</button> -->

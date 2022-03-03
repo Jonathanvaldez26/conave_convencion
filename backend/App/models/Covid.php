@@ -63,4 +63,12 @@ sql;
     public static function delete($id){
         return "delete"+$id;
     }
+
+    public static function getCount($id){
+      $mysqli = Database::getInstance(true);
+      $query =<<<sql
+      SELECT COUNT(*) as count FROM prueba_covid WHERE utilerias_asistentes_id = $id ORDER BY id_prueba_covid ASC;
+sql;
+      return $mysqli->queryOne($query);
+  }
 }

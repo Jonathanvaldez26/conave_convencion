@@ -6,6 +6,7 @@ use \Core\View;
 use \Core\MasterDom;
 use \App\controllers\Contenedor;
 use \Core\Controller;
+use \App\models\PasesAbordar AS PasesAbordarDao;
 
 class Passes extends Controller{
 
@@ -61,8 +62,16 @@ html;
     <!-- Control Center for Soft Dashboard: parallax effects, scripts for the example pages etc -->
     <script src="../../assets/js/soft-ui-dashboard.min.js?v=1.0.5"></script>
 html;
-      View::set('header',$this->_contenedor->header($extraHeader));
-      View::set('footer',$this->_contenedor->footer($extraFooter));
-      View::render("passes_work");
+
+        $pases_abordar = PasesAbordarDao::getCount($_SESSION['utilerias_asistentes_id']);
+        if($pases_abordar['count'] >= 1 ){
+            //Vista principal
+            View::render("passes_all");
+        }else{
+            View::set('header',$this->_contenedor->header($extraHeader));
+            View::set('footer',$this->_contenedor->footer($extraFooter));
+            View::render("passes_work");
+        }
+      
     }
 }

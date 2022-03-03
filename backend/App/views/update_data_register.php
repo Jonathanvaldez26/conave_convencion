@@ -208,6 +208,29 @@ echo $header;
                                                 Kosher
                                             </label>
                                         </div>
+<<<<<<< HEAD
+                                    </div>
+
+                                    <div class="col-md-4 col-sm-12">
+                                        <label class="form-label mt-4">Alergico a *</label>
+                                        <select class="form-control" name="alergias[]" id="select_alergico" multiple="multiple">
+                                            <option value="lacteos">Lacteos</option>
+                                            <option value="gluten">Gluten</option>
+                                            <option value="mariscos">Pescados y/o mariscos</option>
+                                            <option value="otros">Otros</option>
+                                        </select>
+                                    </div>
+
+                                    <div class="col-md-5 col-sm-12 cont_alergia_otro" style="display: none;">
+                                        <label class="form-label mt-4">Especifique </label>
+                                        <input class="form-control" id="alergia_otro" maxlength="149" name="alergia_otro" data-color="dark" type="text" value="" placeholder="Escriba su alergia" />
+                                    </div>
+
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-md-3 col-sm-12">
+=======
                                         <div class="form-check">
                                             <input class="form-check-input" type="radio" name="restricciones_alimenticias" id="res_ali_3" value="ninguna" checked>
                                             <label class="form-check-label" for="res_ali_3">
@@ -217,25 +240,30 @@ echo $header;
                                     </div> 
 
                                     <div class="col-md-4 col-sm-12">
+>>>>>>> 6def41129e3d6b8d71d74bf3354f932dcc46b1b3
                                         <label class="form-label mt-4">¿Es usted alergico a un medicamento?</label>
                                         <div class="form-check">
-                                        <input class="form-check-input" type="radio" name="confirm_alergia" id="confirm_alergia_si" value="si" >
-                                        <label class="form-check-label" for="confirm_alergia_si">
-                                            Si
-                                        </label>
+                                            <input class="form-check-input" type="radio" name="confirm_alergia" id="confirm_alergia_si" value="si">
+                                            <label class="form-check-label" for="confirm_alergia_si">
+                                                Si
+                                            </label>
                                         </div>
                                         <div class="form-check">
-                                        <input class="form-check-input" type="radio" name="confirm_alergia" id="confirm_alergia_no" value="no" checked>
-                                        <label class="form-check-label" for="confirm_alergia_no">
-                                            No
-                                        </label>
+                                            <input class="form-check-input" type="radio" name="confirm_alergia" id="confirm_alergia_no" value="no" checked>
+                                            <label class="form-check-label" for="confirm_alergia_no">
+                                                No
+                                            </label>
                                         </div>
+<<<<<<< HEAD
+
+=======
                                         
                                         <div class="col-md-12 col-sm-12 medicamento_cual" style="display: none!important;">
                                             <label class="form-label mt-4">¿Cual?</label>
                                             <input id="alergia_medicamento_cual" name="alergia_medicamento_cual" maxlength="29" pattern="[a-zA-Z0-9]*" class="form-control" type="text" placeholder=""   value="">
                                                 
                                         </div>
+>>>>>>> 6def41129e3d6b8d71d74bf3354f932dcc46b1b3
                                     </div>
                                     
                                     <div class="col-md-5 col-sm-12">
@@ -249,6 +277,13 @@ echo $header;
                                             </select>
                                         </div>
 
+<<<<<<< HEAD
+                                    <div class="col-md-9 col-sm-12 medicamento_cual" style="display: none!important;">
+                                        <label class="form-label mt-4">¿Cual?</label>
+                                        <input id="alergia_medicamento_cual" name="alergia_medicamento_cual" maxlength="29" pattern="[a-zA-Z0-9]*" class="form-control" type="text" placeholder="" value="">
+
+                                    </div>
+=======
                                         <div class="col-md-12 col-sm-12 cont_alergia_otro" style="display: none;">
                                             <label class="form-label mt-4">Especifique </label>
                                             <input class="form-control" id="alergia_otro" maxlength="149" name="alergia_otro" data-color="dark" type="text" value="" placeholder="Escriba su alergia" />
@@ -267,6 +302,7 @@ echo $header;
 
                                 <div class="row">
                                     
+>>>>>>> 6def41129e3d6b8d71d74bf3354f932dcc46b1b3
                                 </div>
 
 
@@ -360,46 +396,45 @@ echo $header;
 
         $('#cp').select2();
 
-            
-            $('#select_alergico').select2();
 
-            $('#select_alergico').on("change", function(){
-                
-                var valores = $(this).val();
+        $('#select_alergico').select2();
 
-                console.log(valores);
-                if(valores != null){
-                    if(valores.length){
-                    
+        $('#select_alergico').on("change", function() {
+
+            var valores = $(this).val();
+
+            console.log(valores);
+            if (valores != null) {
+                if (valores.length) {
+
                     console.log(valores.length);
 
                     $.each(valores, function(key, value) {
-                        if(value == 'otros'){
-                        console.log(value);
-                        $(".cont_alergia_otro").css('display','block');
-                        $("#alergia_otro").val("");
-                        }else{
-                            $(".cont_alergia_otro").css('display','none');
+                        if (value == 'otros') {
+                            console.log(value);
+                            $(".cont_alergia_otro").css('display', 'block');
+                            $("#alergia_otro").val("");
+                        } else {
+                            $(".cont_alergia_otro").css('display', 'none');
                         }
-                    
+
                     });
 
-                    }
-                }else{
-                    $(".cont_alergia_otro").css('display','none');
                 }
-            });
+            } else {
+                $(".cont_alergia_otro").css('display', 'none');
+            }
+        });
 
-            $('input:radio[name="confirm_alergia"]').change(function(){
-                if($("#confirm_alergia_no").is(':checked')){
-                $(".medicamento_cual").css("display","none");
+        $('input:radio[name="confirm_alergia"]').change(function() {
+            if ($("#confirm_alergia_no").is(':checked')) {
+                $(".medicamento_cual").css("display", "none");
                 $("#alergia_medicamento_cual").val("");
-                }
+            }
 
-                if($("#confirm_alergia_si").is(':checked')){
-                    $(".medicamento_cual").css("display","block");
-                }
-            });
+            if ($("#confirm_alergia_si").is(':checked')) {
+                $(".medicamento_cual").css("display", "block");
+            }
+        });
     });
 </script>
-
