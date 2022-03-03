@@ -3,7 +3,7 @@ echo $header;
 ?>
     <body class="">
     <main class="main-content mt-0 ps">
-        <div class="page-header align-items-start min-vh-50 pt-5 pb-11 m-3 border-radius-lg" style="background-image: url('../../../assets/img/curved-images/Cintillo-03.png');">
+        <div class="page-header align-items-start min-vh-50 pt-5 pb-11 m-3 border-radius-lg" style="background-image: url('../../../assets/img/curved-images/Cintillo-04.png');">
             <span class="mask bg-gradient-dark opacity-0"></span>
             <div class="container">
                 <div class="row justify-content-center">

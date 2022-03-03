@@ -309,9 +309,9 @@ echo $header;
             var estado = $(this).val();
 
             
-            $('span.select2-selection.select2-selection--multiple').addClass('form-control').css('border-color', '#ccc');
-            $('span.select2.select2-container.select2-container--default').addClass("width-wk");
+            $('span.select2.select2-container.select2-container--default').css('border-color','#ccc').addClass("width-wk");
             $('span.select2-selection.select2-selection--single').css('border-color', '#ccc');
+            $('.select2-container--default .select2-selection--single .select2-selection__arrow').css('color', '#fff');
 
             // alert($(this).val());
             $.ajax({

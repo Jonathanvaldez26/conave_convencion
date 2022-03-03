@@ -332,9 +332,10 @@
         </div>
     </div>
 
-    <?php echo $footer; ?>
 </main>
 
+<?php echo $footer; ?>
+</body
 
 
 
