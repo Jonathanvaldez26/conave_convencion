@@ -336,12 +336,9 @@ echo $header;
 
             });
         });
-    });
-</script>
 
-<script>
-        $(document).ready(function() {
-            $('#cp').select2();
+
+        $('#cp').select2();
 
             
             $('#select_alergico').select2();
@@ -383,11 +380,6 @@ echo $header;
                     $(".medicamento_cual").css("display","block");
                 }
             });
-
-
-
-            
-            
-            
-        });
+    });
 </script>
+
