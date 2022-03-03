@@ -139,19 +139,21 @@ html;
                                 </div>
                                 <div class="card-body px-1 pb-0">
                                     <p class="text-gradient text-dark mb-2 text-sm text-center">Comprobante de Vacunación Cargado el {$value['fecha_carga_documento']}. Registró {$value['numero_dosis']} Dosis para su comprobante.</p>
+                                    
 html;
-//                     if ($value['validez'] == 1) {
-//                         $tabla .= <<<html
-//                         <h6 class="text-center">
-//                             Se ha Validado Correctamente su Comprobante de Vacunación.
-//                         </h6>
-// html;
-//                     } else  if ($value['validez'] == 0) {
-//                         $tabla .= <<<html
-//                         <h6 class="text-center">
-//                             Un Ejecutivo Está Validando su Comprobante de Vacunación.
-//                         </h6>
-// html;
+                    if ($value['validado'] == 1) {
+                        $tabla .= <<<html
+                        <h6 class="text-center">
+                            Se ha Validado Correctamente su Comprobante de Vacunación.
+                        </h6>
+html;
+                    } else  if ($value['validado'] == 0) {
+                        $tabla .= <<<html
+                        <h6 class="text-center">
+                            Un Ejecutivo Está Validando su Comprobante de Vacunación.
+                        </h6>
+html;
+                    }
 //                     } else if ($value['status'] == 0) {
 //                         $tabla .=<<<html
 //                             <div class="col-xl-4 col-md-6 mb-xl-0 mb-4">

@@ -63,7 +63,7 @@
 
                     <br>
                     <!-- <a href="#" type="button" class="btn btn-success btn-sm">Nuevo</a> -->
-                    <button type="button" class="btn btn-success btn-sm" data-toggle="modal" data-target="#Modal_Prueba_COVID">
+                    <button type="button" class="btn bg-gradient-success btn-sm" data-toggle="modal" data-target="#Modal_Prueba_COVID">
                         <!-- <i class="fa fa-plus" aria-hidden="true"></i>   -->
                         Nuevo
                     </button>
@@ -113,7 +113,7 @@
                         Agregue su Prueba SARS-CoV-2
                         
                     </h5>
-                    <span type="button" class="btn btn-dark" data-dismiss="modal" aria-label="Close">
+                    <span type="button" class="btn bg-gradient-danger" data-dismiss="modal" aria-label="Close">
                         X
                     </span>
                 </div>
@@ -178,8 +178,8 @@
                             <input type="hidden" id="user_" name="user_" value="<?=$_SESSION["utilerias_asistentes_id"]?>">
                         </div>
                         <div class="modal-footer">
-                            <button type="submit" class="btn btn-success" id="btn_upload" name="btn_upload">Aceptar</button>
-                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
+                            <button type="submit" class="btn bg-gradient-success" id="btn_upload" name="btn_upload">Aceptar</button>
+                            <button type="button" class="btn bg-gradient-secondary" data-dismiss="modal">Cancelar</button>
                         </div>
                     </form>
                 </div>

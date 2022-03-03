@@ -76,7 +76,7 @@ html;
     public function footer($extra = ''){
         $footer =<<<html
 
-        <footer class="footer pt-4">
+        <footer class="footer pt-4 hide-desk">
                 <div class="container-fluid">
                     <div class="row align-items-center justify-content-lg-between">
                         <div class="col-lg-6 mb-lg-0 mb-4">
@@ -84,7 +84,7 @@ html;
                                 © <script>
                                     document.write(new Date().getFullYear())
                                 </script>,
-                                made with <i class="fa fa-heart"></i> by
+                                    made with <i class="fa fa-heart"></i> by
                                 <a href="https://www.creative-tim.com" class="font-weight-bold" target="www.grupolahe.com">Creative GRUPO LAHE</a>.
                             </div>
                         </div>

@@ -40,6 +40,10 @@ echo $header;
                                     
                                 </form>
                             </div>
+
+                            <div class="text-center">
+                                <a class="btn btn-outline-info" href="/Home/">Inicio</a>
+                            </div>
                         </div>
                 </div>
             </div>

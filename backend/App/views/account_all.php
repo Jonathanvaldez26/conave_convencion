@@ -98,7 +98,7 @@
 
 
                 <!-- Card Basic Info -->
-                <div class="card mt-4" id="basic-info">
+                <div class="card mt-4 mb-4" id="basic-info">
                     <div class="card-header">
                         <h5>Información Básica</h5>
                         <?php $prueba; ?>
