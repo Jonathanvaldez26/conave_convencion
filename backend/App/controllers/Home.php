@@ -5,6 +5,9 @@ defined("APPPATH") OR die("Access denied");
 use \Core\View;
 use \Core\Controller;
 use \App\models\Home AS HomeDao;
+use \App\models\Covid AS CovidDao;
+use \App\models\Vaccination AS VaccinationDao;
+use \App\models\PasesAbordar AS PasesAbordarDao;
 
 
 class Home extends Controller{
@@ -27,7 +30,24 @@ class Home extends Controller{
       <link id="pagestyle" href="/assets/css/style.css" rel="stylesheet" />
 html;
 
+        //Modulo Comprobante de vacunacion
+        $comprobante_vacunacion = VaccinationDao::getCount($_SESSION['utilerias_asistentes_id']);
+        if($comprobante_vacunacion['count'] >= 1 ){
+        $active_pruebas_covid = "Disponible <i class=\"fa fa-check-circle me-sm-0\" style=\"color: #01a31c\"></i>";
+        }else{
+          $active_pruebas_covid = "En espera <i class=\"fa fa-clock me-sm-0\" style=\"color: #8a6d3b\"></i>";
+        }
+
+        //modulo pases de abordar
+        $pruebas_covid = CovidDao::getCount($_SESSION['utilerias_asistentes_id']);
+        if($pruebas_covid['count'] >= 1 ){
+        $active_pase_abordar = "Disponible <i class=\"fa fa-check-circle me-sm-0\" style=\"color: #01a31c\"></i>";
+        }else{
+          $active_pase_abordar = "En espera <i class=\"fa fa-clock me-sm-0\" style=\"color: #8a6d3b\"></i>";
+        }
+       
         $card_permisos = HomeDao::getCountByUser($_SESSION['utilerias_asistentes_id']);
+
         //$pickup_permisos = HomeDao::getCountPickUp($_SESSION['utilerias_asistentes_id']);
         $tabla = '';
 
@@ -43,7 +63,8 @@ html;
 
           //  }
         //}
-
+        View::set('active_pruebas_covid',$active_pruebas_covid);
+        View::set('active_pase_abordar',$active_pase_abordar);
         View::set('header',$this->_contenedor->header($extraHeader));
         //View::set('tabla',$tabla);
         View::render("principal_all");

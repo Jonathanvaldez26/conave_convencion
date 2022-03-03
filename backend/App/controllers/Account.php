@@ -168,12 +168,25 @@ html;
         $userData = LoginDao::getUser($_SESSION['usuario'])[0];
 
         $lineaGeneral = LineaGeneralDao::getLineaPrincialAll();
+        
         $optionsGenero = '';
         $optionsLineaPrincipal = '';
         $optionsActividad = '';
         $optionsTalla = '';
         $idLineaPrincipal = '';
         $nombreLineaPrincipal = '';
+
+        foreach ($lineaGeneral as $key => $value) {
+
+            if($userData['id_linea_principal'] == $value['id_linea_principal']){
+                $idLineaPrincipal =  $value['id_linea_principal'];
+                $nombreLineaPrincipal =  $value['nombre'];
+            }
+            $optionsLineaPrincipal.=<<<html
+                <option value="{$value['id_linea_principal']}">{$value['nombre']}</option>
+               
+html;
+        }   
 
         if($userData['genero'] == "Hombre"){
             $optionsGenero = <<<html
@@ -196,17 +209,7 @@ html;
 html;   
         }
 
-        foreach ($lineaGeneral as $key => $value) {
-
-            if($userData['id_linea_principal'] == $value['id_linea_principal']){
-                $idLineaPrincipal =  $value['id_linea_principal'];
-                $nombreLineaPrincipal =  $value['nombre'];
-            }
-            $optionsLineaPrincipal.=<<<html
-                <option value="{$value['id_linea_principal']}">{$value['nombre']}</option>
-               
-html;
-        }      
+           
 
         $userData = RegisterDao::getUserRegisterUpdateData($userData['email'])[0];
 

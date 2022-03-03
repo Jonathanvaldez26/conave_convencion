@@ -6,6 +6,7 @@ use \Core\MasterDom;
 use \App\controllers\Contenedor;
 use \Core\Controller;
 use \App\models\Covid AS CovidDao;
+use \App\models\Vaccination AS VaccinationDao;
 
 class Covid extends Controller{
 
@@ -119,6 +120,7 @@ html;
 html;
 
     $pruebas = CovidDao::getByIdUser($_SESSION['utilerias_asistentes_id']);
+
     $tabla = '';
     $iframe_doc = '';
     $status = '';
@@ -132,17 +134,19 @@ html;
     $fecha_hoy = date('Y-m-d');
 
     foreach ($pruebas as $key => $prueba) {
-      if($prueba['status'] = 1){
+      if($prueba['status'] == 1){
         $status =<<<html
         <span class="badge badge-sm badge-secondary">En Espera de Validación</span>
         
 html;
-      }elseif ($prueba['status'] = 2)
+      }elseif ($prueba['status'] == 2)
       {
           $status =<<<html
           <span class="badge badge-sm badge-success">Se valido Correctamente</span>   
 html;
       }
+
+
 
       $tabla.=<<<html
       <tr>
@@ -204,14 +208,20 @@ $iframe_doc .= <<<html
 html;
     }
 
-    View::set('iframe_doc',$iframe_doc);
-    View::set('tabla',$tabla);
-    View::set('fechaActual',$fechaActual);
-    View::set('fecha_7d',$fecha_7d);
-    View::set('fecha_hoy',$fecha_hoy);
-    View::set('header',$this->_contenedor->header($extraHeader));
-    View::set('footer',$extraFooter);
-    View::render("covid_all");
+
+    $comprobante_vacunacion = VaccinationDao::getCount($_SESSION['utilerias_asistentes_id']);
+    if($comprobante_vacunacion['count'] >= 1 ){
+      View::set('iframe_doc',$iframe_doc);
+      View::set('tabla',$tabla);
+      View::set('fechaActual',$fechaActual);
+      View::set('fecha_7d',$fecha_7d);
+      View::set('fecha_hoy',$fecha_hoy);
+      View::set('header',$this->_contenedor->header($extraHeader));
+      View::set('footer',$extraFooter);
+      View::render("covid_all");
+    }else{
+      View::render("covid_work");
+    }
   }
 
   public function uploadPrueba(){
