@@ -182,7 +182,7 @@ html;
                 $idLineaPrincipal =  $value['id_linea_principal'];
                 $nombreLineaPrincipal =  $value['nombre'];
             }
-
+            
             $optionsLineaPrincipal.=<<<html
                 <option value="{$value['id_linea_principal']}">{$value['nombre']}</option>
                
@@ -203,12 +203,12 @@ html;
 html;
 
         }
-//         else{
-//             $optionsGenero = <<<html
-//                 <option value="Hombre">Masculino</option>
-//                 <option value="Mujer">Femenino</option>
-// html;   
-//         }
+        elseif($userData['genero'] != "Mujer" || $userData['genero'] != "Hombre"){
+            $optionsGenero = <<<html
+                <option value="Hombre">Masculino</option>
+                <option value="Mujer">Femenino</option>
+html;   
+        }
 
            
 
