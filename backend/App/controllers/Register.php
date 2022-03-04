@@ -823,6 +823,7 @@ html;
         $Cp = RegisterDao::getCp($estado);
         
         echo json_encode($Cp);
+        exit();
         
 
     }
@@ -830,11 +831,13 @@ html;
     public function SearchConcidenciaCp(){
         $codigo = $_POST['codigo'];
         $estado = $_POST['estado'];
-        $Cp = RegisterDao::getCpByCode($codigo,$estado);
+
+        if(isset($codigo) && isset($estado) && !empty($codigo) && !empty($estado)){
+            $Cp = RegisterDao::getCpByCode($codigo,$estado);
         
-        echo json_encode($Cp);
-       // var_dump($Cp);
-        
+            echo json_encode($Cp);
+
+        }
 
     }
 

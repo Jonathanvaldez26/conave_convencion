@@ -141,6 +141,7 @@ echo $header;
                                             <option value="" disabled selected>Selecciona una opción</option>
                                             <?php echo $optionsEstados; ?>
                                         </select>
+                                        <!-- <input type="text" name="residencia_value" id="residencia_value"> -->
                                     </div>
 
 
@@ -300,66 +301,49 @@ echo $header;
 <script>
             $(document).ready(function() {
                 $("#residencia").on("change", function() {
-                   // alert($(this).val());
-                    // $(".col-cp").removeClass('d-none');
-                    // $("#show-cp").css('visibility', 'visible');
                     $("#show-cp").css('display', 'block');
-                    //var estado = $(this).val();
-        
-                    
-                    $('span.select2.select2-container.select2-container--default').css('border-color','#ccc').addClass("width-wk");
-                    $('span.select2-selection.select2-selection--single').css('border-color', '#ccc');
-                    $('.select2-container--default .select2-selection--single .select2-selection__arrow').css('color', '#fff');
-        
-                    // alert($(this).val());
-                    
                 });
 
-                $("#cp").on("keyup", function(){
-                    console.log($(this).val());
-                    console.log(estado);
-                    var estado = $("#residencia").val();
-                    var codigo = $(this).val();
-                    $.ajax({
-                        url: "/Register/SearchConcidenciaCp",
-                        type: "POST",
-                        data: {codigo,estado},
-                        dataType: "json",
-                        cache: false,
-                        //contentType: false,
-                        //processData: false,
-                        cache: false,
-                        beforeSend: function() {
-                            console.log("Procesando....");
-                            $('#list_cp')
-                                .find('option')
-                                .remove()
-                                .end();
+                // $("#cp").on("keyup", function(){
+                //     var estado = $("#residencia").val();
+                //     var codigo = $(this).val();
+
+                //     $.ajax({
+                //         url: "/Register/SearchConcidenciaCp",
+                //         type: "POST",
+                //         data: {codigo,estado},
+                //         dataType: "json",
+                //         beforeSend: function() {
+                //             console.log("Procesando....");
+                //             $('#list_cp')
+                //                 .find('option')
+                //                 .remove()
+                //                 .end();
         
-                        },
-                        success: function(respuesta) {
-                             console.log(respuesta);
+                //         },
+                //         success: function(respuesta) {
+                //              console.log(respuesta);
     
         
-                            $.each(respuesta, function(key, value) {
-                                //console.log(key);
-                                console.log(value);
-                                $('#list_cp')
-                                    .append($('<option>', {
-                                            'data-value': value.id 
-                                        })
-                                        .text(value.codigo_postal + ' - ' + value.colonia + ' - ' + value.del_mpio + ' - ' + value.estado));
+                //             $.each(respuesta, function(key, value) {
+                //                 //console.log(key);
+                //                 console.log(value);
+                //                 $('#list_cp')
+                //                     .append($('<option>', {
+                //                             'data-value': value.id 
+                //                         })
+                //                         .text(value.codigo_postal + ' - ' + value.colonia + ' - ' + value.del_mpio + ' - ' + value.estado));
                                 
         
-                            });
+                //             });
         
-                        },
-                        error: function(respuesta) {
-                            console.log(respuesta);
-                        }
+                //         },
+                //         error: function(respuesta) {
+                //             console.log(respuesta);
+                //         }
         
-                    });
-                });
+                //     });
+                // });
         
         
                 //$('#cp').select2();
