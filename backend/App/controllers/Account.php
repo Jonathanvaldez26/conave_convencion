@@ -189,25 +189,35 @@ html;
 html;
         }   
 
-        if($userData['genero'] == "Hombre"){
+        if($userData['genero'] != ''){
+            if($userData['genero'] == "Hombre"){
+                $optionsGenero = <<<html
+                    <option value="Hombre" selected>Masculino</option>
+                    <option value="Mujer">Femenino</option>
+html;
+    
+            }
+            else if($userData['genero'] == "Mujer"){
+                $optionsGenero = <<<html
+                    <option value="Hombre">Masculino</option>
+                    <option value="Mujer" selected>Femenino</option>
+html;
+    
+            }
+            else{
+                $optionsGenero = <<<html
+                    <option value="Hombre">Masculino</option>
+                    <option value="Mujer">Femenino</option>
+html;
+    
+            }
+
+        }else{
             $optionsGenero = <<<html
-                <option value="Hombre" selected>Masculino</option>
+                <option value="Hombre">Masculino</option>
                 <option value="Mujer">Femenino</option>
 html;
 
-        }
-        else if($userData['genero'] == "Mujer"){
-            $optionsGenero = <<<html
-                <option value="Hombre">Masculino</option>
-                <option value="Mujer" selected>Femenino</option>
-html;
-
-        }
-        else if($userData['genero'] != "Mujer" || $userData['genero'] != "Hombre"){
-            $optionsGenero = <<<html
-                <option value="Hombre">Masculino</option>
-                <option value="Mujer">Femenino</option>
-html;   
         }
 
            

@@ -125,4 +125,13 @@ sql;
       return $mysqli->queryAll($query);
   }
 
+  public static function getCpByCode($code,$estado){
+    $mysqli = Database::getInstance(true);
+    $query =<<<sql
+    SELECT * FROM cp where codigo_postal LIKE  $code and id_estado = $estado
+sql;
+
+    return $mysqli->queryAll($query);
+}
+
 }
