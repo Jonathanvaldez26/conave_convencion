@@ -47,6 +47,9 @@ class Mailer
 
         <!-- Responsive Meta Tag -->
         <meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0;">
+        
+        <link rel="apple-touch-icon" sizes="76x76" href="../../../assets/img/aso_icon.png">
+        <link rel="icon" type="image/vnd.microsoft.icon" href="../../../assets/img/aso_icon.png">
 
         <title>Email Template</title>
 
@@ -147,6 +150,9 @@ class Mailer
                 <meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0;">
         
                 <title>Email Template</title>
+                
+                <link rel="apple-touch-icon" sizes="76x76" href="../../../assets/img/aso_icon.png">
+                <link rel="icon" type="image/vnd.microsoft.icon" href="../../../assets/img/aso_icon.png">
         
                 <!-- Responsive and Valid Styles -->
                 <style type="text/css">
