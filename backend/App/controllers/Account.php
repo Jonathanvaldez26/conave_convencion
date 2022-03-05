@@ -169,7 +169,7 @@ html;
 
         $lineaGeneral = LineaGeneralDao::getLineaPrincialAll();
         
-        $optionsGenero = '';
+        
         $optionsLineaPrincipal = '';
         $optionsActividad = '';
         $optionsTalla = '';
@@ -189,27 +189,25 @@ html;
 html;
         }   
 
+        $optionsGenero = '';
+
         if($userData['genero'] == "Hombre"){
-            $optionsGenero = <<<html
+            $optionsGenero .=<<<html
                 <option value="Hombre" selected>Masculino</option>
                 <option value="Mujer">Femenino</option>
 html;
 
-        }
-        elseif($userData['genero'] == "Mujer"){
-            $optionsGenero = <<<html
+        } else if($userData['genero'] == "Mujer"){
+            $optionsGenero .=<<<html
                 <option value="Hombre">Masculino</option>
                 <option value="Mujer" selected>Femenino</option>
 html;
-
+        } else {
+            $optionsGenero .=<<<html
+                <option value="Hombre">Masculino</option>
+                <option value="Mujer">Femenino</option>
+html;
         }
-//         else{
-//             $optionsGenero = <<<html
-//                 <option value="Hombre">Masculino</option>
-//                 <option value="Mujer">Femenino</option>
-// html;   
-//         }
-
            
 
         $userData = RegisterDao::getUserRegisterUpdateData($userData['email'])[0];
@@ -237,6 +235,14 @@ html;
       View::set('nombreLineaPrincipal',$nombreLineaPrincipal);
       View::render("account_all");
     }
+
+
+//         else{
+//             $optionsGenero = <<<html
+//                 <option value="Hombre">Masculino</option>
+//                 <option value="Mujer">Femenino</option>
+// html;   
+//         }
 
 
     public function Actualizar(){
