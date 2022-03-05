@@ -175,6 +175,7 @@ html;
         $optionsTalla = '';
         $idLineaPrincipal = '';
         $nombreLineaPrincipal = '';
+        $optionsGenero = '';
 
         foreach ($lineaGeneral as $key => $value) {
 
@@ -182,26 +183,37 @@ html;
                 $idLineaPrincipal =  $value['id_linea_principal'];
                 $nombreLineaPrincipal =  $value['nombre'];
             }
-
+            
             $optionsLineaPrincipal.=<<<html
                 <option value="{$value['id_linea_principal']}">{$value['nombre']}</option>
                
 html;
         }   
 
-        $optionsGenero = '';
-
-        if($userData['genero'] == "Hombre"){
-            $optionsGenero .=<<<html
-                <option value="Hombre" selected>Masculino</option>
-                <option value="Mujer">Femenino</option>
+        if($userData['genero'] != ''){
+            if($userData['genero'] == "Hombre"){
+                $optionsGenero = <<<html
+                    <option value="Hombre" selected>Masculino</option>
+                    <option value="Mujer">Femenino</option>
 html;
-
-        } else if($userData['genero'] == "Mujer"){
-            $optionsGenero .=<<<html
-                <option value="Hombre">Masculino</option>
-                <option value="Mujer" selected>Femenino</option>
+    
+            }
+            else if($userData['genero'] == "Mujer"){
+                $optionsGenero = <<<html
+                    <option value="Hombre">Masculino</option>
+                    <option value="Mujer" selected>Femenino</option>
 html;
+    
+            }
+            else{
+                $optionsGenero = <<<html
+                    <option value="Hombre">Masculino</option>
+                    <option value="Mujer">Femenino</option>
+html;
+    
+            }
+
+        
         } else {
             $optionsGenero .=<<<html
                 <option value="Hombre">Masculino</option>

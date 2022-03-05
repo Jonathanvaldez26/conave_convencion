@@ -141,15 +141,20 @@ echo $header;
                                             <option value="" disabled selected>Selecciona una opción</option>
                                             <?php echo $optionsEstados; ?>
                                         </select>
+                                        <!-- <input type="text" name="residencia_value" id="residencia_value"> -->
                                     </div>
 
 
                                     <div class="col-md-4 col-sm-12"  id="show-cp" style="display: none;">
                                         <label class="form-label mt-4">Codigo Postal *</label><br>
-                                        <select class="form-control" name="cp" id="cp" required>
+                                        <input type="text" class="form-control" id="cp" name="cp" list="list_cp">
+                                        <datalist id="list_cp">
+
+                                        </datalist>
+                                        <!-- <select class="form-control" name="cp" id="cp" required>
                                             <option value="" disabled selected>Seleccione una opción</option>
-                                            <?php echo $optionsCp; ?>
-                                        </select>
+                                            <?php //echo $optionsCp; ?>
+                                        </select> -->
                                     </div>
                                 </div>
 
@@ -294,5 +299,94 @@ echo $header;
 <?php echo $footer; ?>
 
 <script>
+            $(document).ready(function() {
+                $("#residencia").on("change", function() {
+                    $("#show-cp").css('display', 'block');
+                });
+
+                // $("#cp").on("keyup", function(){
+                //     var estado = $("#residencia").val();
+                //     var codigo = $(this).val();
+
+                //     $.ajax({
+                //         url: "/Register/SearchConcidenciaCp",
+                //         type: "POST",
+                //         data: {codigo,estado},
+                //         dataType: "json",
+                //         beforeSend: function() {
+                //             console.log("Procesando....");
+                //             $('#list_cp')
+                //                 .find('option')
+                //                 .remove()
+                //                 .end();
+        
+                //         },
+                //         success: function(respuesta) {
+                //              console.log(respuesta);
     
-</script>
+        
+                //             $.each(respuesta, function(key, value) {
+                //                 //console.log(key);
+                //                 console.log(value);
+                //                 $('#list_cp')
+                //                     .append($('<option>', {
+                //                             'data-value': value.id 
+                //                         })
+                //                         .text(value.codigo_postal + ' - ' + value.colonia + ' - ' + value.del_mpio + ' - ' + value.estado));
+                                
+        
+                //             });
+        
+                //         },
+                //         error: function(respuesta) {
+                //             console.log(respuesta);
+                //         }
+        
+                //     });
+                // });
+        
+        
+                //$('#cp').select2();
+        
+        
+                $('#select_alergico').select2();
+        
+                $('#select_alergico').on("change", function() {
+        
+                    var valores = $(this).val();
+        
+                    console.log(valores);
+                    if (valores != null) {
+                        if (valores.length) {
+        
+                            console.log(valores.length);
+        
+                            $.each(valores, function(key, value) {
+                                if (value == 'otros') {
+                                    console.log(value);
+                                    $(".cont_alergia_otro").css('display', 'block');
+                                    $("#alergia_otro").val("");
+                                } else {
+                                    $(".cont_alergia_otro").css('display', 'none');
+                                }
+        
+                            });
+        
+                        }
+                    } else {
+                        $(".cont_alergia_otro").css('display', 'none');
+                    }
+                });
+        
+                $('input:radio[name="confirm_alergia"]').change(function() {
+                    if ($("#confirm_alergia_no").is(':checked')) {
+                        $(".medicamento_cual").css("display", "none");
+                        $("#alergia_medicamento_cual").val("");
+                    }
+        
+                    if ($("#confirm_alergia_si").is(':checked')) {
+                        $(".medicamento_cual").css("display", "block");
+                    }
+                });
+            });
+            </script>

@@ -240,7 +240,8 @@
                                             <option value="" disabled selected>Seleccione una opción</option>
                                             <?php echo $optionsCp; ?>
                                         </select> -->
-                                        <input id="cp" name="cp" maxlength="49" class="form-control" type="text" placeholder="bu" onfocus="focused(this)" onfocusout="defocused(this)" value="<?= $userData['codigo_postal']. " - ". $userData['colonia']." - ". $userData['del_mpio'] ?>" readonly>
+                                        <!-- <input id="cp" name="cp" maxlength="49" class="form-control" type="text" placeholder="bu" onfocus="focused(this)" onfocusout="defocused(this)" value="<?= $userData['codigo_postal']. " - ". $userData['colonia']." - ". $userData['del_mpio'] ?>" readonly> -->
+                                        <input id="cp" name="cp" maxlength="49" class="form-control" type="text" placeholder="bu" onfocus="focused(this)" onfocusout="defocused(this)" value="<?= $userData['id_cp'] ?>" readonly>
                                     </div>
 
                                 </div>

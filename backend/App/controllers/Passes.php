@@ -66,6 +66,7 @@ html;
 html;
 
         $pases_abordar = PasesAbordarDao::getCount($_SESSION['utilerias_asistentes_id']);
+        
         if($pases_abordar['count'] >= 1 ){
             //Vista principal
             View::render("passes_all");
