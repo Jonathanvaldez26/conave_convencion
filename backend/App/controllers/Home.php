@@ -31,7 +31,7 @@ class Home extends Controller{
 html;
 
         //Modulo Comprobante de vacunacion
-        $comprobante_vacunacion = VaccinationDao::getCount($_SESSION['utilerias_asistentes_id']);
+        $comprobante_vacunacion = VaccinationDao::getCountHome($_SESSION['utilerias_asistentes_id']);
         if($comprobante_vacunacion['count'] >= 1 ){
         $active_pruebas_covid = "Disponible <i class=\"fa fa-check-circle me-sm-0\" style=\"color: #01a31c\"></i>";
         }else{

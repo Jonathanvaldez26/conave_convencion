@@ -127,8 +127,10 @@ html;
         $iframe_doc = '';
         $fechaActual = date('d-m-Y');
 
+      
+
         foreach ($vacuna as $key => $value) {
-            if($value['count'] >= 1){
+            if($value['count'] > 0){
                 $vacunas = VaccinationDao::getByIdUser($_SESSION['utilerias_asistentes_id']);
                 foreach ($vacunas as $key => $value) {
 
