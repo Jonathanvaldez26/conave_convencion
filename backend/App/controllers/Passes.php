@@ -25,6 +25,8 @@ class Passes extends Controller{
 
     public function index() {
      $extraHeader =<<<html
+     <link rel="apple-touch-icon" sizes="76x76" href="../../../assets/img/aso_icon.png">
+     <link rel="icon" type="image/vnd.microsoft.icon" href="../../../assets/img/aso_icon.png">
 html;
      $extraFooter =<<<html
     <script src="../../assets/js/core/popper.min.js"></script>

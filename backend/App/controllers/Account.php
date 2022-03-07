@@ -169,12 +169,13 @@ html;
 
         $lineaGeneral = LineaGeneralDao::getLineaPrincialAll();
         
-        $optionsGenero = '';
+        
         $optionsLineaPrincipal = '';
         $optionsActividad = '';
         $optionsTalla = '';
         $idLineaPrincipal = '';
         $nombreLineaPrincipal = '';
+        $optionsGenero = '';
 
         foreach ($lineaGeneral as $key => $value) {
 
@@ -212,14 +213,13 @@ html;
     
             }
 
-        }else{
-            $optionsGenero = <<<html
+        
+        } else {
+            $optionsGenero .=<<<html
                 <option value="Hombre">Masculino</option>
                 <option value="Mujer">Femenino</option>
 html;
-
         }
-
            
 
         $userData = RegisterDao::getUserRegisterUpdateData($userData['email'])[0];
@@ -247,6 +247,14 @@ html;
       View::set('nombreLineaPrincipal',$nombreLineaPrincipal);
       View::render("account_all");
     }
+
+
+//         else{
+//             $optionsGenero = <<<html
+//                 <option value="Hombre">Masculino</option>
+//                 <option value="Mujer">Femenino</option>
+// html;   
+//         }
 
 
     public function Actualizar(){

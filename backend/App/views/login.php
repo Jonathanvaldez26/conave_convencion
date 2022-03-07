@@ -609,7 +609,8 @@ echo $header;
                                             Para crear su cuenta de acceso proporcione su cuenta de correo electrónico corporativo y de clic en el siguiente botón.
                                         </p>
                                         <div class="text-center">
-                                            <a href="/Register/" type="button" class="btn btn btn-outline-danger w-100 mt-4 mb-0 font-weight-bold"><b style="color: #b11313">¡QUIERO REGISTRARME!</b></a>
+                                            <!-- <a href="/Register/" type="button" class="btn btn btn-outline-danger w-100 mt-4 mb-0 font-weight-bold"><b style="color: #b11313">¡QUIERO REGISTRARME!</b></a> -->
+                                            <a class="btn btn-outline-danger mt-4 w-100 ms-auto" href="/Register/" style="color: #b11313"><b>¡QUIERO REGISTRARME!</b></a>
                                         </div>
                                     </div>
                                 </div>
