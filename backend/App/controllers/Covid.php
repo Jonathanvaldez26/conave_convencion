@@ -209,7 +209,7 @@ html;
     }
 
 
-    $comprobante_vacunacion = VaccinationDao::getCount($_SESSION['utilerias_asistentes_id']);
+    $comprobante_vacunacion = VaccinationDao::getCountHome($_SESSION['utilerias_asistentes_id']);
     if($comprobante_vacunacion['count'] >= 1 ){
       View::set('iframe_doc',$iframe_doc);
       View::set('tabla',$tabla);
