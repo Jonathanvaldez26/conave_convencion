@@ -187,7 +187,7 @@
                                 
                                 <div class="card-body text-center">
                                     <div class="col-12 text-end">
-                                        <img class="w-30" src="../../assets/img/small-logos/asofarma_user.png">
+                                        <img class="w-30" src="../../assets/img/small-logos/iCONOS - Datos personales.png">
                                     </div>
                                     <h6 class="mb-0 font-weight-bolder">Datos Personales</h6>
                                     <p class="opacity-8 mb-0 text-sm">Disponible <i class="fa fa-check-circle me-sm-0" style="color: #01a31c"></i></p>
@@ -202,7 +202,7 @@
                             <a href="/Vaccination/">
                                 <div class="card-body text-center">
                                     <div class="col-12 text-end">
-                                        <img class="w-30" src="../../assets/img/small-logos/asofarma_comprobante_vacuna.png">
+                                        <img class="w-30" src="../../assets/img/small-logos/iCONOS - Comprobante Covid.png">
                                     </div>
                                     <h6 class="mb-0 font-weight-bolder">Comprobantes Vacuna</h6>
                                     <p class="opacity-8 mb-0 text-sm">Disponible <i class="fa fa-check-circle me-sm-0" style="color: #01a31c"></i></p>
@@ -217,7 +217,7 @@
                             <a href="/Covid/">
                                 <div class="card-body text-center">
                                     <div class="col-12 text-end">
-                                        <img class="w-30" src="../../assets/img/small-logos/asofarma_prueba_covid.png">
+                                        <img class="w-30" src="../../assets/img/small-logos/iCONOS - Prueba Covid.png">
                                     </div>
                                     <h6 class="mb-0 font-weight-bolder">Mis Pruebas Covid</h6>
                                     <p class="opacity-8 mb-0 text-sm"><?php echo $active_pruebas_covid;?></p>
@@ -230,7 +230,7 @@
                             <a href="/Passes/">
                                 <div class="card-body text-center">
                                     <div class="col-12 text-end">
-                                        <img class="w-30" src="../../assets/img/small-logos/asofarma_pase_abordar.png">
+                                        <img class="w-30" src="../../assets/img/small-logos/iCONOS - Pase.png">
                                     </div>
                                     <h6 class="mb-0 font-weight-bolder">Pases de Abordar</h6>
                                     <p class="opacity-8 mb-0 text-sm"><?php echo $active_pase_abordar; ?></p>
@@ -245,7 +245,7 @@
                             <a href="/VirtualTicket/">
                                 <div class="card-body text-center">
                                     <div class="col-12 text-end">
-                                        <img class="w-30" src="../../assets/img/small-logos/asofarma_boleto_virtual.png">
+                                        <img class="w-30" src="../../assets/img/small-logos/iCONOS - Acceso.png">
                                     </div>
                                     <h6 class="mb-0 font-weight-bolder">Mi boleto Virtual</h6>
                                     <p class="opacity-8 mb-0 text-sm">A un click tus asistencias</p>
@@ -258,7 +258,7 @@
                             <a href="/Dinners/">
                                 <div class="card-body text-center">
                                     <div class="col-12 text-end">
-                                        <img class="w-30" src="../../assets/img/small-logos/asofarma_cenas.png">
+                                        <img class="w-30" src="../../assets/img/small-logos/iCONOS - Cenas.png">
                                     </div>
                                     <h6 class="mb-0 font-weight-bolder">Cenas</h6>
                                     <p class="opacity-8 mb-0 text-sm">Reserva y disfruta</p>
@@ -273,7 +273,7 @@
                             <div class="card card-link">
                                 <div class="card-body text-center">
                                     <div class="col-12 text-end">
-                                        <img class="w-30" src="../../assets/img/small-logos/asofarma_pickup.png">
+                                        <img class="w-30" src="../../assets/img/small-logos/iCONOS - Pick Up.png">
                                     </div>
                                     <h6 class="mb-0 font-weight-bolder">PICK UP</h6>
                                     <p class="opacity-8 mb-0 text-sm">A un click tus asistencias</p>
@@ -286,7 +286,7 @@
                             <div class="card card-link">
                                 <div class="card-body text-center">
                                     <div class="col-12 text-end">
-                                        <img class="w-30" src="../../assets/img/small-logos/asofarma_1.png">
+                                        <img class="w-30" src="../../assets/img/small-logos/iCONOS - Notiasofarma.png">
                                     </div>
                                     <h6 class="mb-0 font-weight-bolder">NOTIASOFARMA</h6>
                                     <p class="opacity-8 mb-0 text-sm">A un click</p>

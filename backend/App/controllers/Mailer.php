@@ -40,7 +40,7 @@ class Mailer
 
             $html = '     
     <!DOCTYPE html>
-        <html lang="en">
+        <html lang="es">
 
         <!-- Define Charset -->
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
@@ -86,7 +86,7 @@ class Mailer
         <body leftmargin="0" topmargin="0" marginheight="0" marginwidth="0">
             
             <div class="container">
-            <img src="https://convencionasofarma2022.mx/img/img_email.jpeg" alt="">
+                <img src="https://convencionasofarma2022.mx/assets/img/img_correo.jpeg" alt="">
                
                 <p>
                     Codigo de Verificación: <span
@@ -187,7 +187,7 @@ class Mailer
                 <body leftmargin="0" topmargin="0" marginheight="0" marginwidth="0">
                     
                     <div class="container">
-                    <img src="https://convencionasofarma2022.mx/img/img_email.jpeg" alt="">
+                    <img src="https://convencionasofarma2022.mx/assets/img/img_correo.jpeg" alt="">
                         <p style="text-align: center !important;">
                             <strong>Thank you for submitting your
                                 pre-registration form!</strong>
