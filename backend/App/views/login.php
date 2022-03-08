@@ -606,7 +606,7 @@ echo $header;
                                             <a href="/Register/" class="text-info text-dark font-weight-bold">Da Click Aquí</a>
                                         </p>
                                         <p class="mb-1 text-sm mx-auto text-center">
-                                            Para crear su cuenta de acceso proporcione su cuenta de correo electrónico corporativo y de clic en el siguiente botón.
+                                            Para crear su cuenta de acceso proporcione su cuenta de correo electrónico institucional y de clic en el siguiente botón.
                                         </p>
                                         <div class="text-center">
                                             <!-- <a href="/Register/" type="button" class="btn btn btn-outline-danger w-100 mt-4 mb-0 font-weight-bold"><b style="color: #b11313">¡QUIERO REGISTRARME!</b></a> -->
