@@ -31,7 +31,7 @@ class Contenedor extends Controller{
          <link rel="apple-touch-icon" sizes="76x76" href="../../../assets/img/aso_icon.png">
          <link rel="icon" type="image/vnd.microsoft.icon" href="../../../assets/img/aso_icon.png">
          <title>
-            Convecnion 2022
+            Convención 2022
          </title>
          <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet" />
          <!-- Nucleo Icons -->
@@ -137,7 +137,7 @@ html;
                     </div>
                 </div>
             </footer>
-<!-- jQuery -->
+        <!-- jQuery -->
         <script src="/js/jquery.min.js"></script>
         <!--   Core JS Files   -->
         <script src="/assets/js/core/popper.min.js"></script>

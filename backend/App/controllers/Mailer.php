@@ -34,13 +34,13 @@ class Mailer
             $mail->Port       = 465;                                    //TCP port to connect to; use 587 if you have set `SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS`
 
             //Recipients
-            $mail->setFrom($msg['email'], 'Convencion CONAVE 2022 Registro');
+            $mail->setFrom($msg['email'], 'Verifique su correo ASOFARMA.');
             $mail->addAddress($msg['email'], 'a');     //Add a recipient
 
 
             $html = '     
     <!DOCTYPE html>
-        <html lang="en">
+        <html lang="es">
 
         <!-- Define Charset -->
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
@@ -78,6 +78,10 @@ class Mailer
                 width: 100%;
             }
 
+            .code-v{
+                background-color: yellow;
+            }
+
         
         </style>
 
@@ -86,12 +90,27 @@ class Mailer
         <body leftmargin="0" topmargin="0" marginheight="0" marginwidth="0">
             
             <div class="container">
-            <img src="https://convencionasofarma2022.mx/img/img_email.jpeg" alt="">
-               
+                <img src="https://convencionasofarma2022.mx/assets/img/img_correo.jpeg" alt="">
+                <br>
                 <p>
-                    Codigo de Verificación: <span
-                        style="color: #40982B;">(' . $msg['code'] . ')</span><br>
+                    Estamos ansiosos de volvernos a ver…
                 </p>
+                <p>
+                    Este mensaje se le envió porque usted está intentando registrar su cuenta de correo electrónico institucional a la <b>Convención CONAVE 2022 – ASOFARMA</b>. Si no fue usted ignore este mensaje.
+                </p>
+                
+                <p>
+                    Copie este código de verificación y péguelo en el formulario de verificación de la plataforma a la que usted está intentando registrarse, para completar el proceso de verificación del correo electrónico.
+                </p>
+
+                <p>
+                    Su código de verificación es: <span class="code-v"><b>'. $msg['code'] .'</b></span>
+                </p>
+                <p>
+                    El código de verificación es valido por 24 horas y solo se puede usar una vez, atentamente tu equipo ASOFARMA.
+                </p>
+
+                
                     
                 
             </div>
@@ -100,6 +119,10 @@ class Mailer
         </body>
 
 </html>';
+
+
+// Codigo de Verificación: <span
+// style="color: #40982B;">(' . $msg['code'] . ')</span><br>
 
             // $message = "<img src='https://convencionasofarma2022.mx/img/img_email.jpeg'/>";
             // $message .= "<h5>Thank you for submitting your pre-registration form!</h5>";
@@ -187,7 +210,7 @@ class Mailer
                 <body leftmargin="0" topmargin="0" marginheight="0" marginwidth="0">
                     
                     <div class="container">
-                    <img src="https://convencionasofarma2022.mx/img/img_email.jpeg" alt="">
+                    <img src="https://convencionasofarma2022.mx/assets/img/img_correo.jpeg" alt="">
                         <p style="text-align: center !important;">
                             <strong>Thank you for submitting your
                                 pre-registration form!</strong>
