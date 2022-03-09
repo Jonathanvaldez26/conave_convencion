@@ -34,8 +34,8 @@ class Mailer
             $mail->Port       = 465;                                    //TCP port to connect to; use 587 if you have set `SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS`
 
             //Recipients
-            $mail->setFrom($msg['email'], 'Verifique su correo ASOFARMA.');
-            $mail->addAddress($msg['email'], 'a');     //Add a recipient
+            $mail->setFrom($msg['email'], 'Convención Conave 2022 Asofarma');
+            $mail->addAddress($msg['email'], $msg['name']);     //Add a recipient
 
 
             $html = '     
@@ -130,7 +130,7 @@ class Mailer
 
             //Content
             $mail->isHTML(true);                                  //Set email format to HTML
-            $mail->Subject = 'Código de Registro';
+            $mail->Subject = 'Verifique su correo ASOFARMA';
             $mail->Body    = $html;
             $mail->CharSet = 'UTF-8';
 
@@ -159,8 +159,8 @@ class Mailer
             $mail->Port       = 465;                                    //TCP port to connect to; use 587 if you have set `SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS`
 
             //Recipients
-            $mail->setFrom($msg['email'], 'Convencion CONAVE 2022 Registro');
-            $mail->addAddress($msg['email'], 'a');     //Add a recipient
+            $mail->setFrom($msg['email'], 'Convención Conave 2022 Asofarma');
+            $mail->addAddress($msg['email'], $msg['name']);     //Add a recipient
 
             $html = '     
             <!DOCTYPE html>
@@ -236,7 +236,7 @@ class Mailer
 
             //Content
             $mail->isHTML(true);                                  //Set email format to HTML
-            $mail->Subject = 'Registro';
+            $mail->Subject = 'Registro ASOFARMA';
             $mail->Body    = $html;
             $mail->CharSet = 'UTF-8';
 

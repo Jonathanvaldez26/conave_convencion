@@ -126,6 +126,7 @@ html;
                                 $('#btn_registro_email').attr("disabled", true);
                                 $('#confirm_email').attr("disabled", true);
                                 document.getElementById("confirm_email").value = "";
+                                
                             }
                         }
                     });
@@ -1400,6 +1401,8 @@ html;
     public function isUserValidate(){
         echo (count(RegisterDao::getUserRegister($_POST['email']))>=1)? 'true' : 'false';
     }
+
+    
 
     function generateRandomString($length = 4) {
         return substr(str_shuffle("0123456789"), 0, $length);

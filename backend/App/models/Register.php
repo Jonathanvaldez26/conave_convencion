@@ -16,6 +16,15 @@ sql;
         return $mysqli->queryAll($query);
     }
 
+    public static function getUserRegisterTrue($email){
+      $mysqli = Database::getInstance(true);
+      $query =<<<sql
+      SELECT * FROM utilerias_asistentes WHERE usuario = '$email'
+sql;
+
+      return $mysqli->queryAll($query);
+  }
+
     public static function getUserRegisterUpdateData($email){
       $mysqli = Database::getInstance(true);
       $query =<<<sql
