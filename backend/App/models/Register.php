@@ -57,6 +57,22 @@ sql;
         return $mysqli->update($query, $parametros);
     }
 
+    public static function updatePolitica($registro){
+      $mysqli = Database::getInstance(true);
+      $query=<<<sql
+    UPDATE registros_acceso SET politica = :politica WHERE email = :email
+sql;
+      $parametros = array(
+          ':politica'=>$registro->_politica,
+          ':email'=>$registro->_email
+      );
+      $accion = new \stdClass();
+      $accion->_sql= $query;
+      $accion->_parametros = $parametros;
+      $accion->_id = $registro->_email;
+      return $mysqli->update($query, $parametros);
+  }
+
 
     public static function updateImg($user){
         $mysqli = Database::getInstance(true);

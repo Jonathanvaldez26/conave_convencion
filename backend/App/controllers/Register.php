@@ -1187,6 +1187,164 @@ html;
         View::render('confirm_pass');
     }
 
+    public function Politicas_(){
+        $extraHeader =<<<html
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <link rel="apple-touch-icon" sizes="76x76" href="../../../assets/img/aso_icon.png">
+        <link rel="icon" type="image/vnd.microsoft.icon" href="../../../assets/img/aso_icon.png">
+        <title>
+            Registro Conave
+        </title>
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet" />
+        <!-- Nucleo Icons -->
+        <link href="../../../assets/css/nucleo-icons.css" rel="stylesheet" />
+        <link href="../../../assets/css/nucleo-svg.css" rel="stylesheet" />
+        <!-- Font Awesome Icons -->
+        <script src="https://kit.fontawesome.com/42d5adcbca.js" crossorigin="anonymous"></script>
+        <link href="../../../assets/css/nucleo-svg.css" rel="stylesheet" />
+        <!-- CSS Files -->
+        <link id="pagestyle" href="../../../assets/css/soft-ui-dashboard.css?v=1.0.5" rel="stylesheet" />
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet" />
+        <!-- Nucleo Icons -->
+        <link href="../../../assets/css/nucleo-icons.css" rel="stylesheet" />
+        <link href="../../../assets/css/nucleo-svg.css" rel="stylesheet" />
+        <!-- Font Awesome Icons -->
+        <script src="https://kit.fontawesome.com/42d5adcbca.js" crossorigin="anonymous"></script>
+        <link href="../../../assets/css/nucleo-svg.css" rel="stylesheet" />
+        <!-- CSS Files -->
+        <link id="pagestyle" href="/assets/css/soft-ui-dashboard.css?v=1.0.5" rel="stylesheet" />
+        <link rel="stylesheet" href="/css/alertify/alertify.core.css" />
+        <link rel="stylesheet" href="/css/alertify/alertify.default.css" id="toggleCSS" />
+        <!--script src="../../../assets/js/plugins/choices.min.js"></script-->
+
+        
+        
+        
+
+html;
+        $extraFooter =<<<html
+     
+        <script src="/js/jquery.min.js"></script>
+        <script src="/js/validate/jquery.validate.js"></script>
+        <script src="/js/alertify/alertify.min.js"></script>
+        <!-- -------- END FOOTER 3 w/ COMPANY DESCRIPTION WITH LINKS & SOCIAL ICONS & COPYRIGHT ------- -->
+       <!--   Core JS Files   -->
+          <script src="../../../assets/js/core/popper.min.js"></script>
+          <script src="../../../assets/js/core/bootstrap.min.js"></script>
+          <script src="../../../assets/js/plugins/perfect-scrollbar.min.js"></script>
+          <script src="../../../assets/js/plugins/smooth-scrollbar.min.js"></script>
+          <script src="../../../assets/js/plugins/multistep-form.js"></script>
+          <script src="../../../assets/js/plugins/choices.min.js"></script>
+          <script type="text/javascript" wfd-invisible="true">
+            if (document.getElementById('choices-button')) {
+                var element = document.getElementById('choices-button');
+                const example = new Choices(element, {});
+            }
+            var choicesTags = document.getElementById('choices-tags');
+            var color = choicesTags.dataset.color;
+            if (choicesTags) {
+                const example = new Choices(choicesTags, {
+                delimiter: ',',
+                editItems: true,
+                maxItemCount: 5,
+                removeItemButton: true,
+                addItems: true,
+                classNames: {
+                    item: 'badge rounded-pill choices-' + color + ' me-2'
+                }
+                });
+            }
+        </script>
+          <!-- Kanban scripts -->
+          <script src="../../../assets/js/plugins/dragula/dragula.min.js"></script>
+          <script src="../../../assets/js/plugins/jkanban/jkanban.js"></script>
+          <script>
+            var win = navigator.platform.indexOf('Win') > -1;
+            if (win && document.querySelector('#sidenav-scrollbar')) {
+              var options = {
+                damping: '0.5'
+              }
+              Scrollbar.init(document.querySelector('#sidenav-scrollbar'), options);
+            }
+          </script>
+          <!-- Github buttons -->
+          <script async defer src="https://buttons.github.io/buttons.js"></script>
+          <!-- Control Center for Soft Dashboard: parallax effects, scripts for the example pages etc -->
+          <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+           
+
+          <script>
+            $(document).ready(function(){
+                $("#pass_form").validate({
+                   rules:{
+                        password:{
+                            required: true,
+                            minlength: 6
+                            
+                            
+                        },
+                        confirm_password:{
+                            required: true,
+                            equalTo:"#password"
+                        }
+                    },
+                    messages:{
+                        password:{
+                            required: "Este campo es requerido",
+                            minlength: "El password debe tener al menos 6 caracteres"
+                        },
+                        confirm_password:{
+                            required: "Este campo es requerido",
+                            equalTo: "El password no coincide",
+                        }
+                    }
+                });
+
+            });
+        </script>
+       
+html;
+
+        $email = $_POST['email'];
+        $btn_politicas = '';
+        if(isset($_POST['btn_success'])){
+            $btn_politicas = $_POST['btn_success'];
+        }elseif(isset($_POST['btn_danger'])){
+            $btn_politicas = $_POST['btn_danger'];
+        }
+        
+        View::set('politica',$btn_politicas);
+        View::set('email',$email);
+        View::set('header',$extraHeader);
+        View::set('footer',$extraFooter);
+        View::render('politicas_2');
+
+    }
+
+    public function updatePolitica(){
+
+        $register = new \stdClass();
+        if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+            $email = $_POST['email'];
+            $politica = $_POST['politica_value'];
+
+            $register->_email = $email;
+            $register->_politica = $politica;
+
+            $id = RegisterDao::updatePolitica($register);
+
+            if ($id) {
+                echo 'success';
+
+            } else {
+                echo 'fail';
+            }
+
+        }
+
+    }
+
     public function finalize(){
 
         $register = new \stdClass();
@@ -1212,6 +1370,7 @@ html;
 
                 if ($id) {
                     
+                    RegisterDao::updatePolitica($register);
 
                     $msg = [
                         'email' => $email,
