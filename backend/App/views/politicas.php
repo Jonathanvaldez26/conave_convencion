@@ -60,12 +60,12 @@
 
                                     <div class="row justify-content-center">
                                         <div class="col-md-4 col-sm-12">
-                                            <button class="btn btn-sm btn-success" id="btn_success" disabled name="btn_success" value="1" type="submit">
+                                            <button class="btn btn-sm btn-success w-100 h-100" id="btn_success" disabled name="btn_success" value="1" type="submit">
                                                 Acepto y me comprometo
                                             </button>
                                         </div>
                                         <div class="col-md-4 col-sm-12">
-                                            <button class="btn btn-sm btn-danger" id="btn_danger" disabled name="btn_danger" value="0" type="button">
+                                            <button class="btn btn-sm btn-danger w-100 h-100" id="btn_danger" disabled name="btn_danger" value="0" type="button">
                                                 No acepto  
                                             </button>
                                         </div>
