@@ -85,7 +85,7 @@ echo $header;
                                     </div>
 
                                     <div class="col-lg-4 col-12">
-                                        <label class="form-label mt-4">Número de Telefono *</label>
+                                        <label class="form-label mt-4">Número de Teléfono *</label>
                                         <div class="input-group">
                                             <input id="telefono" name="telefono" maxlength="10" pattern="[0-9]" class="form-control" type="number" placeholder="+40 735 631 620" onfocus="focused(this)" onfocusout="defocused(this)" value="<?= $userData['telefono'] ?>" required>
                                         </div>
@@ -194,7 +194,7 @@ echo $header;
 
                                 <div class="row">
                                     <div class="col-md-3 col-sm-12">
-                                        <label class="form-label mt-4">Restricciones Alimenticias *</label>
+                                        <label class="form-label mt-4">Restricciones Alimentarias *</label>
                                         <div class="form-check">
                                             <input class="form-check-input" type="radio" name="restricciones_alimenticias" id="res_ali_1" value="vegetariano">
                                             <label class="form-check-label" for="res_ali_1">
@@ -224,7 +224,7 @@ echo $header;
 
 
                                     <div class="col-md-4 col-sm-12">
-                                        <label class="form-label mt-4">¿Es usted alergico a un medicamento?</label>
+                                        <label class="form-label mt-4">¿Es usted alérgico a un medicamento?</label>
                                         <div class="form-check">
                                             <input class="form-check-input" type="radio" name="confirm_alergia" id="confirm_alergia_si" value="si">
                                             <label class="form-check-label" for="confirm_alergia_si">
@@ -248,7 +248,7 @@ echo $header;
                                     <div class="col-md-4 col-sm-12">
                                         <label class="form-label mt-4">Alergico a *</label>
                                         <select class="form-control" name="alergias[]" id="select_alergico" multiple="multiple">
-                                            <option value="lacteos">Lacteos</option>
+                                            <option value="lacteos">Lácteos</option>
                                             <option value="gluten">Gluten</option>
                                             <option value="mariscos">Pescados y/o mariscos</option>
                                             <option value="otros">Otros</option>

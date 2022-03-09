@@ -79,7 +79,7 @@ class Mailer
             }
 
             .code-v{
-                background-color: yellow;
+                background: yellow;
             }
 
         
@@ -104,7 +104,7 @@ class Mailer
                 </p>
 
                 <p>
-                    Su código de verificación es: <span class="code-v"><b>'. $msg['code'] .'</b></span>
+                    Su código de verificación es: <span><b style="background: yellow;">'. $msg['code'] .'</b></span>
                 </p>
                 <p>
                     El código de verificación es valido por 24 horas y solo se puede usar una vez, atentamente tu equipo ASOFARMA.
