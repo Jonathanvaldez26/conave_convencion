@@ -249,7 +249,6 @@ echo $header;
                                     </div>
                                    
 
-
                                     <div class="col-md-4 col-sm-12">
                                         <label class="form-label mt-4">¿Es usted alérgico a un medicamento?</label>
                                         <div class="form-check">
