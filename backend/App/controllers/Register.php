@@ -108,12 +108,13 @@ html;
 
           <script>
             $(document).ready(function(){
+                $('#confirm_email').attr("disabled", true);
                 $.validator.addMethod("checkUserCorreo",function(value, element) {
                   var response = false;
                     $.ajax({
                         type:"POST",
                         async: false,
-                        url: "/Register/isUserValidate",
+                        url: "/Register/isUserValidateUser",
                         data: {email: $("#email").val()},
                         success: function(data) {
                             if(data=="true"){
@@ -132,7 +133,7 @@ html;
                     });
 
                     return response;
-                },"Usted no está registrado en la Base de Datos CONAVE 2022, verifique con su área y reintente.");
+                },"Usted no está registrado en la Base de Datos CONAVE 2022 ó ya se registro previamente en la plataforma verifique su información.");
 
                 $("#email_form").validate({
                    rules:{
@@ -868,6 +869,18 @@ html;
 
     }
 
+    public function getLineaByBu(){
+        $bu = $_POST['bu'];
+
+        if(isset($bu)){
+            $Bu = RegisterDao::getLineByBu($bu);
+        
+            echo json_encode($Bu);
+
+        }
+
+    }
+
     public function Politicas(){
 
         $extraHeader =<<<html
@@ -1435,6 +1448,10 @@ html;
 
     public function isUserValidate(){
         echo (count(RegisterDao::getUserRegister($_POST['email']))>=1)? 'true' : 'false';
+    }
+
+    public function isUserValidateUser(){
+        echo (count(RegisterDao::getUserRegisterTrue($_POST['email']))>=1)? 'true' : 'false';
     }
 
     

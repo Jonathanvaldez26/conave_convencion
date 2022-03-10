@@ -10,7 +10,7 @@ class Register
     public static function getUserRegister($email){
         $mysqli = Database::getInstance(true);
         $query =<<<sql
-        SELECT * FROM registros_acceso WHERE email = '$email'
+        SELECT * FROM registros_acceso WHERE email = '$email' 
 sql;
 
         return $mysqli->queryAll($query);
@@ -19,7 +19,7 @@ sql;
     public static function getUserRegisterTrue($email){
       $mysqli = Database::getInstance(true);
       $query =<<<sql
-      SELECT * FROM utilerias_asistentes WHERE usuario = '$email'
+      SELECT * FROM registros_acceso WHERE email = '$email' and politica is NULL
 sql;
 
       return $mysqli->queryAll($query);
@@ -166,6 +166,15 @@ sql;
 sql;
 
     return $mysqli->queryAll($query);
+}
+
+public static function getLineByBu($bu){
+  $mysqli = Database::getInstance(true);
+  $query =<<<sql
+  SELECT * FROM linea_principal where id_bu = $bu
+sql;
+
+  return $mysqli->queryAll($query);
 }
 
 }
