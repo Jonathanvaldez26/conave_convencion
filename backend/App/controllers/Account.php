@@ -224,7 +224,7 @@ html;
             $alergias =<<<html
             <div class="col-md-3">
                 <label class="form-label mt-4">Alergias *</label>
-                <input class="form-control" name="alergias" id="alergias" maxlength="149" name="alergias" data-color="dark" type="text" value="<?= {$userData['alergias']} ?>" placeholder="" readonly />
+                <input class="form-control" name="alergias" id="alergias" maxlength="149" name="alergias" data-color="dark" type="text" value="{$userData['alergias']}" placeholder="" readonly />
             </div>
 html;
         }
@@ -240,7 +240,7 @@ html;
             $alergias_otro =<<<html
             <div class="col-md-3">
                 <label class="form-label mt-4">Alergias Otro *</label>
-                <input class="form-control" name="alergias_otro" id="alergias_otro" maxlength="149" name="alergias" data-color="dark" type="text" value="<?= {$userData['alergias_otro']} ?>" placeholder="" readonly />
+                <input class="form-control" name="alergias_otro" id="alergias_otro" maxlength="149" name="alergias" data-color="dark" type="text" value="{$userData['alergias_otro']}" placeholder="" readonly />
             </div>
 html;
         }
