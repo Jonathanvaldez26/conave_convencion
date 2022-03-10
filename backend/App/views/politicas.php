@@ -32,12 +32,12 @@
 
                                     <div class="text-center">
                                         <span class="text-danger">
-                                            Para registrarte es necesario leer completo los términos, condiciones y políticas del evento.
+                                            <b>Para registrarte es necesario leer completo los términos, condiciones y políticas del evento.</b>
                                         </span>
                                     </div>
                                     <br>
 
-                                    <div id="terminos" class="card-header pt-4 text-scroll ">
+                                    <div id="terminos" class="card-header pt-4 text-scroll " style="text-align: justify;">
                                         <!-- <p>Aquí van los terminos y condiciones</p> -->
                                         <span>
                                         ¡Este encuentro será doblemente especial! <br><br>
