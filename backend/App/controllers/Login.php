@@ -175,9 +175,9 @@ html;
     }
 
     public function cerrarSession(){
-        //session_start();
-        unset($_SESSION);
-        session_unset();
+        session_start();
+        // unset($_SESSION);
+        // session_unset();
         session_destroy();
         header("Location: /Login/");
     }

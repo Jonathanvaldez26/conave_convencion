@@ -96,7 +96,8 @@ echo $header;
                                     <div class="col-12 col-lg-2">
                                         <label class="form-label mt-4">Número de empleado *</label>
                                         <div class="input-group">
-                                            <input id="numero_empleado" name="numero_empleado" maxlength="29" pattern="[a-zA-Z0-9]*" class="form-control" type="text" placeholder="" required="required" onfocus="focused(this)" onfocusout="defocused(this)" value="<?= $userData['numero_empleado'] ?>" style="text-transform:uppercase;" onkeyup="javascript:this.value=this.value.toUpperCase();" readonly>
+                                            <!-- <input id="numero_empleado" name="numero_empleado" maxlength="29" pattern="[a-zA-Z0-9]*" class="form-control" type="text" placeholder="" required="required"  value="<?= $userData['numero_empleado'] ?>" style="text-transform:uppercase;" readonly> -->
+                                            <?php echo $numeroEmpleado; ?>
                                         </div>
                                     </div>
 
@@ -117,7 +118,7 @@ echo $header;
 
                                     <div class="col-lg-3 col-sm-12">
                                         <label class="form-label mt-4">Pertenezco a la Línea ASOFARMA *</label>
-                                        <select class="form-control" style="cursor: pointer;" name="linea_principal" id="linea_principal" tabindex="-1" data-choice="active">
+                                        <select class="form-control" style="cursor: pointer;" name="linea_principal" id="linea_principal" tabindex="-1" data-choice="active" required>
                                             <option value="" disabled selected>Selecciona una opción</option>
                                             <?php echo $optionsLineaPrincipal; ?>
                                         </select>
@@ -208,12 +209,12 @@ echo $header;
                                                 Vegano
                                             </label>
                                         </div>
-                                        <div class="form-check">
+                                        <!-- <div class="form-check">
                                             <input class="form-check-input" type="radio" name="restricciones_alimenticias" id="res_ali_3" value="kosher">
                                             <label class="form-check-label" for="res_ali_3">
                                                 Kosher
                                             </label>
-                                        </div>
+                                        </div> -->
                                         <div class="form-check">
                                             <input class="form-check-input" type="radio" name="restricciones_alimenticias" id="res_ali_4" value="ninguna" checked>
                                             <label class="form-check-label" for="res_ali_4">
@@ -234,7 +235,7 @@ echo $header;
                                     </div>
 
                                     <div class="col-md-4 col-sm-12">
-                                        <label class="form-label mt-4">Alergico a *</label>
+                                        <label class="form-label mt-4">Alérgico a *</label>
                                         <select class="form-control" name="alergias[]" id="select_alergico" multiple="multiple">
                                             <option value="lacteos">Lácteos</option>
                                             <option value="gluten">Gluten</option>
@@ -366,6 +367,7 @@ echo $header;
                 $('#select_alergico').select2();
         
                 $('#select_alergico').on("change", function() {
+                    $('#alergia_otro').removeAttr('required');
         
                     var valores = $(this).val();
         
@@ -379,9 +381,12 @@ echo $header;
                                 if (value == 'otros') {
                                     console.log(value);
                                     $(".cont_alergia_otro").css('display', 'block');
+                                    $("#alergia_otro").attr('required','required');
                                     $("#alergia_otro").val("");
                                 } else {
                                     $(".cont_alergia_otro").css('display', 'none');
+                                    
+                                    
                                 }
         
                             });
@@ -396,10 +401,12 @@ echo $header;
                     if ($("#confirm_alergia_no").is(':checked')) {
                         $(".medicamento_cual").css("display", "none");
                         $("#alergia_medicamento_cual").val("");
+                        $('#alergia_medicamento_cual').removeAttr('required');
                     }
         
                     if ($("#confirm_alergia_si").is(':checked')) {
                         $(".medicamento_cual").css("display", "block");
+                        $("#alergia_medicamento_cual").attr('required','required');
                     }
                 });
 
@@ -407,8 +414,10 @@ echo $header;
                     if ($("#res_ali_5").is(':checked')) {
                         $(".restricciones_alimenticias").css("display", "block");
                         $("#restricciones_alimenticias_cual").val("");
+                        $("#restricciones_alimenticias_cual").attr('required','required');
                     }else{
                         $(".restricciones_alimenticias").css("display", "none");
+                        $('#restricciones_alimenticias_cual').removeAttr('required');
                     }
         
                 });

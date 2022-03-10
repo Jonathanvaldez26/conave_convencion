@@ -702,6 +702,7 @@ html;
         $optionsEstados = '';
         $optionsCP = '';
         $optionsAeropuertos = '';
+        $numeroEmpleado = '';
 
          $userData = RegisterDao::getUserRegister($email)[0];
 
@@ -747,6 +748,16 @@ html;
 html;
         }
 
+        if(empty($userData['numero_empleado']) || $userData['numero_empleado'] == ''){
+            $numeroEmpleado = <<<html
+             <input id="numero_empleado" name="numero_empleado" maxlength="29" pattern="[a-zA-Z0-9]*" class="form-control" type="text" placeholder="" required="required"  value="" style="text-transform:uppercase;" >
+html;             
+        }else{
+            $numeroEmpleado = <<<html
+            <input id="numero_empleado" name="numero_empleado" maxlength="29" pattern="[a-zA-Z0-9]*" class="form-control" type="text" placeholder="" required="required"  value="{$userData['numero_empleado']}" style="text-transform:uppercase;" readonly>
+html;            
+        }
+
         $Aeropuertos = RegisterDao::getAeropuertosAll();
 
         foreach ($Aeropuertos as $key => $value) {
@@ -778,6 +789,8 @@ html;
 html;
         } 
 
+
+
 //         $id = 9;
 
 //         $Cp = RegisterDao::getCp($id);
@@ -800,6 +813,7 @@ html;
             View::set('optionsEstados',$optionsEstados);
             View::set('optionsCp',$optionsCP);
             View::set('optionsAeropuertos',$optionsAeropuertos);
+            View::set('numeroEmpleado',$numeroEmpleado);
            // View::set('optionActividad',$optionActividad);
             View::set('email',$email);
             View::set('header',$extraHeader);
