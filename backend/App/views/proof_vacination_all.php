@@ -23,7 +23,7 @@
                         </a>
                     </li>
                     <li class="breadcrumb-item text-sm"><a class="opacity-5 text-dark" href="/Home/">Inicio</a></li>
-                    <li class="breadcrumb-item text-sm">Comprobante de Vacunación</li>
+                    <li class="breadcrumb-item text-sm">Comprobante de vacunación</li>
                 </ol>
             </nav>
 
@@ -58,8 +58,12 @@
             </div>
             <div class="card col-lg-8 mt-lg-5 mt-1" >
                 <div class="card-header pb-0 p-3">
-                    <h6 class="mb-1">Mi comprobante de Vacunación</h6>
-                    <p class="text-sm">Registra tu Comprobante de Vacunación antes del 01/04/2022</p>
+                    <h6 class="mb-1">Mi comprobante de vacunación</h6>
+                    <p class="text-sm">Registra tu comprobante de vacunación antes del 01/04/2022
+                    <p class="text-danger" style="font-size: 12px;">¡Importante! Si tu comprobante de vacunación emitido por el gobierno federal de México marca la aplicación de una sola dosis, no podrás asistir a la CONAVE 2022.</p>
+                    </p>
+                    
+
                 </div>
                 <div class="card-body p-3">
                     <div class="row">
@@ -88,7 +92,7 @@
             <div class="modal-content">
                 <div class="modal-header">
                     <h5 class="modal-title" id="exampleModalLabel">
-                        Agregue su Comprobante de Vacunación
+                        Agrega tu comprobante de vacunación
 
                     </h5>
                     <span type="button" class="btn bg-gradient-danger" data-dismiss="modal" aria-label="Close">
@@ -99,7 +103,7 @@
                     <h6>
                         <label id="fecha_actual">Fecha máxima de validación: <?php echo $fechaActual; ?></label>
                         <br>
-                        Por favor a continuación ingrese la información solicitada.
+                        Por favor a continuación ingresa la información solicitada.
                     </h6>
                 </div>
 
@@ -109,11 +113,11 @@
                             <div class="row">
                                 <div class="col-md-6">
                                     <div class="form-group col-md-12">
-                                        <label class="control-label col-md-12 col-sm-3 col-xs-12" for="numero_dosis">Seleccione el número de Dosis con el que Cuentas <span class="required">*</span></label>
+                                        <label class="control-label col-md-12 col-sm-3 col-xs-12" for="numero_dosis">Selecciona el número de dosis con las que cuentas <span class="required">*</span></label>
                                         <div class="col-md-12 col-sm-12 col-xs-12">
                                             <!-- <input type="date" name="fecha_" id="fecha_" class="form-control col-md-7 col-xs-12"> -->
                                             <select class="form-control" name="numero_dosis" id="numero_dosis" required>
-                                                <option selected>Seleccione una Opción</option>
+                                                <option selected>Selecciona una Opción</option>
                                                 <option value="2">2 Dosis</option>
                                                 <option value="3">3 Dosis</option>
                                             </select>
@@ -122,7 +126,7 @@
                                     </div>
                                 </div>
                                 <div class="col-md-6">
-                                    <label class="control-label col-md-12 col-sm-3 col-xs-12" for="marca">Seleccione las Marcas de sus Dosis <span class="required">*</span></label>
+                                    <label class="control-label col-md-12 col-sm-3 col-xs-12" for="marca">Selecciona las marcas de tus dosis <span class="required">*</span></label>
                                     <div class="col-md-12 col-sm-12 col-xs-12 checkbox-group required">
                                         <div class="form-check">
                                             <input class="form-check-input" type="checkbox" value="Pfizer-BioNTech" name="checkbox_marcas[]">

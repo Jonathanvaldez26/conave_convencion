@@ -226,7 +226,7 @@ html;
                             </a>
                         </div>
                         <div class="card-body px-1 pb-0">
-                            <p class="text-gradient text-dark mb-2 text-sm text-center">Carga tu Comprobante de Vacunación lo Antes Posible</p>
+                            <p class="text-gradient text-dark mb-2 text-sm text-center">Carga tu comprobante de vacunación lo antes posible</p>
                             <div class="text-center">
                                 <button type="button" class="btn btn-outline-success btn-sm mb-0 text-center" data-toggle="modal" data-target="#Modal_Vacunacion">Subir Comprobante de Vacunación</button>
                             </div>
