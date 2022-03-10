@@ -65,7 +65,7 @@ echo $header;
 
 
                                     <div class="col-12 col-lg-4">
-                                        <label class="form-label mt-4">Genero: *</label>
+                                        <label class="form-label mt-4">Género: *</label>
                                         <select class="form-control" style="cursor: pointer;" name="genero" id="genero" placeholder="Genero">
                                             <option value="" disabled selected>Selecciona una opción</option>
                                             <!-- <option value="Mujer">Mujer</option>
@@ -146,7 +146,7 @@ echo $header;
 
 
                                     <div class="col-md-4 col-sm-12"  id="show-cp" style="display: none;">
-                                        <label class="form-label mt-4">Codigo Postal *</label><br>
+                                        <label class="form-label mt-4">Código Postal *</label><br>
                                         <input type="text" class="form-control" id="cp" name="cp" list="list_cp">
                                         <datalist id="list_cp">
 
