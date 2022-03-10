@@ -8,7 +8,7 @@
                 <div class="row justify-content-center">
                     <div class="col-lg-5 text-center mx-auto">
                         <h1 class="text-white mb-2 mt-5">¡Bienvenido!</h1>
-                        <p class="text-lead text-white">Convención Nacional CONAVE 2022, Creciendo 5in Límites. </p>
+                        <p class="text-lead text-white">Convención Nacional de Ventas 2022, Creciendo 5in Límites. </p>
                     </div>
                 </div>
             </div>
@@ -18,7 +18,7 @@
                 <div class="col-xl-8 col-lg-8 col-md-12 mx-auto">
                         <div class="card z-index-0">
                             <div class="card-header text-center pt-4">
-                                <p>Términos y Condiciones</p>
+                                <p>Aviso</p>
                                 <p class="text-sm font-weight-bold mb-2 text-secondary text-border d-inline z-index-2 bg-white px-3">
                                     <i class="fa fa-user-circle"></i>
                                 </p>
@@ -32,7 +32,7 @@
 
                                     <div class="text-center">
                                         <span class="text-danger">
-                                            <b>Para registrarte es necesario leer completo los términos, condiciones y políticas del evento.</b>
+                                            <b>Para registrarte es necesario leer completo el aviso del evento.</b>
                                         </span>
                                     </div>
                                     <br>
@@ -40,20 +40,18 @@
                                     <div id="terminos" class="card-header pt-4 text-scroll " style="text-align: justify;">
                                         <!-- <p>Aquí van los terminos y condiciones</p> -->
                                         <span>
-                                        ¡Este encuentro será doblemente especial! <br><br>
-                                        Queremos volver a tener la cercanía de una Reunión que nos permita seguir fortaleciendo nuestros lazos, pero guardando los cuidados pertinentes, que nos ayuden a prevenir cualquier tipo de Riesgo de Contagio.<br><br>
+                                            ¡Este encuentro será doblemente especial! <br><br>
+                                            Queremos volver a tener la cercanía de una Reunión que nos permita seguir fortaleciendo nuestros lazos, pero guardando los cuidados pertinentes, que nos ayuden a prevenir cualquier tipo de Riesgo de Contagio.<br><br>
 
-                                        Para ello, estamos considerando las medidas que tienen como principal Objetivo preservar la Seguridad de quienes participaremos en este encuentro, y que como empresa responsable buscamos.<br><br>
+                                            Para ello, estamos considerando las medidas que tienen como principal Objetivo preservar la Seguridad de quienes participaremos en este encuentro, y que como empresa responsable buscamos.<br><br>
 
-                                        Así que además de contar con tu participación activa, confiamos en que seguirás las recomendaciones que se tienen, privilegiando ante todo tu seguridad y la de todos.<br><br>
+                                            Así que además de contar con tu participación activa, confiamos en que seguirás las recomendaciones que se tienen, privilegiando ante todo tu seguridad y la de todos.<br><br>
 
-                                        Con tu aceptación te comprometes a:<br><br>
-                                        <ul>
-                                            <li>Proporcionar información fidedigna.</li>
-                                            <li>Apegarte a las recomendaciones antes, durante y después de la Reunión.</li>
-                                        </ul>
-
- 
+                                            Con tu aceptación te comprometes a:<br><br>
+                                            <ul>
+                                                <li>Proporcionar información fidedigna.</li>
+                                                <li>Apegarte a las recomendaciones antes, durante y después de la Reunión.</li>
+                                            </ul>
                                         </span>
                                     </div>
                                     <br>

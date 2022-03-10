@@ -113,7 +113,7 @@
                             <div class="row">
                                 <div class="col-12 col-lg-3">
                                     <!-- <input type="text" id="id_registro" name="id_registro" value="<?= $userData['id_registro'] ?> "> -->
-                                    <label class="form-label">Nombre *</label>
+                                    <label class="form-label">Primer Nombre *</label>
                                     <div class="input-group">
                                         <input id="nombre" name="nombre" maxlength="29" pattern="[a-zA-Z ÑñáÁéÉíÍóÚ]*{2,254}" class="form-control" type="text" placeholder="Alec" required="" onfocus="focused(this)" onfocusout="defocused(this)" value="<?= $userData['nombre'] ?>" style="text-transform:uppercase;" onkeyup="javascript:this.value=this.value.toUpperCase();">
                                     </div>
@@ -145,7 +145,7 @@
                             <div class="row">
 
                                 <div class="col-12 col-lg-4">
-                                    <label class="form-label mt-4">Genero: *</label>
+                                    <label class="form-label mt-4">Género: *</label>
                                     <select class="form-control" style="cursor: pointer;" name="genero" id="genero" placeholder="Genero">
                                         <option value="" disabled selected>Selecciona una opción</option>
                                         <!-- <option value="Mujer">Mujer</option>
@@ -185,7 +185,7 @@
                                 </div>
 
                                 <div class="col-lg-4 col-12">
-                                    <label class="form-label mt-4">Email Registrado y Verificado *</label>
+                                    <label class="form-label mt-4">Correo electrónico registrado y verificado *</label>
                                     <div class="input-group">
                                         <input id="email" name="email" maxlength="49" class="form-control" type="email" placeholder="example@email.com" onfocus="focused(this)" onfocusout="defocused(this)" value="<?= $userData['email'] ?>" readonly>
                                     </div>

@@ -8,7 +8,7 @@
                 <div class="row justify-content-center">
                     <div class="col-lg-5 text-center mx-auto">
                         <h1 class="text-white mb-2 mt-5">¡Bienvenido!</h1>
-                        <p class="text-lead text-white">Convención Nacional CONAVE 2022, Creciendo 5in Límites. </p>
+                        <p class="text-lead text-white">Convención Nacional de Ventas 2022, Creciendo 5in Límites. </p>
                     </div>
                 </div>
             </div>
@@ -31,7 +31,8 @@
                                    
                                     <div class="text-center">
                                         <span class="text-danger">
-                                        <b>Términos y Condiciones de Uso de plataforma Protocolo de seguridad en Convención Asofarma 2022.</b>
+                                        <b>Términos y condiciones de uso de plataforma.
+                                            <br>Protocolo de seguridad en Convención Asofarma 2022.</b>
                                         </span>
                                     </div>
                                     <br>

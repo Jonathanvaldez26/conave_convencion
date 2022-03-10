@@ -8,7 +8,7 @@ echo $header;
             <nav class="navbar navbar-expand-lg  blur blur-rounded top-0  z-index-3 shadow position-absolute my-3 py-2 start-0 end-0 mx-4">
                 <div class="container-fluid">
                     <a class="navbar-brand font-weight-bolder ms-lg-0 ms-3 ">
-                        Crecer 5in Límites
+                        Creciendo 5in Límites
                     </a>
                     <button class="navbar-toggler shadow-none ms-2" type="button" data-bs-toggle="collapse" data-bs-target="#navigation" aria-controls="navigation" aria-expanded="false" aria-label="Toggle navigation">
               <span class="navbar-toggler-icon mt-2">
@@ -20,11 +20,11 @@ echo $header;
                     <div class="collapse navbar-collapse w-100 pt-3 pb-2 py-lg-0" id="navigation">
                         <ul class="navbar-nav navbar-nav-hover mx-auto">
                             <li class="nav-item dropdown dropdown-hover mx-2">
-                                <a role="button" class="nav-link ps-2 d-flex justify-content-between cursor-pointer align-items-center " id="dropdownMenuBlocks" data-bs-toggle="dropdown" aria-expanded="false">
+                                <!-- <a role="button" class="nav-link ps-2 d-flex justify-content-between cursor-pointer align-items-center " id="dropdownMenuBlocks" data-bs-toggle="dropdown" aria-expanded="false">
                                     ¿Quienes Somos?
                                     <img src=" ../../../assets/img/down-arrow-dark.svg " alt="down-arrow" class="arrow ms-1 d-lg-block d-none">
                                     <img src="../../../assets/img/down-arrow-dark.svg" alt="down-arrow" class="arrow ms-1 d-lg-none d-block">
-                                </a>
+                                </a> -->
                                 <div class="dropdown-menu dropdown-menu-animation dropdown-md dropdown-md-responsive p-3 border-radius-lg mt-0 mt-lg-3" aria-labelledby="dropdownMenuBlocks">
                                     <div class="d-none d-lg-block">
                                         <ul class="list-group">
@@ -584,7 +584,7 @@ echo $header;
                                 </div>
                                 <div class="card-body">
                                     <form role="form" class="text-start" id="login" action="/Login/crearSession" method="POST" class="form-horizontal">
-                                        <label style="font-weight:bold; font-size: 15px">Correo Electrónico</label>
+                                        <label style="font-weight:bold; font-size: 15px">Correo electrónico</label>
                                         <div class="mb-3">
                                             <input type="email" name="usuario" id="usuario" class="form-control" placeholder="usuario@grupolahe.com" aria-label="Email">
                                         </div>
@@ -603,10 +603,10 @@ echo $header;
                                     <div class="card-footer text-center pt-0 px-lg-2 px-1">
                                         <p class="mb-2 text-sm mx-auto">
                                             ¿Olvidaste tu Contraseña?
-                                            <a href="/Register/" class="text-info text-dark font-weight-bold">Da Click Aquí</a>
+                                            <a href="/Register/" class="text-info text-dark font-weight-bold">Da clic aquí</a>
                                         </p>
                                         <p class="mb-1 text-sm mx-auto text-center">
-                                            Para crear su cuenta de acceso proporcione su cuenta de correo electrónico institucional y de clic en el siguiente botón.
+                                            Para crear su cuenta de acceso proporcione su correo electrónico institucional y de clic en el siguiente botón.
                                         </p>
                                         <div class="text-center">
                                             <!-- <a href="/Register/" type="button" class="btn btn btn-outline-danger w-100 mt-4 mb-0 font-weight-bold"><b style="color: #b11313">¡QUIERO REGISTRARME!</b></a> -->
