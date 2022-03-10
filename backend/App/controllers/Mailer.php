@@ -96,11 +96,11 @@ class Mailer
                     Estamos ansiosos de volvernos a ver…
                 </p>
                 <p>
-                    Este mensaje se le envió porque usted está intentando registrar su cuenta de correo electrónico institucional a la <b>Convención CONAVE 2022 – ASOFARMA</b>. Si no fue usted ignore este mensaje.
+                    Este mensaje se le envió porque usted está intentando registrar su cuenta de correo electrónico institucional a la <bConvención Nacional de Ventas 2022 - CONAVE ASOFARMA</b>. Si no fue usted ignore este mensaje.
                 </p>
                 
                 <p>
-                    Copie este código de verificación y péguelo en el formulario de verificación de la plataforma a la que usted está intentando registrarse, para completar el proceso de verificación del correo electrónico.
+                    Copie este código de verificación y péguelo en el formulario de la plataforma a la que usted está intentando registrarse.
                 </p>
 
                 <p>
@@ -110,7 +110,6 @@ class Mailer
                     El código de verificación es valido por 24 horas y solo se puede usar una vez, atentamente tu equipo ASOFARMA.
                 </p>
 
-                
                     
                 
             </div>
