@@ -700,6 +700,7 @@ html;
         $optionsBu = '';
         $optionsPosiciones = '';
         $optionsEstados = '';
+        $optionsCiudades = '';
         $optionsCP = '';
         $optionsAeropuertos = '';
         $numeroEmpleado = '';
@@ -737,6 +738,14 @@ html;
 
         }
 
+        $Ciudades = RegisterDao::getCiudadesAll();
+
+        foreach ($Ciudades as $key => $value) {
+            $optionsCiudades .=<<<html
+                <option value="{$value['id_ciudades']}">{$value['nombre']}</option>
+html;
+        }
+
         
        
 
@@ -747,6 +756,8 @@ html;
                 <option value="{$value['id_estado']}">{$value['nombre']}</option>
 html;
         }
+
+        
 
         if(empty($userData['numero_empleado']) || $userData['numero_empleado'] == ''){
             $numeroEmpleado = <<<html
@@ -810,6 +821,7 @@ html;
             View::set('optionsGenero',$optionsGenero);
             View::set('optionsBu',$optionsBu);
             View::set('optionsPosiciones',$optionsPosiciones);
+            View::set('optionsCiudades',$optionsCiudades);
             View::set('optionsEstados',$optionsEstados);
             View::set('optionsCp',$optionsCP);
             View::set('optionsAeropuertos',$optionsAeropuertos);
@@ -999,6 +1011,7 @@ html;
               //$talla = $_POST['talla_playera'];
               $alergias = $_POST['alergias'];
               $residencia = $_POST['residencia'];
+              $ciudades = $_POST['ciudades'];
               $aeropuerto = $_POST['aeropuerto'];
               $cp = $_POST['cp'];
               $restricciones_alimenticias = $_POST['restricciones_alimenticias'];
@@ -1039,6 +1052,7 @@ html;
               $documento->_bu = $bu;
               $documento->_posicion = $posicion;
               $documento->_residencia = $residencia;
+              $documento->_ciudades = $ciudades;
               $documento->_aeropuerto = $aeropuerto;
               $documento->_cp = $cp;
               $documento->_restricciones_alimenticias = $restricciones_alimenticias;

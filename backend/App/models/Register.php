@@ -28,19 +28,21 @@ sql;
     public static function getUserRegisterUpdateData($email){
       $mysqli = Database::getInstance(true);
       $query =<<<sql
-      SELECT ra.*, ua.* , bu.nombre as nombre_bu, lp.nombre as nombre_linea, p.nombre as nombre_posicion, e.nombre as nombre_estado, a.aeropuerto as nombre_aeropuerto
+      SELECT ra.*, ua.* , bu.nombre as nombre_bu, lp.nombre as nombre_linea, p.nombre as nombre_posicion, e.nombre as nombre_estado, c.nombre as nombre_ciudades, a.aeropuerto as nombre_aeropuerto
       FROM registros_acceso ra 
       INNER JOIN utilerias_asistentes ua 
       INNER JOIN bu 
       INNER JOIN linea_principal lp
       INNER JOIN posiciones p 
       INNER JOIN estados e
+      INNER JOIN ciudades c
       INNER JOIN aeropuertos a
       WHERE ra.id_registro_acceso = ua.id_registro_acceso
       and ra.id_bu = bu.id_bu
       and ra.id_linea_principal = lp.id_linea_principal
       and ra.id_posicion = p.id_posicion
       and ra.id_residencia = e.id_estado 
+      and ra.id_ciudades = c.id_ciudades
       and ra.id_aeropuerto = a.id_aeropuerto
       and ra.email = '$email'
 sql;
@@ -129,6 +131,15 @@ sql;
 
         return $mysqli->queryAll($query);
     }
+
+    public static function getCiudadesAll(){
+      $mysqli = Database::getInstance(true);
+      $query =<<<sql
+      SELECT * FROM ciudades
+sql;
+
+      return $mysqli->queryAll($query);
+  }
 
     public static function getAeropuertosAll(){
       $mysqli = Database::getInstance(true);

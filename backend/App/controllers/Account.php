@@ -213,7 +213,58 @@ html;
 html;
         }
 
+        if ($userData['alergias'] == '') {
+            $alergias =<<<html
+            <div class="col-md-3">
+                <label class="form-label mt-4">Alergias *</label>
+                <input class="form-control" name="alergias" id="alergias" maxlength="149" name="alergias" data-color="dark" type="text" value="Ninguna" placeholder="" readonly />
+            </div>
+html;
+        } else{
+            $alergias =<<<html
+            <div class="col-md-3">
+                <label class="form-label mt-4">Alergias *</label>
+                <input class="form-control" name="alergias" id="alergias" maxlength="149" name="alergias" data-color="dark" type="text" value="<?= {$userData['alergias']} ?>" placeholder="" readonly />
+            </div>
+html;
+        }
+
+        if ($userData['alergias_otro'] == '') {
+            $alergias_otro =<<<html
+            <div class="col-md-3">
+                <label class="form-label mt-4">Alergias Otro *</label>
+                <input class="form-control" name="alergias_otro" id="alergias_otro" maxlength="149" name="alergias" data-color="dark" type="text" value="Ninguna" placeholder="" readonly />
+            </div>
+html;
+        } else{
+            $alergias_otro =<<<html
+            <div class="col-md-3">
+                <label class="form-label mt-4">Alergias Otro *</label>
+                <input class="form-control" name="alergias_otro" id="alergias_otro" maxlength="149" name="alergias" data-color="dark" type="text" value="<?= {$userData['alergias_otro']} ?>" placeholder="" readonly />
+            </div>
+html;
+        }
+
+        if ($userData['alergia_medicamento_cual'] == '') {
+            $alergia_medicamento_cual =<<<html
+            <div class="col-md-3">
+                <label class="form-label mt-4">Alergias Medicamento *</label>
+                <input class="form-control" name="alergia_medicamento_cual" id="alergia_medicamento_cual" maxlength="149" name="alergias" data-color="dark" type="text" value="Ninguna" placeholder="" readonly />
+            </div>
+html;
+        } else{
+            $alergia_medicamento_cual =<<<html
+            <div c<div class="col-md-3">
+                <label class="form-label mt-4">Alergias Medicamento *</label>
+                <input class="form-control" name="alergia_medicamento_cual" id="alergia_medicamento_cual" maxlength="149" name="alergias" data-color="dark" type="text" value="{$userData['alergia_medicamento_cual']}" placeholder="" readonly />
+            </div>
+html;
+        }
+
       View::set('imgUser',$imgUser);
+      View::set('alergias',$alergias);
+      View::set('alergias_otro',$alergias_otro);
+      View::set('alergia_medicamento_cual',$alergia_medicamento_cual);
       View::set('header',$this->_contenedor->header($extraHeader));
       View::set('footer',$this->_contenedor->header($extraFooter));
       View::set('userData', $userData);

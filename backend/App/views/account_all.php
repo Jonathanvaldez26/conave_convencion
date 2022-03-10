@@ -232,7 +232,20 @@
                                     <input id="residencia" name="residencia" maxlength="49" class="form-control" type="text" placeholder="bu" onfocus="focused(this)" onfocusout="defocused(this)" value="<?= $userData['nombre_estado'] ?>" readonly>
                                 </div>
 
+                                <div class="col-lg-4 align-self-center">
+                                    <label class="form-label mt-4">Ciudades *</label>
+                                    <!-- <select class="form-control" style="cursor: pointer;" name="residencia" id="residencia" tabindex="-1" data-choice="active" required>
+                                        <option value="" disabled selected>Selecciona una opción</option>
+                                        <?php echo $optionsCiuades; ?>
+                                    </select> -->
+                                    <input id="residencia" name="residencia" maxlength="49" class="form-control" type="text" placeholder="bu" onfocus="focused(this)" onfocusout="defocused(this)" value="<?= $userData['nombre_ciudades'] ?>" readonly>
+                                </div>
 
+
+                                
+                            </div>
+
+                            <div class="row">
                                 <div class="col-md-4 align-self-center col-cp">
                                     <div id="show-cp">
                                         <label class="form-label mt-4">Código Postal: </label>
@@ -245,9 +258,6 @@
                                     </div>
 
                                 </div>
-                            </div>
-
-                            <div class="row">
                                 <div class="col-lg-5 align-self-center">
                                     <label class="form-label mt-4">Aeropuerto: </label>
                                     <!-- <select class="form-control" style="cursor: pointer;" name="aeropuerto" id="aeropuerto" tabindex="-1" data-choice="active" required>
@@ -267,27 +277,20 @@
                                     <input id="actividad" name="actividad" maxlength="49" class="form-control" type="text" placeholder="actividad" onfocus="focused(this)" onfocusout="defocused(this)" value="<?= $userData['actividad']?>" readonly>
                                 </div>
                                 
-                                <div class="col-md-4">
-                                    <label class="form-label mt-4">Restricciones Alimenticias *</label>
-                                    <input class="form-control" name="restricciones_alimenticias" id="restricciones_alimenticias" maxlength="149" name="alergias" data-color="dark" type="text" value="<?= $userData['restricciones_alimenticias'] ?>" placeholder="" readonly />
-                                </div>
+                                
                             </div>
 
                             <div class="row">
                                 <div class="col-md-3">
-                                    <label class="form-label mt-4">Alergias *</label>
-                                    <input class="form-control" name="alergias" id="alergias" maxlength="149" name="alergias" data-color="dark" type="text" value="<?= $userData['alergias'] ?>" placeholder="" readonly />
+                                    <label class="form-label mt-4">Restricciones Alimenticias *</label>
+                                    <input class="form-control" name="restricciones_alimenticias" id="restricciones_alimenticias" maxlength="149" name="alergias" data-color="dark" type="text" value="<?= $userData['restricciones_alimenticias'] ?>" placeholder="" readonly />
                                 </div>
 
-                                <div class="col-md-3">
-                                    <label class="form-label mt-4">Alergias Otro *</label>
-                                    <input class="form-control" name="alergias_otro" id="alergias_otro" maxlength="149" name="alergias" data-color="dark" type="text" value="<?= $userData['alergias_otro'] ?>" placeholder="" readonly />
-                                </div>
+                                <?php echo $alergias;?>
 
-                                <div class="col-md-3">
-                                    <label class="form-label mt-4">Alergias Medicamento *</label>
-                                    <input class="form-control" name="alergia_medicamento_cual" id="alergia_medicamento_cual" maxlength="149" name="alergias" data-color="dark" type="text" value="<?= $userData['alergia_medicamento_cual'] ?>" placeholder="" readonly />
-                                </div>
+                                <?php echo $alergias_otro;?>
+
+                                <?php echo $alergia_medicamento_cual;?>
                             </div>
 
                             <div class="row">

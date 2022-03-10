@@ -145,7 +145,22 @@ echo $header;
                                         <!-- <input type="text" name="residencia_value" id="residencia_value"> -->
                                     </div>
 
+                                    <div class="col-lg-4 col-sm-12">
+                                        <label class="form-label mt-4">Ciudades *</label>
+                                        <select class="form-control" style="cursor: pointer;" name="ciudades" id="ciudades" tabindex="-1" data-choice="active" required>
+                                            <option value="" disabled selected>Selecciona una opción</option>
+                                            <?php echo $optionsCiudades; ?>
+                                        </select>
+                                        <!-- <input type="text" name="residencia_value" id="residencia_value"> -->
+                                    </div>
 
+
+                                    
+                                </div>
+
+
+
+                                <div class="row">
                                     <div class="col-md-4 col-sm-12"  id="show-cp" style="display: none;">
                                         <label class="form-label mt-4">Código Postal *</label><br>
                                         <input type="text" class="form-control" id="cp" name="cp" list="list_cp">
@@ -157,19 +172,14 @@ echo $header;
                                             <?php //echo $optionsCp; ?>
                                         </select> -->
                                     </div>
-                                </div>
-
-
-
-                                <div class="row">
-                                    <div class="col-lg-6 col-sm-12">
-                                        <label class="form-label mt-4">Aeropuerto *</label>
+                                    <div class="col-lg-7 col-sm-12" id="aeropuerto-size">
+                                        <label class="form-label mt-4" >Aeropuerto *</label>
                                         <select class="form-control" style="cursor: pointer;" name="aeropuerto" id="aeropuerto" tabindex="-1" data-choice="active" required>
                                             <option value="" disabled selected>Selecciona una opción</option>
                                             <?php echo $optionsAeropuertos; ?>
                                         </select>
                                     </div>
-                                    <div class="col-md-6 col-sm-12">
+                                    <div class="col-md-5 col-sm-12" id="actividad-size">
                                         <label class="form-label mt-4">Actividad *</label>
                                         <select class="form-control" style="cursor: pointer;" name="actividad" id="actividad" tabindex="-1" data-choice="active" required>
                                             <option value disabled>Selecciona una opción</option>
@@ -310,8 +320,10 @@ echo $header;
 
 <script>
             $(document).ready(function() {
-                $("#residencia").on("change", function() {
+                $("#ciudades").on("change", function() {
                     $("#show-cp").css('display', 'block');
+                    $("#aeropuerto-size").removeClass('col-lg-7').addClass('col-lg-5');
+                    $("#actividad-size").removeClass('col-md-5').addClass('col-md-3');
                 });
 
                 // $("#cp").on("keyup", function(){

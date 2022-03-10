@@ -12,13 +12,14 @@ class Data {
   public static function update($user){
     $mysqli = Database::getInstance(true);
     $query=<<<sql
-    UPDATE registros_acceso SET id_bu = :id_bu, id_posicion = :id_posicion, id_residencia = :id_residencia, id_aeropuerto = :id_aeropuerto, id_cp = :id_cp, id_linea_principal = :id_linea_principal, numero_empleado = :numero_empleado, nombre = :nombre, segundo_nombre = :segundo_nombre, apellido_materno = :apellido_materno, apellido_paterno = :apellido_paterno, genero = :genero, fecha_nacimiento = :fecha_nacimiento, telefono = :telefono, actividad = :actividad, alergias = :alergias, alergias_otro = :alergias_otro, alergia_medicamento = :alergia_medicamento, alergia_medicamento_cual = :alergia_medicamento_cual, restricciones_alimenticias = :restricciones_alimenticias, restricciones_alimenticias_cual = :restricciones_alimenticias_cual  WHERE email = :email;
+    UPDATE registros_acceso SET id_bu = :id_bu, id_posicion = :id_posicion, id_residencia = :id_residencia, id_ciudades = :id_ciudades, id_aeropuerto = :id_aeropuerto, id_cp = :id_cp, id_linea_principal = :id_linea_principal, numero_empleado = :numero_empleado, nombre = :nombre, segundo_nombre = :segundo_nombre, apellido_materno = :apellido_materno, apellido_paterno = :apellido_paterno, genero = :genero, fecha_nacimiento = :fecha_nacimiento, telefono = :telefono, actividad = :actividad, alergias = :alergias, alergias_otro = :alergias_otro, alergia_medicamento = :alergia_medicamento, alergia_medicamento_cual = :alergia_medicamento_cual, restricciones_alimenticias = :restricciones_alimenticias, restricciones_alimenticias_cual = :restricciones_alimenticias_cual  WHERE email = :email;
 sql;
     $parametros = array(
       ':id_linea_principal'=>$user->_linea_principal,
       ':id_bu'=>$user->_bu,
       ':id_posicion'=>$user->_posicion,
       ':id_residencia'=>$user->_residencia,
+      ':id_ciudades'=>$user->_ciudades,
       ':id_aeropuerto'=>$user->_aeropuerto,
       ':id_cp'=>$user->_cp,
       ':nombre'=>$user->_nombre,
