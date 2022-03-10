@@ -144,7 +144,7 @@
                                             <!-- <input type="date" name="fecha_" id="fecha_" class="form-control col-md-7 col-xs-12"> -->
                                             <select class="form-control" name="tipo_prueba_" id="tipo_prueba_" required>
                                                 <option selected>Seleccione un Tipo de Prueba</option>
-                                                <option value="Prueba PCR">Prueba PCR</option>
+                                                <!-- <option value="Prueba PCR">Prueba PCR</option> -->
                                                 <option value="Prueba Antigeno">Prueba Antígeno</option>
                                             </select>
                                         </div>
