@@ -193,6 +193,7 @@ echo $header;
                                 </div>
 
                                 <div class="row">
+                                    
                                     <div class="col-md-3 col-sm-12">
                                         <label class="form-label mt-4">Restricciones Alimentarias *</label>
                                         <div class="form-check">
@@ -214,10 +215,36 @@ echo $header;
                                             </label>
                                         </div>
                                         <div class="form-check">
-                                            <input class="form-check-input" type="radio" name="restricciones_alimenticias" id="res_ali_3" value="ninguna" checked>
-                                            <label class="form-check-label" for="res_ali_3">
+                                            <input class="form-check-input" type="radio" name="restricciones_alimenticias" id="res_ali_4" value="ninguna" checked>
+                                            <label class="form-check-label" for="res_ali_4">
                                                 Ninguna
                                             </label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="radio" name="restricciones_alimenticias" id="res_ali_5" value="otro">
+                                            <label class="form-check-label" for="res_ali_5">
+                                                Otro
+                                            </label>
+                                        </div>
+                                        <div class="col-md-12 col-sm-12 restricciones_alimenticias" style="display: none!important;">
+                                            <label class="form-label mt-4">¿Cual?</label>
+                                            <input id="restricciones_alimenticias_cual" name="restricciones_alimenticias_cual" maxlength="45" class="form-control" type="text" placeholder=""   value="">
+                                                
+                                        </div>
+                                    </div>
+
+                                    <div class="col-md-4 col-sm-12">
+                                        <label class="form-label mt-4">Alergico a *</label>
+                                        <select class="form-control" name="alergias[]" id="select_alergico" multiple="multiple">
+                                            <option value="lacteos">Lácteos</option>
+                                            <option value="gluten">Gluten</option>
+                                            <option value="mariscos">Pescados y/o mariscos</option>
+                                            <option value="otros">Otros</option>
+                                        </select>
+
+                                        <div class="col-md-12 col-sm-12 cont_alergia_otro" style="display: none;">
+                                            <label class="form-label mt-4">Especifique </label>
+                                            <input class="form-control" id="alergia_otro" maxlength="149" name="alergia_otro" data-color="dark" type="text" value="" placeholder="Escriba su alergia" />
                                         </div>
                                     </div>
                                    
@@ -245,20 +272,7 @@ echo $header;
                                         </div>
                                     </div>
                                     
-                                    <div class="col-md-4 col-sm-12">
-                                        <label class="form-label mt-4">Alergico a *</label>
-                                        <select class="form-control" name="alergias[]" id="select_alergico" multiple="multiple">
-                                            <option value="lacteos">Lácteos</option>
-                                            <option value="gluten">Gluten</option>
-                                            <option value="mariscos">Pescados y/o mariscos</option>
-                                            <option value="otros">Otros</option>
-                                        </select>
-
-                                        <div class="col-md-12 col-sm-12 cont_alergia_otro" style="display: none;">
-                                            <label class="form-label mt-4">Especifique </label>
-                                            <input class="form-control" id="alergia_otro" maxlength="149" name="alergia_otro" data-color="dark" type="text" value="" placeholder="Escriba su alergia" />
-                                        </div>
-                                    </div>
+                                    
 
 
                                 </div>
@@ -387,6 +401,16 @@ echo $header;
                     if ($("#confirm_alergia_si").is(':checked')) {
                         $(".medicamento_cual").css("display", "block");
                     }
+                });
+
+                $('input:radio[name="restricciones_alimenticias"]').change(function() {
+                    if ($("#res_ali_5").is(':checked')) {
+                        $(".restricciones_alimenticias").css("display", "block");
+                        $("#restricciones_alimenticias_cual").val("");
+                    }else{
+                        $(".restricciones_alimenticias").css("display", "none");
+                    }
+        
                 });
             });
             </script>

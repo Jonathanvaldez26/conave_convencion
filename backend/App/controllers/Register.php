@@ -1002,6 +1002,12 @@ html;
               }else{
               $alergia_medicamento_cual = '';
               }
+
+              if(isset($_POST['restricciones_alimenticias_cual'])){
+                $restricciones_alimenticias_cual = $_POST['restricciones_alimenticias_cual'];
+              }else{
+                $restricciones_alimenticias_cual = '';
+              }
              
   
               $documento->_nombre = $nombre;
@@ -1026,6 +1032,7 @@ html;
               $documento->_alergia_otro = $alergia_otro;
               $documento->_alergia_medicamento = $alergia_medicamento;
               $documento->_alergia_medicamento_cual = $alergia_medicamento_cual;
+              $documento->_restricciones_alimenticias_cual = $restricciones_alimenticias_cual;
               
 
 
