@@ -169,7 +169,7 @@ echo $header;
                                             <?php echo $optionsAeropuertos; ?>
                                         </select>
                                     </div>
-                                    <div class="col-md-3 col-sm-12">
+                                    <div class="col-md-6 col-sm-12">
                                         <label class="form-label mt-4">Actividad *</label>
                                         <select class="form-control" style="cursor: pointer;" name="actividad" id="actividad" tabindex="-1" data-choice="active" required>
                                             <option value disabled>Selecciona una opción</option>
@@ -177,7 +177,7 @@ echo $header;
                                             <option value="carrera_5k">Carrera 5k</option>
                                         </select>
                                     </div>
-                                    <div class="col-md-3 col-sm-12">
+                                    <!-- <div class="col-md-3 col-sm-12">
                                         <label class="form-label mt-4">Talla de Playera *</label>
                                         <select class="form-control" style="cursor: pointer;" required="true" name="talla_playera" id="talla_playera" tabindex="-1" data-choice="active">
                                             <option value="" disabled>Seleccione una Talla</option>
@@ -186,7 +186,7 @@ echo $header;
                                             <option value="Grande">Grande</option>
                                             <option value="Extra_Grande">Extra Grande</option>
                                         </select>
-                                    </div>
+                                    </div> -->
                                     <!-- <div class="col-md-3 col-sm-12">
                                         <label class="form-label mt-4">Restricciones alimenticias</label>
                                         <input class="form-control" id="alergias" maxlength="149" name="alergias" data-color="dark" type="text" value="<?= $userData['alergias'] ?>" placeholder="Enter something" />
@@ -229,7 +229,7 @@ echo $header;
                                         </div>
                                         <div class="col-md-12 col-sm-12 restricciones_alimenticias" style="display: none!important;">
                                             <label class="form-label mt-4">¿Cual?</label>
-                                            <input id="restricciones_alimenticias_cual" name="restricciones_alimenticias_cual" maxlength="45" class="form-control" type="text" placeholder=""   value="">
+                                            <input id="restricciones_alimenticias_cual" name="restricciones_alimenticias_cual" maxlength="45" class="form-control" type="text" placeholder="Escriba su restricción"   value="">
                                                 
                                         </div>
                                     </div>
@@ -268,14 +268,10 @@ echo $header;
                                         
                                         <div class="col-md-12 col-sm-12 medicamento_cual" style="display: none!important;">
                                             <label class="form-label mt-4">¿Cual?</label>
-                                            <input id="alergia_medicamento_cual" name="alergia_medicamento_cual" maxlength="29" pattern="[a-zA-Z0-9]*" class="form-control" type="text" placeholder=""   value="">
+                                            <input id="alergia_medicamento_cual" name="alergia_medicamento_cual" maxlength="29" pattern="[a-zA-Z0-9]*" class="form-control" type="text" placeholder="Escriba a que medicamento es alérgico"   value="">
                                                 
                                         </div>
                                     </div>
-                                    
-                                    
-
-
                                 </div>
 
                                 <div class="row">
