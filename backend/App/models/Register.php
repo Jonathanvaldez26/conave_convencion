@@ -157,4 +157,13 @@ sql;
     return $mysqli->queryAll($query);
 }
 
+public static function getLineByBu($bu){
+  $mysqli = Database::getInstance(true);
+  $query =<<<sql
+  SELECT * FROM linea_principal where id_bu = $bu
+sql;
+
+  return $mysqli->queryAll($query);
+}
+
 }

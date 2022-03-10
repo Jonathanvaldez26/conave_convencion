@@ -120,7 +120,7 @@ echo $header;
                                         <label class="form-label mt-4">Línea *</label>
                                         <select class="form-control" style="cursor: pointer;" name="linea_principal" id="linea_principal" tabindex="-1" data-choice="active" required>
                                             <option value="" disabled selected>Selecciona una opción</option>
-                                            <?php echo $optionsLineaPrincipal; ?>
+                                            <!-- <?php //echo $optionsLineaPrincipal; ?> -->
                                         </select>
                                     </div>
 
@@ -313,6 +313,55 @@ echo $header;
                 $("#residencia").on("change", function() {
                     $("#show-cp").css('display', 'block');
                 });
+
+                $("#bu").on("change", function(){
+                   
+                    var bu = $(this).val();
+
+                    $.ajax({
+                        url: "/Register/getLineaByBu",
+                        type: "POST",
+                        data: {bu},
+                        dataType: "json",
+                        beforeSend: function() {
+                            console.log("Procesando....");
+                            $('#linea_principal')
+                                .find('option')
+                                .remove()
+                                .end();
+        
+                        },
+                        success: function(respuesta) {
+                             console.log(respuesta);
+
+                             $('#linea_principal')
+                                    .append($('<option>', {
+                                            value: ''
+                                        })
+                                        .text('Selecciona una opción'));
+    
+        
+                            $.each(respuesta, function(key, value) {
+                                //console.log(key);
+                                console.log(value);
+                                $('#linea_principal')
+                                    .append($('<option>', {
+                                            value: value.id_linea_principal
+                                        })
+                                        .text(value.nombre ));
+                                
+        
+                            });
+        
+                        },
+                        error: function(respuesta) {
+                            console.log(respuesta);
+                        }
+        
+                    });
+                });
+
+                
 
                 // $("#cp").on("keyup", function(){
                 //     var estado = $("#residencia").val();

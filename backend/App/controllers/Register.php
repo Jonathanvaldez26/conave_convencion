@@ -857,6 +857,18 @@ html;
 
     }
 
+    public function getLineaByBu(){
+        $bu = $_POST['bu'];
+
+        if(isset($bu)){
+            $Bu = RegisterDao::getLineByBu($bu);
+        
+            echo json_encode($Bu);
+
+        }
+
+    }
+
     public function Politicas(){
 
         $extraHeader =<<<html
