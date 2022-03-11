@@ -112,7 +112,7 @@ class Mailer
                 <br><br><br>
 
 
-                        <img src="https://convencionasofarma2022.mx/assets/img/img_equipo_asofarma.jpeg" alt="firma">
+                        <img src="https://convencionasofarma2022.mx/assets/img/img_equipo_asofarma_n.jpeg" alt="firma">
 
                     
                 
@@ -220,7 +220,7 @@ class Mailer
                         </p><br><br><br>
 
 
-                        <img src="https://convencionasofarma2022.mx/assets/img/img_equipo_asofarma.jpeg" alt="firma">
+                        <img src="https://convencionasofarma2022.mx/assets/img/img_equipo_asofarma_n.jpeg" alt="firma">
                     </div>
                     
                         
