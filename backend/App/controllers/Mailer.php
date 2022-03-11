@@ -96,18 +96,18 @@ class Mailer
                     Estamos ansiosos de volvernos a ver…
                 </p>
                 <p>
-                    Este mensaje se le envió porque usted está intentando registrar su cuenta de correo electrónico institucional a la <bConvención Nacional de Ventas 2022 - CONAVE ASOFARMA</b>. Si no fue usted ignore este mensaje.
+                    Este mensaje se le envió porque usted está intentando registrar su cuenta de correo electrónico institucional a la <b>Convención Nacional de Ventas 2022 - CONAVE ASOFARMA</b>. Si no fue usted ignore este mensaje.
                 </p>
                 
                 <p>
-                    Copie este código de verificación y péguelo en el formulario de la plataforma a la que usted está intentando registrarse.
+                    Copie este código y péguelo en el formulario de la plataforma a la que usted está intentando registrarse.
                 </p>
 
                 <p>
-                    Su código de verificación es: <span><b style="background: yellow;">'. $msg['code'] .'</b></span>
+                    Su código es: <span><b style="background: yellow;">'. $msg['code'] .'</b></span>
                 </p>
                 <p>
-                    El código de verificación es valido por 24 horas y solo se puede usar una vez, atentamente tu equipo ASOFARMA.
+                    El código es valido por 24 horas y solo se puede usar una vez, atentamente tu equipo ASOFARMA.
                 </p>
 
                     
