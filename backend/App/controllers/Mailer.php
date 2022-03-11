@@ -109,6 +109,10 @@ class Mailer
                 <p>
                     El código es valido por 24 horas y solo se puede usar una vez, atentamente tu equipo ASOFARMA.
                 </p>
+                <br><br><br>
+
+
+                        <img src="https://convencionasofarma2022.mx/assets/img/img_equipo_asofarma.jpeg" alt="firma">
 
                     
                 
@@ -213,8 +217,10 @@ class Mailer
                         <p style="text-align: center !important;">
                             Hola, ' . $msg['name'] . ' : 
                             <strong>¡Tu registro a la CONAVE 2022 fue exitoso! </strong>
-                        </p>
-                        
+                        </p><br><br><br>
+
+
+                        <img src="https://convencionasofarma2022.mx/assets/img/img_equipo_asofarma.jpeg" alt="firma">
                     </div>
                     
                         
