@@ -34,7 +34,7 @@ class Mailer
             $mail->Port       = 465;                                    //TCP port to connect to; use 587 if you have set `SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS`
 
             //Recipients
-            $mail->setFrom($msg['email'], 'Convención Conave 2022 Asofarma');
+            $mail->setFrom($msg['email'], 'Conave 2022 Asofarma');
             $mail->addAddress($msg['email'], $msg['name']);     //Add a recipient
 
 
@@ -96,7 +96,7 @@ class Mailer
                     Estamos ansiosos de volvernos a ver…
                 </p>
                 <p>
-                    Este mensaje se le envió porque usted está intentando registrar su cuenta de correo electrónico institucional a la <b>Convención Nacional de Ventas 2022 - CONAVE ASOFARMA</b>. Si no fue usted ignore este mensaje.
+                    Este mensaje se le envió porque usted está intentando registrar su cuenta de correo electrónico institucional a la <b>CONAVE 2022</b>. Si no fue usted ignore este mensaje.
                 </p>
                 
                 <p>
@@ -158,7 +158,7 @@ class Mailer
             $mail->Port       = 465;                                    //TCP port to connect to; use 587 if you have set `SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS`
 
             //Recipients
-            $mail->setFrom($msg['email'], 'Convención Conave 2022 Asofarma');
+            $mail->setFrom($msg['email'], 'Conave 2022');
             $mail->addAddress($msg['email']);     //Add a recipient
 
             $html = '     
@@ -212,7 +212,7 @@ class Mailer
                     <img src="https://convencionasofarma2022.mx/assets/img/img_correo.jpeg" alt="">
                         <p style="text-align: center !important;">
                             Hola, ' . $msg['name'] . ' : 
-                            <strong>¡Tu registro a la convención nacional de ventas fue exitoso! </strong>
+                            <strong>¡Tu registro a la CONAVE 2022 fue exitoso! </strong>
                         </p>
                         
                     </div>
