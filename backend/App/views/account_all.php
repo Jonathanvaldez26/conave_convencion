@@ -258,15 +258,15 @@
                                     </div>
 
                                 </div>
-                                <div class="col-lg-5 align-self-center">
-                                    <label class="form-label mt-4">Aeropuerto: </label>
+                                <!-- <div class="col-lg-5 align-self-center">
+                                    <label class="form-label mt-4">Aeropuerto: </label> -->
                                     <!-- <select class="form-control" style="cursor: pointer;" name="aeropuerto" id="aeropuerto" tabindex="-1" data-choice="active" required>
                                         <option value="" disabled selected>Selecciona una opción</option>
                                         <?php echo $optionsEstados; ?>
                                     </select> -->
-                                    <input id="aeropuerto" name="aeropuerto" maxlength="49" class="form-control" type="text" placeholder="aeropuerto" onfocus="focused(this)" onfocusout="defocused(this)" value="<?= $userData['nombre_aeropuerto']?>" readonly>
-                                </div>
-                                <div class="col-md-3 align-self-center">
+                                    <!-- <input id="aeropuerto" name="aeropuerto" maxlength="49" class="form-control" type="text" placeholder="aeropuerto" onfocus="focused(this)" onfocusout="defocused(this)" value="<?= $userData['nombre_aeropuerto']?>" readonly>
+                                </div> -->
+                                <div class="col-md-4 align-self-center">
                                     <label class="form-label mt-4">Actividad *</label>
                                     <!-- <select class="form-control" style="cursor: pointer;" name="actividad" id="actividad" tabindex="-1" data-choice="active" required>
                                         <option value disabled>Selecciona una opción</option>
@@ -277,14 +277,15 @@
                                     <input id="actividad" name="actividad" maxlength="49" class="form-control" type="text" placeholder="actividad" onfocus="focused(this)" onfocusout="defocused(this)" value="<?= $userData['actividad']?>" readonly>
                                 </div>
                                 
+                                <div class="col-md-4">
+                                    <label class="form-label mt-4">Restricciones Alimenticias *</label>
+                                    <input class="form-control" name="restricciones_alimenticias" id="restricciones_alimenticias" maxlength="149" name="alergias" data-color="dark" type="text" value="<?= $userData['restricciones_alimenticias'] ?>" placeholder="" readonly />
+                                </div>
                                 
                             </div>
 
                             <div class="row">
-                                <div class="col-md-3">
-                                    <label class="form-label mt-4">Restricciones Alimenticias *</label>
-                                    <input class="form-control" name="restricciones_alimenticias" id="restricciones_alimenticias" maxlength="149" name="alergias" data-color="dark" type="text" value="<?= $userData['restricciones_alimenticias'] ?>" placeholder="" readonly />
-                                </div>
+                               
 
                                 <?php echo $alergias;?>
 

@@ -1025,7 +1025,7 @@ html;
               $alergias = $_POST['alergias'];
               $residencia = $_POST['residencia'];
               $ciudades = $_POST['ciudades'];
-              $aeropuerto = $_POST['aeropuerto'];
+            //   $aeropuerto = $_POST['aeropuerto'];
               $cp = $_POST['cp'];
               $restricciones_alimenticias = $_POST['restricciones_alimenticias'];
               $alergias = $_POST['alergias'];+
@@ -1066,7 +1066,7 @@ html;
               $documento->_posicion = $posicion;
               $documento->_residencia = $residencia;
               $documento->_ciudades = $ciudades;
-              $documento->_aeropuerto = $aeropuerto;
+            //   $documento->_aeropuerto = $aeropuerto;
               $documento->_cp = $cp;
               $documento->_restricciones_alimenticias = $restricciones_alimenticias;
               $documento->_alergias = $alergias_;
