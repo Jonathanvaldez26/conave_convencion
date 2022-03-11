@@ -172,13 +172,13 @@ echo $header;
                                             <?php //echo $optionsCp; ?>
                                         </select> -->
                                     </div>
-                                    <div class="col-lg-7 col-sm-12" id="aeropuerto-size">
+                                    <!-- <div class="col-lg-7 col-sm-12" id="aeropuerto-size">
                                         <label class="form-label mt-4" >Aeropuerto *</label>
                                         <select class="form-control" style="cursor: pointer;" name="aeropuerto" id="aeropuerto" tabindex="-1" data-choice="active" required>
                                             <option value="" disabled selected>Selecciona una opción</option>
                                             <?php echo $optionsAeropuertos; ?>
                                         </select>
-                                    </div>
+                                    </div> -->
                                     <div class="col-md-5 col-sm-12" id="actividad-size">
                                         <label class="form-label mt-4">Actividad *</label>
                                         <select class="form-control" style="cursor: pointer;" name="actividad" id="actividad" tabindex="-1" data-choice="active" required>
