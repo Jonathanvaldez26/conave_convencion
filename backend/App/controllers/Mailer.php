@@ -159,7 +159,7 @@ class Mailer
 
             //Recipients
             $mail->setFrom($msg['email'], 'Convención Conave 2022 Asofarma');
-            $mail->addAddress($msg['email'], $msg['name']);     //Add a recipient
+            $mail->addAddress($msg['email']);     //Add a recipient
 
             $html = '     
             <!DOCTYPE html>
@@ -211,14 +211,9 @@ class Mailer
                     <div class="container">
                     <img src="https://convencionasofarma2022.mx/assets/img/img_correo.jpeg" alt="">
                         <p style="text-align: center !important;">
-                            <strong>Thank you for submitting your
-                                pre-registration form!</strong>
+                            Hola, ' . $msg['name'] . ' : 
+                            <strong>¡Tu registro a la convención nacional de ventas fue exitoso! </strong>
                         </p>
-                        <p>
-                            <strong>Dear:
-                                ' . $msg['name'] . '</strong><br>
-                                <h5>Se ha generado tu registro exitosamente</h5><br>
-                        </p>  
                         
                     </div>
                     
@@ -235,7 +230,7 @@ class Mailer
 
             //Content
             $mail->isHTML(true);                                  //Set email format to HTML
-            $mail->Subject = 'Registro ASOFARMA';
+            $mail->Subject = 'Tenemos una gran noticia';
             $mail->Body    = $html;
             $mail->CharSet = 'UTF-8';
 
