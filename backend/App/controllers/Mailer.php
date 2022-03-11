@@ -90,7 +90,7 @@ class Mailer
         <body leftmargin="0" topmargin="0" marginheight="0" marginwidth="0">
             
             <div class="container">
-                <img src="https://convencionasofarma2022.mx/assets/img/img_equipo_asofarma_n.jpeg" alt="">
+                <img src="https://convencionasofarma2022.mx/assets/img/img_correo_n.png" alt="">
                 <br>
                 <p>
                     Estamos ansiosos de volvernos a ver…
@@ -112,7 +112,7 @@ class Mailer
                 <br><br><br>
 
 
-                        <img src="https://convencionasofarma2022.mx/assets/img/img_asofarma_firma.jpeg" alt="firma">
+                        <img src="https://convencionasofarma2022.mx/assets/img/img_equipo_asofarma_n.jpeg" alt="firma">
 
                     
                 
@@ -213,14 +213,14 @@ class Mailer
                 <body leftmargin="0" topmargin="0" marginheight="0" marginwidth="0">
                     
                     <div class="container">
-                    <img src="https://convencionasofarma2022.mx/assets/img/img_equipo_asofarma_n.jpeg" alt="">
+                    <img src="https://convencionasofarma2022.mx/assets/img/img_correo_n.png" alt="">
                         <p style="text-align: center !important;">
                             Hola, ' . $msg['name'] . ' : 
                             <strong>¡Tu registro a la CONAVE 2022 fue exitoso! </strong>
                         </p><br><br><br>
 
 
-                        <img src="https://convencionasofarma2022.mx/assets/img/img_asofarma_firma.jpeg" alt="firma">
+                        <img src="https://convencionasofarma2022.mx/assets/img/img_equipo_asofarma_n.jpeg" alt="firma">
                     </div>
                     
                         
