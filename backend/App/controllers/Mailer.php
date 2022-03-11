@@ -107,7 +107,7 @@ class Mailer
                     Su código es: <span><b style="background: yellow;">'. $msg['code'] .'</b></span>
                 </p>
                 <p>
-                    El código es valido por 24 horas y solo se puede usar una vez, atentamente tu equipo ASOFARMA.
+                    El código es valido por 24 horas y solo se puede usar una vez.
                 </p>
                 <br><br><br>
 
