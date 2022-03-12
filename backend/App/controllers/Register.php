@@ -881,6 +881,19 @@ html;
 
     }
 
+    public function getposicionByLinea(){
+        $linea_principal = $_POST['linea_principal'];
+
+        if(isset($linea_principal)){
+            $posiciones = RegisterDao::getposicionByLine($linea_principal);
+        
+            echo json_encode($posiciones);
+            //var_dump($posiciones);
+
+        }
+
+    }
+
     public function Politicas(){
 
         $extraHeader =<<<html

@@ -176,4 +176,13 @@ sql;
   return $mysqli->queryAll($query);
 }
 
+public static function getposicionByLine($id_line){
+  $mysqli = Database::getInstance(true);
+  $query =<<<sql
+  SELECT * FROM posiciones WHERE id_linea_principal = $id_line
+sql;
+
+  return $mysqli->queryAll($query);
+}
+
 }

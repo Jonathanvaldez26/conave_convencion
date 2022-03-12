@@ -132,7 +132,7 @@ echo $header;
                                         <label class="form-label mt-4">Posición *</label>
                                         <select class="form-control" style="cursor: pointer;" name="posicion" id="posicion" tabindex="-1" data-choice="active" required>
                                             <option value="" disabled selected>Selecciona una opción</option>
-                                            <?php echo $optionsPosiciones; ?>
+                                            <!-- <?php //echo $optionsPosiciones; ?> -->
                                         </select>
                                     </div>
 
@@ -373,6 +373,50 @@ echo $header;
                     });
                 });
 
+                $("#linea_principal").on("change", function(){
+                   var linea_principal = $(this).val();
+
+                   $.ajax({
+                       url: "/Register/getposicionByLinea",
+                       type: "POST",
+                       data: {linea_principal},
+                       dataType: "json",
+                       beforeSend: function() {
+                           console.log("Procesando....");
+                           $('#posicion')
+                               .find('option')
+                               .remove()
+                               .end();
+       
+                       },
+                       success: function(respuesta) {
+                            console.log(respuesta);
+
+                            $('#posicion')
+                                   .append($('<option>', {
+                                           value: ''
+                                       })
+                                       .text('Selecciona una opción'));
+   
+       
+                           $.each(respuesta, function(key, value) {
+                               //console.log(key);
+                               console.log(value);
+                               $('#posicion')
+                                   .append($('<option>', {
+                                           value: value.id_posicion
+                                       })
+                                       .text(value.nombre ));
+       
+                           });
+       
+                       },
+                       error: function(respuesta) {
+                           console.log(respuesta);
+                       }
+       
+                   });
+               });
                 
 
                 // $("#cp").on("keyup", function(){
