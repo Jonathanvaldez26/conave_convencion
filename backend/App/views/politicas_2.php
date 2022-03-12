@@ -125,7 +125,7 @@
                                     <div class="row justify-content-center">
                                         <div class="col-md-4 col-sm-12">
                                             <button class="btn btn-sm btn-success w-100 h-100" id="btn_success" disabled name="btn_success" value="1" type="submit">
-                                                Acepto y me comprometo
+                                                Acepto
                                             </button>
                                         </div>
                                         <div class="col-md-4 col-sm-12">

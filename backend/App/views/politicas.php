@@ -40,17 +40,21 @@
                                     <div id="terminos" class="card-header pt-4 text-scroll " style="text-align: justify;">
                                         <!-- <p>Aquí van los terminos y condiciones</p> -->
                                         <span>
-                                            ¡Este encuentro será doblemente especial! <br><br>
-                                            Queremos volver a tener la cercanía de una Reunión que nos permita seguir fortaleciendo nuestros lazos, pero guardando los cuidados pertinentes, que nos ayuden a prevenir cualquier tipo de Riesgo de Contagio.<br><br>
+                                            Estimado (a)<br><br>
 
-                                            Para ello, estamos considerando las medidas que tienen como principal Objetivo preservar la Seguridad de quienes participaremos en este encuentro, y que como empresa responsable buscamos.<br><br>
+                                            Estamos ansiosos de volvernos a ver … <br><br>
 
-                                            Así que además de contar con tu participación activa, confiamos en que seguirás las recomendaciones que se tienen, privilegiando ante todo tu seguridad y la de todos.<br><br>
+                                            ¡¡Este encuentro será doblemente especial¡¡ <br><br>
+                                            Queremos tener la cercanía de una reunión que nos permita seguir fortaleciendo nuestros lazos, porque juntos somos imparables;  guardando siempre para prevenir cualquier tipo de riesgo de contagio los cuidados pertinentes con base en nuestra nueva realidad.<br><br>
+
+                                            Para ello, estamos considerando las medidas que tienen como principal objetivo preservar la seguridad y salud de quienes participaremos en este encuentro, y que como empresa responsable buscamos.<br><br>
+
+                                            Así que además de contar con tu participación activa, confiamos en que seguirás las recomendaciones que se han establecido y comunicado previamente, privilegiando en todo momento tu seguridad y la de todos.<br><br>
 
                                             Con tu aceptación te comprometes a:<br><br>
                                             <ul>
-                                                <li>Proporcionar información fidedigna.</li>
-                                                <li>Apegarte a las recomendaciones antes, durante y después de la Reunión.</li>
+                                                <li>Proporcionar información fidedigna</li>
+                                                <li>Apegarte a las recomendaciones antes, durante y después de la reunión.</li>
                                             </ul>
                                         </span>
                                     </div>
