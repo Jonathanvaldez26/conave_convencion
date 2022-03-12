@@ -106,7 +106,7 @@ html;
           <!-- Control Center for Soft Dashboard: parallax effects, scripts for the example pages etc -->
            
 
-          <script>
+        <script>
             $(document).ready(function(){
                 $('#confirm_email').attr("disabled", true);
                 $.validator.addMethod("checkUserCorreo",function(value, element) {
@@ -133,7 +133,7 @@ html;
                     });
 
                     return response;
-                },"Usted no está registrado en la Base de Datos CONAVE 2022 ó ya se registro previamente en la plataforma verifique su información.");
+                },"<b >Usted no está registrado en la Base de Datos CONAVE 2022 ó ya se registro previamente en la plataforma verifique su información.</b>");
 
                 $("#email_form").validate({
                    rules:{
@@ -1094,6 +1094,7 @@ html;
   
               if ($id) {
                   View::set('email',$email);
+                  View::set('nombre',$nombre);
                   View::set('header',$extraHeader);
                   View::set('footer',$extraFooter);
                   View::render('politicas');
@@ -1103,6 +1104,7 @@ html;
                 //quitar esta parte
                 
                   View::set('email',$email);
+                  View::set('nombre',$nombre);
                   View::set('header',$extraHeader);
                   View::set('footer',$extraFooter);
                   View::render('politicas');

@@ -146,8 +146,6 @@ html;
 html;
       }
 
-
-
       $tabla.=<<<html
       <tr>
         <td>
