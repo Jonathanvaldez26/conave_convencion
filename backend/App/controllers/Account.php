@@ -262,6 +262,51 @@ html;
 
         $userData = RegisterDao::getUserRegisterUpdateData($userData['email'])[0];
 
+        if ($userData['restricciones_alimenticias'] == '') {
+            $res_alimenticias =<<<html
+                <div class="col-md-3 col-sm-12">
+                    <label class="form-label mt-4">Restricciones Alimentarias *</label>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="restricciones_alimenticias" id="res_ali_1" value="vegetariano">
+                        <label class="form-check-label" for="res_ali_1">
+                            Vegetariano
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="restricciones_alimenticias" id="res_ali_2" value="vegano">
+                        <label class="form-check-label" for="res_ali_2">
+                            Vegano
+                        </label>
+                    </div>
+
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="restricciones_alimenticias" id="res_ali_4" value="ninguna" checked>
+                        <label class="form-check-label" for="res_ali_4">
+                            Ninguna
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="restricciones_alimenticias" id="res_ali_5" value="otro">
+                        <label class="form-check-label" for="res_ali_5">
+                            Otro
+                        </label>
+                    </div>
+                    <div class="col-md-12 col-sm-12 restricciones_alimenticias" style="display: none!important;">
+                        <label class="form-label mt-4">¿Cual?</label>
+                        <input id="restricciones_alimenticias_cual" name="restricciones_alimenticias_cual" maxlength="45" class="form-control" type="text" placeholder="Escriba su restricción" value="">
+
+                    </div>
+                </div>
+html;
+        } else{
+            $res_alimenticias =<<<html
+            <div class="col-md-3">
+                <label class="form-label mt-4">Restricciones Alimenticias *</label>
+                <input class="form-control" name="restricciones_alimenticias" id="restricciones_alimenticias" maxlength="149" name="alergias" data-color="dark" type="text" value="{$userData['restricciones_alimenticias']}, {$userData['restricciones_alimenticias_cual']}" placeholder="" readonly />
+            </div>
+html;
+        }
+
         if($userData['img'] != ''){
             $imgUser=<<<html
             <img src="../../../img/users_conave/{$userData['img']}" id="img-user" alt="bruce" class="w-100 h-100 border-radius-lg shadow-sm">
@@ -275,26 +320,33 @@ html;
 
         if ($userData['alergias'] == '') {
             $alergias =<<<html
-            <div class="col-md-3">
-                <label class="form-label mt-4">Alergias *</label>
-                <input class="form-control" name="alergias" id="alergias" maxlength="149" name="alergias" data-color="dark" type="text" value="Ninguna" placeholder="" readonly />
-            </div>
+                <div class="col-md-4 col-sm-12">
+                    <label class="form-label mt-4">Alérgico a *</label>
+                    <select class="form-control" name="alergias[]" id="select_alergico" multiple="multiple">
+                        <option value="lacteos">Lácteos</option>
+                        <option value="gluten">Gluten</option>
+                        <option value="mariscos">Pescados y/o mariscos</option>
+                        <option value="otros">Otros</option>
+                    </select>
+
+                    <div class="col-md-12 col-sm-12 cont_alergia_otro" style="display: none;">
+                        <label class="form-label mt-4">Especifique </label>
+                        <input class="form-control" id="alergia_otro" maxlength="149" name="alergia_otro" data-color="dark" type="text" value="" placeholder="Escriba su alergia" />
+                    </div>
+                </div>
 html;
         } else{
             $alergias =<<<html
-            <div class="col-md-3">
-                <label class="form-label mt-4">Alergias *</label>
-                <input class="form-control" name="alergias" id="alergias" maxlength="149" name="alergias" data-color="dark" type="text" value="{$userData['alergias']}" placeholder="" readonly />
-            </div>
+                <div class="col-md-3">
+                    <label class="form-label mt-4">Alergias *</label>
+                    <input class="form-control" name="alergias" id="alergias" maxlength="149" name="alergias" data-color="dark" type="text" value="{$userData['alergias']}" placeholder="" readonly />
+                </div>
 html;
         }
 
         if ($userData['alergias_otro'] == '') {
             $alergias_otro =<<<html
-            <div class="col-md-3">
-                <label class="form-label mt-4">Alergias Otro *</label>
-                <input class="form-control" name="alergias_otro" id="alergias_otro" maxlength="149" name="alergias" data-color="dark" type="text" value="Ninguna" placeholder="" readonly />
-            </div>
+            
 html;
         } else{
             $alergias_otro =<<<html
@@ -307,9 +359,26 @@ html;
 
         if ($userData['alergia_medicamento_cual'] == '') {
             $alergia_medicamento_cual =<<<html
-            <div class="col-md-3">
-                <label class="form-label mt-4">Alergias Medicamento *</label>
-                <input class="form-control" name="alergia_medicamento_cual" id="alergia_medicamento_cual" maxlength="149" name="alergias" data-color="dark" type="text" value="Ninguna" placeholder="" readonly />
+            <div class="col-md-4 col-sm-12">
+                <label class="form-label mt-4">¿Es usted alérgico a un medicamento?</label>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="confirm_alergia" id="confirm_alergia_si" value="si">
+                    <label class="form-check-label" for="confirm_alergia_si">
+                        Si
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="confirm_alergia" id="confirm_alergia_no" value="no" checked>
+                    <label class="form-check-label" for="confirm_alergia_no">
+                        No
+                    </label>
+                </div>
+
+                <div class="col-md-12 col-sm-12 medicamento_cual" style="display: none!important;">
+                    <label class="form-label mt-4">¿Cual?</label>
+                    <input id="alergia_medicamento_cual" name="alergia_medicamento_cual" maxlength="29" pattern="[a-zA-Z0-9]*" class="form-control" type="text" placeholder="Escriba a que medicamento es alérgico" value="">
+
+                </div>
             </div>
 html;
         } else{
@@ -322,6 +391,7 @@ html;
         }
 
       View::set('imgUser',$imgUser);
+      View::set('res_alimenticias',$res_alimenticias);
       View::set('alergias',$alergias);
       View::set('alergias_otro',$alergias_otro);
       View::set('alergia_medicamento_cual',$alergia_medicamento_cual);
