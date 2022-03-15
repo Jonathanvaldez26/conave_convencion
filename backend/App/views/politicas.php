@@ -24,7 +24,7 @@
                                 </p>
                             </div>
                             <div class="card-body pt-1">
-                                <form class="form-horizontal" id="pass_form" action="/Register/Politicas_" method="POST">
+                                <form class="form-horizontal" id="pass_form" action="/Register/DataPassword" method="POST">
                                     <!-- <input type="hidden" id="id_registro" name="id_registro" value="<?=$id_registro?>"> -->
                                     <input type="hidden" id="email" name="email" value="<?=$email?>">
 
@@ -66,11 +66,11 @@
                                                 Acepto y me comprometo
                                             </button>
                                         </div>
-                                        <div class="col-md-4 col-sm-12">
+                                        <!-- <div class="col-md-4 col-sm-12">
                                             <button class="btn btn-sm btn-danger w-100 h-100" id="btn_danger" disabled name="btn_danger" value="0" type="button">
                                                 No acepto  
                                             </button>
-                                        </div>
+                                        </div> -->
                                     </div>
                                 </form>
                             </div>

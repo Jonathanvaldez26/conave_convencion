@@ -122,7 +122,7 @@
                                     </div>
                                     <br>
 
-                                    <div class="row justify-content-center">
+                                    <!-- <div class="row justify-content-center">
                                         <div class="col-md-4 col-sm-12">
                                             <button class="btn btn-sm btn-success w-100 h-100" id="btn_success" disabled name="btn_success" value="1" type="submit">
                                                 Acepto
@@ -133,7 +133,7 @@
                                                 No acepto  
                                             </button>
                                         </div>
-                                    </div>
+                                    </div> -->
                                 </form>
                             </div>
                         </div>

@@ -283,12 +283,23 @@ echo $header;
                                     </div>
                                 </div>
 
-                                <div class="row">
-                                    
+                                <br>
+                                <br>
+                                <div class="row" >
+                                    <div class="col-md-8">
+                                    </div>
+                                    <div class="col-md-4">
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" value="1" id="terminos" name="terminos" required>
+                                            <label class="form-check-label" for="terminos">
+                                                <a href="/Register/Politicas_" target="blank_"><b>He leído los terminos y condiciones</b></a> 
+                                            </label>
+                                        </div>
+
+                                      
+                                    </div>
                                 </div>
 
-
-                                <br>
                                 <br>
                                 <p> Los campos marcados con (*) son obligatorios.</p>
 

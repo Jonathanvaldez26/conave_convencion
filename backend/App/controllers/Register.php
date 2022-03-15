@@ -1161,8 +1161,9 @@ html;
         </script>
        
 html;
-        
 
+   
+ 
         $documento = new \stdClass();
   
   
@@ -1187,6 +1188,7 @@ html;
               $residencia = $_POST['residencia'];
               $ciudades = $_POST['ciudades'];
             //   $aeropuerto = $_POST['aeropuerto'];
+              $politica = $_POST['terminos'];
               $cp = $_POST['cp'];
               $restricciones_alimenticias = $_POST['restricciones_alimenticias'];
               $alergias = $_POST['alergias'];+
@@ -1209,8 +1211,7 @@ html;
               }else{
                 $restricciones_alimenticias_cual = '';
               }
-             
-  
+
               $documento->_nombre = $nombre;
               $documento->_segundo_nombre = $segundo_nombre;
               $documento->_apellido_paterno = $apellido_paterno;
@@ -1235,6 +1236,7 @@ html;
               $documento->_alergia_medicamento = $alergia_medicamento;
               $documento->_alergia_medicamento_cual = $alergia_medicamento_cual;
               $documento->_restricciones_alimenticias_cual = $restricciones_alimenticias_cual;
+              $documento->_politica= $politica;
               
 
 
@@ -1256,9 +1258,7 @@ html;
                   View::set('header',$extraHeader);
                   View::set('footer',$extraFooter);
                   View::render('politicas');
-               // print_r($id);
-                 // $this->code500();
-                  //echo 'fail';
+               
               }
           } else {
               echo 'fail REQUEST';
@@ -1575,7 +1575,7 @@ html;
 
                 if ($id) {
                     
-                    RegisterDao::updatePolitica($register);
+                    //RegisterDao::updatePolitica($register);
 
                     $msg = [
                         'email' => $email,
