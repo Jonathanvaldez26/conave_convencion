@@ -23,7 +23,16 @@ sql;
 sql;
 
       return $mysqli->queryAll($query);
-  }
+    }
+
+    public static function getUserRegisterRecoveryPass($email){
+      $mysqli = Database::getInstance(true);
+      $query =<<<sql
+      SELECT * FROM utilerias_asistentes WHERE usuario = '$email' and politica = 1
+sql;
+
+      return $mysqli->queryAll($query);
+    }
 
     public static function getUserRegisterUpdateData($email){
       $mysqli = Database::getInstance(true);
@@ -82,6 +91,19 @@ sql;
       $accion->_id = $registro->_email;
       return $mysqli->update($query, $parametros);
   }
+
+  public static function updatePassword($registro){
+    $mysqli = Database::getInstance(true);
+    $query=<<<sql
+  UPDATE utilerias_asistentes SET contrasena = :contrasena WHERE usuario = :email
+sql;
+    $parametros = array(
+        ':contrasena'=>$registro->_password,
+        ':email'=>$registro->_email
+    );
+    
+    return $mysqli->update($query, $parametros);
+}
 
 
     public static function updateImg($user){
@@ -171,6 +193,15 @@ public static function getLineByBu($bu){
   $mysqli = Database::getInstance(true);
   $query =<<<sql
   SELECT * FROM linea_principal where id_bu = $bu
+sql;
+
+  return $mysqli->queryAll($query);
+}
+
+public static function getposicionByLine($id_line){
+  $mysqli = Database::getInstance(true);
+  $query =<<<sql
+  SELECT * FROM posiciones WHERE id_linea_principal = $id_line
 sql;
 
   return $mysqli->queryAll($query);

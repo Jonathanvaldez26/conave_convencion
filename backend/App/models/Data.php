@@ -12,7 +12,7 @@ class Data {
   public static function update($user){
     $mysqli = Database::getInstance(true);
     $query=<<<sql
-    UPDATE registros_acceso SET id_bu = :id_bu, id_posicion = :id_posicion, id_residencia = :id_residencia, id_ciudades = :id_ciudades, id_cp = :id_cp, id_linea_principal = :id_linea_principal, numero_empleado = :numero_empleado, nombre = :nombre, segundo_nombre = :segundo_nombre, apellido_materno = :apellido_materno, apellido_paterno = :apellido_paterno, genero = :genero, fecha_nacimiento = :fecha_nacimiento, telefono = :telefono, actividad = :actividad, alergias = :alergias, alergias_otro = :alergias_otro, alergia_medicamento = :alergia_medicamento, alergia_medicamento_cual = :alergia_medicamento_cual, restricciones_alimenticias = :restricciones_alimenticias, restricciones_alimenticias_cual = :restricciones_alimenticias_cual  WHERE email = :email;
+    UPDATE registros_acceso SET id_bu = :id_bu, id_posicion = :id_posicion, id_residencia = :id_residencia, id_ciudades = :id_ciudades, id_cp = :id_cp, id_linea_principal = :id_linea_principal, numero_empleado = :numero_empleado, nombre = :nombre, segundo_nombre = :segundo_nombre, apellido_materno = :apellido_materno, apellido_paterno = :apellido_paterno, genero = :genero, fecha_nacimiento = :fecha_nacimiento, telefono = :telefono, actividad = :actividad, alergias = :alergias, alergias_otro = :alergias_otro, alergia_medicamento = :alergia_medicamento, alergia_medicamento_cual = :alergia_medicamento_cual, restricciones_alimenticias = :restricciones_alimenticias, restricciones_alimenticias_cual = :restricciones_alimenticias_cual, politica = :politica  WHERE email = :email;
 sql;
     $parametros = array(
       ':id_linea_principal'=>$user->_linea_principal,
@@ -38,6 +38,7 @@ sql;
       ':alergia_medicamento_cual' =>$user->_alergia_medicamento_cual,
       ':restricciones_alimenticias' =>$user->_restricciones_alimenticias,
       ':restricciones_alimenticias_cual' =>$user->_restricciones_alimenticias_cual,
+      ':politica' => $user->_politica,
       ':email'=>$user->_email
       
     );
@@ -54,7 +55,7 @@ sql;
   public static function updateInAdmin($user){
     $mysqli = Database::getInstance(true);
     $query=<<<sql
-    UPDATE registros_acceso SET nombre = :nombre, segundo_nombre = :segundo_nombre, apellido_materno = :apellido_materno, apellido_paterno = :apellido_paterno, genero = :genero, fecha_nacimiento = :fecha_nacimiento, telefono = :telefono, alergias = :alergias WHERE email = :email;
+    UPDATE registros_acceso SET nombre = :nombre, segundo_nombre = :segundo_nombre, apellido_materno = :apellido_materno, apellido_paterno = :apellido_paterno, genero = :genero, fecha_nacimiento = :fecha_nacimiento, telefono = :telefono, alergias = :alergias, alergias_otro = :alergias_otro, alergia_medicamento = :alergia_medicamento, alergia_medicamento_cual = :alergia_medicamento_cual, restricciones_alimenticias = :restricciones_alimenticias, restricciones_alimenticias_cual = :restricciones_alimenticias_cual  WHERE email = :email;
 sql;
     $parametros = array(
       
@@ -66,6 +67,11 @@ sql;
       ':fecha_nacimiento'=>$user->_fecha_nacimiento,
       ':telefono'=>$user->_telefono,
       ':alergias'=>$user->_alergias,
+      ':alergias_otro'=>$user->_alergia_otro,
+      ':alergia_medicamento' =>$user->_alergia_medicamento,
+      ':alergia_medicamento_cual' =>$user->_alergia_medicamento_cual,
+      ':restricciones_alimenticias' =>$user->_restricciones_alimenticias,
+      ':restricciones_alimenticias_cual' =>$user->_restricciones_alimenticias_cual,
       ':email'=>$user->_email
       
     );

@@ -28,7 +28,7 @@ echo $header;
                             <?php //$userData; 
                             ?>
                         </div>
-                        <form class="form-horizontal" id="update_form" action="/Register/Politicas" method="POST">
+                        <form class="form-horizontal" id="update_form" action="/Register/DataPassword" method="POST">
                             <div class="card-body pt-0">
                                 <div class="row">
                                     <div class="col-12 col-lg-3">
@@ -120,7 +120,8 @@ echo $header;
                                         <label class="form-label mt-4">Línea *</label>
                                         <select class="form-control" style="cursor: pointer;" name="linea_principal" id="linea_principal" tabindex="-1" data-choice="active" required>
                                             <option value="" disabled selected>Selecciona una opción</option>
-                                            <!-- <?php //echo $optionsLineaPrincipal; ?> -->
+                                            <!-- <?php //echo $optionsLineaPrincipal; 
+                                                    ?> -->
                                         </select>
                                     </div>
 
@@ -132,7 +133,8 @@ echo $header;
                                         <label class="form-label mt-4">Posición *</label>
                                         <select class="form-control" style="cursor: pointer;" name="posicion" id="posicion" tabindex="-1" data-choice="active" required>
                                             <option value="" disabled selected>Selecciona una opción</option>
-                                            <?php echo $optionsPosiciones; ?>
+                                            <!-- <?php //echo $optionsPosiciones; 
+                                                    ?> -->
                                         </select>
                                     </div>
 
@@ -155,13 +157,13 @@ echo $header;
                                     </div>
 
 
-                                    
+
                                 </div>
 
 
 
                                 <div class="row">
-                                    <div class="col-md-4 col-sm-12"  id="show-cp" style="display: none;">
+                                    <div class="col-md-4 col-sm-12" id="show-cp" style="display: none;">
                                         <label class="form-label mt-4">Código Postal *</label><br>
                                         <input type="text" class="form-control" id="cp" name="cp" list="list_cp">
                                         <datalist id="list_cp">
@@ -169,7 +171,8 @@ echo $header;
                                         </datalist>
                                         <!-- <select class="form-control" name="cp" id="cp" required>
                                             <option value="" disabled selected>Seleccione una opción</option>
-                                            <?php //echo $optionsCp; ?>
+                                            <?php //echo $optionsCp; 
+                                            ?>
                                         </select> -->
                                     </div>
                                     <!-- <div class="col-lg-7 col-sm-12" id="aeropuerto-size">
@@ -203,8 +206,11 @@ echo $header;
                                     </div> -->
                                 </div>
 
-                                <div class="row">
-                                    
+                                <br>
+                                <p> Los campos marcados con (*) son obligatorios.</p>
+
+                                <!-- <div class="row">
+
                                     <div class="col-md-3 col-sm-12">
                                         <label class="form-label mt-4">Restricciones Alimentarias *</label>
                                         <div class="form-check">
@@ -219,12 +225,7 @@ echo $header;
                                                 Vegano
                                             </label>
                                         </div>
-                                        <!-- <div class="form-check">
-                                            <input class="form-check-input" type="radio" name="restricciones_alimenticias" id="res_ali_3" value="kosher">
-                                            <label class="form-check-label" for="res_ali_3">
-                                                Kosher
-                                            </label>
-                                        </div> -->
+                                       
                                         <div class="form-check">
                                             <input class="form-check-input" type="radio" name="restricciones_alimenticias" id="res_ali_4" value="ninguna" checked>
                                             <label class="form-check-label" for="res_ali_4">
@@ -239,8 +240,8 @@ echo $header;
                                         </div>
                                         <div class="col-md-12 col-sm-12 restricciones_alimenticias" style="display: none!important;">
                                             <label class="form-label mt-4">¿Cual?</label>
-                                            <input id="restricciones_alimenticias_cual" name="restricciones_alimenticias_cual" maxlength="45" class="form-control" type="text" placeholder="Escriba su restricción"   value="">
-                                                
+                                            <input id="restricciones_alimenticias_cual" name="restricciones_alimenticias_cual" maxlength="45" class="form-control" type="text" placeholder="Escriba su restricción" value="">
+
                                         </div>
                                     </div>
 
@@ -258,7 +259,7 @@ echo $header;
                                             <input class="form-control" id="alergia_otro" maxlength="149" name="alergia_otro" data-color="dark" type="text" value="" placeholder="Escriba su alergia" />
                                         </div>
                                     </div>
-                                   
+
 
                                     <div class="col-md-4 col-sm-12">
                                         <label class="form-label mt-4">¿Es usted alérgico a un medicamento?</label>
@@ -274,26 +275,103 @@ echo $header;
                                                 No
                                             </label>
                                         </div>
-                                        
+
                                         <div class="col-md-12 col-sm-12 medicamento_cual" style="display: none!important;">
                                             <label class="form-label mt-4">¿Cual?</label>
-                                            <input id="alergia_medicamento_cual" name="alergia_medicamento_cual" maxlength="29" pattern="[a-zA-Z0-9]*" class="form-control" type="text" placeholder="Escriba a que medicamento es alérgico"   value="">
-                                                
+                                            <input id="alergia_medicamento_cual" name="alergia_medicamento_cual" maxlength="29" pattern="[a-zA-Z0-9]*" class="form-control" type="text" placeholder="Escriba a que medicamento es alérgico" value="">
+
+                                        </div>
+                                    </div>
+                                </div> -->
+
+                                <div class="row">
+                                    <div class="col-12 text-center">
+                                        <label class="form-label mt-4"><b>Aviso del evento</b></label>
+                                        <div class="card z-index-0">
+
+                                            <div class="card-body pt-1">
+
+                                                <!-- <input type="hidden" id="id_registro" name="id_registro" value="<?= $id_registro ?>"> -->
+                                                <input type="hidden" id="email" name="email" value="<?= $email ?>">
+                                                <div id="terminos" class="card-header pt-4 text-scroll " style="text-align: justify;">
+                                                    <!-- <p>Aquí van los terminos y condiciones</p> -->
+                                                    <span>
+
+                                                        Queremos tener la cercanía de una reunión que nos permita seguir fortaleciendo nuestros lazos, porque juntos somos imparables; guardando siempre para prevenir cualquier tipo de riesgo de contagio los cuidados pertinentes con base en nuestra nueva realidad.<br><br>
+
+                                                        Para ello, estamos considerando las medidas que tienen como principal objetivo preservar la seguridad y salud de quienes participaremos en este encuentro, y que como empresa responsable buscamos.<br><br>
+
+                                                        Así que además de contar con tu participación activa, confiamos en que seguirás las recomendaciones que se han establecido y comunicado previamente, privilegiando en todo momento tu seguridad y la de todos.<br><br>
+
+                                                        Con tu aceptación te comprometes a:<br><br>
+                                                        <ul>
+                                                            <li>Proporcionar información fidedigna</li>
+                                                            <li>Apegarte a las recomendaciones antes, durante y después de la reunión.</li>
+                                                        </ul>
+                                                    </span>
+                                                </div>
+                                                <br>
+                                                <br>
+                                                <div class="row">
+                                                    <div class="col-md-8">
+                                                    </div>
+                                                    <div class="col-md-4">
+                                                        <div class="form-check">
+                                                            <input class="form-check-input" type="checkbox" value="1" id="terminos" name="terminos" required>
+                                                            <label class="form-check-label" for="terminos">
+                                                                <b>He leído los terminos y condiciones</b>
+                                                            </label>
+                                                        </div>
+
+
+                                                    </div>
+                                                </div>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
 
+                                <br><br>
+
                                 <div class="row">
-                                    
+                                    <div class="col-12 text-center">
+                                        <label class="form-label mt-4"><b>Terminos y condiciones</b></label>
+                                        <div class="card z-index-0">
+
+                                            <div class="card-body pt-1">
+
+                                                <!-- <input type="hidden" id="id_registro" name="id_registro" value="<?= $id_registro ?>"> -->
+                                                <input type="hidden" id="email" name="email" value="<?= $email ?>">
+                                                <div id="terminos" class="card-header pt-4 text-scroll " style="text-align: justify;">
+                                                    <!-- <p>Aquí van los terminos y condiciones</p> -->
+                                                    <span>
+
+                                                    Al usar la plataforma, usted acepta y está de acuerdo con estos términos y condiciones en lo que se refiere a su uso de la plataforma, si desea leer el documento completo de <a href="/Register/Politicas_" target="blank_" style="text-decoration: underline;"><b>clic aquí</b></a>
+                                                    </span>
+                                                </div>
+                                                <br>
+                                                <br>
+                                                <div class="row">
+                                                    <div class="col-md-8">
+                                                    </div>
+                                                    <div class="col-md-4">
+                                                        <div class="form-check">
+                                                            <input class="form-check-input" type="checkbox" value="1" id="terminos1" name="terminos1" required>
+                                                            <label class="form-check-label" for="terminos1">
+                                                                <b>He leído los terminos y condiciones</b>
+                                                            </label>
+                                                        </div>
+
+
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
 
-
                                 <br>
-                                <br>
-                                <p> Los campos marcados con (*) son obligatorios.</p>
-
-
-
+                                <p> <b>Al dar clic en siguiente, aceptas que la información proporcionada es real y fidedigna.</b></p>
                                 <!-- <div class="row">
                                         
                                         
@@ -319,163 +397,211 @@ echo $header;
 <?php echo $footer; ?>
 
 <script>
-            $(document).ready(function() {
-                $("#ciudades").on("change", function() {
-                    $("#show-cp").css('display', 'block');
-                    $("#aeropuerto-size").removeClass('col-lg-7').addClass('col-lg-5');
-                    $("#actividad-size").removeClass('col-md-5').addClass('col-md-3');
-                });
+    $(document).ready(function() {
+        $("#ciudades").on("change", function() {
+            $("#show-cp").css('display', 'block');
+            $("#aeropuerto-size").removeClass('col-lg-7').addClass('col-lg-5');
+            $("#actividad-size").removeClass('col-md-5').addClass('col-md-3');
+        });
 
-                $("#bu").on("change", function(){
-                   
-                    var bu = $(this).val();
+        $("#bu").on("change", function() {
 
-                    $.ajax({
-                        url: "/Register/getLineaByBu",
-                        type: "POST",
-                        data: {bu},
-                        dataType: "json",
-                        beforeSend: function() {
-                            console.log("Procesando....");
-                            $('#linea_principal')
-                                .find('option')
-                                .remove()
-                                .end();
-        
-                        },
-                        success: function(respuesta) {
-                             console.log(respuesta);
+            var bu = $(this).val();
 
-                             $('#linea_principal')
-                                    .append($('<option>', {
-                                            value: ''
-                                        })
-                                        .text('Selecciona una opción'));
-    
-        
-                            $.each(respuesta, function(key, value) {
-                                //console.log(key);
-                                console.log(value);
-                                $('#linea_principal')
-                                    .append($('<option>', {
-                                            value: value.id_linea_principal
-                                        })
-                                        .text(value.nombre ));
-                                
-        
-                            });
-        
-                        },
-                        error: function(respuesta) {
-                            console.log(respuesta);
-                        }
-        
+            $.ajax({
+                url: "/Register/getLineaByBu",
+                type: "POST",
+                data: {
+                    bu
+                },
+                dataType: "json",
+                beforeSend: function() {
+                    console.log("Procesando....");
+                    $('#linea_principal')
+                        .find('option')
+                        .remove()
+                        .end();
+
+                },
+                success: function(respuesta) {
+                    console.log(respuesta);
+
+                    $('#linea_principal')
+                        .append($('<option>', {
+                                value: ''
+                            })
+                            .text('Selecciona una opción'));
+
+
+                    $.each(respuesta, function(key, value) {
+                        //console.log(key);
+                        console.log(value);
+                        $('#linea_principal')
+                            .append($('<option>', {
+                                    value: value.id_linea_principal
+                                })
+                                .text(value.nombre));
+
+
                     });
-                });
 
-                
+                },
+                error: function(respuesta) {
+                    console.log(respuesta);
+                }
 
-                // $("#cp").on("keyup", function(){
-                //     var estado = $("#residencia").val();
-                //     var codigo = $(this).val();
-
-                //     $.ajax({
-                //         url: "/Register/SearchConcidenciaCp",
-                //         type: "POST",
-                //         data: {codigo,estado},
-                //         dataType: "json",
-                //         beforeSend: function() {
-                //             console.log("Procesando....");
-                //             $('#list_cp')
-                //                 .find('option')
-                //                 .remove()
-                //                 .end();
-        
-                //         },
-                //         success: function(respuesta) {
-                //              console.log(respuesta);
-    
-        
-                //             $.each(respuesta, function(key, value) {
-                //                 //console.log(key);
-                //                 console.log(value);
-                //                 $('#list_cp')
-                //                     .append($('<option>', {
-                //                             'data-value': value.id 
-                //                         })
-                //                         .text(value.codigo_postal + ' - ' + value.colonia + ' - ' + value.del_mpio + ' - ' + value.estado));
-                                
-        
-                //             });
-        
-                //         },
-                //         error: function(respuesta) {
-                //             console.log(respuesta);
-                //         }
-        
-                //     });
-                // });
-        
-        
-                //$('#cp').select2();
-        
-        
-                $('#select_alergico').select2();
-        
-                $('#select_alergico').on("change", function() {
-                    $('#alergia_otro').removeAttr('required');
-        
-                    var valores = $(this).val();
-        
-                    console.log(valores);
-                    if (valores != null) {
-                        if (valores.length) {
-        
-                            console.log(valores.length);
-        
-                            $.each(valores, function(key, value) {
-                                if (value == 'otros') {
-                                    console.log(value);
-                                    $(".cont_alergia_otro").css('display', 'block');
-                                    $("#alergia_otro").attr('required','required');
-                                    $("#alergia_otro").val("");
-                                } else {
-                                    $(".cont_alergia_otro").css('display', 'none');
-                                    
-                                    
-                                }
-        
-                            });
-        
-                        }
-                    } else {
-                        $(".cont_alergia_otro").css('display', 'none');
-                    }
-                });
-        
-                $('input:radio[name="confirm_alergia"]').change(function() {
-                    if ($("#confirm_alergia_no").is(':checked')) {
-                        $(".medicamento_cual").css("display", "none");
-                        $("#alergia_medicamento_cual").val("");
-                        $('#alergia_medicamento_cual').removeAttr('required');
-                    }
-        
-                    if ($("#confirm_alergia_si").is(':checked')) {
-                        $(".medicamento_cual").css("display", "block");
-                        $("#alergia_medicamento_cual").attr('required','required');
-                    }
-                });
-
-                $('input:radio[name="restricciones_alimenticias"]').change(function() {
-                    if ($("#res_ali_5").is(':checked')) {
-                        $(".restricciones_alimenticias").css("display", "block");
-                        $("#restricciones_alimenticias_cual").val("");
-                        $("#restricciones_alimenticias_cual").attr('required','required');
-                    }else{
-                        $(".restricciones_alimenticias").css("display", "none");
-                        $('#restricciones_alimenticias_cual').removeAttr('required');
-                    }
-        
-                });
             });
-            </script>
+        });
+
+        $("#linea_principal").on("change", function() {
+            var linea_principal = $(this).val();
+
+            $.ajax({
+                url: "/Register/getposicionByLinea",
+                type: "POST",
+                data: {
+                    linea_principal
+                },
+                dataType: "json",
+                beforeSend: function() {
+                    console.log("Procesando....");
+                    $('#posicion')
+                        .find('option')
+                        .remove()
+                        .end();
+
+                },
+                success: function(respuesta) {
+                    console.log(respuesta);
+
+                    $('#posicion')
+                        .append($('<option>', {
+                                value: ''
+                            })
+                            .text('Selecciona una opción'));
+
+
+                    $.each(respuesta, function(key, value) {
+                        //console.log(key);
+                        console.log(value);
+                        $('#posicion')
+                            .append($('<option>', {
+                                    value: value.id_posicion
+                                })
+                                .text(value.nombre));
+
+                    });
+
+                },
+                error: function(respuesta) {
+                    console.log(respuesta);
+                }
+
+            });
+        });
+
+
+        // $("#cp").on("keyup", function(){
+        //     var estado = $("#residencia").val();
+        //     var codigo = $(this).val();
+
+        //     $.ajax({
+        //         url: "/Register/SearchConcidenciaCp",
+        //         type: "POST",
+        //         data: {codigo,estado},
+        //         dataType: "json",
+        //         beforeSend: function() {
+        //             console.log("Procesando....");
+        //             $('#list_cp')
+        //                 .find('option')
+        //                 .remove()
+        //                 .end();
+
+        //         },
+        //         success: function(respuesta) {
+        //              console.log(respuesta);
+
+
+        //             $.each(respuesta, function(key, value) {
+        //                 //console.log(key);
+        //                 console.log(value);
+        //                 $('#list_cp')
+        //                     .append($('<option>', {
+        //                             'data-value': value.id 
+        //                         })
+        //                         .text(value.codigo_postal + ' - ' + value.colonia + ' - ' + value.del_mpio + ' - ' + value.estado));
+
+
+        //             });
+
+        //         },
+        //         error: function(respuesta) {
+        //             console.log(respuesta);
+        //         }
+
+        //     });
+        // });
+
+
+        //$('#cp').select2();
+
+
+        $('#select_alergico').select2();
+
+        $('#select_alergico').on("change", function() {
+            $('#alergia_otro').removeAttr('required');
+
+            var valores = $(this).val();
+
+            console.log(valores);
+            if (valores != null) {
+                if (valores.length) {
+
+                    console.log(valores.length);
+
+                    $.each(valores, function(key, value) {
+                        if (value == 'otros') {
+                            console.log(value);
+                            $(".cont_alergia_otro").css('display', 'block');
+                            $("#alergia_otro").attr('required', 'required');
+                            $("#alergia_otro").val("");
+                        } else {
+                            $(".cont_alergia_otro").css('display', 'none');
+
+
+                        }
+
+                    });
+
+                }
+            } else {
+                $(".cont_alergia_otro").css('display', 'none');
+            }
+        });
+
+        $('input:radio[name="confirm_alergia"]').change(function() {
+            if ($("#confirm_alergia_no").is(':checked')) {
+                $(".medicamento_cual").css("display", "none");
+                $("#alergia_medicamento_cual").val("");
+                $('#alergia_medicamento_cual').removeAttr('required');
+            }
+
+            if ($("#confirm_alergia_si").is(':checked')) {
+                $(".medicamento_cual").css("display", "block");
+                $("#alergia_medicamento_cual").attr('required', 'required');
+            }
+        });
+
+        $('input:radio[name="restricciones_alimenticias"]').change(function() {
+            if ($("#res_ali_5").is(':checked')) {
+                $(".restricciones_alimenticias").css("display", "block");
+                $("#restricciones_alimenticias_cual").val("");
+                $("#restricciones_alimenticias_cual").attr('required', 'required');
+            } else {
+                $(".restricciones_alimenticias").css("display", "none");
+                $('#restricciones_alimenticias_cual').removeAttr('required');
+            }
+
+        });
+    });
+</script>
