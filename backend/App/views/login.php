@@ -603,7 +603,7 @@ echo $header;
                                     <div class="card-footer text-center pt-0 px-lg-2 px-1">
                                         <p class="mb-2 text-sm mx-auto">
                                             ¿Olvidaste tu Contraseña?
-                                            <a href="/Register/" class="text-info text-dark font-weight-bold">Da clic aquí</a>
+                                            <a href="/Register/recuperarPass/" class="text-info text-dark font-weight-bold">Da clic aquí</a>
                                         </p>
                                         <p class="mb-1 text-sm mx-auto text-center">
                                             Para crear su cuenta de acceso proporcione su correo electrónico institucional y de clic en el siguiente botón.

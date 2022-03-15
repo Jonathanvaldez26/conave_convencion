@@ -378,6 +378,154 @@ html;
         View::render("code");
     }
 
+    public function codeRecoveryPass($email , $alerta = null){
+        $extraHeader =<<<html
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <link rel="apple-touch-icon" sizes="76x76" href="../../../assets/img/aso_icon.png">
+        <link rel="icon" type="image/vnd.microsoft.icon" href="../../../assets/img/aso_icon.png">
+        <title>
+            Registro Conave
+        </title>
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet" />
+        <!-- Nucleo Icons -->
+        <link href="../../../assets/css/nucleo-icons.css" rel="stylesheet" />
+        <link href="../../../assets/css/nucleo-svg.css" rel="stylesheet" />
+        <!-- Font Awesome Icons -->
+        <script src="https://kit.fontawesome.com/42d5adcbca.js" crossorigin="anonymous"></script>
+        <link href="../../../assets/css/nucleo-svg.css" rel="stylesheet" />
+        <!-- CSS Files -->
+        <link id="pagestyle" href="../../../assets/css/soft-ui-dashboard.css?v=1.0.5" rel="stylesheet" />
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet" />
+        <!-- Nucleo Icons -->
+        <link href="../../../assets/css/nucleo-icons.css" rel="stylesheet" />
+        <link href="../../../assets/css/nucleo-svg.css" rel="stylesheet" />
+        <!-- Font Awesome Icons -->
+        <script src="https://kit.fontawesome.com/42d5adcbca.js" crossorigin="anonymous"></script>
+        <link href="../../../assets/css/nucleo-svg.css" rel="stylesheet" />
+        <!-- CSS Files -->
+        <link id="pagestyle" href="/assets/css/soft-ui-dashboard.css?v=1.0.5" rel="stylesheet" />
+        <link rel="stylesheet" href="/css/alertify/alertify.core.css" />
+        <link rel="stylesheet" href="/css/alertify/alertify.default.css" id="toggleCSS" />
+        
+        
+        
+        
+
+html;
+        $extraFooter =<<<html
+     
+        <script src="/js/jquery.min.js"></script>
+        <script src="/js/validate/jquery.validate.js"></script>
+        <script src="/js/alertify/alertify.min.js"></script>
+        <!-- -------- END FOOTER 3 w/ COMPANY DESCRIPTION WITH LINKS & SOCIAL ICONS & COPYRIGHT ------- -->
+       <!--   Core JS Files   -->
+          <script src="../../../assets/js/core/popper.min.js"></script>
+          <script src="../../../assets/js/core/bootstrap.min.js"></script>
+          <script src="../../../assets/js/plugins/perfect-scrollbar.min.js"></script>
+          <script src="../../../assets/js/plugins/smooth-scrollbar.min.js"></script>
+          <script src="../../../assets/js/plugins/multistep-form.js"></script>
+         
+          <!-- Kanban scripts -->
+          <script src="../../../assets/js/plugins/dragula/dragula.min.js"></script>
+          <script src="../../../assets/js/plugins/jkanban/jkanban.js"></script>
+          <script>
+            var win = navigator.platform.indexOf('Win') > -1;
+            if (win && document.querySelector('#sidenav-scrollbar')) {
+              var options = {
+                damping: '0.5'
+              }
+              Scrollbar.init(document.querySelector('#sidenav-scrollbar'), options);
+            }
+          </script>
+          <!-- Github buttons -->
+          <script async defer src="https://buttons.github.io/buttons.js"></script>
+          <!-- Control Center for Soft Dashboard: parallax effects, scripts for the example pages etc -->
+          <script>
+            $(document).ready(function(){
+                $.validator.addMethod("checkUserCorreo",function(value, element) {
+                  var response = false;
+                    $.ajax({
+                        type:"POST",
+                        async: false,
+                        url: "/Register/isUserValidate",
+                        data: {email: $("#email").val()},
+                        success: function(data) {
+                            if(data=="true"){
+                                $('#btn_registro_email').attr("disabled", false);
+                                $('#confirm_email').attr("disabled", false);
+                                $('#email').attr("disabled", true);
+                                response = true;
+                            }else{
+                                $('#btn_registro_email').attr("disabled", true);
+                                $('#confirm_email').attr("disabled", true);
+                                document.getElementById("confirm_email").value = "";
+                            }
+                        }
+                    });
+
+                    return response;
+                },"Usted no está registrado en la Base de Datos CONAVE 2022, verifique con su área y reintente.");
+
+                $("#email_form").validate({
+                   rules:{
+                        email:{
+                            required: true,
+                            checkUserCorreo: true
+                        },
+                        confirm_email:{
+                            required: true,
+                            equalTo:"#email"
+                        }
+                    },
+                    messages:{
+                        email:{
+                            required: "Este campo es requerido",
+                        },
+                        confirm_email:{
+                            required: "Este campo es requerido",
+                            equalTo: "El Correo Eléctronico no coincide",
+                        }
+                    }
+                });
+
+            });
+          
+            var uno = document.getElementById("uno"),
+                dos = document.getElementById("dos"),
+                tres = document.getElementById("tres"),
+                cuatro = document.getElementById("cuatro");
+
+            uno.onkeyup = function() {
+                if (this.value.length === parseInt(this.attributes["maxlength"].value)) {
+                    dos.focus();
+                }
+            }
+
+            dos.onkeyup = function() {
+                if (this.value.length === parseInt(this.attributes["maxlength"].value)) {
+                    tres.focus();
+                }
+            }
+            tres.onkeyup = function() {
+                if (this.value.length === parseInt(this.attributes["maxlength"].value)) {
+                    cuatro.focus();
+                }
+            }
+           
+        </script>
+      
+html;
+
+       
+        $code = $email;
+        View::set('header',$extraHeader);
+        View::set('footer',$extraFooter);
+        View::set('code',$code);
+        View::set('alerta',$alerta);
+        View::render("codeVerifyPass");
+    }
+
     public function ValidationEmail($email){
         $extraHeader =<<<html
         <meta charset="utf-8" />
@@ -1149,10 +1297,6 @@ html;
         <link rel="stylesheet" href="/css/alertify/alertify.default.css" id="toggleCSS" />
         <!--script src="../../../assets/js/plugins/choices.min.js"></script-->
 
-        
-        
-        
-
 html;
         $extraFooter =<<<html
      
@@ -1282,10 +1426,6 @@ html;
         <link rel="stylesheet" href="/css/alertify/alertify.default.css" id="toggleCSS" />
         <!--script src="../../../assets/js/plugins/choices.min.js"></script-->
 
-        
-        
-        
-
 html;
         $extraFooter =<<<html
      
@@ -1408,6 +1548,7 @@ html;
         }
 
     }
+    
 
     public function finalize(){
 
@@ -1456,6 +1597,394 @@ html;
       
 
     }
+
+    public function recuperarPass(){
+        $extraHeader =<<<html
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <link rel="apple-touch-icon" sizes="76x76" href="../../../assets/img/aso_icon.png">
+        <link rel="icon" type="image/vnd.microsoft.icon" href="../../../assets/img/aso_icon.png">
+        <title>
+            Registro Conave
+        </title>
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet" />
+        <!-- Nucleo Icons -->
+        <link href="../../../assets/css/nucleo-icons.css" rel="stylesheet" />
+        <link href="../../../assets/css/nucleo-svg.css" rel="stylesheet" />
+        <!-- Font Awesome Icons -->
+        <script src="https://kit.fontawesome.com/42d5adcbca.js" crossorigin="anonymous"></script>
+        <link href="../../../assets/css/nucleo-svg.css" rel="stylesheet" />
+        <!-- CSS Files -->
+        <link id="pagestyle" href="../../../assets/css/soft-ui-dashboard.css?v=1.0.5" rel="stylesheet" />
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet" />
+        <!-- Nucleo Icons -->
+        <link href="../../../assets/css/nucleo-icons.css" rel="stylesheet" />
+        <link href="../../../assets/css/nucleo-svg.css" rel="stylesheet" />
+        <!-- Font Awesome Icons -->
+        <script src="https://kit.fontawesome.com/42d5adcbca.js" crossorigin="anonymous"></script>
+        <link href="../../../assets/css/nucleo-svg.css" rel="stylesheet" />
+        <!-- CSS Files -->
+        <link id="pagestyle" href="/assets/css/soft-ui-dashboard.css?v=1.0.5" rel="stylesheet" />
+        <link rel="stylesheet" href="/css/alertify/alertify.core.css" />
+        <link rel="stylesheet" href="/css/alertify/alertify.default.css" id="toggleCSS" />
+        <!--script src="../../../assets/js/plugins/choices.min.js"></script-->
+
+        
+        
+        
+
+html;
+        $extraFooter =<<<html
+     
+        <script src="/js/jquery.min.js"></script>
+        <script src="/js/validate/jquery.validate.js"></script>
+        <script src="/js/alertify/alertify.min.js"></script>
+        <!-- -------- END FOOTER 3 w/ COMPANY DESCRIPTION WITH LINKS & SOCIAL ICONS & COPYRIGHT ------- -->
+       <!--   Core JS Files   -->
+          <script src="../../../assets/js/core/popper.min.js"></script>
+          <script src="../../../assets/js/core/bootstrap.min.js"></script>
+          <script src="../../../assets/js/plugins/perfect-scrollbar.min.js"></script>
+          <script src="../../../assets/js/plugins/smooth-scrollbar.min.js"></script>
+          <script src="../../../assets/js/plugins/multistep-form.js"></script>
+          <script src="../../../assets/js/plugins/choices.min.js"></script>
+          <script type="text/javascript" wfd-invisible="true">
+            if (document.getElementById('choices-button')) {
+                var element = document.getElementById('choices-button');
+                const example = new Choices(element, {});
+            }
+            var choicesTags = document.getElementById('choices-tags');
+            var color = choicesTags.dataset.color;
+            if (choicesTags) {
+                const example = new Choices(choicesTags, {
+                delimiter: ',',
+                editItems: true,
+                maxItemCount: 5,
+                removeItemButton: true,
+                addItems: true,
+                classNames: {
+                    item: 'badge rounded-pill choices-' + color + ' me-2'
+                }
+                });
+            }
+        </script>
+          <!-- Kanban scripts -->
+          <script src="../../../assets/js/plugins/dragula/dragula.min.js"></script>
+          <script src="../../../assets/js/plugins/jkanban/jkanban.js"></script>
+          <script>
+            var win = navigator.platform.indexOf('Win') > -1;
+            if (win && document.querySelector('#sidenav-scrollbar')) {
+              var options = {
+                damping: '0.5'
+              }
+              Scrollbar.init(document.querySelector('#sidenav-scrollbar'), options);
+            }
+          </script>
+          <!-- Github buttons -->
+          <script async defer src="https://buttons.github.io/buttons.js"></script>
+          <!-- Control Center for Soft Dashboard: parallax effects, scripts for the example pages etc -->
+           
+
+        <script>
+            $(document).ready(function(){
+                $('#confirm_email').attr("disabled", true);
+                $.validator.addMethod("checkUserCorreo",function(value, element) {
+                  var response = false;
+                    $.ajax({
+                        type:"POST",
+                        async: false,
+                        url: "/Register/isUserValidateRecoveryPassword",
+                        data: {email: $("#email").val()},
+                        success: function(data) {
+                            if(data=="true"){
+                                $('#btn_registro_email').attr("disabled", false);
+                                $('#confirm_email').attr("disabled", false);
+                                $('#email').attr("readonly");
+
+                                response = true;
+                            }else{
+                                $('#btn_registro_email').attr("disabled", true);
+                                $('#confirm_email').attr("disabled", true);
+                                document.getElementById("confirm_email").value = "";
+                                
+                            }
+                        }
+                    });
+
+                    return response;
+                },"<b >Usted no esta registrado en la plataforma.</b>");
+
+                $("#email_form_recovery_pass").validate({
+                   rules:{
+                        email:{
+                            required: true,
+                            checkUserCorreo: true
+                        },
+                        confirm_email:{
+                            required: true,
+                            equalTo:"#email"
+                        }
+                    },
+                    messages:{
+                        email:{
+                            required: "Este campo es requerido",
+                        },
+                        confirm_email:{
+                            required: "Este campo es requerido",
+                            equalTo: "El Correo Eléctronico no coincide",
+                        }
+                    }
+                });
+                
+
+            });
+            
+        </script>
+       
+html;
+        View::set('header',$extraHeader);
+        View::set('footer',$extraFooter);
+        View::render("recuperar_password");
+        
+    }
+
+    public function verifyCodePass(){
+        $register = new \stdClass();
+
+        $email = $_POST['email'];
+
+        $register->_email = $email;
+
+        $codigo_rand = $this->generateRandomString();
+        $register->_code = $codigo_rand;
+
+        $id = RegisterDao::update($register);
+        if($id >= 1)
+        {
+            $msg = [
+                'email' => $register->_email,
+                'code' =>  $register->_code
+            ];
+
+            $mailer = new Mailer();
+            $mailer->mailerRecoveryPass($msg);
+
+            $this->codeRecoveryPass($register->_email);
+        }
+        else
+        {
+            // echo "holaaaaa";
+            // exit();
+            $this->code500();
+            //$this->Success();
+            //$this->alerta($id,'error',$method_pay, $name_register);
+        }
+
+    }
+
+    public function ChangePass(){
+        $extraHeader =<<<html
+            <meta charset="utf-8" />
+            <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+            <link rel="apple-touch-icon" sizes="76x76" href="../../../assets/img/aso_icon.png">
+            <link rel="icon" type="image/vnd.microsoft.icon" href="../../../assets/img/aso_icon.png">
+            <title>
+                Registro Conave
+            </title>
+            <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet" />
+            <!-- Nucleo Icons -->
+            <link href="../../../assets/css/nucleo-icons.css" rel="stylesheet" />
+            <link href="../../../assets/css/nucleo-svg.css" rel="stylesheet" />
+            <!-- Font Awesome Icons -->
+            <script src="https://kit.fontawesome.com/42d5adcbca.js" crossorigin="anonymous"></script>
+            <link href="../../../assets/css/nucleo-svg.css" rel="stylesheet" />
+            <!-- CSS Files -->
+            <link id="pagestyle" href="../../../assets/css/soft-ui-dashboard.css?v=1.0.5" rel="stylesheet" />
+            <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet" />
+            <!-- Nucleo Icons -->
+            <link href="../../../assets/css/nucleo-icons.css" rel="stylesheet" />
+            <link href="../../../assets/css/nucleo-svg.css" rel="stylesheet" />
+            <!-- Font Awesome Icons -->
+            <script src="https://kit.fontawesome.com/42d5adcbca.js" crossorigin="anonymous"></script>
+            <link href="../../../assets/css/nucleo-svg.css" rel="stylesheet" />
+            <!-- CSS Files -->
+            <link id="pagestyle" href="/assets/css/soft-ui-dashboard.css?v=1.0.5" rel="stylesheet" />
+            <link rel="stylesheet" href="/css/alertify/alertify.core.css" />
+            <link rel="stylesheet" href="/css/alertify/alertify.default.css" id="toggleCSS" />
+            <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
+            <style>
+            .select2-container--default .select2-selection--single {
+            height: 38px!important;
+            border-radius: 8px!important;
+            }
+            .select2-container--default .select2-selection--single .select2-selection__rendered {
+                color: #444;
+                line-height: 32px;
+            }
+            .select2-container--default.select2-container--focus .select2-selection--multiple {
+               // height: 38px!important;
+                border-radius: 8px!important;
+            }
+            
+            // .select2-container--default .select2-selection--multiple {
+            //     height: 38px!important;
+            //     border-radius: 8px!important;
+            // }
+            </style>
+           
+            
+            <!--script src="../../../assets/js/plugins/choices.min.js"></script-->
+html;
+        $extraFooter =<<<html
+     
+            <script src="/js/jquery.min.js"></script>
+            <script src="/js/validate/jquery.validate.js"></script>
+            <script src="/js/alertify/alertify.min.js"></script>
+            <!-- -------- END FOOTER 3 w/ COMPANY DESCRIPTION WITH LINKS & SOCIAL ICONS & COPYRIGHT ------- -->
+        <!--   Core JS Files   -->
+            <script src="../../../assets/js/core/popper.min.js"></script>
+            <script src="../../../assets/js/core/bootstrap.min.js"></script>
+            <script src="../../../assets/js/plugins/perfect-scrollbar.min.js"></script>
+            <script src="../../../assets/js/plugins/smooth-scrollbar.min.js"></script>
+            <!--<script src="../../../assets/js/plugins/multistep-form.js"></script>-->
+            <script src="../../../assets/js/plugins/choices.min.js"></script>
+            <script type="text/javascript" wfd-invisible="true">
+                // if (document.getElementById('choices-button')) {
+                //     var element = document.getElementById('choices-button');
+                //     const example = new Choices(element, {});
+                // }
+                // var choicesTags = document.getElementById('choices-tags');
+                // var color = choicesTags.dataset.color;
+                // if (choicesTags) {
+                //     const example = new Choices(choicesTags, {
+                //     delimiter: ',',
+                //     editItems: true,
+                //     maxItemCount: 5,
+                //     removeItemButton: true,
+                //     addItems: true,
+                //     classNames: {
+                //         item: 'badge rounded-pill choices-' + color + ' me-2'
+                //     }
+                //     });
+                // }
+            </script>
+            <!-- Kanban scripts -->
+            <script src="../../../assets/js/plugins/dragula/dragula.min.js"></script>
+            <script src="../../../assets/js/plugins/jkanban/jkanban.js"></script>
+            <script>
+                var win = navigator.platform.indexOf('Win') > -1;
+                if (win && document.querySelector('#sidenav-scrollbar')) {
+                var options = {
+                    damping: '0.5'
+                }
+                Scrollbar.init(document.querySelector('#sidenav-scrollbar'), options);
+                }
+            </script>
+            <!-- Github buttons -->
+            <script async defer src="https://buttons.github.io/buttons.js"></script>
+            <!-- Control Center for Soft Dashboard: parallax effects, scripts for the example pages etc -->
+            <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+           
+            <script>
+                $(document).ready(function(){
+                    $("#pass_form").validate({
+                        rules:{
+                             password:{
+                                 required: true,
+                                 minlength: 6
+                                 
+                                 
+                             },
+                             confirm_password:{
+                                 required: true,
+                                 equalTo:"#password"
+                             }
+                         },
+                         messages:{
+                             password:{
+                                 required: "Este campo es requerido",
+                                 minlength: "El password debe tener al menos 6 caracteres"
+                             },
+                             confirm_password:{
+                                 required: "Este campo es requerido",
+                                 equalTo: "El password no coincide",
+                             }
+                         }
+                     });
+                });
+            
+            </script>
+
+           
+      
+html;
+
+        $email = $_POST['email'];
+        $digit1 =  $_POST['uno'];
+        $digit2 =  $_POST['dos'];
+        $digit3 =  $_POST['tres'];
+        $digit4 =  $_POST['cuatro'];
+        $code_received  = $digit1.$digit2.$digit3.$digit4;
+       
+
+         $userData = RegisterDao::getUserRegister($email)[0];
+
+
+
+        if($userData['code'] === $code_received){
+            // echo "Se verifico codigo correctamente";
+            
+         
+            View::set('email',$email);
+            View::set('header',$extraHeader);
+            View::set('footer',$extraFooter);
+            View::render('recovery_pass');
+        }else{
+
+            $alerta =<<<html
+            <div class="alert alert-danger text-white" role="alert" >
+                El codigo de verificación no coincide, Intenta nuevamente!
+            </div>
+html;
+            $this->codeRecoveryPass($email,$alerta);
+        }
+
+    }
+
+    public function updatePassword(){
+
+        $register = new \stdClass();
+
+        if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+
+            $password = $_POST['password'];
+            $email = $_POST['email'];
+
+            $userData = RegisterDao::getUserRegister($email)[0];
+            
+  
+            
+            $register->_password = md5($password);
+            $register->_email = $email;
+
+            $update = RegisterDao::updatePassword($register);
+
+            if($update){
+                $msg = [
+                    'email' => $email,
+                    'name' =>  $userData['nombre']
+                ];
+    
+                $mailer = new Mailer();
+                $mailer->mailerUpdatePass($msg);
+    
+                echo 'success';
+            }else{
+                echo 'fail';
+            }
+          
+        }    
+
+    }
     
     public function code500(){
         View::render("500");
@@ -1467,6 +1996,10 @@ html;
 
     public function isUserValidateUser(){
         echo (count(RegisterDao::getUserRegisterTrue($_POST['email']))>=1)? 'true' : 'false';
+    }
+
+    public function isUserValidateRecoveryPassword(){
+        echo (count(RegisterDao::getUserRegisterRecoveryPass($_POST['email']))>=1)? 'true' : 'false';
     }
 
     
