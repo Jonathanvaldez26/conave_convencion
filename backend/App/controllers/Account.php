@@ -28,33 +28,33 @@ class Account extends Controller{
 
     public function index() {
         $extraHeader =<<<html
-
+        <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
+        <style>
+        .select2-container--default .select2-selection--single {
+        height: 38px!important;
+        border-radius: 8px!important;
+        }
+        .select2-container--default .select2-selection--single .select2-selection__rendered {
+            color: #444;
+            line-height: 32px;
+        }
+        .select2-container--default.select2-container--focus .select2-selection--multiple {
+           // height: 38px!important;
+            border-radius: 8px!important;
+        }
+        
+        // .select2-container--default .select2-selection--multiple {
+        //     height: 38px!important;
+        //     border-radius: 8px!important;
+        // }
+        </style>
 
 html;
         $extraFooter =<<<html
-        <script src="../../../assets/js/plugins/choices.min.js"></script>
-        <script type="text/javascript" wfd-invisible="true">
-            if (document.getElementById('choices-button')) {
-                var element = document.getElementById('choices-button');
-                const example = new Choices(element, {});
-            }
-            var choicesTags = document.getElementById('choices-tags');
-            var color = choicesTags.dataset.color;
-            if (choicesTags) {
-                const example = new Choices(choicesTags, {
-                delimiter: ',',
-                editItems: true,
-                maxItemCount: 5,
-                removeItemButton: true,
-                addItems: true,
-                classNames: {
-                    item: 'badge rounded-pill choices-' + color + ' me-2'
-                }
-                });
-            }
-        </script>
+        
         <script src="/js/jquery.min.js"></script>
         <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
         
         <script>
             $(document).ready(function() {
@@ -138,6 +138,66 @@ html;
         
                     });
                 });
+
+                $('#select_alergico').select2();
+
+                $('#select_alergico').on("change", function() {
+                    $('#alergia_otro').removeAttr('required');
+                
+                    var valores = $(this).val();
+                
+                    console.log(valores);
+                    if (valores != null) {
+                        if (valores.length) {
+                
+                            console.log(valores.length);
+                
+                            $.each(valores, function(key, value) {
+                                if (value == 'otros') {
+                                    console.log(value);
+                                    $(".cont_alergia_otro").css('display', 'block');
+                                    $("#alergia_otro").attr('required', 'required');
+                                    $("#alergia_otro").val("");
+                                } else {
+                                    $(".cont_alergia_otro").css('display', 'none');
+                
+                
+                                }
+                
+                            });
+                
+                        }
+                    } else {
+                        $(".cont_alergia_otro").css('display', 'none');
+                    }
+                });
+                
+                $('input:radio[name="confirm_alergia"]').change(function() {
+                    if ($("#confirm_alergia_no").is(':checked')) {
+                        $(".medicamento_cual").css("display", "none");
+                        $("#alergia_medicamento_cual").val("");
+                        $('#alergia_medicamento_cual').removeAttr('required');
+                    }
+                
+                    if ($("#confirm_alergia_si").is(':checked')) {
+                        $(".medicamento_cual").css("display", "block");
+                        $("#alergia_medicamento_cual").attr('required', 'required');
+                    }
+                });
+                
+                $('input:radio[name="restricciones_alimenticias"]').change(function() {
+                    if ($("#res_ali_5").is(':checked')) {
+                        $(".restricciones_alimenticias").css("display", "block");
+                        $("#restricciones_alimenticias_cual").val("");
+                        $("#restricciones_alimenticias_cual").attr('required', 'required');
+                    } else {
+                        $(".restricciones_alimenticias").css("display", "none");
+                        $('#restricciones_alimenticias_cual').removeAttr('required');
+                    }
+                
+                });
+
+               
         
             });
         </script>
@@ -294,19 +354,40 @@ html;
 
           if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
-              $id_registro = $_POST['id_registro'];
-              $nombre = $_POST['nombre'];
-              $segundo_nombre = $_POST['segundo_nombre'];
-              $apellido_paterno = $_POST['apellido_paterno'];
-              $apellido_materno = $_POST['apellido_materno'];
-              $genero = $_POST['genero'];
-              $fecha_nacimiento = $_POST['fecha_nacimiento'];
-              $email = $_POST['email'];
-              $telefono = $_POST['telefono'];
+                $id_registro = $_POST['id_registro'];
+                $nombre = $_POST['nombre'];
+                $segundo_nombre = $_POST['segundo_nombre'];
+                $apellido_paterno = $_POST['apellido_paterno'];
+                $apellido_materno = $_POST['apellido_materno'];
+                $genero = $_POST['genero'];
+                $fecha_nacimiento = $_POST['fecha_nacimiento'];
+                $email = $_POST['email'];
+                $telefono = $_POST['telefono'];
             //   $linea_principal = $_POST['linea_principal'];
             //   $talla = $_POST['talla'];
             //   $actividad = $_POST['actividad'];
-              $alergias = $_POST['alergias'];
+              
+                $restricciones_alimenticias = $_POST['restricciones_alimenticias'];
+                $alergias = $_POST['alergias'];
+                $alergias_ = implode(",", $alergias);
+                if (isset($_POST['alergia_otro'])) {
+                    $alergia_otro = $_POST['alergia_otro'];
+                } else {
+                    $alergia_otro = '';
+                }
+                $alergia_medicamento = $_POST['confirm_alergia'];
+
+                if (isset($_POST['alergia_medicamento_cual'])) {
+                    $alergia_medicamento_cual = $_POST['alergia_medicamento_cual'];
+                } else {
+                    $alergia_medicamento_cual = '';
+                }
+
+                if (isset($_POST['restricciones_alimenticias_cual'])) {
+                    $restricciones_alimenticias_cual = $_POST['restricciones_alimenticias_cual'];
+                } else {
+                    $restricciones_alimenticias_cual = '';
+                }
 
               $documento->_nombre = $nombre;
               $documento->_segundo_nombre = $segundo_nombre;
@@ -320,6 +401,12 @@ html;
               //$documento->_talla = $talla;
               //$documento->_actividad = $actividad;
               $documento->_alergias = $alergias;
+              $documento->_restricciones_alimenticias = $restricciones_alimenticias;
+              $documento->_alergias = $alergias_;
+              $documento->_alergia_otro = $alergia_otro;
+              $documento->_alergia_medicamento = $alergia_medicamento;
+              $documento->_alergia_medicamento_cual = $alergia_medicamento_cual;
+              $documento->_restricciones_alimenticias_cual = $restricciones_alimenticias_cual;
 
               $id = DataDao::updateInAdmin($documento);
 

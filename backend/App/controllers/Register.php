@@ -1,27 +1,31 @@
 <?php
+
 namespace App\controllers;
 
 use \Core\View;
 use \Core\MasterDom;
-use \App\models\Register AS RegisterDao;
-use \App\models\LineaGeneral AS LineaGeneralDao;
-use \App\models\UnidadNegocio AS UnidadNegocioDao;
-use \App\models\Posiciones AS PosicionesDao;
-use \App\models\Data AS DataDao; 
+use \App\models\Register as RegisterDao;
+use \App\models\LineaGeneral as LineaGeneralDao;
+use \App\models\UnidadNegocio as UnidadNegocioDao;
+use \App\models\Posiciones as PosicionesDao;
+use \App\models\Data as DataDao;
 use \App\controllers\Mailer;
 use \App\controllers\Contenedor;
 use App\models\UnidadNegocio;
 use Core\Controller;
 
-class Register{
+class Register
+{
     private $_contenedor;
 
-    public function getUsuario(){
+    public function getUsuario()
+    {
         return $this->__usuario;
     }
 
-    public function index() {
-        $extraHeader =<<<html
+    public function index()
+    {
+        $extraHeader = <<<html
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
         <link rel="apple-touch-icon" sizes="76x76" href="../../../assets/img/aso_icon.png">
@@ -56,7 +60,7 @@ class Register{
         
 
 html;
-        $extraFooter =<<<html
+        $extraFooter = <<<html
      
         <script src="/js/jquery.min.js"></script>
         <script src="/js/validate/jquery.validate.js"></script>
@@ -163,12 +167,13 @@ html;
         </script>
        
 html;
-        View::set('header',$extraHeader);
-        View::set('footer',$extraFooter);
+        View::set('header', $extraHeader);
+        View::set('footer', $extraFooter);
         View::render("Register");
     }
 
-    public function Success(){
+    public function Success()
+    {
 
 
         $register = new \stdClass();
@@ -180,8 +185,7 @@ html;
         $register->_code = $codigo_rand;
 
         $id = RegisterDao::update($register);
-        if($id >= 1)
-        {
+        if ($id >= 1) {
             $msg = [
                 'email' => $register->_email,
                 'code' =>  $register->_code
@@ -191,9 +195,7 @@ html;
             $mailer->mailer($msg);
 
             $this->code($register->_email);
-        }
-        else
-        {
+        } else {
             // echo "holaaaaa";
             // exit();
             $this->code500();
@@ -202,14 +204,13 @@ html;
         }
     }
 
-    public function alerta($id, $parametro, $type_deposit, $name_register){
+    public function alerta($id, $parametro, $type_deposit, $name_register)
+    {
 
         $pay = '';
 
-        if($parametro == 'add')
-        {
-            if($type_deposit == 'paypal')
-            {
+        if ($parametro == 'add') {
+            if ($type_deposit == 'paypal') {
                 $pay = 'CREDIT OR DEBIT CARD';
                 $name = $name_register;
                 $message_pay = 'Important note: Please include the reference provided by this system in the field "Concepto 
@@ -219,19 +220,19 @@ html;
             }
         }
 
-        if($parametro == "error")
-        {
+        if ($parametro == "error") {
             $mensaje = "Al parecer ha ocurrido un problema";
         }
 
-        View::set('pay',$pay);
-        View::set('message_pay',$message_pay);
-        View::set('name',$name);
+        View::set('pay', $pay);
+        View::set('message_pay', $message_pay);
+        View::set('name', $name);
         View::render("alerta");
     }
 
-    public function code($email , $alerta = null){
-        $extraHeader =<<<html
+    public function code($email, $alerta = null)
+    {
+        $extraHeader = <<<html
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
         <link rel="apple-touch-icon" sizes="76x76" href="../../../assets/img/aso_icon.png">
@@ -265,7 +266,7 @@ html;
         
 
 html;
-        $extraFooter =<<<html
+        $extraFooter = <<<html
      
         <script src="/js/jquery.min.js"></script>
         <script src="/js/validate/jquery.validate.js"></script>
@@ -369,17 +370,18 @@ html;
       
 html;
 
-       
+
         $code = $email;
-        View::set('header',$extraHeader);
-        View::set('footer',$extraFooter);
-        View::set('code',$code);
-        View::set('alerta',$alerta);
+        View::set('header', $extraHeader);
+        View::set('footer', $extraFooter);
+        View::set('code', $code);
+        View::set('alerta', $alerta);
         View::render("code");
     }
 
-    public function codeRecoveryPass($email , $alerta = null){
-        $extraHeader =<<<html
+    public function codeRecoveryPass($email, $alerta = null)
+    {
+        $extraHeader = <<<html
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
         <link rel="apple-touch-icon" sizes="76x76" href="../../../assets/img/aso_icon.png">
@@ -413,7 +415,7 @@ html;
         
 
 html;
-        $extraFooter =<<<html
+        $extraFooter = <<<html
      
         <script src="/js/jquery.min.js"></script>
         <script src="/js/validate/jquery.validate.js"></script>
@@ -517,17 +519,18 @@ html;
       
 html;
 
-       
+
         $code = $email;
-        View::set('header',$extraHeader);
-        View::set('footer',$extraFooter);
-        View::set('code',$code);
-        View::set('alerta',$alerta);
+        View::set('header', $extraHeader);
+        View::set('footer', $extraFooter);
+        View::set('code', $code);
+        View::set('alerta', $alerta);
         View::render("codeVerifyPass");
     }
 
-    public function ValidationEmail($email){
-        $extraHeader =<<<html
+    public function ValidationEmail($email)
+    {
+        $extraHeader = <<<html
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
         <link rel="apple-touch-icon" sizes="76x76" href="../../../assets/img/aso_icon.png">
@@ -562,7 +565,7 @@ html;
         
 
 html;
-        $extraFooter =<<<html
+        $extraFooter = <<<html
      
         <script src="/js/jquery.min.js"></script>
         <script src="/js/validate/jquery.validate.js"></script>
@@ -666,14 +669,15 @@ html;
       
 html;
         $code = $email;
-        View::set('header',$extraHeader);
-        View::set('footer',$extraFooter);
-        View::set('code',$code);
+        View::set('header', $extraHeader);
+        View::set('footer', $extraFooter);
+        View::set('code', $code);
         View::render("formulario");
     }
 
-    public function Data(){
-        $extraHeader =<<<html
+    public function Data()
+    {
+        $extraHeader = <<<html
             <meta charset="utf-8" />
             <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
             <link rel="apple-touch-icon" sizes="76x76" href="../../../assets/img/aso_icon.png">
@@ -725,7 +729,7 @@ html;
             
             <!--script src="../../../assets/js/plugins/choices.min.js"></script-->
 html;
-        $extraFooter =<<<html
+        $extraFooter = <<<html
      
             <script src="/js/jquery.min.js"></script>
             <script src="/js/validate/jquery.validate.js"></script>
@@ -829,21 +833,21 @@ html;
            
       
 html;
-        if (strlen((date('y')-18))!=1) {
-            $fecha_min = '20'.(date('y')-18).'-'.date('m').'-'.date('d');
+        if (strlen((date('y') - 18)) != 1) {
+            $fecha_min = '20' . (date('y') - 18) . '-' . date('m') . '-' . date('d');
         } else {
-            $fecha_min = '200'.(date('y')-18).'-'.date('m').'-'.date('d');
+            $fecha_min = '200' . (date('y') - 18) . '-' . date('m') . '-' . date('d');
         }
 
-        $fecha_max = '20'.date('y').'-'.date('m').'-'.date('d');
-        
+        $fecha_max = '20' . date('y') . '-' . date('m') . '-' . date('d');
+
 
         $email = $_POST['email'];
         $digit1 =  $_POST['uno'];
         $digit2 =  $_POST['dos'];
         $digit3 =  $_POST['tres'];
         $digit4 =  $_POST['cuatro'];
-        $code_received  = $digit1.$digit2.$digit3.$digit4;
+        $code_received  = $digit1 . $digit2 . $digit3 . $digit4;
         $optionsGenero = '';
         $optionsLineaPrincipal = '';
         $optionsBu = '';
@@ -854,89 +858,82 @@ html;
         $optionsAeropuertos = '';
         $numeroEmpleado = '';
 
-         $userData = RegisterDao::getUserRegister($email)[0];
+        $userData = RegisterDao::getUserRegister($email)[0];
 
-        if($userData['genero'] != ''){
-            if($userData['genero'] == "Hombre"){
+        if ($userData['genero'] != '') {
+            if ($userData['genero'] == "Hombre") {
                 $optionsGenero = <<<html
                     <option value="Hombre" selected>Masculino</option>
                     <option value="Mujer">Femenino</option>
 html;
-    
-            }
-            else if($userData['genero'] == "Mujer"){
+            } else if ($userData['genero'] == "Mujer") {
                 $optionsGenero = <<<html
                     <option value="Hombre">Masculino</option>
                     <option value="Mujer" selected>Femenino</option>
 html;
-    
-            }
-            else{
+            } else {
                 $optionsGenero = <<<html
                     <option value="Hombre">Masculino</option>
                     <option value="Mujer">Femenino</option>
 html;
-    
             }
-
-        }else{
+        } else {
             $optionsGenero = <<<html
                 <option value="Hombre">Masculino</option>
                 <option value="Mujer">Femenino</option>
 html;
-
         }
 
         $Ciudades = RegisterDao::getCiudadesAll();
 
         foreach ($Ciudades as $key => $value) {
-            $optionsCiudades .=<<<html
+            $optionsCiudades .= <<<html
                 <option value="{$value['id_ciudades']}">{$value['nombre']}</option>
 html;
         }
 
-        
-       
+
+
 
         $Estados = RegisterDao::getEstadosAll();
 
         foreach ($Estados as $key => $value) {
-            $optionsEstados .=<<<html
+            $optionsEstados .= <<<html
                 <option value="{$value['id_estado']}">{$value['nombre']}</option>
 html;
         }
 
-        
 
-        if(empty($userData['numero_empleado']) || $userData['numero_empleado'] == ''){
+
+        if (empty($userData['numero_empleado']) || $userData['numero_empleado'] == '') {
             $numeroEmpleado = <<<html
              <input id="numero_empleado" name="numero_empleado" maxlength="29" pattern="[a-zA-Z0-9]*" class="form-control" type="text" placeholder="" required="required"  value="" style="text-transform:uppercase;" >
-html;             
-        }else{
+html;
+        } else {
             $numeroEmpleado = <<<html
             <input id="numero_empleado" name="numero_empleado" maxlength="29" pattern="[a-zA-Z0-9]*" class="form-control" type="text" placeholder="" required="required"  value="{$userData['numero_empleado']}" style="text-transform:uppercase;" readonly>
-html;            
+html;
         }
 
         $Aeropuertos = RegisterDao::getAeropuertosAll();
 
         foreach ($Aeropuertos as $key => $value) {
-            $optionsAeropuertos .=<<<html
+            $optionsAeropuertos .= <<<html
                 <option value="{$value['id_aeropuerto']}">{$value['aeropuerto']}</option>
 html;
         }
         $lineaGeneral = LineaGeneralDao::getLineaPrincialAll();
 
         foreach ($lineaGeneral as $key => $value) {
-            $optionsLineaPrincipal .=<<<html
+            $optionsLineaPrincipal .= <<<html
                 <option value="{$value['id_linea_principal']}">{$value['nombre']}</option>
 html;
-        }    
-        
+        }
+
         $UnidadNegocio = UnidadNegocioDao::getBuAll();
 
         foreach ($UnidadNegocio as $key => $value) {
-            $optionsBu .=<<<html
+            $optionsBu .= <<<html
                 <option value="{$value['id_bu']}">{$value['nombre']}</option>
 html;
         }
@@ -944,107 +941,105 @@ html;
         $Posiciones = PosicionesDao::getPosicionesAll();
 
         foreach ($Posiciones as $key => $value) {
-            $optionsPosiciones .=<<<html
+            $optionsPosiciones .= <<<html
                 <option value="{$value['id_posicion']}">{$value['nombre']}</option>
 html;
-        } 
+        }
 
 
 
-//         $id = 9;
+        //         $id = 9;
 
-//         $Cp = RegisterDao::getCp($id);
-//         foreach ($Cp as $key => $value) {
-//             $optionsCP .=<<<html
-//                 <option value="{$value['id']}">{$value['codigo_postal']} - {$value['colonia']} - {$value['del_mpio']} - {$value['estado']}</option>
-// html;
-//         } 
+        //         $Cp = RegisterDao::getCp($id);
+        //         foreach ($Cp as $key => $value) {
+        //             $optionsCP .=<<<html
+        //                 <option value="{$value['id']}">{$value['codigo_postal']} - {$value['colonia']} - {$value['del_mpio']} - {$value['estado']}</option>
+        // html;
+        //         } 
 
 
-        if($userData['code'] === $code_received){
+        if ($userData['code'] === $code_received) {
             //echo "Se verifico codigo correctamente";
-            View::set('optionsLineaPrincipal',$optionsLineaPrincipal);
+            View::set('optionsLineaPrincipal', $optionsLineaPrincipal);
             View::set('userData', $userData);
             View::set('fecha_min', $fecha_min);
             View::set('fecha_max', $fecha_max);
-            View::set('optionsGenero',$optionsGenero);
-            View::set('optionsBu',$optionsBu);
-            View::set('optionsPosiciones',$optionsPosiciones);
-            View::set('optionsCiudades',$optionsCiudades);
-            View::set('optionsEstados',$optionsEstados);
-            View::set('optionsCp',$optionsCP);
-            View::set('optionsAeropuertos',$optionsAeropuertos);
-            View::set('numeroEmpleado',$numeroEmpleado);
-           // View::set('optionActividad',$optionActividad);
-            View::set('email',$email);
-            View::set('header',$extraHeader);
-            View::set('footer',$extraFooter);
+            View::set('optionsGenero', $optionsGenero);
+            View::set('optionsBu', $optionsBu);
+            View::set('optionsPosiciones', $optionsPosiciones);
+            View::set('optionsCiudades', $optionsCiudades);
+            View::set('optionsEstados', $optionsEstados);
+            View::set('optionsCp', $optionsCP);
+            View::set('optionsAeropuertos', $optionsAeropuertos);
+            View::set('numeroEmpleado', $numeroEmpleado);
+            // View::set('optionActividad',$optionActividad);
+            View::set('email', $email);
+            View::set('header', $extraHeader);
+            View::set('footer', $extraFooter);
             View::render('update_data_register');
-        }else{
+        } else {
 
-            $alerta =<<<html
+            $alerta = <<<html
             <div class="alert alert-danger text-white" role="alert" >
                 El codigo de verificación no coincide, Intenta nuevamente!
             </div>
 html;
-            $this->code($email,$alerta);
+            $this->code($email, $alerta);
         }
 
         // print_r($user_register);
 
     }
 
-    public function getCodesByState(){
+    public function getCodesByState()
+    {
         $estado = $_POST['estado'];
         $Cp = RegisterDao::getCp($estado);
-        
+
         echo json_encode($Cp);
         exit();
-        
-
     }
 
-    public function SearchConcidenciaCp(){
+    public function SearchConcidenciaCp()
+    {
         $codigo = $_POST['codigo'];
         $estado = $_POST['estado'];
 
-        if(isset($codigo) && isset($estado) && !empty($codigo) && !empty($estado)){
-            $Cp = RegisterDao::getCpByCode($codigo,$estado);
-        
+        if (isset($codigo) && isset($estado) && !empty($codigo) && !empty($estado)) {
+            $Cp = RegisterDao::getCpByCode($codigo, $estado);
+
             echo json_encode($Cp);
-
         }
-
     }
 
-    public function getLineaByBu(){
+    public function getLineaByBu()
+    {
         $bu = $_POST['bu'];
 
-        if(isset($bu)){
+        if (isset($bu)) {
             $Bu = RegisterDao::getLineByBu($bu);
-        
+
             echo json_encode($Bu);
-
         }
-
     }
 
-    public function getposicionByLinea(){
+    public function getposicionByLinea()
+    {
         $linea_principal = $_POST['linea_principal'];
 
-        if(isset($linea_principal)){
+        if (isset($linea_principal)) {
             $posiciones = RegisterDao::getposicionByLine($linea_principal);
-        
+
             echo json_encode($posiciones);
             //var_dump($posiciones);
 
         }
-
     }
 
-    public function Politicas(){
+    public function Politicas()
+    {
 
-        $extraHeader =<<<html
+        $extraHeader = <<<html
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
         <link rel="icon" href="../../../assets/img/aso_icon.png">
@@ -1076,7 +1071,7 @@ html;
         <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>  
 
 html;
-        $extraFooter =<<<html
+        $extraFooter = <<<html
      
         <script src="/js/jquery.min.js"></script>
         <script src="/js/validate/jquery.validate.js"></script>
@@ -1162,112 +1157,111 @@ html;
        
 html;
 
-   
- 
+
+
         $documento = new \stdClass();
-  
-  
-          if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
-              $id_registro = $_POST['id_registro'];
-              $nombre = $_POST['nombre'];
-              $numero_empleado = $_POST['numero_empleado'];
-              $segundo_nombre = $_POST['segundo_nombre'];
-              $apellido_paterno = $_POST['apellido_paterno'];
-              $apellido_materno = $_POST['apellido_materno'];
-              $genero = $_POST['genero'];
-              $fecha_nacimiento = $_POST['fecha_nacimiento'];
-              $email = $_POST['email'];
-              $telefono = $_POST['telefono'];
-              $linea_principal = $_POST['linea_principal'];
-              $bu = $_POST['bu'];
-              $posicion = $_POST['posicion'];
-              $actividad = $_POST['actividad'];
-              //$talla = $_POST['talla_playera'];
-              $alergias = $_POST['alergias'];
-              $residencia = $_POST['residencia'];
-              $ciudades = $_POST['ciudades'];
+
+        if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+
+            $id_registro = $_POST['id_registro'];
+            $nombre = $_POST['nombre'];
+            $numero_empleado = $_POST['numero_empleado'];
+            $segundo_nombre = $_POST['segundo_nombre'];
+            $apellido_paterno = $_POST['apellido_paterno'];
+            $apellido_materno = $_POST['apellido_materno'];
+            $genero = $_POST['genero'];
+            $fecha_nacimiento = $_POST['fecha_nacimiento'];
+            $email = $_POST['email'];
+            $telefono = $_POST['telefono'];
+            $linea_principal = $_POST['linea_principal'];
+            $bu = $_POST['bu'];
+            $posicion = $_POST['posicion'];
+            $actividad = $_POST['actividad'];
+            //$talla = $_POST['talla_playera'];
+            //$alergias = $_POST['alergias'];
+            $residencia = $_POST['residencia'];
+            $ciudades = $_POST['ciudades'];
             //   $aeropuerto = $_POST['aeropuerto'];
-              $politica = $_POST['terminos'];
-              $cp = $_POST['cp'];
-              $restricciones_alimenticias = $_POST['restricciones_alimenticias'];
-              $alergias = $_POST['alergias'];+
-              $alergias_ = implode(",", $alergias);
-              if(isset($_POST['alergia_otro'])){
+            $politica = $_POST['terminos'];
+            $cp = $_POST['cp'];
+            $restricciones_alimenticias = $_POST['restricciones_alimenticias'];
+            $alergias = $_POST['alergias'];
+            $alergias_ = implode(",", $alergias);
+            if (isset($_POST['alergia_otro'])) {
                 $alergia_otro = $_POST['alergia_otro'];
-              }else{
+            } else {
                 $alergia_otro = '';
-              }
-              $alergia_medicamento = $_POST['confirm_alergia'];
+            }
+            $alergia_medicamento = $_POST['confirm_alergia'];
 
-              if(isset($_POST['alergia_medicamento_cual'])){
-              $alergia_medicamento_cual = $_POST['alergia_medicamento_cual'];
-              }else{
-              $alergia_medicamento_cual = '';
-              }
+            if (isset($_POST['alergia_medicamento_cual'])) {
+                $alergia_medicamento_cual = $_POST['alergia_medicamento_cual'];
+            } else {
+                $alergia_medicamento_cual = '';
+            }
 
-              if(isset($_POST['restricciones_alimenticias_cual'])){
+            if (isset($_POST['restricciones_alimenticias_cual'])) {
                 $restricciones_alimenticias_cual = $_POST['restricciones_alimenticias_cual'];
-              }else{
+            } else {
                 $restricciones_alimenticias_cual = '';
-              }
+            }
 
-              $documento->_nombre = $nombre;
-              $documento->_segundo_nombre = $segundo_nombre;
-              $documento->_apellido_paterno = $apellido_paterno;
-              $documento->_apellido_materno = $apellido_materno;
-              $documento->_genero = $genero;
-              $documento->_fecha_nacimiento = $fecha_nacimiento;
-              $documento->_email = $email;
-              $documento->_telefono = $telefono;
-              $documento->_linea_principal = $linea_principal;
-              $documento->_actividad = $actividad;
-              //$documento->_talla = $talla;
-              $documento->_numero_empleado = $numero_empleado;
-              $documento->_bu = $bu;
-              $documento->_posicion = $posicion;
-              $documento->_residencia = $residencia;
-              $documento->_ciudades = $ciudades;
+            $documento->_nombre = $nombre;
+            $documento->_segundo_nombre = $segundo_nombre;
+            $documento->_apellido_paterno = $apellido_paterno;
+            $documento->_apellido_materno = $apellido_materno;
+            $documento->_genero = $genero;
+            $documento->_fecha_nacimiento = $fecha_nacimiento;
+            $documento->_email = $email;
+            $documento->_telefono = $telefono;
+            $documento->_linea_principal = $linea_principal;
+            $documento->_actividad = $actividad;
+            //$documento->_talla = $talla;
+            $documento->_numero_empleado = $numero_empleado;
+            $documento->_bu = $bu;
+            $documento->_posicion = $posicion;
+            $documento->_residencia = $residencia;
+            $documento->_ciudades = $ciudades;
             //   $documento->_aeropuerto = $aeropuerto;
-              $documento->_cp = $cp;
-              $documento->_restricciones_alimenticias = $restricciones_alimenticias;
-              $documento->_alergias = $alergias_;
-              $documento->_alergia_otro = $alergia_otro;
-              $documento->_alergia_medicamento = $alergia_medicamento;
-              $documento->_alergia_medicamento_cual = $alergia_medicamento_cual;
-              $documento->_restricciones_alimenticias_cual = $restricciones_alimenticias_cual;
-              $documento->_politica= $politica;
-              
+            $documento->_cp = $cp;
+            $documento->_restricciones_alimenticias = $restricciones_alimenticias;
+            $documento->_alergias = $alergias_;
+            $documento->_alergia_otro = $alergia_otro;
+            $documento->_alergia_medicamento = $alergia_medicamento;
+            $documento->_alergia_medicamento_cual = $alergia_medicamento_cual;
+            $documento->_restricciones_alimenticias_cual = $restricciones_alimenticias_cual;
+            $documento->_politica = $politica;
 
 
-              $id = DataDao::update($documento);
-  
-              if ($id) {
-                  View::set('email',$email);
-                  View::set('nombre',$nombre);
-                  View::set('header',$extraHeader);
-                  View::set('footer',$extraFooter);
-                  View::render('politicas');
-                  //echo 'success';
-              } else {
+
+            $id = DataDao::update($documento);
+
+            if ($id) {
+                View::set('email', $email);
+                View::set('nombre', $nombre);
+                View::set('header', $extraHeader);
+                View::set('footer', $extraFooter);
+                View::render('politicas');
+                //echo 'success';
+            } else {
 
                 //quitar esta parte
-                
-                  View::set('email',$email);
-                  View::set('nombre',$nombre);
-                  View::set('header',$extraHeader);
-                  View::set('footer',$extraFooter);
-                  View::render('politicas');
-               
-              }
-          } else {
-              echo 'fail REQUEST';
-          }
 
+                View::set('email', $email);
+                View::set('nombre', $nombre);
+                View::set('header', $extraHeader);
+                View::set('footer', $extraFooter);
+                View::render('politicas');
+            }
+        } else {
+            echo 'fail REQUEST';
+        }
     }
 
-    public function DataPassword(){
-        $extraHeader =<<<html
+    public function DataPassword()
+    {
+        $extraHeader = <<<html
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
         <link rel="apple-touch-icon" sizes="76x76" href="../../../assets/img/aso_icon.png">
@@ -1298,7 +1292,7 @@ html;
         <!--script src="../../../assets/js/plugins/choices.min.js"></script-->
 
 html;
-        $extraFooter =<<<html
+        $extraFooter = <<<html
      
         <script src="/js/jquery.min.js"></script>
         <script src="/js/validate/jquery.validate.js"></script>
@@ -1380,23 +1374,111 @@ html;
         </script>
        
 html;
-        $email = $_POST['email'];
-        $btn_politicas = '';
-        if(isset($_POST['btn_success'])){
-            $btn_politicas = $_POST['btn_success'];
-        }elseif(isset($_POST['btn_danger'])){
-            $btn_politicas = $_POST['btn_danger'];
+        $documento = new \stdClass();
+
+
+        if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+
+            $id_registro = $_POST['id_registro'];
+            $nombre = $_POST['nombre'];
+            $numero_empleado = $_POST['numero_empleado'];
+            $segundo_nombre = $_POST['segundo_nombre'];
+            $apellido_paterno = $_POST['apellido_paterno'];
+            $apellido_materno = $_POST['apellido_materno'];
+            $genero = $_POST['genero'];
+            $fecha_nacimiento = $_POST['fecha_nacimiento'];
+            $email = $_POST['email'];
+            $telefono = $_POST['telefono'];
+            $linea_principal = $_POST['linea_principal'];
+            $bu = $_POST['bu'];
+            $posicion = $_POST['posicion'];
+            $actividad = $_POST['actividad'];
+            //$talla = $_POST['talla_playera'];
+            $alergias = $_POST['alergias'];
+            $residencia = $_POST['residencia'];
+            $ciudades = $_POST['ciudades'];
+            //   $aeropuerto = $_POST['aeropuerto'];
+            $politica = $_POST['terminos'];
+            $cp = $_POST['cp'];
+            $restricciones_alimenticias = $_POST['restricciones_alimenticias'];
+            $alergias = $_POST['alergias'];
+            +$alergias_ = implode(",", $alergias);
+            if (isset($_POST['alergia_otro'])) {
+                $alergia_otro = $_POST['alergia_otro'];
+            } else {
+                $alergia_otro = '';
+            }
+            $alergia_medicamento = $_POST['confirm_alergia'];
+
+            if (isset($_POST['alergia_medicamento_cual'])) {
+                $alergia_medicamento_cual = $_POST['alergia_medicamento_cual'];
+            } else {
+                $alergia_medicamento_cual = '';
+            }
+
+            if (isset($_POST['restricciones_alimenticias_cual'])) {
+                $restricciones_alimenticias_cual = $_POST['restricciones_alimenticias_cual'];
+            } else {
+                $restricciones_alimenticias_cual = '';
+            }
+
+            $documento->_nombre = $nombre;
+            $documento->_segundo_nombre = $segundo_nombre;
+            $documento->_apellido_paterno = $apellido_paterno;
+            $documento->_apellido_materno = $apellido_materno;
+            $documento->_genero = $genero;
+            $documento->_fecha_nacimiento = $fecha_nacimiento;
+            $documento->_email = $email;
+            $documento->_telefono = $telefono;
+            $documento->_linea_principal = $linea_principal;
+            $documento->_actividad = $actividad;
+            //$documento->_talla = $talla;
+            $documento->_numero_empleado = $numero_empleado;
+            $documento->_bu = $bu;
+            $documento->_posicion = $posicion;
+            $documento->_residencia = $residencia;
+            $documento->_ciudades = $ciudades;
+            //   $documento->_aeropuerto = $aeropuerto;
+            $documento->_cp = $cp;
+            $documento->_restricciones_alimenticias = $restricciones_alimenticias;
+            $documento->_alergias = $alergias_;
+            $documento->_alergia_otro = $alergia_otro;
+            $documento->_alergia_medicamento = $alergia_medicamento;
+            $documento->_alergia_medicamento_cual = $alergia_medicamento_cual;
+            $documento->_restricciones_alimenticias_cual = $restricciones_alimenticias_cual;
+            $documento->_politica = $politica;
+
+
+
+            $id = DataDao::update($documento);
+
+            if ($id) {
+                View::set('email', $email);
+                View::set('nombre', $nombre);
+                View::set('politica',$politica);
+                View::set('header', $extraHeader);
+                View::set('footer', $extraFooter);
+                View::render('confirm_pass');
+                //echo 'success';
+            } else {
+
+                //quitar esta parte
+
+                View::set('email', $email);
+                View::set('nombre', $nombre);
+                View::set('politica',$politica);
+                View::set('header', $extraHeader);
+                View::set('footer', $extraFooter);
+                View::render('confirm_pass');
+            }
+        } else {
+            echo 'fail REQUEST';
         }
-        
-        View::set('politica',$btn_politicas);
-        View::set('email',$email);
-        View::set('header',$extraHeader);
-        View::set('footer',$extraFooter);
-        View::render('confirm_pass');
     }
 
-    public function Politicas_(){
-        $extraHeader =<<<html
+    public function Politicas_()
+    {
+        $extraHeader = <<<html
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
         <link rel="apple-touch-icon" sizes="76x76" href="../../../assets/img/aso_icon.png">
@@ -1427,7 +1509,7 @@ html;
         <!--script src="../../../assets/js/plugins/choices.min.js"></script-->
 
 html;
-        $extraFooter =<<<html
+        $extraFooter = <<<html
      
         <script src="/js/jquery.min.js"></script>
         <script src="/js/validate/jquery.validate.js"></script>
@@ -1512,21 +1594,21 @@ html;
 
         $email = $_POST['email'];
         $btn_politicas = '';
-        if(isset($_POST['btn_success'])){
+        if (isset($_POST['btn_success'])) {
             $btn_politicas = $_POST['btn_success'];
-        }elseif(isset($_POST['btn_danger'])){
+        } elseif (isset($_POST['btn_danger'])) {
             $btn_politicas = $_POST['btn_danger'];
         }
-        
-        View::set('politica',$btn_politicas);
-        View::set('email',$email);
-        View::set('header',$extraHeader);
-        View::set('footer',$extraFooter);
-        View::render('politicas_2');
 
+        View::set('politica', $btn_politicas);
+        View::set('email', $email);
+        View::set('header', $extraHeader);
+        View::set('footer', $extraFooter);
+        View::render('politicas_2');
     }
 
-    public function updatePolitica(){
+    public function updatePolitica()
+    {
 
         $register = new \stdClass();
         if ($_SERVER['REQUEST_METHOD'] == 'POST') {
@@ -1540,66 +1622,61 @@ html;
 
             if ($id) {
                 echo 'success';
-
             } else {
                 echo 'fail';
             }
-
         }
-
     }
-    
 
-    public function finalize(){
+
+    public function finalize()
+    {
 
         $register = new \stdClass();
 
         if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
-                $password = $_POST['password'];
-                $email = $_POST['email'];
-                $politica = $_POST['politica'];
-               
+            $password = $_POST['password'];
+            $email = $_POST['email'];
+            $politica = $_POST['politica'];
 
-                $userData = RegisterDao::getUserRegister($email)[0];
-                
-                
-                $id_registro_acceso = $userData['id_registro_acceso'];
-                
-                $register->_password = md5($password);
-                $register->_email = $email;
-                $register->_politica = $politica;
-                $register->_id_registro_acceso = $id_registro_acceso;
 
-                $id = DataDao::insert($register);
+            $userData = RegisterDao::getUserRegister($email)[0];
 
-                if ($id) {
-                    
-                    //RegisterDao::updatePolitica($register);
 
-                    $msg = [
-                        'email' => $email,
-                        'name' =>  $userData['nombre']
-                    ];
-        
-                    $mailer = new Mailer();
-                    $mailer->mailerRegister($msg);
+            $id_registro_acceso = $userData['id_registro_acceso'];
 
-                    echo 'success';
-                    
+            $register->_password = md5($password);
+            $register->_email = $email;
+            $register->_politica = $politica;
+            $register->_id_registro_acceso = $id_registro_acceso;
 
-                } else {
+            $id = DataDao::insert($register);
 
-                
-                    echo 'fail';
-                }
-        }    
-      
+            if ($id) {
 
+                //RegisterDao::updatePolitica($register);
+
+                $msg = [
+                    'email' => $email,
+                    'name' =>  $userData['nombre']
+                ];
+
+                $mailer = new Mailer();
+                $mailer->mailerRegister($msg);
+
+                echo 'success';
+            } else {
+
+
+                echo 'fail';
+            }
+        }
     }
 
-    public function recuperarPass(){
-        $extraHeader =<<<html
+    public function recuperarPass()
+    {
+        $extraHeader = <<<html
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
         <link rel="apple-touch-icon" sizes="76x76" href="../../../assets/img/aso_icon.png">
@@ -1634,7 +1711,7 @@ html;
         
 
 html;
-        $extraFooter =<<<html
+        $extraFooter = <<<html
      
         <script src="/js/jquery.min.js"></script>
         <script src="/js/validate/jquery.validate.js"></script>
@@ -1741,13 +1818,13 @@ html;
         </script>
        
 html;
-        View::set('header',$extraHeader);
-        View::set('footer',$extraFooter);
+        View::set('header', $extraHeader);
+        View::set('footer', $extraFooter);
         View::render("recuperar_password");
-        
     }
 
-    public function verifyCodePass(){
+    public function verifyCodePass()
+    {
         $register = new \stdClass();
 
         $email = $_POST['email'];
@@ -1758,8 +1835,7 @@ html;
         $register->_code = $codigo_rand;
 
         $id = RegisterDao::update($register);
-        if($id >= 1)
-        {
+        if ($id >= 1) {
             $msg = [
                 'email' => $register->_email,
                 'code' =>  $register->_code
@@ -1769,20 +1845,18 @@ html;
             $mailer->mailerRecoveryPass($msg);
 
             $this->codeRecoveryPass($register->_email);
-        }
-        else
-        {
+        } else {
             // echo "holaaaaa";
             // exit();
             $this->code500();
             //$this->Success();
             //$this->alerta($id,'error',$method_pay, $name_register);
         }
-
     }
 
-    public function ChangePass(){
-        $extraHeader =<<<html
+    public function ChangePass()
+    {
+        $extraHeader = <<<html
             <meta charset="utf-8" />
             <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
             <link rel="apple-touch-icon" sizes="76x76" href="../../../assets/img/aso_icon.png">
@@ -1834,7 +1908,7 @@ html;
             
             <!--script src="../../../assets/js/plugins/choices.min.js"></script-->
 html;
-        $extraFooter =<<<html
+        $extraFooter = <<<html
      
             <script src="/js/jquery.min.js"></script>
             <script src="/js/validate/jquery.validate.js"></script>
@@ -1923,34 +1997,34 @@ html;
         $digit2 =  $_POST['dos'];
         $digit3 =  $_POST['tres'];
         $digit4 =  $_POST['cuatro'];
-        $code_received  = $digit1.$digit2.$digit3.$digit4;
-       
-
-         $userData = RegisterDao::getUserRegister($email)[0];
+        $code_received  = $digit1 . $digit2 . $digit3 . $digit4;
 
 
+        $userData = RegisterDao::getUserRegister($email)[0];
 
-        if($userData['code'] === $code_received){
+
+
+        if ($userData['code'] === $code_received) {
             // echo "Se verifico codigo correctamente";
-            
-         
-            View::set('email',$email);
-            View::set('header',$extraHeader);
-            View::set('footer',$extraFooter);
-            View::render('recovery_pass');
-        }else{
 
-            $alerta =<<<html
+
+            View::set('email', $email);
+            View::set('header', $extraHeader);
+            View::set('footer', $extraFooter);
+            View::render('recovery_pass');
+        } else {
+
+            $alerta = <<<html
             <div class="alert alert-danger text-white" role="alert" >
                 El codigo de verificación no coincide, Intenta nuevamente!
             </div>
 html;
-            $this->codeRecoveryPass($email,$alerta);
+            $this->codeRecoveryPass($email, $alerta);
         }
-
     }
 
-    public function updatePassword(){
+    public function updatePassword()
+    {
 
         $register = new \stdClass();
 
@@ -1960,54 +2034,54 @@ html;
             $email = $_POST['email'];
 
             $userData = RegisterDao::getUserRegister($email)[0];
-            
-  
-            
+
+
+
             $register->_password = md5($password);
             $register->_email = $email;
 
             $update = RegisterDao::updatePassword($register);
 
-            if($update){
+            if ($update) {
                 $msg = [
                     'email' => $email,
                     'name' =>  $userData['nombre']
                 ];
-    
+
                 $mailer = new Mailer();
                 $mailer->mailerUpdatePass($msg);
-    
+
                 echo 'success';
-            }else{
+            } else {
                 echo 'fail';
             }
-          
-        }    
-
+        }
     }
-    
-    public function code500(){
+
+    public function code500()
+    {
         View::render("500");
     }
 
-    public function isUserValidate(){
-        echo (count(RegisterDao::getUserRegister($_POST['email']))>=1)? 'true' : 'false';
+    public function isUserValidate()
+    {
+        echo (count(RegisterDao::getUserRegister($_POST['email'])) >= 1) ? 'true' : 'false';
     }
 
-    public function isUserValidateUser(){
-        echo (count(RegisterDao::getUserRegisterTrue($_POST['email']))>=1)? 'true' : 'false';
+    public function isUserValidateUser()
+    {
+        echo (count(RegisterDao::getUserRegisterTrue($_POST['email'])) >= 1) ? 'true' : 'false';
     }
 
-    public function isUserValidateRecoveryPassword(){
-        echo (count(RegisterDao::getUserRegisterRecoveryPass($_POST['email']))>=1)? 'true' : 'false';
+    public function isUserValidateRecoveryPassword()
+    {
+        echo (count(RegisterDao::getUserRegisterRecoveryPass($_POST['email'])) >= 1) ? 'true' : 'false';
     }
 
-    
 
-    function generateRandomString($length = 4) {
+
+    function generateRandomString($length = 4)
+    {
         return substr(str_shuffle("0123456789"), 0, $length);
     }
-
 }
-
-
