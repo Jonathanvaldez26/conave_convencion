@@ -346,7 +346,7 @@ echo $header;
                                                     <!-- <p>Aquí van los terminos y condiciones</p> -->
                                                     <span>
 
-                                                    Al usar la plataforma, usted acepta y esté de acuerdo con estos términos y condiciones en lo que se refiere a su uso de la plataforma, si desea leer el documento completo de <a href="/Register/Politicas_" target="blank_" style="text-decoration: underline;"><b>clic aquí</b></a>
+                                                    Al usar la plataforma, usted acepta y está de acuerdo con estos términos y condiciones en lo que se refiere a su uso de la plataforma, si desea leer el documento completo de <a href="/Register/Politicas_" target="blank_" style="text-decoration: underline;"><b>clic aquí</b></a>
                                                     </span>
                                                 </div>
                                                 <br>
