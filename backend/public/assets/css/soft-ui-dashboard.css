@@ -36873,4 +36873,17 @@ svg.leaflet-image-layer.leaflet-interactive path {
   border-color: #ddd; 
 }
 
+@media (max-width: 991.98px){
+  .FAQs {
+    height: 65px;
+    opacity: 1;
+  }
+}
+
+@media (max-width: 991.98px){
+  .dropdown.nav-item .dropdown-menu-animation.show {
+      height: 65px;
+      opacity: 1;
+  }
+}
 /*# sourceMappingURL=dashboard-pro.css.map */
