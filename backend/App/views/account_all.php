@@ -274,7 +274,7 @@
 
                             </div>
 
-                            <div class="row">
+                        <div class="row">
 
                                 <?php echo $res_alimenticias;?>
 
@@ -282,12 +282,14 @@
 
                                 <?php echo $alergias_otro; ?>
 
-                                <?php echo $alergia_medicamento_cual; ?>
-                            </div>
+                                <?php echo $alergia_medicamento; ?>
 
-                            <div class="row">
+                                <?php  echo $alergia_medicamento_cual; ?>
+                        </div> 
 
-                                <!-- <div class="col-md-3 col-sm-12">
+                            <!-- <div class="row">
+
+                                <div class="col-md-3 col-sm-12">
                                     <label class="form-label mt-4">Restricciones Alimentarias *</label>
                                     <div class="form-check">
                                         <input class="form-check-input" type="radio" name="restricciones_alimenticias" id="res_ali_1" value="vegetariano">
@@ -319,11 +321,11 @@
                                         <input id="restricciones_alimenticias_cual" name="restricciones_alimenticias_cual" maxlength="45" class="form-control" type="text" placeholder="Escriba su restricción" value="">
 
                                     </div>
-                                </div> -->
+                                </div> 
 
 
 
-                                <!-- <div class="col-md-4 col-sm-12">
+                                <div class="col-md-4 col-sm-12">
                                     <label class="form-label mt-4">Alérgico a *</label>
                                     <select class="form-control" name="alergias[]" id="select_alergico" multiple="multiple">
                                         <option value="lacteos">Lácteos</option>
@@ -336,10 +338,8 @@
                                         <label class="form-label mt-4">Especifique </label>
                                         <input class="form-control" id="alergia_otro" maxlength="149" name="alergia_otro" data-color="dark" type="text" value="" placeholder="Escriba su alergia" />
                                     </div>
-                                </div> -->
-
-
-                                <!-- <div class="col-md-4 col-sm-12">
+                                </div> 
+                                 <div class="col-md-4 col-sm-12">
                                     <label class="form-label mt-4">¿Es usted alérgico a un medicamento?</label>
                                     <div class="form-check">
                                         <input class="form-check-input" type="radio" name="confirm_alergia" id="confirm_alergia_si" value="si">
@@ -359,8 +359,8 @@
                                         <input id="alergia_medicamento_cual" name="alergia_medicamento_cual" maxlength="29" pattern="[a-zA-Z0-9]*" class="form-control" type="text" placeholder="Escriba a que medicamento es alérgico" value="">
 
                                     </div>
-                                </div> -->
-                            </div>
+                                </div>
+                           </div> -->
 
                             <div class="row">
                                 <div class="button-row d-flex mt-4 col-12">
