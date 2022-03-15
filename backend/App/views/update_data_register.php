@@ -346,17 +346,7 @@ echo $header;
                                                     <!-- <p>Aquí van los terminos y condiciones</p> -->
                                                     <span>
 
-                                                        Queremos tener la cercanía de una reunión que nos permita seguir fortaleciendo nuestros lazos, porque juntos somos imparables; guardando siempre para prevenir cualquier tipo de riesgo de contagio los cuidados pertinentes con base en nuestra nueva realidad.<br><br>
-
-                                                        Para ello, estamos considerando las medidas que tienen como principal objetivo preservar la seguridad y salud de quienes participaremos en este encuentro, y que como empresa responsable buscamos.<br><br>
-
-                                                        Así que además de contar con tu participación activa, confiamos en que seguirás las recomendaciones que se han establecido y comunicado previamente, privilegiando en todo momento tu seguridad y la de todos.<br><br>
-
-                                                        Con tu aceptación te comprometes a:<br><br>
-                                                        <ul>
-                                                            <li>Proporcionar información fidedigna</li>
-                                                            <li>Apegarte a las recomendaciones antes, durante y después de la reunión.</li>
-                                                        </ul>
+                                                    Al usar la plataforma, usted acepta y esté de acuerdo con estos términos y condiciones en lo que se refiere a su uso de la plataforma, si desea leer el documento completo de <a href="/Register/Politicas_" target="blank_" style="text-decoration: underline;"><b>clic aquí</b></a>
                                                     </span>
                                                 </div>
                                                 <br>
