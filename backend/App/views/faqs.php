@@ -222,13 +222,15 @@
                                 <h4><i class="fas fa-virus-slash"></i>&nbsp;&nbsp; ¿Qué hago si después de subir mi comprobante salgo positivo a COVID?</h4>
                                 
                                 <p>
-                                    Favor de comunicarlo a tu jefe inmediato con copia a mlvazquez@asofarma.com.mx y mx-serviciomedico@asofarma.com.mx  
+                                    Favor de comunicarlo a tu jefe inmediato con copia a mlvazquez@asofarma.com.mx y <br>
+                                    mx-serviciomedico@asofarma.com.mx  
                                 </p>
                             </li>
                             <li class="list-group-item borderless">
                                 <h4><i class="fas fa-id-badge"></i>&nbsp;&nbsp; ¿A quién doy aviso si debo cancelar mi asistencia a la CONAVE2022?</h4>
                                 
-                                Favor de comunicarlo a tu jefe inmediato con copia a mlvazquez@asofarma.com.mx y mx-serviciomedico@asofarma.com.mx  
+                                Favor de comunicarlo a tu jefe inmediato con copia a mlvazquez@asofarma.com.mx y <br>
+                                mx-serviciomedico@asofarma.com.mx  
                             </li>
                             
                         </ul>
