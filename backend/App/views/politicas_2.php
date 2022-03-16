@@ -37,7 +37,7 @@
                                     </div>
                                     <br>
 
-                                    <div id="terminos" class="card-header pt-4 text-scroll ">
+                                    <div id="terminos" class="card-header pt-4">
                                         <!-- <p>Aquí van los terminos y condiciones</p> -->
                                         <div style="text-align: justify;">
                                         Los siguientes términos y condiciones (los "Términos y Condiciones") rigen el uso que usted le dé a la plataforma Protocolo de seguridad para Convención Asofarma 2022 y a cualquiera de los contenidos disponibles en ella, incluyendo cualquier contenido derivado de la misma ("La aplicación"). Asofarma de México S.A. de C.V. ("Asofarma" o "nosotros") ha puesto a su disposición la plataforma. Podemos cambiar los Términos y Condiciones de vez en cuando, en cualquier momento sin ninguna notificación, sólo publicando los cambios en la plataforma. <b>AL USAR EL LA PLATAFORMA, USTED ACEPTA Y ESTÉ DE ACUERDO CON ESTOS TÉRMINOS Y CONDICIONES EN LO QUE SE REFIERE A SU USO DE LA PLATAFORMA. </b> usted no está de acuerdo con estos Términos y Condiciones, no puede tener acceso al mismo ni usar la plataforma de ninguna otra manera.<br><br>

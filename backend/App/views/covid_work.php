@@ -29,9 +29,14 @@
             <div class="container">
                 <div class="row mt-lg-0 mt-1">
                     <div class="col-lg-5 my-auto">
-                        <h1 class=" text-bolder text-gradient text-danger fadeIn1 fadeInBottom ">Próximamente Disponible</h1>
-                        <h4 class="fadeIn3 fadeInBottom opacity-8">Usted podrá subir su prueba covid. </h4>
+                        <h2 class=" text-bolder text-gradient text-danger fadeIn1 fadeInBottom ">Con un lapso no mayor a 48 hrs al día de tu vuelo</h2>
+                        <h4 class="fadeIn3 fadeInBottom opacity-8">Deberás realizarte una prueba rápida de antígenos COVID (NO PCR). </h4>
                         <p class="lead opacity-6 fadeIn2 fadeInBottom">Le sugerimos que vaya a la página de inicio...</p>
+                        <ul>
+                            <li>Subir el comprobante de tu resultado en formato PDF (2mb)</li>
+                            <li>Esta prueba deberá ser realizada en laboratorio o farmacia de referencia que emita el resultado en formato PDF (NO pruebas hechas en casa)</li>
+                            
+                        </ul>
                         <a href="/Home/" type="button" class="btn bg-gradient-danger mt-4 fadeIn2 fadeInBottom">Ir a la página de inicio</a>
                     </div>
                     <div class="col-lg-7 my-auto">

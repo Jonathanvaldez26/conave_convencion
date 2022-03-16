@@ -36803,7 +36803,7 @@ svg.leaflet-image-layer.leaflet-interactive path {
 
 .text-scroll{
   overflow-y: scroll !important;
-  max-height: 150px;
+  max-height: 300px;
   height: 10%;
 }
 
