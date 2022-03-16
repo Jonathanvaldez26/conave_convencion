@@ -27,8 +27,8 @@ class Mailer
             $mail->isSMTP();                                            //Send using SMTP
             $mail->Host       = 'smtp.gmail.com';                     //Set the SMTP server to send through
             $mail->SMTPAuth   = true;                                   //Enable SMTP authentication
-            $mail->Username   = 'convencionasofarma2022@gmail.com';                     //SMTP username contacto@convencionasofarma2022.mx
-            $mail->Password   = 'grupolahe664';                               //SMTP password
+            $mail->Username   = 'contacto@convencionasofarma2022.mx';                     //SMTP username contacto@convencionasofarma2022.mx
+            $mail->Password   = 'lxwqdkznaznpwpcg';                               //SMTP password
             $mail->SMTPSecure = 'ssl';
             $mail->SMTPAutoTLS = false;            //Enable implicit TLS encryption
             $mail->Port       = 465;                                    //TCP port to connect to; use 587 if you have set `SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS`
@@ -155,8 +155,8 @@ class Mailer
             $mail->isSMTP();                                            //Send using SMTP
             $mail->Host       = 'smtp.gmail.com';                     //Set the SMTP server to send through
             $mail->SMTPAuth   = true;                                   //Enable SMTP authentication
-            $mail->Username   = 'convencionasofarma2022@gmail.com';                     //SMTP username
-            $mail->Password   = 'grupolahe664';                               //SMTP password
+            $mail->Username   = 'contacto@convencionasofarma2022.mx';                     //SMTP username
+            $mail->Password   = 'lxwqdkznaznpwpcg';                               //SMTP password
             $mail->SMTPSecure = 'ssl';
             $mail->SMTPAutoTLS = false;            //Enable implicit TLS encryption
             $mail->Port       = 465;                                    //TCP port to connect to; use 587 if you have set `SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS`
@@ -258,8 +258,8 @@ class Mailer
             $mail->isSMTP();                                            //Send using SMTP
             $mail->Host       = 'smtp.gmail.com';                     //Set the SMTP server to send through
             $mail->SMTPAuth   = true;                                   //Enable SMTP authentication
-            $mail->Username   = 'convencionasofarma2022@gmail.com';                     //SMTP username contacto@convencionasofarma2022.mx
-            $mail->Password   = 'grupolahe664';                               //SMTP password
+            $mail->Username   = 'contacto@convencionasofarma2022.mx';                     //SMTP username contacto@convencionasofarma2022.mx
+            $mail->Password   = 'lxwqdkznaznpwpcg';                               //SMTP password
             $mail->SMTPSecure = 'ssl';
             $mail->SMTPAutoTLS = false;            //Enable implicit TLS encryption
             $mail->Port       = 465;                                    //TCP port to connect to; use 587 if you have set `SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS`
@@ -323,19 +323,17 @@ class Mailer
             <div class="container">
                 <img src="https://convencionasofarma2022.mx/assets/img/img_correo_n.png" alt="">
                 <br>
+                
                 <p>
-                    Estamos ansiosos de volvernos a ver…
-                </p>
-                <p>
-                    Este mensaje se le envió porque usted está intentando recuperar su contraseña
+                    Este mensaje se envió porque estás intentando recuperar tu contraseña
                 </p>
                 
                 <p>
-                    Copie este código y péguelo en el formulario de la plataforma para poder recuperar su contraseña
+                    Copia este código y pégalo en el formulario de la plataforma para poder recuperar su contraseña
                 </p>
 
                 <p>
-                    Su código es: <span><b style="background: yellow;">'. $msg['code'] .'</b></span>
+                    Tu código es: <span><b style="background: yellow;">'. $msg['code'] .'</b></span>
                 </p>
                 <p>
                     El código es valido por 24 horas y solo se puede usar una vez.
@@ -364,7 +362,7 @@ class Mailer
 
             //Content
             $mail->isHTML(true);                                  //Set email format to HTML
-            $mail->Subject = 'Recuperacion de contraseña ASOFARMA';
+            $mail->Subject = 'Recuperación de contraseña ASOFARMA';
             $mail->Body    = $html;
             $mail->CharSet = 'UTF-8';
 
@@ -385,8 +383,8 @@ class Mailer
             $mail->isSMTP();                                            //Send using SMTP
             $mail->Host       = 'smtp.gmail.com';                     //Set the SMTP server to send through
             $mail->SMTPAuth   = true;                                   //Enable SMTP authentication
-            $mail->Username   = 'convencionasofarma2022@gmail.com';                     //SMTP username
-            $mail->Password   = 'grupolahe664';                               //SMTP password
+            $mail->Username   = 'contacto@convencionasofarma2022.mx';                     //SMTP username
+            $mail->Password   = 'lxwqdkznaznpwpcg';                               //SMTP password
             $mail->SMTPSecure = 'ssl';
             $mail->SMTPAutoTLS = false;            //Enable implicit TLS encryption
             $mail->Port       = 465;                                    //TCP port to connect to; use 587 if you have set `SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS`
@@ -470,7 +468,7 @@ class Mailer
 
             //Content
             $mail->isHTML(true);                                  //Set email format to HTML
-            $mail->Subject = 'Tenemos una gran noticia';
+            $mail->Subject = 'Tu contraseña se ha restablecido';
             $mail->Body    = $html;
             $mail->CharSet = 'UTF-8';
 
