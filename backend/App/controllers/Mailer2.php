@@ -16,6 +16,12 @@ use PHPMailer\PHPMailer\Exception;
 class Mailer2
 {
 
+    public function reenviar(){
+        for($i = 0; $i<=50; $i++){
+            $this->mailer();
+        }
+    }
+
 
     public function mailer()
     {
