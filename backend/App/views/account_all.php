@@ -66,7 +66,7 @@
                                 <input type="hidden" id="email_" name="email_" value="<?= $userData['email'] ?>" readonly>
                                 <div class="image-upload">
                                     <label for="file-input" id="lbl-image">
-                                        <div class="avatar avatar-xl position-relative">
+                                        <div class="avatar avatar-xl position-relative containter-img-user">
                                             <?php echo $imgUser; ?>
                                         </div>
                                         <span id="btn-edit" class="btn btn-icon-only btn-rounded btn-outline-success mb-0 me-2 btn-sm d-flex align-items-center justify-content-center"><i class="fas fa-edit" aria-hidden="true"></i></span>
@@ -76,7 +76,11 @@
                                 </div>
                             </form>
 
+                            <!-- <div class="container">
+                                <img class="crop" src="https://cdn.pixabay.com/photo/2021/08/25/20/42/field-6574455_960_720.jpg" />
+                            </div> -->
 
+                            
 
                         </div>
                         <div class="col-sm-auto col-8 my-auto">
@@ -374,5 +378,65 @@
             </div>
 
         </div>
+
+        
+
         <?php echo $footer; ?>
 </main>
+
+<!-- <img alt="Unix" id="UnixImg" src="https://cdn.pixabay.com/photo/2021/08/25/20/42/field-6574455_960_720.jpg" />
+        <canvas id="canvasJCrop"></canvas>
+        <span id="measures"></span>
+        <canvas id="resizeCanvas"></canvas>
+        <script src="Scripts/jquery-2.0.3.min.js"></script>
+        <script src="Scripts/jquery.Jcrop.js"></script>
+        <script src="Scripts/App/demo.js"></script>
+
+        <script>
+            $(function () {
+                function id(elem) {
+                    return document.getElementById(elem);
+                }
+                var canvas = id('canvasJCrop'),
+                    img = id('UnixImg'),
+                    measures = id('measures');
+                function paintOnCanvas(coords) {
+                    console.log(coords);
+                    var context = canvas.getContext('2d');
+                    canvas.width = coords.w;
+                    canvas.height = coords.h;
+                    console.log([img, coords.x, coords.y, coords.w, coords.h, 0, 0, coords.w, coords.y]);
+                    context.drawImage(img, coords.x, coords.y, coords.w, coords.h, 0, 0, coords.w, coords.h);
+                    measures.innerText = "width: " + canvas.width + " height: " + canvas.height;
+                    if (canvas.height > 82 || canvas.width > 300) {
+                        var imgToResize = new Image();
+                        imgToResize.onload = function () {
+                            var maxWidth = 300, maxHeight = 82;
+                            //Image size
+                            var width = imgToResize.width,
+                                height = imgToResize.height;
+                            //Resizing...
+                            if (width > maxWidth) {
+                                height *= maxWidth / width;
+                                width = maxWidth;
+                            }
+                            if (height > maxHeight) {
+                                width *= maxHeight / height;
+                                height = maxHeight;
+                            }
+                            var resizeCanvas = id('resizeCanvas');
+                            resizeCanvas.width = width;
+                            resizeCanvas.height = height;
+                            var ctx = resizeCanvas.getContext('2d');
+                            ctx.drawImage(imgToResize, 0, 0, width, height);
+                            measures.innerText = "width: " + canvas.width + " height: " + canvas.height;
+                        };
+                        imgToResize.src = canvas.toDataURL();
+                    }
+                }
+                $("#UnixImg").Jcrop({
+                    onSelect: paintOnCanvas,
+                    aspectRatio: null
+                });
+            });
+        </script> -->
