@@ -30,67 +30,8 @@ class Account extends Controller
     public function index()
     {
         $extraHeader = <<<html
-        <link href=”jquery.Jcrop.min.css” rel=”stylesheet” type=”text/css”/>
-        <script src=”jquery.min.js”></script>
-        <script src=”jquery.Jcrop.min.js”></script>
         <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
-        
-        <script src="jcrop/js/jquery.min.js"></script>
-        <script src="jcrop/js/jquery.Jcrop.js"></script>
-        <link rel="stylesheet" href="jcrop/css/jquery.Jcrop.css" type="text/css" />
-
-        <title>Recortar imágenes con jCrop y PHPThumb</title>
-
-        <script type="text/javascript">
-        //Utilizamos jCrop en los elementos con el id cropbox
-        $(function(){
-
-        $('#cropbox').Jcrop({
-            aspectRatio: 0,
-            onSelect: updateCoords
-        });
-
-        });
-
-        function updateCoords(c)
-        {
-        $('#x').val(c.x);
-        $('#y').val(c.y);
-        $('#w').val(c.w);
-        $('#h').val(c.h);
-        };
-
-        function checkCoords()
-        {
-        if (parseInt($('#w').val())) return true;
-        alert('Selecciona una región en la imágen');
-        return false;
-        };
-
-        $(document).ready(function(){
-            //Mostrar alto y ancho en px del area seleccionada
-            $("#target").mousemove(function(){
-                var ancho=$("#w").val();
-                var alto=$("#h").val();
-                $("#ancho_seleccionado").html(ancho);
-                $("#alto_seleccionado").html(alto);
-            });
-        });
-
-        </script>
-        <style type="text/css">
-        #cropbox{
-            max-width:100%;
-        }
-        .imagen{
-        float:left;
-        }
-        .clear{
-        clear:both;
-        }
-        </style>
-
-
+        <link href="Content/jquery.Jcrop.css" rel="stylesheet" />
         <style>
         .select2-container--default .select2-selection--single {
         height: 38px!important;
@@ -353,7 +294,7 @@ html;
 
         if ($userData['img'] != '') {
             $imgUser = <<<html
-            <img src="../../../img/users_conave/{$userData['img']}" id="img-user" alt="bruce" class="w-100 h-100 border-radius-lg shadow-sm">
+            <img src="../../../img/users_conave/{$userData['img']}" id="img-user" alt="bruce" class="h-100 border-radius-lg shadow-sm" style="width: fit-content;">
 html;
         } else {
             $imgUser = <<<html
