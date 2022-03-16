@@ -319,7 +319,7 @@ echo $header;
                                                         <div class="form-check">
                                                             <input class="form-check-input" type="checkbox" value="1" id="terminos" name="terminos" required>
                                                             <label class="form-check-label" for="terminos">
-                                                                <b>He leído los terminos y condiciones</b>
+                                                                <b>He leído y acepto los términos y condiciones</b>
                                                             </label>
                                                         </div>
 
@@ -335,7 +335,7 @@ echo $header;
 
                                 <div class="row">
                                     <div class="col-12 text-center">
-                                        <label class="form-label mt-4"><b>Terminos y condiciones</b></label>
+                                        <label class="form-label mt-4"><b>Términos y condiciones</b></label>
                                         <div class="card z-index-0">
 
                                             <div class="card-body pt-1">
@@ -358,7 +358,7 @@ echo $header;
                                                         <div class="form-check">
                                                             <input class="form-check-input" type="checkbox" value="1" id="terminos1" name="terminos1" required>
                                                             <label class="form-check-label" for="terminos1">
-                                                                <b>He leído los terminos y condiciones</b>
+                                                                <b>He leído y acepto los términos y condiciones</b>
                                                             </label>
                                                         </div>
 
