@@ -342,7 +342,7 @@ echo $header;
 
                                                 <!-- <input type="hidden" id="id_registro" name="id_registro" value="<?= $id_registro ?>"> -->
                                                 <input type="hidden" id="email" name="email" value="<?= $email ?>">
-                                                <div id="terminos" class="card-header pt-4 text-scroll " style="text-align: justify;">
+                                                <div id="terminos" class="card-header pt-4 " style="text-align: justify;">
                                                     <!-- <p>Aquí van los terminos y condiciones</p> -->
                                                     <span>
 

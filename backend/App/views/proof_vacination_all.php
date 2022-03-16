@@ -58,7 +58,7 @@
             </div>
             <div class="card col-lg-8 mt-lg-5 mt-1" >
                 <div class="card-header pb-0 p-3">
-                    <h6 class="mb-1">Mi comprobante de vacunación</h6>
+                    <h6 class="mb-1">El comprobante de vacunación</h6>
                     <p class="text-sm">Registra tus certificados / comprobantes de vacunación, esquema completo <br>
                     Formato PDF, 2 mb<br>
                     Lleva a cabo este registro a mas tardar el 25 de marzo
