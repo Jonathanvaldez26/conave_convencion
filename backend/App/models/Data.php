@@ -90,7 +90,7 @@ sql;
     {
         $mysqli = Database::getInstance();
         $query = <<<sql
-        INSERT INTO utilerias_asistentes VALUES(null,:id_registro_acceso,:usuario,:contrasena,:politica,1)                        
+        INSERT INTO utilerias_asistentes VALUES(null,:id_registro_acceso,:usuario,:contrasena,:politica,1,NOW())                        
 sql;
 
         $parametros = array(
