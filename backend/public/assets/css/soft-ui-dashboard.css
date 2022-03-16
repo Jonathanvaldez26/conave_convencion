@@ -10795,6 +10795,10 @@ fieldset:disabled .btn {
   height: 500px !important;
 }
 
+.height-550 {
+  height: 550px !important;
+}
+
 .height-600 {
   height: 600px !important;
 }
