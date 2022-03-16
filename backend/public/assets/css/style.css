@@ -31,6 +31,10 @@
     .programa-4{
         background-image: url('../../assets/img/v\ \(3\).png'); background-size:cover;
     }
+
+    .h-programa-movil{
+        height: 400px !important;
+    }
 }
 
 @media (min-width: 990px) {
@@ -49,5 +53,9 @@
     }
     .programa-4{
         background-image: url('../../assets/img/4.png'); background-size:cover;
+    }
+
+    .h-programa-movil{
+        height: 500px !important;
     }
 }

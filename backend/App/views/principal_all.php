@@ -144,16 +144,16 @@
                     </div>
                     <div class="card-body p-3 mt-2">
                         <div class="tab-content" id="v-pills-tabContent">
-                            <div class="tab-pane fade show position-relative active height-500 programa-1 border-radius-lg" id="cam1" role="tabpanel" aria-labelledby="cam1" >
+                            <div class="tab-pane fade show position-relative active h-programa-movil programa-1 border-radius-lg" id="cam1" role="tabpanel" aria-labelledby="cam1" >
 
                             </div>
-                            <div class="tab-pane fade position-relative height-500 programa-2 border-radius-lg" id="cam2" role="tabpanel" aria-labelledby="cam2" >
+                            <div class="tab-pane fade position-relative h-programa-movil programa-2 border-radius-lg" id="cam2" role="tabpanel" aria-labelledby="cam2" >
 
                             </div>
-                            <div class="tab-pane fade position-relative height-500 programa-3 border-radius-lg" id="cam3" role="tabpanel" aria-labelledby="cam3" >
+                            <div class="tab-pane fade position-relative h-programa-movil programa-3 border-radius-lg" id="cam3" role="tabpanel" aria-labelledby="cam3" >
 
                             </div>
-                            <div class="tab-pane fade position-relative height-500 programa-4 border-radius-lg" id="cam4" role="tabpanel" aria-labelledby="cam3" >
+                            <div class="tab-pane fade position-relative h-programa-movil programa-4 border-radius-lg" id="cam4" role="tabpanel" aria-labelledby="cam3" >
 
                             </div>
                         </div>
