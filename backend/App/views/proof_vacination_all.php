@@ -61,7 +61,7 @@
                     <h6 class="mb-1">El comprobante de vacunación</h6>
                     <p class="text-sm">Registra tus certificados / comprobantes de vacunación, esquema completo <br>
                     
-                    Lleva a cabo este registro a mas tardar el 25 de marzo
+                    Lleva a cabo este registro a más tardar el 25 de marzo
                     <!-- <p class="text-danger" style="font-size: 12px;">¡Importante! Si tu comprobante de vacunación emitido por el gobierno federal de México marca la aplicación de una sola dosis, no podrás asistir a la CONAVE 2022.</p> -->
                     </p>
                     
@@ -74,8 +74,11 @@
                         <div class="col-xl-4 col-md-0 mb-xl-0 mb-4"></div>
                     </div>
                     <div class="row">
-                        <div class="button-row d-flex mt-4 col-12">
+                        <div class="button-row d-flex mt-4 col-md-6 col-12">
                             <a class="btn bg-gradient-light mb-0 js-btn-prev" href="/Home/" title="Prev">Regresar</a>
+                        </div>
+                        <div class="col-md-6 mt-4 col-12 text-end">
+                            <label class="text-danger">Formato PDF, 2 mb</label>
                         </div>
                     </div>
                 </div>
