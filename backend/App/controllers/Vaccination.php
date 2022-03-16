@@ -105,7 +105,7 @@ html;
                               window.location.replace("/Vaccination/");
                           });
                       }else if(respuesta == 'no_permitido'){
-                        swal("Error al cargar, formato no permitido!!", "Seleccione un archivo en formato pdf", "info");
+                        swal("Error al cargar, ¡formato no permitido!", "Seleccione un archivo en formato pdf", "info");
                         
                       }
                       console.log(respuesta);

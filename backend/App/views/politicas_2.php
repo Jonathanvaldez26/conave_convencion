@@ -177,7 +177,7 @@
                         console.log(respuesta);
                        
                         if(respuesta == 'success'){
-                            swal("Usted no acepto los terminos", "", "error").
+                            swal("¡Usted no acepto los terminos!", "", "error").
                             then((value) => {
                                 window.location.replace("/Login");
                             });
