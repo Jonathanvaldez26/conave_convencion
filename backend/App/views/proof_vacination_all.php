@@ -60,7 +60,7 @@
                 <div class="card-header pb-0 p-3">
                     <h6 class="mb-1">Mi comprobante de vacunación</h6>
                     <p class="text-sm">Registra tu comprobante de vacunación antes del 01/04/2022
-                    <p class="text-danger" style="font-size: 12px;">¡Importante! Si tu comprobante de vacunación emitido por el gobierno federal de México marca la aplicación de una sola dosis, no podrás asistir a la CONAVE 2022.</p>
+                    <!-- <p class="text-danger" style="font-size: 12px;">¡Importante! Si tu comprobante de vacunación emitido por el gobierno federal de México marca la aplicación de una sola dosis, no podrás asistir a la CONAVE 2022.</p> -->
                     </p>
                     
 
