@@ -101,7 +101,7 @@ html;
                       if(respuesta == 'success'){
                          // $('#modal_payment_ticket').modal('toggle');
                          
-                          swal("Se ha guardado tu la prueba correctamente!!", "", "success").
+                          swal("¡Se ha guardado tu la prueba correctamente!", "", "success").
                           then((value) => {
                               window.location.replace("/Covid/");
                           });

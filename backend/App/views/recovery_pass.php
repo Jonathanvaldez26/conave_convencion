@@ -82,12 +82,12 @@ echo $header;
                         console.log(respuesta);
                         
                         if(respuesta == 'success'){
-                            swal("Se ha cambiado tu contraseña correctamente!", "", "success").
+                            swal("¡Se ha cambiado tu contraseña correctamente!", "", "success").
                             then((value) => {
                                 window.location.replace("/Login");
                             });
                         }else{
-                            swal("Hubo un al cambiar tu contraseña!", "", "error").
+                            swal("¡Hubo un al cambiar tu contraseña!", "", "error").
                             then((value) => {
                                 window.location.replace("/Login")
                             });

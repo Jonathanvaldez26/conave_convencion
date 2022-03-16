@@ -82,12 +82,12 @@ echo $header;
                         console.log(respuesta);
                         
                         if(respuesta == 'success'){
-                            swal("Te has registrado exitosamente!", "", "success").
+                            swal("¡Te has registrado exitosamente!", "", "success").
                             then((value) => {
                                 window.location.replace("/Login");
                             });
                         }else{
-                            swal("Hubo un error al registrarte!", "", "error").
+                            swal("¡Hubo un error al registrarte!", "", "error").
                             then((value) => {
                                 window.location.replace("/Login")
                             });
