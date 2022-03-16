@@ -84,12 +84,12 @@ html;
                         success: function(respuesta) {
                                 console.log(respuesta);
                             if (respuesta == 'success') {
-                                swal("Se actualizaron tus datos correctamente!", "", "success").
+                                swal("¡Se actualizaron tus datos correctamente!", "", "success").
                                 then((value) => {
                                     window.location.replace("/Account/");
                                 });
                             } else {
-                                swal("Usted No Actualizo Nada!", "", "warning").
+                                swal("¡No se actualizó ningun registro!", "", "warning").
                                 then((value) => {
                                    // window.location.replace("/Account/")
                                 });
