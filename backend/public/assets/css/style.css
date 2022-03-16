@@ -3,7 +3,7 @@
 }
 
 .height-500{
-    height: 500px !important;
+    height: 550px !important;
 }
 
 @media (max-width: 990px) {
@@ -18,10 +18,36 @@
     li#movil-li {
         padding: 0 5px;
     }
+
+    .programa-1{
+        background-image: url('../../assets/img/v\ \(4\).png'); background-size:cover;
+    }
+    .programa-2{
+        background-image: url('../../assets/img/v\ \(1\).png'); background-size:cover;
+    }
+    .programa-3{
+        background-image: url('../../assets/img/v\ \(2\).png'); background-size:cover;
+    }
+    .programa-4{
+        background-image: url('../../assets/img/v\ \(3\).png'); background-size:cover;
+    }
 }
 
 @media (min-width: 990px) {
     #days-movil{
         display: none !important;
+    }
+
+    .programa-1{
+        background-image: url('../../assets/img/1.png'); background-size:cover;
+    }
+    .programa-2{
+        background-image: url('../../assets/img/2.png'); background-size:cover;
+    }
+    .programa-3{
+        background-image: url('../../assets/img/3.png'); background-size:cover;
+    }
+    .programa-4{
+        background-image: url('../../assets/img/4.png'); background-size:cover;
     }
 }
