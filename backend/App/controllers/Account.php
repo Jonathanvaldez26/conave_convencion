@@ -287,7 +287,7 @@ html;
             $res_alimenticias = <<<html
             <div class="col-md-3">
                 <label class="form-label mt-4">Restricciones Alimenticias *</label>
-                <input class="form-control" name="restricciones_alimenticias" id="restricciones_alimenticias" maxlength="149" name="alergias" data-color="dark" type="text" value="{$userData['restricciones_alimenticias']}, {$userData['restricciones_alimenticias_cual']}" placeholder="" readonly />
+                <input class="form-control" name="restricciones_alimenticias" id="restricciones_alimenticias" maxlength="149" name="alergias" data-color="dark" type="text" value="{$userData['restricciones_alimenticias']} {$userData['restricciones_alimenticias_cual']}" placeholder="" readonly />
             </div>
 html;
         }
@@ -321,10 +321,11 @@ html;
         } else {
             $alergias = <<<html
                 <div class="col-md-3">
-                <label class="form-label mt-4">Alergias *</label>
-                <input class="form-control" name="alergia_otro" id="alergia_otro" maxlength="149" data-color="dark" type="text" value="{$userData['alergias']}" placeholder="" readonly />
-            </div>
+                    <label class="form-label mt-4">Alergias *</label>
+                    <input class="form-control" name="alergias[]" id="alergias" maxlength="149" data-color="dark" type="text" value="{$userData['alergias']}" placeholder="" readonly />
+                </div>
 html;
+           
         }
 
         if ($userData['alergias_otro'] == '') {
