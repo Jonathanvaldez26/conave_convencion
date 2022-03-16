@@ -144,16 +144,16 @@
                     </div>
                     <div class="card-body p-3 mt-2">
                         <div class="tab-content" id="v-pills-tabContent">
-                            <div class="tab-pane fade show position-relative active height-350 border-radius-lg" id="cam1" role="tabpanel" aria-labelledby="cam1" style="background-image: url('../../assets/img/miercoles.jpeg'); background-size:cover;">
+                            <div class="tab-pane fade show position-relative active height-500 border-radius-lg" id="cam1" role="tabpanel" aria-labelledby="cam1" style="background-image: url('../../assets/img/1.png'); background-size:cover;">
 
                             </div>
-                            <div class="tab-pane fade position-relative height-350 border-radius-lg" id="cam2" role="tabpanel" aria-labelledby="cam2" style="background-image: url('../../assets/img/jueves.jpeg'); background-size:cover;">
+                            <div class="tab-pane fade position-relative height-500 border-radius-lg" id="cam2" role="tabpanel" aria-labelledby="cam2" style="background-image: url('../../assets/img/2.png'); background-size:cover;">
 
                             </div>
-                            <div class="tab-pane fade position-relative height-350 border-radius-lg" id="cam3" role="tabpanel" aria-labelledby="cam3" style="background-image: url('../../assets/img/viernes.jpeg'); background-size:cover;">
+                            <div class="tab-pane fade position-relative height-500 border-radius-lg" id="cam3" role="tabpanel" aria-labelledby="cam3" style="background-image: url('../../assets/img/3.png'); background-size:cover;">
 
                             </div>
-                            <div class="tab-pane fade position-relative height-350 border-radius-lg" id="cam4" role="tabpanel" aria-labelledby="cam3" style="background-image: url('../../assets/img/sabado.jpeg'); background-size:cover;">
+                            <div class="tab-pane fade position-relative height-500 border-radius-lg" id="cam4" role="tabpanel" aria-labelledby="cam3" style="background-image: url('../../assets/img/4.png'); background-size:cover;">
 
                             </div>
                         </div>
