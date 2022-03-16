@@ -8,10 +8,6 @@ require_once dirname(__DIR__).'/../public/librerias/Sendinblue/Mailin.php';
  * This will initiate the API with the endpoint and your access key.
  *
  */
-// $mailin = new Mailin('masivos@grupolahe.com', 'KAIU4Sb1CfDyFMcm');
-// $mailin = new Mailin('https://api.sendinblue.com/v2.0','KAIU4Sb1CfDyFMcm');
-// $mailin = new Mailin('masivos@grupolahe.com','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');
-$mailin = new Mailin('https://api.sendinblue.com/v3.0','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');
 
 // $data = array("type" => "classic", "status" => "queued", "page" => 1, "page_limit" => 10);
 // var_dump($mailin->get_campaigns_v2($data));
