@@ -132,7 +132,8 @@
                                     </div>
                                 </div>
                                 <div class="col-md-6">
-                                    <label class="control-label col-md-12 col-sm-3 col-xs-12" for="marca">Selecciona las marcas de tus dosis <span class="required">*</span></label>
+                                    <label class="control-label col-md-12 col-sm-3 col-xs-12" for="marca" id="varias-dosis">Selecciona las marcas de tus dosis <span class="required">*</span></label>
+                                    <label class="control-label col-md-12 col-sm-3 col-xs-12" for="marca" id="una-dosis" hidden>Selecciona la marca de tu dosis <span class="required">*</span></label>
                                     <div class="col-md-12 col-sm-12 col-xs-12 checkbox-group required">
                                         <div class="form-check" hidden id="Pfizer">
                                             <input class="form-check-input" type="checkbox" value="Pfizer-BioNTech" name="checkbox_marcas[]">
@@ -150,8 +151,8 @@
                                             <input class="form-check-input" type="checkbox" value="AstraZeneca" name="checkbox_marcas[]">
                                             <label class="form-check-label" for="flexCheckDefault">AstraZeneca</label>
                                         </div>
-                                        <div class="form-check" hidden id="Sputnik">
-                                            <input class="form-check-input" type="checkbox" value="Sputnik V" name="checkbox_marcas[]">
+                                        <div class="form-check" hidden id="Sputnik V">
+                                            <input class="form-check-input" type="checkbox" value="Sputnik-V" name="checkbox_marcas[]">
                                             <label class="form-check-label" for="flexCheckDefault">Sputnik V</label>
                                         </div>
                                         <div class="form-check" hidden id="Sinovac">
@@ -210,9 +211,10 @@
                 document.getElementById('COVAX').setAttribute('hidden','');
                 document.getElementById('Moderna').setAttribute('hidden','');
                 document.getElementById('AstraZeneca').setAttribute('hidden','');
-                document.getElementById('Sputnik').setAttribute('hidden','');
-                // $('#Cansino').css('display: block !important;');
-                // $('#Janssen').css('display: block !important;');
+                document.getElementById('Sputnik V').setAttribute('hidden','');
+
+                document.getElementById('una-dosis').removeAttribute('hidden');
+                document.getElementById('varias-dosis').setAttribute('hidden','');
             } else {
                 document.getElementById('Cansino').removeAttribute('hidden');
                 document.getElementById('Janssen').removeAttribute('hidden');
@@ -221,8 +223,10 @@
                 document.getElementById('COVAX').removeAttribute('hidden');
                 document.getElementById('Moderna').removeAttribute('hidden');
                 document.getElementById('AstraZeneca').removeAttribute('hidden');
-                document.getElementById('AstraZeneca').removeAttribute('hidden');
-                document.getElementById('Sputnik').removeAttribute('hidden');
+                document.getElementById('Sputnik V').removeAttribute('hidden');
+
+                document.getElementById('varias-dosis').removeAttribute('hidden');
+                document.getElementById('una-dosis').setAttribute('hidden','');
             }
             console.log($('option:selected').val());
         });
