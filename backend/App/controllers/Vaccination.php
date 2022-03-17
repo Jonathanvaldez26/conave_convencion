@@ -266,7 +266,7 @@ html;
             $usuario = $_POST["user_"];
             $numero_dosis = $_POST['numero_dosis'];
             foreach($_POST['checkbox_marcas'] as $selected){
-                $marca_ = $selected."/ ";
+                $marca_ .= $selected."/ ";
             }
             $marca = $marca_;
             $file = $_FILES["file_"];

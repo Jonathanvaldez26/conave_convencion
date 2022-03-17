@@ -78,7 +78,7 @@
                             <a class="btn bg-gradient-light mb-0 js-btn-prev" href="/Home/" title="Prev">Regresar</a>
                         </div>
                         <div class="col-md-6 mt-4 col-12 text-end">
-                            <label class="text-danger">Formato PDF, 2 mb</label>
+                            <label class="text-danger">Formato PDF, 2 MB</label>
                         </div>
                     </div>
                 </div>
@@ -122,7 +122,8 @@
                                         <div class="col-md-12 col-sm-12 col-xs-12">
                                             <!-- <input type="date" name="fecha_" id="fecha_" class="form-control col-md-7 col-xs-12"> -->
                                             <select class="form-control" name="numero_dosis" id="numero_dosis" required>
-                                                <option selected>Selecciona una Opción</option>
+                                                <option value="" selected disabled>Selecciona una Opción</option>
+                                                <option value="1">1 Dosis</option>
                                                 <option value="2">2 Dosis</option>
                                                 <option value="3">3 Dosis</option>
                                             </select>
@@ -133,35 +134,35 @@
                                 <div class="col-md-6">
                                     <label class="control-label col-md-12 col-sm-3 col-xs-12" for="marca">Selecciona las marcas de tus dosis <span class="required">*</span></label>
                                     <div class="col-md-12 col-sm-12 col-xs-12 checkbox-group required">
-                                        <div class="form-check">
+                                        <div class="form-check" hidden id="Pfizer">
                                             <input class="form-check-input" type="checkbox" value="Pfizer-BioNTech" name="checkbox_marcas[]">
                                             <label class="form-check-label">Pfizer-BioNTech</label>
                                         </div>
-                                        <div class="form-check">
-                                            <input class="form-check-input" type="checkbox" value="Cansino" name="checkbox_marcas[]">
+                                        <div class="form-check" hidden id="Cansino">
+                                            <input class="form-check-input" type="checkbox"  value="Cansino" name="checkbox_marcas[]">
                                             <label class="form-check-label" for="flexCheckDefault">Cansino</label>
                                         </div>
-                                        <div class="form-check">
+                                        <div class="form-check" hidden id="COVAX">
                                             <input class="form-check-input" type="checkbox" value="COVAX" name="checkbox_marcas[]">
                                             <label class="form-check-label" for="flexCheckDefault">COVAX</label>
                                         </div>
-                                        <div class="form-check">
+                                        <div class="form-check" hidden id="AstraZeneca">
                                             <input class="form-check-input" type="checkbox" value="AstraZeneca" name="checkbox_marcas[]">
                                             <label class="form-check-label" for="flexCheckDefault">AstraZeneca</label>
                                         </div>
-                                        <div class="form-check">
+                                        <div class="form-check" hidden id="Sputnik">
                                             <input class="form-check-input" type="checkbox" value="Sputnik V" name="checkbox_marcas[]">
                                             <label class="form-check-label" for="flexCheckDefault">Sputnik V</label>
                                         </div>
-                                        <div class="form-check">
+                                        <div class="form-check" hidden id="Sinovac">
                                             <input class="form-check-input" type="checkbox" value="Sinovac" name="checkbox_marcas[]">
                                             <label class="form-check-label" for="flexCheckDefault">Sinovac</label>
                                         </div>
-                                        <div class="form-check">
-                                            <input class="form-check-input" type="checkbox" value="Janssen" name="checkbox_marcas[]">
+                                        <div class="form-check" hidden id="Janssen">
+                                            <input class="form-check-input" type="checkbox"  value="Janssen" name="checkbox_marcas[]">
                                             <label class="form-check-label" for="flexCheckDefault">Janssen</label>
                                         </div>
-                                        <div class="form-check">
+                                        <div class="form-check" hidden id="Moderna">
                                             <input class="form-check-input" type="checkbox" value="Moderna" name="checkbox_marcas[]">
                                             <label class="form-check-label" for="flexCheckDefault">Moderna</label>
                                         </div>
@@ -172,7 +173,7 @@
                                     <div class="col-md-12 col-sm-12 col-xs-12">
                                         <input type="file" accept="application/pdf" class="form-control" id="file_" name="file_" required>
                                     </div> <br>
-                                    <label class="text-danger">Formato PDF, 2 mb</label>
+                                    <label class="text-danger">Formato PDF, 2 MB</label>
                                 </div>
                             </div>
 
@@ -198,5 +199,33 @@
 
 </main>
 
-
+<script>
+     $(document).ready(function() {
+        $('#numero_dosis').on('change', function(){
+            if ($('option:selected').val() == 1) {
+                document.getElementById('Cansino').removeAttribute('hidden');
+                document.getElementById('Janssen').removeAttribute('hidden');
+                document.getElementById('Pfizer').setAttribute('hidden','');
+                document.getElementById('Sinovac').setAttribute('hidden','');
+                document.getElementById('COVAX').setAttribute('hidden','');
+                document.getElementById('Moderna').setAttribute('hidden','');
+                document.getElementById('AstraZeneca').setAttribute('hidden','');
+                document.getElementById('Sputnik').setAttribute('hidden','');
+                // $('#Cansino').css('display: block !important;');
+                // $('#Janssen').css('display: block !important;');
+            } else {
+                document.getElementById('Cansino').removeAttribute('hidden');
+                document.getElementById('Janssen').removeAttribute('hidden');
+                document.getElementById('Pfizer').removeAttribute('hidden');
+                document.getElementById('Sinovac').removeAttribute('hidden');
+                document.getElementById('COVAX').removeAttribute('hidden');
+                document.getElementById('Moderna').removeAttribute('hidden');
+                document.getElementById('AstraZeneca').removeAttribute('hidden');
+                document.getElementById('AstraZeneca').removeAttribute('hidden');
+                document.getElementById('Sputnik').removeAttribute('hidden');
+            }
+            console.log($('option:selected').val());
+        });
+     });
+</script>
 
