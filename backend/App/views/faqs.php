@@ -172,7 +172,7 @@
             <div class="row">
                 <div class="col-xl-10 col-lg-10 col-md-10 text-center mx-auto">
                     <div class="card card-plain mt-8 mb-4">
-                        <h2>FAQS</h2>
+                        <h2>FAQs</h2>
                     </div>
                     <div class="card card-body m-2 mb-6">
                         <ul class="list-group text-left mt-2">
@@ -222,17 +222,17 @@
                                 <h4><i class="fas fa-virus-slash"></i>&nbsp;&nbsp; ¿Qué hago si después de subir mi comprobante salgo positivo a COVID?</h4>
                                 
                                 <p>
-                                    Favor de comunicarlo a tu jefe inmediato con copia a mlvazquez@asofarma.com.mx y <br>
-                                    mx-serviciomedico@asofarma.com.mx  
+                                    Favor de comunicarlo a tu jefe inmediato con copia a mlvazquez@asofarma.com.mx, <br>
+                                    lgfonseca@asofarma.com.mx y csvilchis@asofarma.com.mx
                                 </p>
                             </li>
                             <li class="list-group-item borderless">
                                 <h4><i class="fas fa-id-badge"></i>&nbsp;&nbsp; ¿A quién doy aviso si debo cancelar mi asistencia a la CONAVE 2022?</h4>
                                 
-                                Favor de comunicarlo a tu jefe inmediato con copia a mlvazquez@asofarma.com.mx y <br>
-                                mx-serviciomedico@asofarma.com.mx  
+                                Favor de comunicarlo a tu jefe inmediato con copia a mlvazquez@asofarma.com.mx, <br>
+                                lgfonseca@asofarma.com.mx y csvilchis@asofarma.com.mx 
                             </li>
-                            
+                            <!-- mx-serviciomedico@asofarma.com.mx, -->
                         </ul>
                     </div>
                 </div>
