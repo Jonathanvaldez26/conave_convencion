@@ -181,7 +181,7 @@
                             <input type="hidden" id="user_" name="user_" value="<?=$_SESSION["utilerias_asistentes_id"]?>">
                         </div>
                         <div class="modal-footer">
-                            <button type="submit" class="btn bg-gradient-success" id="btn_upload" name="btn_upload">Aceptar</button>
+                            <button type="submit" id="btn-subir" class="btn bg-gradient-success" id="btn_upload" name="btn_upload">Aceptar</button>
                             <button type="button" class="btn bg-gradient-secondary" data-dismiss="modal">Cancelar</button>
                         </div>
                     </form>
@@ -202,6 +202,7 @@
 
 <script>
      $(document).ready(function() {
+        
         $('#numero_dosis').on('change', function(){
             if ($('option:selected').val() == 1) {
                 document.getElementById('Cansino').removeAttribute('hidden');
