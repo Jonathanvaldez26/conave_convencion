@@ -85,6 +85,8 @@ html;
           $("#form_prueba_covid").on("submit",function(event){
               event.preventDefault();
               
+                document.getElementById('btn_upload').setAttribute('disabled','');
+
                   var formData = new FormData(document.getElementById("form_prueba_covid"));
                   console.log(formData);
                   $.ajax({
