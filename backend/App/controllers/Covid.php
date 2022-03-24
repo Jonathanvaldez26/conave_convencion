@@ -136,9 +136,14 @@ html;
     $fecha_hoy = date('Y-m-d');
 
     foreach ($pruebas as $key => $prueba) {
-      if($prueba['status'] == 1){
+      if($prueba['status'] == 0){
         $status =<<<html
         <span class="badge badge-sm badge-secondary">En Espera de Validación</span>
+        
+html;
+      }elseif($prueba['status'] == 1){
+        $status =<<<html
+        <span class="badge badge-sm badge-danger">Se ha rechazado su prueba</span>
         
 html;
       }elseif ($prueba['status'] == 2)

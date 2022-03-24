@@ -428,6 +428,14 @@ echo $header;
                 </div>
             </nav>
 
+            <div class="fixed-bottom space-wa" >
+                <div class="m-5">
+                    <a href="https://api.whatsapp.com/send?phone=525573107925&text=Buen%20d%C3%ADa,%20te%20contacto%20de%20parte%20del%20Equipo%20Grupo%20LAHE%20%F0%9F%98%80">
+                        <span class="fa fa-whatsapp px-3 py-2-5 icon-wa bg-gradient-success"></span>
+                    </a>
+                </div>
+            </div>
+
             <div class="page-header min-vh-75">
                 <div class="container">
                     <div class="row">
