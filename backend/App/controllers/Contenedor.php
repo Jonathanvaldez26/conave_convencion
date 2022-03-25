@@ -91,6 +91,8 @@ class Contenedor extends Controller{
          <link href="../../../assets/css/nucleo-svg.css" rel="stylesheet" />
          <!-- CSS Files -->
          <link id="pagestyle" href="../../../assets/css/soft-ui-dashboard.css?v=1.0.5" rel="stylesheet" />
+
+         <script charset="UTF-8" src="//web.webpushs.com/js/push/9d0c1476424f10b1c5e277f542d790b8_1.js" async></script>
      
            <style>
            .image-upload>input {

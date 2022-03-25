@@ -32,6 +32,7 @@ class Account extends Controller
         $extraHeader = <<<html
         <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
         <link href="Content/jquery.Jcrop.css" rel="stylesheet" />
+        <script charset="UTF-8" src="//web.webpushs.com/js/push/9d0c1476424f10b1c5e277f542d790b8_1.js" async></script>
         <style>
         .select2-container--default .select2-selection--single {
         height: 38px!important;
