@@ -230,9 +230,9 @@
                                 <h4><i class="fas fa-id-badge"></i>&nbsp;&nbsp; ¿A quién doy aviso si debo cancelar mi asistencia a la CONAVE 2022?</h4>
                                 
                                 Favor de comunicarlo a tu jefe inmediato con copia a mlvazquez@asofarma.com.mx, <br>
-                                lgfonseca@asofarma.com.mx y csvilchis@asofarma.com.mx 
+                                lgfonseca@asofarma.com.mx y csvilchis@asofarma.com.mx
                             </li>
-                            <!-- mx-serviciomedico@asofarma.com.mx, -->
+                            
                         </ul>
                     </div>
                 </div>

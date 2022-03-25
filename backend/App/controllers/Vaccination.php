@@ -80,7 +80,8 @@ html;
 
           $("#form_vacunacion").on("submit",function(event){
               event.preventDefault();
-                document.getElementById('btn-subir').setAttribute('disabled','');;
+			  	document.getElementById('btn-subir').setAttribute('disabled','');
+              
                   var formData = new FormData(document.getElementById("form_vacunacion"));
                   for (var value of formData.values()) 
                   {
@@ -99,7 +100,7 @@ html;
                   success: function(respuesta){
                       if(respuesta == 'success'){
                          // $('#modal_payment_ticket').modal('toggle');
-                            
+                         
                           swal("¡Se ha guardado tu prueba correctamente!", "", "success").
                           then((value) => {
                               window.location.replace("/Vaccination/");

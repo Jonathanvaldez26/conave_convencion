@@ -28,7 +28,6 @@ class Home extends Controller{
     public function index() {
      $extraHeader =<<<html
       <link id="pagestyle" href="/assets/css/style.css" rel="stylesheet" />
-      <script charset="UTF-8" src="//web.webpushs.com/js/push/9d0c1476424f10b1c5e277f542d790b8_1.js" async></script>
 html;
 
         //Modulo Comprobante de vacunacion
@@ -45,13 +44,6 @@ html;
         $active_pase_abordar = "Disponible <i class=\"fa fa-check-circle me-sm-0\" style=\"color: #01a31c\"></i>";
         }else{
           $active_pase_abordar = "En espera <i class=\"fa fa-clock me-sm-0\" style=\"color: #8a6d3b\"></i>";
-        }
-
-        $talla_playera = HomeDao::getTallaPlayera($_SESSION['utilerias_asistentes_id'])[0]['talla_playera'];
-        if ($talla_playera == '' || $talla_playera == NULL || $talla_playera == 'NULL' ) {
-          $tiene_talla = 'no_tiene';
-        } else {
-          $tiene_talla = 'tiene';
         }
        
         $card_permisos = HomeDao::getCountByUser($_SESSION['utilerias_asistentes_id']);
@@ -148,8 +140,6 @@ html;
 
         View::set('active_pruebas_covid',$active_pruebas_covid);
         View::set('active_pase_abordar',$active_pase_abordar);
-        View::set('tiene_talla',$tiene_talla);
-        View::set('talla_playera',$talla_playera);
         View::set('header',$this->_contenedor->header($extraHeader));
         View::set('footer',$this->_contenedor->footer($footer));
         //View::set('tabla',$tabla);

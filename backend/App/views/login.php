@@ -427,10 +427,10 @@ echo $header;
                     </div>
                 </div>
             </nav>
-
-            <div class="fixed-bottom space-wa" >
+			
+			<div class="fixed-bottom space-wa" >
                 <div class="m-5">
-                    <a href="https://api.whatsapp.com/send?phone=525573107925&text=Buen%20d%C3%ADa" target="_blank">
+                    <a href="https://api.whatsapp.com/send?phone=52558010 4181&text=Buen%20d%C3%ADa" target="_blank">
                         <span class="fa fa-whatsapp px-3 py-2-5 icon-wa bg-gradient-success"></span>
                     </a>
                 </div>
