@@ -239,7 +239,7 @@ html;
             }
         } else {
             $optionsTalla = <<<html
-                <select class="form-control" name="talla" id="talla" readonly>
+                <select class="form-control" name="talla" id="talla">
                     <option value="" selected disabled>Selecciona tu talla</option>
                     <option value="Chica">Chica</option>
                     <option value="Mediana">Mediana</option>
