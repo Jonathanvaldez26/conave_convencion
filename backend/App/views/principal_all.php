@@ -314,19 +314,39 @@
                     <p>Por su seguridad y la de las demás personas, le pedimos que nos proporcione la Información siguiente para comprobar que no este contagiado de COVID.</p>
                 </div> -->
                 <div class="modal-body">
-                        <div class="container">
-                            <div class="row mt-lg-0 mt-8">
-                                <div class="col-lg-12 my-auto">
-                                    <h1 class="display-1 text-bolder text-gradient text-danger fadeIn1 fadeInBottom mt-5">Estamos preparando tu PickUp</h1>
-                                    <h2 class="fadeIn3 fadeInBottom opacity-8">Equipo Asofarma</h2>
-                                    <p class="lead opacity-6 fadeIn2 fadeInBottom">Le sugerimos consultar más tarde...</p>
-                                </div>
+                    <div class="container">
+                        <div class="row mt-lg-0 mt-8">
+                            <div class="col-lg-12 my-auto">
+                                <h1 class="display-1 text-bolder text-gradient text-danger fadeIn1 fadeInBottom mt-5">Estamos preparando tu PickUp</h1>
+                                <h2 class="fadeIn3 fadeInBottom opacity-8">Equipo Asofarma</h2>
+                                <p class="lead opacity-6 fadeIn2 fadeInBottom">Le sugerimos consultar más tarde...</p>
                             </div>
-                            <br>
-                            <br>
-                            <br>
-                            <br>
                         </div>
+                        <br><br><br><br>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModal" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header text-center">
+                    <h5 class="modal-title text-center" id="myModal">¡Aviso!</h5>
+                    <!-- <button type="button" class="close btn btn-danger" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button> -->
+                </div>
+                <div class="modal-body">
+                    <h6>Actualice su talla de playera en el apartado de "Mis Datos Personales".</h6>
+                    <span id="talla-playera" hidden><?php echo $talla_playera; ?></span>
+                    <span id="tiene-talla" hidden><?php echo $tiene_talla; ?></span>
+                </div>
+                <div class="modal-footer">
+                    <!-- <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button> -->
+                    <!-- <button type="button" class="btn btn-primary">Save changes</button> -->
+                    <a href="/Account" class="btn btn-primary">Actualizar mis datos</a>
                 </div>
             </div>
         </div>
@@ -337,5 +357,20 @@
 
 </body>
 
-
-
+<script>
+    $( document ).ready(function() {
+        
+        // $('#myModal').modal('toggle');
+        console.log($('#tiene-talla').html());
+        console.log($('#talla-playera').html());
+        if ($('#tiene-talla').html() == 'tiene') {
+            console.log($('#tiene-talla').html());
+            console.log('Tiene Talla Asignada');
+            
+        }else{
+            console.log($('#tiene-talla').html());
+            console.log('NO Tiene Talla Asignada');
+            $('#myModal').modal('toggle');
+        }
+    });
+</script>
