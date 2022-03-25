@@ -45,6 +45,13 @@ html;
         }else{
           $active_pase_abordar = "En espera <i class=\"fa fa-clock me-sm-0\" style=\"color: #8a6d3b\"></i>";
         }
+
+        $talla_playera = HomeDao::getTallaPlayera($_SESSION['utilerias_asistentes_id'])[0]['talla_playera'];
+        if ($talla_playera == '' || $talla_playera == NULL || $talla_playera == 'NULL' ) {
+          $tiene_talla = 'no_tiene';
+        } else {
+          $tiene_talla = 'tiene';
+        }
        
         $card_permisos = HomeDao::getCountByUser($_SESSION['utilerias_asistentes_id']);
 
@@ -140,6 +147,8 @@ html;
 
         View::set('active_pruebas_covid',$active_pruebas_covid);
         View::set('active_pase_abordar',$active_pase_abordar);
+        View::set('tiene_talla',$tiene_talla);
+        View::set('talla_playera',$talla_playera);
         View::set('header',$this->_contenedor->header($extraHeader));
         View::set('footer',$this->_contenedor->footer($footer));
         //View::set('tabla',$tabla);

@@ -275,7 +275,13 @@
                                     <input id="actividad" name="actividad" maxlength="49" class="form-control" type="text" placeholder="actividad" onfocus="focused(this)" onfocusout="defocused(this)" value="<?= $userData['actividad'] ?>" readonly>
                                 </div>
 
-
+                                <div class="col-md-4 align-self-center">
+                                    <label class="form-label mt-4">Talla Playera *</label>
+                                    <!-- <input id="talla" name="talla" maxlength="49" class="form-control" type="text" placeholder="talla" onfocus="focused(this)" onfocusout="defocused(this)" value="<?= $userData['talla_playera'] ?>" readonly> -->
+                                    
+                                        <?php echo $optionsTalla; ?>
+                                    
+                                </div>
                             </div>
 
                         <div class="row">

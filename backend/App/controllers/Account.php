@@ -222,6 +222,31 @@ html;
                
 html;
         }
+        if ($userData['talla_playera'] != '') {
+            if ($userData['talla_playera'] == "Chica") {
+                $optionsTalla = <<<html
+                    <input  class="form-control" value="Chica" selected disabled></input>
+html;
+            } else if ($userData['talla_playera'] == "Mediana") {
+                $optionsTalla = <<<html
+                    <input class="form-control" value="Mediana" selected disabled></input>
+html;
+            } else {
+                $optionsTalla = <<<html
+                    <input class="form-control" value="Grande" selected disabled></input>
+html;
+            }
+        } else {
+            $optionsTalla = <<<html
+                <select class="form-control" name="talla" id="talla" readonly>
+                    <option value="" selected disabled>Selecciona tu talla</option>
+                    <option value="Chica">Chica</option>
+                    <option value="Mediana">Mediana</option>
+                    <option value="Grande">Grande</option>
+                </select>
+html;
+        }
+
         if ($userData['genero'] != '') {
             if ($userData['genero'] == "Hombre") {
                 $optionsGenero = <<<html
@@ -407,7 +432,7 @@ html;
             $email = $_POST['email'];
             $telefono = $_POST['telefono'];
             //   $linea_principal = $_POST['linea_principal'];
-            //   $talla = $_POST['talla'];
+            $talla = $_POST['talla'];
             //   $actividad = $_POST['actividad'];
 
             $restricciones_alimenticias = $_POST['restricciones_alimenticias'];
@@ -439,7 +464,7 @@ html;
             $documento->_email = $email;
             $documento->_telefono = $telefono;
             //$documento->_linea_principal = $linea_principal;
-            //$documento->_talla = $talla;
+            $documento->_talla = $talla;
             //$documento->_actividad = $actividad;
             // $documento->_alergias = $alergias;
             $documento->_restricciones_alimenticias = $restricciones_alimenticias;
