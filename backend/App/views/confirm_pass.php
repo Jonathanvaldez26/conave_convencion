@@ -89,7 +89,7 @@ echo $header;
                         }else{
                             swal("¡Hubo un error al registrarte!", "", "error").
                             then((value) => {
-                                window.location.replace("/Login")
+                                window.location.replace("/Login");
                             });
                         }
 

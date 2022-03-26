@@ -8,6 +8,8 @@ use \App\models\Home AS HomeDao;
 use \App\models\Covid AS CovidDao;
 use \App\models\Vaccination AS VaccinationDao;
 use \App\models\PasesAbordar AS PasesAbordarDao;
+use \App\models\Notificaciones AS NotificacionesDao;
+
 
 
 class Home extends Controller{
@@ -32,11 +34,12 @@ html;
 
         //Modulo Comprobante de vacunacion
         $comprobante_vacunacion = VaccinationDao::getCountHome($_SESSION['utilerias_asistentes_id']);
-        if($comprobante_vacunacion['count'] >= 1 ){
-        $active_pruebas_covid = "Disponible <i class=\"fa fa-check-circle me-sm-0\" style=\"color: #01a31c\"></i>";
-        }else{
+        //descomentar esto cuando nos diga janeth
+        // if($comprobante_vacunacion['count'] >= 1 ){
+        // $active_pruebas_covid = "Disponible <i class=\"fa fa-check-circle me-sm-0\" style=\"color: #01a31c\"></i>";
+        // }else{
           $active_pruebas_covid = "En espera <i class=\"fa fa-clock me-sm-0\" style=\"color: #8a6d3b\"></i>";
-        }
+        //}
 
         //modulo pases de abordar
         $pruebas_covid = CovidDao::getCount($_SESSION['utilerias_asistentes_id']);
@@ -236,6 +239,12 @@ html;
         View::set('header',$extraHeader);
         View::set('footer',$extraFooter);
         View::render("code");
+    }
+
+    function getNotificaciones(){
+      $id_asis = $_POST['id'];
+      $notificaciones = NotificacionesDao::getNotificaciones($id_asis);
+      echo json_encode($notificaciones);
     }
 
 }
