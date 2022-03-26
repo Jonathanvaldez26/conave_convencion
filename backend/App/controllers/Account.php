@@ -226,24 +226,31 @@ html;
         if ($userData['talla_playera'] != '') {
             if ($userData['talla_playera'] == "Chica") {
                 $optionsTalla = <<<html
-                    <input  class="form-control" value="Chica" selected disabled></input>
+                    <input  class="form-control" value="CH" selected disabled></input>
 html;
             } else if ($userData['talla_playera'] == "Mediana") {
                 $optionsTalla = <<<html
-                    <input class="form-control" value="Mediana" selected disabled></input>
+                    <input class="form-control" value="M" selected disabled></input>
+html;
+            } else if ($userData['talla_playera'] == "Mediana") {
+                $optionsTalla = <<<html
+                    <input class="form-control" value="M" selected disabled></input>
 html;
             } else {
                 $optionsTalla = <<<html
-                    <input class="form-control" value="Grande" selected disabled></input>
+                    <input class="form-control" value="G" selected disabled></input>
 html;
             }
         } else {
             $optionsTalla = <<<html
                 <select class="form-control" name="talla" id="talla">
                     <option value="" selected disabled>Selecciona tu talla</option>
-                    <option value="Chica">Chica</option>
-                    <option value="Mediana">Mediana</option>
-                    <option value="Grande">Grande</option>
+                    <option value="Chica">CH</option>
+                    <option value="Mediana">M</option>
+                    <option value="Grande">G</option>
+                    <option value="X">X</option>
+                    <option value="XL">XL</option>
+                    <option value="XXL">XXL</option>
                 </select>
 html;
         }

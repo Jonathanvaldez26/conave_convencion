@@ -329,14 +329,14 @@
         </div>
     </div>
 
-    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModal" aria-hidden="true">
+    <!-- <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModal" aria-hidden="true">
         <div class="modal-dialog" role="document">
             <div class="modal-content">
                 <div class="modal-header text-center">
                     <h5 class="modal-title text-center" id="myModal">¡Aviso!</h5>
-                    <!-- <button type="button" class="close btn btn-danger" data-dismiss="modal" aria-label="Close">
+                    <button type="button" class="close btn btn-danger" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
-                    </button> -->
+                    </button>
                 </div>
                 <div class="modal-body">
                     <h6>Actualice su talla de playera en el apartado de "Mis Datos Personales".</h6>
@@ -344,13 +344,13 @@
                     <span id="tiene-talla" hidden><?php echo $tiene_talla; ?></span>
                 </div>
                 <div class="modal-footer">
-                    <!-- <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button> -->
-                    <!-- <button type="button" class="btn btn-primary">Save changes</button> -->
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Save changes</button>
                     <a href="/Account" class="btn btn-primary">Actualizar mis datos</a>
                 </div>
             </div>
         </div>
-    </div>
+    </div> -->
 
     <?php echo $footer; ?>
 </main>
