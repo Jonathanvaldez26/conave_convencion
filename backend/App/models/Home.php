@@ -25,4 +25,14 @@ sql;
         return $mysqli->queryOne($query);
     }
 
+    public static function getTallaPlayera($id){
+      $mysqli = Database::getInstance();
+      $query=<<<sql
+      SELECT talla_playera from utilerias_asistentes ua 
+      INNER JOIN registros_acceso ra
+      ON ua.id_registro_acceso = ra.id_registro_acceso
+      WHERE utilerias_asistentes_id = '$id'
+sql;
+      return $mysqli->queryAll($query);
+    }
 }

@@ -72,6 +72,7 @@ sql;
       ':alergia_medicamento_cual' =>$user->_alergia_medicamento_cual,
       ':restricciones_alimenticias' =>$user->_restricciones_alimenticias,
       ':restricciones_alimenticias_cual' =>$user->_restricciones_alimenticias_cual,
+      // ':talla' =>$user->_talla,
       ':email'=>$user->_email
       
     );
