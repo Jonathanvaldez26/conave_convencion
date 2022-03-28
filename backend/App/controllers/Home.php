@@ -254,7 +254,19 @@ html;
     function getNotificaciones(){
       $id_asis = $_POST['id'];
       $notificaciones = NotificacionesDao::getNotificaciones($id_asis);
+      // $numNotiSinLeer = NotificacionesDao::numNotiSinLeer($id_asis);
       echo json_encode($notificaciones);
+    }
+
+    function leerNotif(){
+      $id_notif = $_POST['id'];
+      $noficacionLeida = NotificacionesDao::updateStatusNotif($id_notif);
+
+      if($noficacionLeida){
+        echo 'success';
+      }else{
+        echo 'fail';
+      }
     }
 
 }

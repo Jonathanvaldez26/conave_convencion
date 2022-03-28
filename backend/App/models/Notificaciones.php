@@ -16,4 +16,13 @@ sql;
 
         return $mysqli->queryAll($query);
     }
+
+    public static function updateStatusNotif($id){
+        $mysqli = Database::getInstance(true);
+        $query=<<<sql
+        UPDATE notif SET status = 1  WHERE id = $id
+sql;
+       
+        return $mysqli->update($query);
+        }
 }
