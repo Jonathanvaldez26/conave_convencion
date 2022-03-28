@@ -36918,10 +36918,20 @@ svg.leaflet-image-layer.leaflet-interactive path {
   color: white;
 }
 
-.space-wa{
-  z-index: 200;
-  color: white;
-  left: auto;
+@media(min-width: 992px){
+  .space-wa{
+    z-index: 200;
+    color: white;
+    left: auto;
+  }
+}
+@media(max-width: 991.98px){
+  .space-wa{
+    z-index: 200;
+    color: white;
+    left: auto;
+    display:none;
+  }
 }
 
 .up-card:hover{
