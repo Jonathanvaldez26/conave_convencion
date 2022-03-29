@@ -36909,7 +36909,6 @@ svg.leaflet-image-layer.leaflet-interactive path {
   min-width: 100%;
 }
 
-
 .icon-wa{
   font-size: xx-large;
   background-color: green;
@@ -36947,5 +36946,36 @@ svg.leaflet-image-layer.leaflet-interactive path {
 .py-2-5 {
   padding-top: 0.7rem !important;
   padding-bottom: 0.7rem !important;
+}
+
+.scroll-notif{
+  overflow-y: auto;
+  max-height: 25rem;
+}
+
+.scroll-notif::-webkit-scrollbar {
+  -webkit-appearance: none;
+}
+
+.scroll-notif::-webkit-scrollbar:vertical {
+  width:10px;
+}
+
+.scroll-notif::-webkit-scrollbar:hover{
+  width: px;
+}
+
+.scroll-notif::-webkit-scrollbar:horizontal {
+  height: 10px;
+}
+
+.scroll-notif::-webkit-scrollbar-thumb {
+  background-color: #ddd;
+  border-radius: 20px;
+  border: 2px solid #f1f2f3;
+}
+
+.scroll-notif::-webkit-scrollbar-track {
+  border-radius: 10px;  
 }
 /*# sourceMappingURL=dashboard-pro.css.map */
