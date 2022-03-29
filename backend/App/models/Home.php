@@ -35,4 +35,21 @@ sql;
 sql;
       return $mysqli->queryAll($query);
     }
+
+    public static function getItinerarioAsistente($id){
+      $mysqli = Database::getInstance();
+      $query=<<<sql
+      SELECT i.id_itinerario, ce.nombre as aerolinea_origen, cee.nombre as aerolinea_destino, i.fecha_salida, i.hora_salida, i.fecha_regreso, i.hora_regreso, a.aeropuerto as aeropuerto_salida, aa.aeropuerto as aeropuerto_regreso, i.nota, concat(ra.nombre, " ", ra.segundo_nombre, " ", ra.apellido_paterno, " ", ra.apellido_materno) as nombre 
+      FROM itinerario i 
+      INNER JOIN catalogo_aerolinea ce on ce.id_aerolinea = i.aerolinea_origen 
+      INNER JOIN catalogo_aerolinea cee on cee.id_aerolinea = i.aerolinea_destino 
+      INNER JOIN aeropuertos a on a.id_aeropuerto = i.aeropuerto_salida 
+      INNER JOIN aeropuertos aa on aa.id_aeropuerto = i.aeropuerto_regreso 
+      INNER JOIN utilerias_asistentes ua on ua.utilerias_asistentes_id = i.utilerias_asistentes_id 
+      INNER JOIN registros_acceso ra on ra.id_registro_acceso = ua.id_registro_acceso 
+      WHERE ua.utilerias_asistentes_id = $id
+      
+sql;
+      return $mysqli->queryAll($query);
+    }
 }

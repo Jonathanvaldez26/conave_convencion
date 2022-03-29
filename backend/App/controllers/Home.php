@@ -75,6 +75,9 @@ html;
           //  }
         //}
 
+   
+
+
         $footer =<<<html
         <!-- jQuery -->
 
@@ -267,6 +270,14 @@ html;
       }else{
         echo 'fail';
       }
+    }
+
+    function getItinerario(){
+      $id_asis = $_POST['id'];
+      $asistenteItinerario = HomeDao::getItinerarioAsistente($id_asis)[0];
+      echo json_encode($asistenteItinerario);
+      
+      
     }
 
 }

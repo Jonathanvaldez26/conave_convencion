@@ -1,7 +1,7 @@
 <?php echo $header; ?>
 <link id="pagestyle" href="/assets/css/soft-ui-dashboard.css?v=1.0.5" rel="stylesheet" />
 <style>
-    .badge{        
+    .badge {
         height: 17px;
         width: 17px;
         border-radius: 50%;
@@ -12,7 +12,7 @@
         padding: 3px;
         background-color: red;
         color: white;
-        
+
     }
 </style>
 <main class="main-content position-relative max-height-vh-100 h-100 border-radius-lg ">
@@ -65,37 +65,37 @@
                 </ul>
             </div>
 
-           
-			<li class="nav-item dropdown pe-2 d-flex align-items-center">
+
+            <li class="nav-item dropdown pe-2 d-flex align-items-center">
                 <a href="javascript:;" class="nav-link text-body p-0" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
                     <i class="fa fa-bell cursor-pointer" style="margin-left: 23px;"></i>
                     <span class="badge text-center" id="num_noti_sin_leer"></span>
 
-      
+
                 </a>
                 <ul class="dropdown-menu dropdown-menu-end px-2 py-3 me-sm-n4" aria-labelledby="dropdownMenuButton">
                     <h5><b>Notificaciones de Sistema</b></h5>
                     <div id="cont-notif">
-                        
-                        
+
+
                     </div>
 
 
-                 
+
                 </ul>
             </li>
             <li class="nav-item d-flex align-items-center">
-                        <a href="/Account" class="nav-link text-body font-weight-bold mx-lg-4 mx-0  px-0">
-                            <i class="fa fa-user me-sm-0"></i>
-                            <span class="d-sm-inline d-none">Mi Cuenta</span>
-                        </a>
-                    </li>
+                <a href="/Account" class="nav-link text-body font-weight-bold mx-lg-4 mx-0  px-0">
+                    <i class="fa fa-user me-sm-0"></i>
+                    <span class="d-sm-inline d-none">Mi Cuenta</span>
+                </a>
+            </li>
             <li class="nav-item d-flex align-items-center">
-                        <a href="/Login/cerrarSession" class="nav-link text-body font-weight-bold px-0">
-                            <i class="fa fa-power-off me-sm-1"></i>
-                            <span class="d-sm-inline d-none">Logout</span>
-                        </a>
-                    </li>
+                <a href="/Login/cerrarSession" class="nav-link text-body font-weight-bold px-0">
+                    <i class="fa fa-power-off me-sm-1"></i>
+                    <span class="d-sm-inline d-none">Logout</span>
+                </a>
+            </li>
         </div>
     </nav>
     <!-- End Navbar -->
@@ -104,7 +104,7 @@
             <div class="col-xl-7">
                 <div class="card">
                     <input type="hidden" id="id_asistente" class="form-control" value="<?= $_SESSION['utilerias_asistentes_id'] ?>">
-                    <div  id="days-desk" class="card-header d-flex pb-0 p-3">
+                    <div id="days-desk" class="card-header d-flex pb-0 p-3">
                         <h6 id="titulo-program" class="my-auto">Programa</h6>
                         <div class="nav-wrapper position-relative ms-auto w-50">
                             <ul class="nav nav-pills nav-fill p-1 flex-row" role="tablist">
@@ -128,7 +128,8 @@
                                         Sábado
                                     </a>
                                 </li>
-                                <div class="moving-tab position-absolute nav-link" style="padding: 0px; transition: all 0.5s ease 0s; transform: translate3d(0px, 0px, 0px); "><a class="nav-link mb-0 px-0 py-1 active" data-bs-toggle="tab" href="#cam1" role="tab" aria-controls="cam1" aria-selected="true">-</a></div></ul>
+                                <div class="moving-tab position-absolute nav-link" style="padding: 0px; transition: all 0.5s ease 0s; transform: translate3d(0px, 0px, 0px); "><a class="nav-link mb-0 px-0 py-1 active" data-bs-toggle="tab" href="#cam1" role="tab" aria-controls="cam1" aria-selected="true">-</a></div>
+                            </ul>
                         </div>
                         <div class="dropdown pt-2">
                             <a href="javascript:;" class="text-secondary ps-4" id="dropdownCam" data-bs-toggle="dropdown" aria-expanded="false">
@@ -145,7 +146,7 @@
                             </ul>
                         </div>
                     </div>
-                    
+
                     <div id="days-movil" class="card-header pb-0 p-3">
                         <h6 id="titulo-program" class="">Programa</h6>
                         <div class="nav-wrapper position-relative ms-auto">
@@ -185,22 +186,22 @@
                                     </ul>
                                 </div>
                             </ul>
-                            
+
                         </div>
-                        
+
                     </div>
                     <div class="card-body p-3 mt-2">
                         <div class="tab-content" id="v-pills-tabContent">
-                            <div class="tab-pane fade show position-relative active h-programa-movil programa-1 border-radius-lg" id="cam1" role="tabpanel" aria-labelledby="cam1" >
+                            <div class="tab-pane fade show position-relative active h-programa-movil programa-1 border-radius-lg" id="cam1" role="tabpanel" aria-labelledby="cam1">
 
                             </div>
-                            <div class="tab-pane fade position-relative h-programa-movil programa-2 border-radius-lg" id="cam2" role="tabpanel" aria-labelledby="cam2" >
+                            <div class="tab-pane fade position-relative h-programa-movil programa-2 border-radius-lg" id="cam2" role="tabpanel" aria-labelledby="cam2">
 
                             </div>
-                            <div class="tab-pane fade position-relative h-programa-movil programa-3 border-radius-lg" id="cam3" role="tabpanel" aria-labelledby="cam3" >
+                            <div class="tab-pane fade position-relative h-programa-movil programa-3 border-radius-lg" id="cam3" role="tabpanel" aria-labelledby="cam3">
 
                             </div>
-                            <div class="tab-pane fade position-relative h-programa-movil programa-4 border-radius-lg" id="cam4" role="tabpanel" aria-labelledby="cam3" >
+                            <div class="tab-pane fade position-relative h-programa-movil programa-4 border-radius-lg" id="cam4" role="tabpanel" aria-labelledby="cam3">
 
                             </div>
                         </div>
@@ -227,11 +228,11 @@
                     </div>
                 </div>
                 <div class="row mt-md-4 mt-0">
-                    
-                    <div class="col-md-6 mt-md-0 mt-4 ">
+
+                    <div class="col-md-6 mb-4 mt-md-0 mt-4 ">
                         <a href="/Account/">
                             <div class="card card-link" style="display: block;">
-                                
+
                                 <div class="card-body text-center">
                                     <div class="col-12 text-end">
                                         <img class="w-30" src="../../assets/img/small-logos/iCONOS - Datos personales.png">
@@ -239,12 +240,12 @@
                                     <h6 class="mb-0 font-weight-bolder">Datos Personales</h6>
                                     <p class="opacity-8 mb-0 text-sm">Disponible <i class="fa fa-check-circle me-sm-0" style="color: #01a31c"></i></p>
                                 </div>
-                            
+
                             </div>
-                        </a>  
+                        </a>
                     </div>
-                
-                    <div class="col-md-6 mt-md-0 mt-4">
+
+                    <div class="col-md-6 mb-4 mt-md-0 mt-4">
                         <div class="card card-link">
                             <a href="/Vaccination/">
                                 <div class="card-body text-center">
@@ -257,9 +258,9 @@
                             </a>
                         </div>
                     </div>
-                </div>
-                <div class="row mt-4">
-                    <div class="col-md-6">
+                <!-- </div> -->
+                <!-- <div class="row mt-4"> -->
+                    <div class="col-md-6 mb-4">
                         <div class="card card-link">
                             <a href="/Covid/">
                                 <div class="card-body text-center">
@@ -267,12 +268,12 @@
                                         <img class="w-30" src="../../assets/img/small-logos/iCONOS - Prueba Covid.png">
                                     </div>
                                     <h6 class="mb-0 font-weight-bolder">Mis Pruebas Covid</h6>
-                                    <p class="opacity-8 mb-0 text-sm"><?php echo $active_pruebas_covid;?></p>
+                                    <p class="opacity-8 mb-0 text-sm"><?php echo $active_pruebas_covid; ?></p>
                                 </div>
                             </a>
                         </div>
                     </div>
-                    <div class="col-md-6 mt-md-0 mt-4">
+                    <div class="col-md-6 mb-4 mt-md-0 mt-4">
                         <div class="card card-link">
                             <a href="/Passes/">
                                 <div class="card-body text-center">
@@ -285,9 +286,22 @@
                             </a>
                         </div>
                     </div>
-                </div>
-                <div class="row mt-4">
-                    <div class="col-md-6">
+                <!-- </div>
+                <div class="row mt-4"> -->
+                    <div class="col-md-6 mb-4 mt-md-0 mt-4" id="cont-itinerario">
+                        <div class="card card-link">
+                        <a type="button" data-toggle="modal" data-target="#ver-itinerario" class="btn-itinerario">
+                                <div class="card-body text-center">
+                                    <div class="col-12 text-end">
+                                        <img class="w-30" src="../../assets/img/small-logos/iCONOS - itinerario.png">
+                                    </div>
+                                    <h6 class="mb-0 font-weight-bolder">Itinerario</h6>
+                                    <p class="opacity-8 mb-0 text-sm">Disponible <i class="fa fa-check-circle me-sm-0" style="color: #01a31c"></i></p>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-md-6 mb-4">
                         <div class="card card-link">
                             <a href="/VirtualTicket/">
                                 <div class="card-body text-center">
@@ -300,7 +314,10 @@
                             </a>
                         </div>
                     </div>
-                    <div class="col-md-6 mt-md-0 mt-4">
+
+                <!-- </div>
+                <div class="row mt-4"> -->
+                    <div class="col-md-6 mb-4 mt-md-0 mt-4">
                         <div class="card card-link">
                             <a href="/Dinners/">
                                 <div class="card-body text-center">
@@ -313,9 +330,7 @@
                             </a>
                         </div>
                     </div>
-                </div>
-                <div class="row mt-4">
-                    <div class="col-md-6">
+                    <div class="col-md-6 mb-4">
                         <a type="button" data-toggle="modal" data-target="#ver-pickup">
                             <div class="card card-link">
                                 <div class="card-body text-center">
@@ -328,7 +343,12 @@
                             </div>
                         </a>
                     </div>
-                    <div class="col-md-6 mt-md-0 mt-4">
+
+
+                <!-- </div>
+
+                <div class="row mt-4"> -->
+                    <div class="col-md-6 mb-4 mt-md-0 mt-4">
                         <a href="/News/">
                             <div class="card card-link">
                                 <div class="card-body text-center">
@@ -341,7 +361,6 @@
                             </div>
                         </a>
                     </div>
-
                 </div>
             </div>
         </div>
@@ -354,32 +373,29 @@
                 <div class="modal-header">
                     <h5 class="modal-title" id="exampleModalLabel">PICKUP Convención 2022</h5>
                     <span type="button" class="btn bg-gradient-danger" data-dismiss="modal" aria-label="Close">
-                            X
-                        </span>
+                        X
+                    </span>
                 </div>
                 <!-- <div class="modal-header">
                     <p>Por su seguridad y la de las demás personas, le pedimos que nos proporcione la Información siguiente para comprobar que no este contagiado de COVID.</p>
                 </div> -->
                 <div class="modal-body">
-                        <div class="container">
-                            <div class="row mt-lg-0 mt-8">
-                                <div class="col-lg-12 my-auto">
-                                    <h1 class="display-1 text-bolder text-gradient text-danger fadeIn1 fadeInBottom mt-5">Estamos preparando tu PickUp</h1>
-                                    <h2 class="fadeIn3 fadeInBottom opacity-8">Equipo Asofarma</h2>
-                                    <p class="lead opacity-6 fadeIn2 fadeInBottom">Le sugerimos consultar más tarde...</p>
-                                </div>
+                    <div class="container">
+                        <div class="row mt-lg-0 mt-8">
+                            <div class="col-lg-12 my-auto">
+                                <h1 class="display-1 text-bolder text-gradient text-danger fadeIn1 fadeInBottom mt-5">Estamos preparando tu PickUp</h1>
+                                <h2 class="fadeIn3 fadeInBottom opacity-8">Equipo Asofarma</h2>
+                                <p class="lead opacity-6 fadeIn2 fadeInBottom">Le sugerimos consultar más tarde...</p>
                             </div>
-                            <br>
-                            <br>
-                            <br>
-                            <br>
                         </div>
+                        <br><br><br><br>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
-	
-	<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModal" aria-hidden="true">
+
+    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModal" aria-hidden="true">
         <div class="modal-dialog" role="document">
             <div class="modal-content">
                 <div class="modal-header text-center">
@@ -402,6 +418,159 @@
         </div>
     </div>
 
+    <div class="modal fade" id="ver-itinerario" tabindex="-1" role="dialog" aria-labelledby="ver-comprobante" aria-hidden="true">
+        <div class="modal-dialog modal-lg  modal-dialog-scrollable" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Itinerario Convención 2022</h5>
+                    <span type="button" class="btn bg-gradient-danger" data-dismiss="modal" aria-label="Close">
+                        X
+                    </span>
+                </div>
+                <!-- <div class="modal-header">
+                    <p>Por su seguridad y la de las demás personas, le pedimos que nos proporcione la Información siguiente para comprobar que no este contagiado de COVID.</p>
+                </div> -->
+                <div class="modal-body">
+                    <div class="card">
+                        <div class="card-body">
+                            <!-- <div class="form-group row"> -->
+                            <div class="row form-group">
+                                <div class="form-group col-md-12">
+                                    <label class="control-label col-md-12 col-sm-1 col-xs-12" for="id_asistente">Nombre<span class="required"></span></label>
+                                    <div class="col-md-12 col-sm-12 col-xs-12">
+                                        <!-- <input type="text" name="nombre_asistente" id="nombre_asistente" class="form-control form-control-plaintext col-md-7 col-xs-12" > -->
+                                        <label for="" id="nombre_asistente"></label>
+
+                                    </div>
+                                    <span id="availability_"></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+
+                    <div class="card mt-3">
+                        <div class="card-body">
+                            <div class="row">
+                                <div class="col-12">
+                                    <h5 class="text-center">Rumbo a la Convención</h5>
+                                </div>
+                                <hr>
+                            </div>
+                            <div class="row form-group">
+                                <div class="form-group col-md-6">
+                                    <label class="control-label col-md-12 col-sm-1 col-xs-12" for="aerolinea_origen">Origen de la aerolinea (Ida)<span class="required"></span></label>
+                                    <div class="col-md-12 col-sm-12 col-xs-12">
+                                        <!-- <input type="text" name="aerolinea_origen" id="aerolinea_origen" class="form-control form-control-plaintext col-md-7 col-xs-12" > -->
+                                        <label for="" id="aerolinea_origen"></label>
+
+                                    </div>
+                                    <span id="availability_"></span>
+                                </div>
+                                <div class="col-12 col-lg-6">
+                                    <label class="form-label">Fecha de salida del vuelo </label>
+                                    <div class="input-group">
+                                        <!-- <input id="fecha_salida" name="fecha_salida" minlength="6" maxlength="8" class="form-control form-control-plaintext" type="date" placeholder="00/00/0000" onfocus="focused(this)" onfocusout="defocused(this)" style="text-transform:uppercase;" > -->
+                                        <label for="" id="fecha_salida"></label>
+                                    </div>
+                                </div>
+                                <div class="col-12 col-lg-6">
+                                    <label class="form-label">Hora de salida del vuelo </label>
+                                    <div class="input-group">
+                                        <!-- <input id="hora_salida" name="hora_salida" maxlength="29" class="form-control form-control-plaintext" type="time" placeholder="hora llegada" required="" style="text-transform:uppercase;" > -->
+                                        <label for="" id="hora_salida"></label>
+                                    </div>
+                                </div>
+                                <div class="col-12 col-lg-12">
+                                    <label class="form-label">Aeropuerto de Salida</label>
+                                    <div class="col-md-12 col-sm-12 col-xs-12">
+                                        <!-- <input type="text" name="aeropuerto_salida" id="aeropuerto_salida" class="form-control form-control-plaintext col-md-7 col-xs-12" > -->
+                                        <label for="" id="aeropuerto_salida"></label>
+
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card mt-3">
+                        <div class="card-body">
+                            <div class="row">
+                                <div class="col-12">
+                                    <h5 class="text-center">Regreso a casa</h5>
+                                </div>
+                                <hr>
+                            </div>
+                            <div class="row form-group">
+
+
+                                <div class="form-group col-md-6">
+                                    <label class="control-label col-md-12 col-sm-1 col-xs-12" for="aerolinea_destino">Origen de la aerolinea (Regreso) <span class="required"></span></label>
+                                    <div class="col-md-12 col-sm-12 col-xs-12">
+                                        <!-- <input type="text" name="aerolinea_destino" id="aerolinea_destino" class="form-control form-control-plaintext col-md-7 col-xs-12" > -->
+                                        <label for="" id="aerolinea_destino"></label>
+                                        <!-- <select class="form-control form-control-plaintext" name="aerolinea_destino" id="aerolinea_destino" required>
+                                                    <option selected disabled>Seleccione una Opción</option>
+                                                    <?php //echo $aerolineas; 
+                                                    ?>
+                                                </select> -->
+                                    </div>
+                                    <span id="availability_"></span>
+                                </div>
+
+
+                                <div class="col-12 col-lg-6">
+                                    <label class="form-label">Fecha de regreso del vuelo</label>
+                                    <div class="input-group">
+                                        <!-- <input id="fecha_regreso" name="fecha_regreso" minlength="6" maxlength="8" class="form-control form-control-plaintext" type="date" placeholder="00/00/0000" onfocus="focused(this)" onfocusout="defocused(this)" style="text-transform:uppercase;" > -->
+                                        <label for="" id="fecha_regreso"></label>
+                                    </div>
+                                </div>
+                                <div class="col-12 col-lg-6">
+                                    <label class="form-label">Hora de regreso del vuelo</label>
+                                    <div class="input-group">
+                                        <!-- <input id="hora_regreso" name="hora_regreso" maxlength="29" class="form-control form-control-plaintext" type="time" placeholder="hora regreso" required="" style="text-transform:uppercase;" > -->
+                                        <label for="" id="hora_regreso"></label>
+                                    </div>
+                                </div>
+                                <div class="col-12 col-lg-12">
+                                    <label class="form-label">Aeropuerto de Regreso </label>
+                                    <div class="col-md-12 col-sm-12 col-xs-12">
+                                        <!-- <input type="text" name="aeropuerto_regreso" id="aeropuerto_regreso" class="form-control form-control-plaintext col-md-7 col-xs-12" > -->
+                                        <label for="" id="aeropuerto_regreso"></label>
+
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card mt-3">
+                        <div class="card-body">
+                            <!-- <div class="form-group row"> -->
+                            <div class="row form-group">
+
+
+                                <div class="col-12 col-lg-12">
+                                    <label class="form-label">Notas </label>
+                                    <div class="input-group">
+                                        <!-- <textarea id="nota_itinerario" name="nota_itinerario" maxlength="1000" class="form-control form-control-plaintext" placeholder="Añade Alguna Nota de Importancia" ></textarea> -->
+                                        <label for="" id="nota_itinerario"></label>
+                                    </div>
+                                </div>
+                                <input type="hidden" id="user_" name="user_" value="<?= $_SESSION["utilerias_administradores_id"] ?>">
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <?php echo $footer; ?>
 </main>
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.17.1/moment.min.js"></script>
@@ -412,13 +581,14 @@
         var tope = 0;
         var intervalo;
         var id_asis = $("#id_asistente").val();
-        
+
         notificaciones(id_asis);
         intervalo();
+        revisarItinerario(id_asis);
 
         function mensaje() {
 
-            console.log("hola desde javascript");
+            // console.log("hola desde javascript");
             //  tope++;
             //  if (tope>=10) {
             //  clearInterval(intervalo);
@@ -427,20 +597,22 @@
 
         function intervalo() {
             var id_asis = $("#id_asistente").val();
-            intervalo = setInterval(notificaciones, 15000 , id_asis);
+            intervalo = setInterval(notificaciones, 15000, id_asis);
 
         }
 
-        
+
 
         function notificaciones(id) {
 
-           // console.log(id);
+            // console.log(id);
             //alert(id);
             $.ajax({
                 url: "/Home/getNotificaciones",
                 type: "POST",
-                data: {id},
+                data: {
+                    id
+                },
                 dataType: 'json',
                 beforeSend: function() {
                     console.log("Procesando....");
@@ -449,16 +621,16 @@
                 },
                 success: function(respuesta) {
 
-                    console.log(respuesta);
+                    //console.log(respuesta);
                     var numero_noti = 0;
 
-                    $.each(respuesta,function(index, el) { 
+                    $.each(respuesta, function(index, el) {
 
-                        console.log(el.title);
-                        if(el.status == 0){
+                        //console.log(el.title);
+                        if (el.status == 0) {
                             numero_noti++;
                             style = 'color: #344767; background-color: #e9ecef;';
-                        }else{
+                        } else {
                             style = '';
                         }
 
@@ -489,13 +661,13 @@
 
                     });
 
-                    if(numero_noti != 0){
+                    if (numero_noti != 0) {
                         $("#num_noti_sin_leer").html(numero_noti);
-                    }else{
+                    } else {
                         $("#num_noti_sin_leer").html("");
                     }
 
-                    
+
 
 
                 },
@@ -506,33 +678,35 @@
             });
         }
 
-        $('#cont-notif').on("click","a.notif", function(event) {
+        $('#cont-notif').on("click", "a.notif", function(event) {
             var id = $(this).attr('data-id');
-        
+
             $.ajax({
                 url: "/Home/leerNotif",
                 type: "POST",
-                data: {id},
+                data: {
+                    id
+                },
                 //dataType: 'json',
                 beforeSend: function() {
                     console.log("Procesando....");
-                    
+
                 },
                 success: function(respuesta) {
 
                     // console.log(respuesta);
                     // if(respuesta == 'success'){
                     //     var id_asis = $("#id_asistente").val();
-                        
+
                     //     notificaciones(id_asis);
-                        
+
                     // }else{
                     //     var id_asis = $("#id_asistente").val();
-                        
+
                     //     notificaciones(id_asis);
                     // }
-                         notificaciones(id_asis);
-                    
+                    notificaciones(id_asis);
+
 
                 },
                 error: function(respuesta) {
@@ -541,20 +715,169 @@
 
             });
         });
+
+
+
+        $('#cont-notif').on("click", "button.btn-itinerario", function(event) {
+            var id = $("#id_asistente").val();
+
+            //alert(id);
+            $.ajax({
+                url: "/Home/getItinerario",
+                type: "POST",
+                data: {
+                    id
+                },
+                dataType: 'json',
+                beforeSend: function() {
+                    console.log("Procesando....");
+
+
+                },
+                success: function(respuesta) {
+
+                    console.log(respuesta.aerolinea_origen);
+
+                    $("#nombre_asistente").html(respuesta.nombre);
+                    $("#aerolinea_origen").html(respuesta.aerolinea_origen);
+                    $("#fecha_salida").html(respuesta.fecha_salida);
+                    $("#hora_salida").html(respuesta.hora_salida);
+                    $("#aeropuerto_salida").html(respuesta.aeropuerto_salida);
+
+                    $("#aerolinea_destino").html(respuesta.aerolinea_destino);
+                    $("#fecha_regreso").html(respuesta.fecha_regreso);
+                    $("#hora_regreso").html(respuesta.hora_regreso);
+                    $("#aeropuerto_regreso").html(respuesta.aeropuerto_regreso);
+
+                    $("#nota_itinerario").html(respuesta.nota);
+
+                    nota_itinerario
+                    // $("#nombre_asistente").val(respuesta.nombre);
+                    // $("#nombre_asistente").val(respuesta.nombre);
+                    // $("#nombre_asistente").val(respuesta.nombre);
+                    // $("#nombre_asistente").val(respuesta.nombre);
+                    // $("#nombre_asistente").val(respuesta.nombre);
+                    // $("#nombre_asistente").val(respuesta.nombre);
+                    // $("#nombre_asistente").val(respuesta.nombre);
+
+
+
+                },
+                error: function(respuesta) {
+                    console.log(respuesta);
+                }
+
+            });
+        })
+
+        $('.btn-itinerario').on("click", function(event) {
+            var id = $("#id_asistente").val();
+
+            //alert(id);
+            $.ajax({
+                url: "/Home/getItinerario",
+                type: "POST",
+                data: {
+                    id
+                },
+                dataType: 'json',
+                beforeSend: function() {
+                    console.log("Procesando....");
+
+
+                },
+                success: function(respuesta) {
+
+                    console.log(respuesta.aerolinea_origen);
+
+                    $("#nombre_asistente").html(respuesta.nombre);
+                    $("#aerolinea_origen").html(respuesta.aerolinea_origen);
+                    $("#fecha_salida").html(respuesta.fecha_salida);
+                    $("#hora_salida").html(respuesta.hora_salida);
+                    $("#aeropuerto_salida").html(respuesta.aeropuerto_salida);
+
+                    $("#aerolinea_destino").html(respuesta.aerolinea_destino);
+                    $("#fecha_regreso").html(respuesta.fecha_regreso);
+                    $("#hora_regreso").html(respuesta.hora_regreso);
+                    $("#aeropuerto_regreso").html(respuesta.aeropuerto_regreso);
+
+                    $("#nota_itinerario").html(respuesta.nota);
+
+                    nota_itinerario
+                    // $("#nombre_asistente").val(respuesta.nombre);
+                    // $("#nombre_asistente").val(respuesta.nombre);
+                    // $("#nombre_asistente").val(respuesta.nombre);
+                    // $("#nombre_asistente").val(respuesta.nombre);
+                    // $("#nombre_asistente").val(respuesta.nombre);
+                    // $("#nombre_asistente").val(respuesta.nombre);
+                    // $("#nombre_asistente").val(respuesta.nombre);
+
+
+
+                },
+                error: function(respuesta) {
+                    console.log(respuesta);
+                }
+
+            });
+        })
+
+
+
+        function revisarItinerario(id){
+
+        
+
+            //alert(id);
+            $.ajax({
+                url: "/Home/getItinerario",
+                type: "POST",
+                data: {
+                    id
+                },
+                dataType: 'json',
+                beforeSend: function() {
+                    console.log("Procesando....");
+
+
+                },
+                success: function(respuesta) {
+
+                    // console.log("itinerario --------");
+                    // console.log(respuesta);
+                    
+                    // console.log(respuesta.length);
+                    // console.log(Object.keys(respuesta.id_itinerario).length)
+                  
+                    // if(Object.keys(respuesta.id_itinerario).length > 0){
+
+                    //     $("#cont-itinerario").show();
+                    // }else{
+                    //     $("#cont-itinerario").hide();
+                    // }
+                   
+
+                },
+                error: function(respuesta) {
+                    console.log(respuesta);
+                }
+
+            });
+        }
     });
 </script>
 
 <script>
-    $( document ).ready(function() {
-        
+    $(document).ready(function() {
+
         // $('#myModal').modal('toggle');
         console.log($('#tiene-talla').html());
         console.log($('#talla-playera').html());
         if ($('#tiene-talla').html() == 'tiene') {
             console.log($('#tiene-talla').html());
             console.log('Tiene Talla Asignada');
-            
-        }else{
+
+        } else {
             console.log($('#tiene-talla').html());
             console.log('NO Tiene Talla Asignada');
             //$('#myModal').modal('toggle');
@@ -563,6 +886,3 @@
 </script>
 
 </body>
-
-
-
