@@ -439,7 +439,7 @@
                                     <label class="control-label col-md-12 col-sm-1 col-xs-12" for="id_asistente">Nombre<span class="required"></span></label>
                                     <div class="col-md-12 col-sm-12 col-xs-12">
                                         <!-- <input type="text" name="nombre_asistente" id="nombre_asistente" class="form-control form-control-plaintext col-md-7 col-xs-12" > -->
-                                        <label for="" id="nombre_asistente"></label>
+                                        <i class="fa fa-user me-sm-0" aria-hidden="true"></i> <label for="" id="nombre_asistente"></label>
 
                                     </div>
                                     <span id="availability_"></span>
@@ -460,34 +460,41 @@
                             </div>
                             <div class="row form-group">
                                 <div class="form-group col-md-6">
-                                    <label class="control-label col-md-12 col-sm-1 col-xs-12" for="aerolinea_origen">Origen de la aerolinea (Ida)<span class="required"></span></label>
+                                    <label class="control-label col-md-12 col-sm-1 col-xs-12" for="aerolinea_origen">Origen de la aerolinea (Ida) </label>
                                     <div class="col-md-12 col-sm-12 col-xs-12">
                                         <!-- <input type="text" name="aerolinea_origen" id="aerolinea_origen" class="form-control form-control-plaintext col-md-7 col-xs-12" > -->
-                                        <label for="" id="aerolinea_origen"></label>
+                                        <span class="fa fa-plane-departure" aria-hidden="true"></span> <label for="" id="aerolinea_origen"></label> 
 
                                     </div>
                                     <span id="availability_"></span>
                                 </div>
                                 <div class="col-12 col-lg-6">
-                                    <label class="form-label">Fecha de salida del vuelo </label>
+                                   <label class="form-label">Fecha de salida del vuelo </label>
                                     <div class="input-group">
                                         <!-- <input id="fecha_salida" name="fecha_salida" minlength="6" maxlength="8" class="form-control form-control-plaintext" type="date" placeholder="00/00/0000" onfocus="focused(this)" onfocusout="defocused(this)" style="text-transform:uppercase;" > -->
-                                        <label for="" id="fecha_salida"></label>
+                                        <i class="fa fas fa-calendar"></i>&nbsp;<label for="" id="fecha_salida"></label>
                                     </div>
                                 </div>
                                 <div class="col-12 col-lg-6">
                                     <label class="form-label">Hora de salida del vuelo </label>
                                     <div class="input-group">
                                         <!-- <input id="hora_salida" name="hora_salida" maxlength="29" class="form-control form-control-plaintext" type="time" placeholder="hora llegada" required="" style="text-transform:uppercase;" > -->
-                                        <label for="" id="hora_salida"></label>
+                                        <i class="fa fa-solid fa-clock"></i>&nbsp;<label for="" id="hora_salida"></label>
                                     </div>
                                 </div>
                                 <div class="col-12 col-lg-12">
-                                    <label class="form-label">Aeropuerto de Salida</label>
+                                    <label class="form-label">Aeropuerto de Salida </label>
                                     <div class="col-md-12 col-sm-12 col-xs-12">
                                         <!-- <input type="text" name="aeropuerto_salida" id="aeropuerto_salida" class="form-control form-control-plaintext col-md-7 col-xs-12" > -->
-                                        <label for="" id="aeropuerto_salida"></label>
+                                        <i class="fa fas fa-road"> </i> <label for="" id="aeropuerto_salida"></label>
 
+                                    </div>
+                                </div>
+                                <hr>
+                                <div class="col-12 col-lg-12">
+                                    <label class="form-label">Escalas</label>
+                                    <div class="col-md-12 col-sm-12 col-xs-12">                                       
+                                        <label for="" id="">Sin Escalas</label>
                                     </div>
                                 </div>
 
@@ -510,7 +517,7 @@
                                     <label class="control-label col-md-12 col-sm-1 col-xs-12" for="aerolinea_destino">Origen de la aerolinea (Regreso) <span class="required"></span></label>
                                     <div class="col-md-12 col-sm-12 col-xs-12">
                                         <!-- <input type="text" name="aerolinea_destino" id="aerolinea_destino" class="form-control form-control-plaintext col-md-7 col-xs-12" > -->
-                                        <label for="" id="aerolinea_destino"></label>
+                                        <span class="fa fa-plane-arrival" aria-hidden="true"></span> <label for="" id="aerolinea_destino"></label>
                                         <!-- <select class="form-control form-control-plaintext" name="aerolinea_destino" id="aerolinea_destino" required>
                                                     <option selected disabled>Seleccione una Opción</option>
                                                     <?php //echo $aerolineas; 
@@ -525,47 +532,37 @@
                                     <label class="form-label">Fecha de regreso del vuelo</label>
                                     <div class="input-group">
                                         <!-- <input id="fecha_regreso" name="fecha_regreso" minlength="6" maxlength="8" class="form-control form-control-plaintext" type="date" placeholder="00/00/0000" onfocus="focused(this)" onfocusout="defocused(this)" style="text-transform:uppercase;" > -->
-                                        <label for="" id="fecha_regreso"></label>
+                                        <i class="fa fas fa-calendar"></i>&nbsp;<label for="" id="fecha_regreso"></label>
                                     </div>
                                 </div>
                                 <div class="col-12 col-lg-6">
                                     <label class="form-label">Hora de regreso del vuelo</label>
                                     <div class="input-group">
                                         <!-- <input id="hora_regreso" name="hora_regreso" maxlength="29" class="form-control form-control-plaintext" type="time" placeholder="hora regreso" required="" style="text-transform:uppercase;" > -->
-                                        <label for="" id="hora_regreso"></label>
+                                        <i class="fa fa-solid fa-clock"></i>&nbsp;<label for="" id="hora_regreso"></label>
                                     </div>
                                 </div>
                                 <div class="col-12 col-lg-12">
                                     <label class="form-label">Aeropuerto de Regreso </label>
                                     <div class="col-md-12 col-sm-12 col-xs-12">
                                         <!-- <input type="text" name="aeropuerto_regreso" id="aeropuerto_regreso" class="form-control form-control-plaintext col-md-7 col-xs-12" > -->
-                                        <label for="" id="aeropuerto_regreso"></label>
+                                        <i class="fa fas fa-road"> </i> <label for="" id="aeropuerto_regreso"></label>
 
                                     </div>
                                 </div>
-
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="card mt-3">
-                        <div class="card-body">
-                            <!-- <div class="form-group row"> -->
-                            <div class="row form-group">
-
-
+                                <hr>
                                 <div class="col-12 col-lg-12">
-                                    <label class="form-label">Notas </label>
-                                    <div class="input-group">
-                                        <!-- <textarea id="nota_itinerario" name="nota_itinerario" maxlength="1000" class="form-control form-control-plaintext" placeholder="Añade Alguna Nota de Importancia" ></textarea> -->
-                                        <label for="" id="nota_itinerario"></label>
+                                    <label class="form-label">Escalas</label>
+                                    <div class="col-md-12 col-sm-12 col-xs-12">                                       
+                                        <label for="" id="">Sin Escalas</label>
                                     </div>
                                 </div>
-                                <input type="hidden" id="user_" name="user_" value="<?= $_SESSION["utilerias_administradores_id"] ?>">
 
                             </div>
                         </div>
                     </div>
+
+                   
                 </div>
             </div>
         </div>
