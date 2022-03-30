@@ -165,7 +165,7 @@ echo $header;
                                 <div class="row">
                                     <div class="col-md-4 col-sm-12" id="show-cp" style="display: none;">
                                         <label class="form-label mt-4">Código Postal *</label><br>
-                                        <input type="text" class="form-control" id="cp" name="cp" list="list_cp">
+                                        <input type="text" class="form-control" id="cp" name="cp" list="list_cp" placeholder="0100" required>
                                         <datalist id="list_cp">
 
                                         </datalist>
